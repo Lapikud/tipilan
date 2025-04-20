@@ -1,8 +1,15 @@
-import React from "react";
+// Icons
+import { Menu } from "lucide-react";
+
+// Fonts
+import { vipnagorgialla } from "@/app/layout";
 
 const Header = () => (
-    <header className="h-16 bg-gray-100 flex items-center justify-center border-b border-gray-200">
-        header
+    <header className="h-16 flex items-center border-b-3 border-[#007CAB] justify-between px-12 text-[#2A2C3F]">
+        <button>
+            <Menu className="h-12 w-12 text-[#2A2C3F]" />
+        </button>
+        <p className={`text-3xl ${vipnagorgialla.className} font-bold italic`}>ENG</p>
     </header>
 );
 

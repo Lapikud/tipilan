@@ -1,15 +1,47 @@
+// Head metadata
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+// Fonts
+import { Work_Sans } from "next/font/google";
+import localFont from 'next/font/local'
+
+// Style 'only' has normal and italic for some reason.
+// It uses the weight to determine the style used.
+export const vipnagorgialla = localFont({
+  src: [
+    {
+      path: './fonts/vipnagorgialla/Vipnagorgialla-Rg.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/vipnagorgialla/Vipnagorgialla-Rg-It.otf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: './fonts/vipnagorgialla/Vipnagorgialla-Bd.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/vipnagorgialla/Vipnagorgialla-Bd-It.otf',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
+});
+
+import "./globals.css";
+import Header from "@/components/Header";
+
+const workSans = Work_Sans({
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Tipilan",
-  description: "",
+  description: "TipiLAN on pungil põnevatest turniiridest, mini-võistlustest, loengutest ja paljust muust.",
 };
 
 export default function RootLayout({
@@ -20,8 +52,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${workSans} antialiased bg-[#EEE5E5]`}
       >
+        <Header />
         {children}
       </body>
     </html>
