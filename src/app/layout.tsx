@@ -1,5 +1,5 @@
 // Head metadata
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 
 // Fonts
 import { Work_Sans } from "next/font/google";
@@ -33,17 +33,19 @@ export const vipnagorgialla = localFont({
 });
 
 import "./globals.css";
-import Header from "@/components/Header";
+import SidebarParent from "@/components/SidebarParent";
 import Footer from "@/components/Footer";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Tipilan",
-  description: "TipiLAN on pungil põnevatest turniiridest, mini-võistlustest, loengutest ja paljust muust.",
-};
+// Commented out for now, because it doesn't work having client components in the layout file
+
+// export const metadata: Metadata = {
+//   title: "Tipilan",
+//   description: "TipiLAN on pungil põnevatest turniiridest, mini-võistlustest, loengutest ja paljust muust.",
+// };
 
 export default function RootLayout({
   children,
@@ -55,7 +57,7 @@ export default function RootLayout({
       <body
         className={`${workSans} antialiased bg-[#EEE5E5]`}
       >
-        <Header />
+        <SidebarParent />
         {children}
         <Footer />
       </body>

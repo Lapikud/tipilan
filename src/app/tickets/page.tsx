@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Tickets() {
     return (
-        <div className="flex flex-col min-h-[90vh] bg-[#EEE5E5] p-12">
+        <div className="flex flex-col min-h-[90vh] bg-[#EEE5E5] p-12 pt-18">
             <h1 className={`text-6xl ${vipnagorgialla.className} font-bold text-[#2A2C3F] mt-8 pb-8`}>Piletid ja registreerimine</h1>
             <div className="flex justify-center items-center flex-row gap-16 flex-grow">
                 <div className="bg-[#007CAB] -skew-x-5 text-white px-12 py-16 w-72 hover:scale-105 transition-all">   

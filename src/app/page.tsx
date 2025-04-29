@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       {/* Title */}
-      <div className="border-b-3 border-[#007CAB] flex items-center justify-between">
+      <div className="border-b-3 border-[#007CAB] flex items-center justify-between pt-18">
         <img src="/tipilan-white.svg" alt="TipiLAN Logo" className="h-64"/>
         <div className="pr-12 hidden 2xl:block">
           <h3 className={`text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F]`}>Auhinnafond</h3>
@@ -15,13 +15,13 @@ export default function Home() {
       </div>
       {/* Grid of buttons */}
       <div className="grid grid-cols-1 xl:grid-cols-3 border-[#007CAB] min-h-[33vh]">
-        <div className="p-12 flex flex-col justify-between border-b-3 lg:border-r-3 group border-[#007CAB] hover:bg-[#007CAB] transition-all">
+        <div className="p-12 flex flex-col justify-between border-b-3 lg:border-r-3 group border-[#007CAB] hover:bg-[#007CAB] transition">
           <Link href="/timetable" prefetch={true}>
             <div className="cursor-pointer flex flex-row justify-between">
               <h2 className={`text-5xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] group-hover:text-black`}>
                 Ajakava
               </h2>
-              <MdEast size={'4em'} className="text-[#007CAB] group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition-all"/>
+              <MdEast size={'4em'} className="text-[#007CAB] group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition"/>
             </div>
           </Link>
           <div>
@@ -32,12 +32,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="p-12 flex flex-col justify-between border-b-3 lg:border-r-3 group border-[#007CAB] hover:bg-[#007CAB] transition-all">
+        <div className="p-12 flex flex-col justify-between border-b-3 lg:border-r-3 group border-[#007CAB] hover:bg-[#007CAB] transition">
           <div className="cursor-pointer flex flex-row justify-between">
             <h2 className={`text-5xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] group-hover:text-black`}>
               Turniirid
             </h2>
-            <MdEast size={'4em'} className="text-[#007CAB] group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition-all"/>
+            <MdEast size={'4em'} className="text-[#007CAB] group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition"/>
           </div>
           <div>
             <MdEmojiEvents size={'4em'} className="text-[#007CAB] group-hover:text-[#EEE5E5] mb-4"/>
@@ -52,7 +52,7 @@ export default function Home() {
             <h2 className={`text-5xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] group-hover:text-black`}>
               Messiala
             </h2>
-            <MdEast size={'4em'} className="text-[#007CAB] group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition-all"/>
+            <MdEast size={'4em'} className="text-[#007CAB] group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition"/>
           </div>
           <div>
             <MdWeekend size={'4em'} className="text-[#007CAB] group-hover:text-[#EEE5E5] mb-4"/>
@@ -63,21 +63,19 @@ export default function Home() {
         </div>
       </div>
       {/* Date */}
-      <div className={`p-12 flex flex-col ${vipnagorgialla.className} font-bold italic border-b-3 border-[#007CAB] hover:bg-[#007CAB] group transition-all`}>
+      <div className={`p-12 flex flex-col ${vipnagorgialla.className} font-bold italic border-b-3 border-[#007CAB] hover:bg-[#007CAB] group transition`}>
         <Link href="/tickets" prefetch={true}>
           <div className="cursor-pointer text-left flex flex-row justify-between xl:justify-start">
             <h3 className="text-5xl text-[#2A2C3F] group-hover:text-black pb-8">
               Broneeri oma koht juba täna!
             </h3>
-            <MdEast size={'4em'} className="text-[#007CAB] ml-8 group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition-all"/>
+            <MdEast size={'4em'} className="text-[#007CAB] ml-8 group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition"/>
           </div>
         </Link>
         <h2 className="text-6xl text-[#007CAB] group-hover:text-[#EEE5E5]">
           24.-26. okt.
         </h2>
       </div>
-      {/* Footer */}
-
     </div>
   );
 }
