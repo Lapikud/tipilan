@@ -9,7 +9,7 @@ const SidebarParent = () => {
     const toggleSidebar = () => setIsOpen(!isOpen);
     
     return (
-        <div className="fixed w-screen">
+        <div className="fixed w-screen top-0 z-9999">
             <Header toggleSidebar={toggleSidebar} />
             <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}/>
         </div>
