@@ -1,4 +1,4 @@
-import { vipnagorgialla } from "./layout";
+import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import { MdEast, MdEmojiEvents, MdEventNote, MdWeekend } from "react-icons/md";
 import Link from 'next/link';
 
@@ -9,7 +9,7 @@ export default function Home() {
       <div className="border-b-3 border-[#007CAB] flex items-center justify-between pt-18">
         <img src="/tipilan-white.svg" alt="TipiLAN Logo" className="h-64"/>
         <div className="pr-12 hidden 2xl:block">
-          <h3 className={`text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F]`}>Auhinnafond</h3>
+          <h3 className={`text-6xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F]`}>Auhinnafond</h3>
           <h2 className={`text-8xl ${vipnagorgialla.className} font-bold italic text-[#007CAB]`}>10 000€</h2>
         </div>
       </div>

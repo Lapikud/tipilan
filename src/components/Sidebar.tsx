@@ -1,7 +1,7 @@
 'use client';
 
 // Fonts
-import { vipnagorgialla } from '@/app/layout';
+import { vipnagorgialla } from "@/components/Vipnagorgialla";
 
 // Use effect to handle route changes and close the sidebar if it's open
 // usePathName to listen to route changes in Next.js

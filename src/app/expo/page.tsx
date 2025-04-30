@@ -1,4 +1,4 @@
-import { vipnagorgialla } from "../layout";
+import { vipnagorgialla } from "@/components/Vipnagorgialla";
 
 export default function Expo() {
     return (

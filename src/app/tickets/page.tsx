@@ -1,4 +1,4 @@
-import { vipnagorgialla } from "../layout";
+import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import Link from 'next/link';
 
 export default function Tickets() {
