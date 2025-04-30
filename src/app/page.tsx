@@ -18,7 +18,7 @@ export default function Home() {
         <div className="p-12 flex flex-col justify-between border-b-3 lg:border-r-3 group border-[#007CAB] hover:bg-[#007CAB] transition">
           <Link href="/timetable" prefetch={true}>
             <div className="cursor-pointer flex flex-row justify-between">
-              <h2 className={`text-5xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] group-hover:text-black`}>
+              <h2 className={`text-4xl md:text-5xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] group-hover:text-black`}>
                 Ajakava
               </h2>
               <MdEast size={'4em'} className="text-[#007CAB] group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition"/>
@@ -33,12 +33,14 @@ export default function Home() {
         </div>
 
         <div className="p-12 flex flex-col justify-between border-b-3 lg:border-r-3 group border-[#007CAB] hover:bg-[#007CAB] transition">
-          <div className="cursor-pointer flex flex-row justify-between">
-            <h2 className={`text-5xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] group-hover:text-black`}>
-              Turniirid
-            </h2>
-            <MdEast size={'4em'} className="text-[#007CAB] group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition"/>
-          </div>
+          <Link href="/tourney" prefetch={true}>
+            <div className="cursor-pointer flex flex-row justify-between">
+              <h2 className={`text-4xl md:text-5xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] group-hover:text-black`}>
+                Turniirid
+              </h2>
+              <MdEast size={'4em'} className="text-[#007CAB] group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition"/>
+            </div>
+          </Link>
           <div>
             <MdEmojiEvents size={'4em'} className="text-[#007CAB] group-hover:text-[#EEE5E5] mb-4"/>
             <p className="text-xl group-hover:text-black">
@@ -48,12 +50,14 @@ export default function Home() {
         </div>
 
         <div className="p-12 flex flex-col justify-between border-b-3 border-[#007CAB] group hover:bg-[#007CAB] transition-all">
-          <div className="cursor-pointer flex flex-row justify-between">
-            <h2 className={`text-5xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] group-hover:text-black`}>
-              Messiala
-            </h2>
-            <MdEast size={'4em'} className="text-[#007CAB] group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition"/>
-          </div>
+          <Link href="/expo" prefetch={true}>
+            <div className="cursor-pointer flex flex-row justify-between">
+              <h2 className={`text-4xl md:text-5xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] group-hover:text-black`}>
+                Messiala
+              </h2>
+              <MdEast size={'4em'} className="text-[#007CAB] group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition"/>
+            </div>
+          </Link>
           <div>
             <MdWeekend size={'4em'} className="text-[#007CAB] group-hover:text-[#EEE5E5] mb-4"/>
             <p className="text-xl group-hover:text-black">
@@ -66,10 +70,10 @@ export default function Home() {
       <div className={`p-12 flex flex-col ${vipnagorgialla.className} font-bold italic border-b-3 border-[#007CAB] hover:bg-[#007CAB] group transition`}>
         <Link href="/tickets" prefetch={true}>
           <div className="cursor-pointer text-left flex flex-row justify-between xl:justify-start">
-            <h3 className="text-5xl text-[#2A2C3F] group-hover:text-black pb-8">
+            <h3 className="text-4xl md:text-5xl text-[#2A2C3F] group-hover:text-black pb-8">
               Broneeri oma koht juba täna!
             </h3>
-            <MdEast size={'4em'} className="text-[#007CAB] ml-8 group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition"/>
+            <MdEast size={'4em'} className="text-[#007CAB] hidden md:block ml-8 group-hover:translate-x-2 -translate-y-2 group-hover:text-[#EEE5E5] transition"/>
           </div>
         </Link>
         <h2 className="text-6xl text-[#007CAB] group-hover:text-[#EEE5E5]">

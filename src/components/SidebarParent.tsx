@@ -10,7 +10,7 @@ const SidebarParent = () => {
     
     return (
         <div className="fixed w-screen top-0 z-9999">
-            <Header toggleSidebar={toggleSidebar} />
+            <Header isOpen={isOpen} toggleSidebar={toggleSidebar} />
             <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}/>
         </div>
     );

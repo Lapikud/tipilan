@@ -1,7 +1,7 @@
 import { SiDiscord, SiInstagram, SiFacebook } from "react-icons/si";
 
 const Footer = () => (
-    <div className="flex items-center justify-between h-60 px-12">
+    <div className="flex items-center justify-center sm:justify-between flex-col sm:flex-row h-60 px-12">
         <img src="/tipilan-white.svg" alt="TipiLAN Logo" className="h-16"/>
         {/* Social media */}
         <div className="flex flex-row">
