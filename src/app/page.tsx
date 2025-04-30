@@ -44,7 +44,7 @@ export default function Home() {
           <div>
             <MdEmojiEvents size={'4em'} className="text-[#007CAB] group-hover:text-[#EEE5E5] mb-4"/>
             <p className="text-xl group-hover:text-black">
-              TipiLANil toimuvad suurejoonelised Counter-Strike 2 ja League of Legends turniirid, mille auhinnafondid on 5000 €
+              TipiLANil toimuvad suurejoonelised Counter-Strike 2 ja League of Legends turniirid, mille auhinnafond on 10 000€.
             </p>
           </div>
         </div>
