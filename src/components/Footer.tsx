@@ -5,13 +5,13 @@ const Footer = () => (
         <img src="/tipilan-white.svg" alt="TipiLAN Logo" className="h-16"/>
         {/* Social media */}
         <div className="flex flex-row">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://discord.gg/eB7sVqgJ9b" target="_blank" rel="noopener noreferrer">
                 <SiDiscord title="Discord" size={'2em'} className="mx-4 text-[#2A2C3F]"/>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com/tipilan.ee" target="_blank" rel="noopener noreferrer">
                 <SiInstagram title="Instagram" size={'2em'} className="mx-4 text-[#2A2C3F]"/>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://facebook.com/tipilan.ee" target="_blank" rel="noopener noreferrer">
                 <SiFacebook title="Facebook" size={'2em'} className="mx-4 text-[#2A2C3F]"/>
             </a>
         </div>
