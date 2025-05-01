@@ -4,6 +4,7 @@
 // Provides the theme context to the app
 import { ThemeProvider } from "@/components/Theme-provider"
 import "./globals.css";
+import "material-symbols";
 
 // Fonts
 import { Work_Sans } from "next/font/google";

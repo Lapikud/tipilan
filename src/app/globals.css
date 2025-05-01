@@ -128,3 +128,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 24;
+}
