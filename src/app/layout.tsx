@@ -21,7 +21,7 @@ const workSans = Work_Sans({
 // Commented out for now, because it doesn't work having client components in the layout file
 
 export const metadata: Metadata = {
-  title: "TipiLAN",
+  title: "TipiLAN 2025",
   description: "TipiLAN 2025 – Eesti suurim tudengite korraldatud LAN!",
 };
 
@@ -35,7 +35,7 @@ export default function RootLayout({
       <Head>
         <title>TipiLAN</title>
         <meta property="og:title" content="TipiLAN 2025" key="title" />
-        <meta name="description" content="Eesti suurim tudengite korraldatud LAN!" />
+        <meta name="description" content="TipiLAN 2025 – Eesti suurim tudengite korraldatud LAN!" />
       </Head>
       <body
         className={`${workSans} antialiased bg-[#EEE5E5] dark:bg-[#0E0F19]`}
