@@ -1,10 +1,14 @@
 // Head metadata
 // import type { Metadata } from "next";
 
+// Provides the theme context to the app
+import { ThemeProvider } from "@/components/Theme-provider"
+import "./globals.css";
+
 // Fonts
 import { Work_Sans } from "next/font/google";
 
-import "./globals.css";
+
 import SidebarParent from "@/components/SidebarParent";
 import Footer from "@/components/Footer";
 
@@ -25,13 +29,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${workSans} antialiased bg-[#EEE5E5]`}
+        className={`${workSans} antialiased bg-[#EEE5E5] dark:bg-[#0E0F19]`}
       >
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+        >
         <SidebarParent />
         {children}
         <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

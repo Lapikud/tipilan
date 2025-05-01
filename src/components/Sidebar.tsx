@@ -26,7 +26,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: { isOpen: boolean; toggleSidebar: ()
                 onClick={toggleSidebar} // Close sidebar when clicking outside
             ></div>
             <div
-                className={`text-5xl ${vipnagorgialla.className} font-bold italic uppercase fixed flex items-center flex-col gap-8 pt-16 top-0 left-0 h-[99vh] mt-16 -skew-x-5 border-r-3 border-[#007CAB] w-screen sm:w-128 bg-[#EEE5E5] text-[#2A2C3F] transition-transform transform z-20`}
+                className={`text-5xl ${vipnagorgialla.className} font-bold italic uppercase fixed flex items-center flex-col gap-8 pt-16 top-0 left-0 h-[99vh] mt-16 -skew-x-5 border-r-3 border-[#007CAB] dark:border-[#00A3E0] w-screen sm:w-128 bg-[#EEE5E5] dark:bg-[#0E0F19] text-[#2A2C3F] dark:text-[#EEE5E5] transition-transform transform z-20`}
                 style={{ transform: isOpen ? 'translateX(-10%) skewX(calc(5deg * -1)' : 'translateX(-150%) skewX(calc(5deg * -1)' }}
             >
                 <Link href="/" prefetch={true} onClick={toggleSidebar}>Avaleht</Link>

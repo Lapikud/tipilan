@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function Tickets() {
     return (
-        <div className="flex flex-col min-h-[90vh] bg-[#EEE5E5] m-6 mt-16 md:m-16">
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] mt-8 md:mt-16 mb-4`}>PILETID JA REGAMINE</h1>
+        <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4`}>PILETID JA REGAMINE</h1>
             <div className="flex justify-center lg:items-center flex-col lg:flex-row gap-8 md:gap-12 flex-grow mb-16 md:mt-8 lg:mt-0">
                 <div className="bg-[#007CAB] -skew-x-2 md:-skew-x-5 text-white px-8 md:px-12 py-16 hover:scale-103 transition-all duration-150 w-full md:w-xl lg:w-[400px]">   
                     <h2 className={`text-6xl ${vipnagorgialla.className} font-bold italic text-[#EEE5E5] pb-2`}>8€</h2>
