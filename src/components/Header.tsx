@@ -22,7 +22,7 @@ const Header = ({ isOpen, toggleSidebar }: { isOpen: boolean; toggleSidebar: () 
     const { setTheme } = useTheme();
 
     return (
-        <header className="h-16 flex items-center bg-[#EEE5E5] dark:bg-[#0E0F19] border-b-3 border-[#007CAB] dark:border-[#00A3E0] justify-between px-12 text-[#2A2C3F] dark:text-[#EEE5E5]">
+        <header className="px-8 py-2 md:px-12 flex items-center bg-[#EEE5E5] dark:bg-[#0E0F19] border-b-3 border-[#007CAB] dark:border-[#00A3E0] justify-between text-[#2A2C3F] dark:text-[#EEE5E5]">
             <button onClick={toggleSidebar}>
                 {isOpen ? (
                     <MdClose className="h-12 w-12 text-[#2A2C3F] dark:text-[#EEE5E5]" />

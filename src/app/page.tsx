@@ -102,7 +102,7 @@ export default function Home() {
                 className={`p-8 md:p-12 flex flex-col ${vipnagorgialla.className} font-bold italic border-b-3 border-[#007CAB] dark:border-[#00A3E0] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] group transition`}
             >
                 <div className="cursor-pointer text-left flex flex-row justify-between xl:justify-start gap-8">
-                    <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] dark:group-hover:text-[#2A2C3F] text-[#2A2C3F] group-hover:text-black pb-8">
+                    <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] dark:group-hover:text-[#2A2C3F] text-[#2A2C3F] group-hover:text-black">
                         Bro&shy;neeri oma koht juba täna!
                     </h3>
                     <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] hidden md:block group-hover:translate-x-2 group-hover:text-[#EEE5E5] dark:group-hover:text-[#EEE5E5] transition">arrow_right_alt</span>
