@@ -25,9 +25,9 @@ const Header = ({ isOpen, toggleSidebar }: { isOpen: boolean; toggleSidebar: () 
         <header className="px-8 py-2 md:px-12 flex items-center bg-[#EEE5E5] dark:bg-[#0E0F19] border-b-3 border-[#1F5673] justify-between text-[#2A2C3F] dark:text-[#EEE5E5]">
             <button onClick={toggleSidebar}>
                 {isOpen ? (
-                    <MdClose className="h-12 w-12 text-[#2A2C3F] dark:text-[#EEE5E5]" />
+                    <MdClose className="h-12 w-12 text-[#2A2C3F] dark:text-[#EEE5E5] cursor-pointer" />
                 ) : (
-                    <MdMenu className="h-12 w-12 text-[#2A2C3F] dark:text-[#EEE5E5]" />
+                    <MdMenu className="h-12 w-12 text-[#2A2C3F] dark:text-[#EEE5E5] cursor-pointer" />
                 )}
             </button>
             <DropdownMenu>
