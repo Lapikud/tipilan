@@ -23,7 +23,7 @@ export default function Tickets() {
                     <h2 className={`text-6xl ${vipnagorgialla.className} font-bold italic text-[#EEE5E5] pb-2`}>12-15€</h2>
                     <h3 className={`text-3xl ${vipnagorgialla.className} font-bold italic text-[#EEE5E5] pb-4`}>Võistleja</h3>
                     <ul className="pl-4 mb-8 list-[square] marker:text-[#007CAB]">
-                        <li className="text-xl">Võimalus osaleda turniiridel</li>
+                        <li className="text-xl">Võimalus osaleda CS2 või LoL turniiril</li>
                         <li className="text-xl">Isiklik laud, voolu- ja internetiühendus</li>
                         <li className="text-xl">Ligipääs demoalale</li>
                         <li className="text-xl">Turniiride pealt vaatamine</li>

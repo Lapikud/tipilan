@@ -1,5 +1,5 @@
 // Head metadata
-// import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Head from 'next/head';
 
 // Provides the theme context to the app
@@ -20,10 +20,10 @@ const workSans = Work_Sans({
 
 // Commented out for now, because it doesn't work having client components in the layout file
 
-// export const metadata: Metadata = {
-//   title: "Tipilan",
-//   description: "TipiLAN on pungil põnevatest turniiridest, mini-võistlustest, loengutest ja paljust muust.",
-// };
+export const metadata: Metadata = {
+  title: "TipiLAN",
+  description: "TipiLAN 2025 – Eesti suurim tudengite korraldatud LAN!",
+};
 
 export default function RootLayout({
   children,

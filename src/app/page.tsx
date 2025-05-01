@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <div>
             {/* Title */}
-            <div className="border-b-3 border-[#007CAB] dark:border-[#00A3E0] flex items-center justify-between mt-18 gap-12 py-8">
+            <div className="border-b-3 border-[#1F5673] flex items-center justify-between mt-18 gap-12 py-8">
                 <Image
                     src="/tipilan-white.svg"
                     width={850}
@@ -33,10 +33,10 @@ export default function Home() {
                 </div>
             </div>
             {/* Grid of buttons */}
-            <div className="grid grid-cols-1 xl:grid-cols-3 border-[#007CAB] dark:border-[#00A3E0]">
+            <div className="grid grid-cols-1 xl:grid-cols-3 border-[#1F5673]">
                 <Link
                     href="/ajakava"
-                    className="px-8 md:px-12 py-8 flex flex-col gap-4 border-b-3 lg:border-r-3 group border-[#007CAB] dark:border-[#00A3E0] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
+                    className="px-8 md:px-12 py-8 flex flex-col gap-4 border-b-3 lg:border-r-3 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
                 >
                     <div className="cursor-pointer flex flex-row justify-between gap-4 items-center">
                         <h2
@@ -56,7 +56,7 @@ export default function Home() {
                 </Link>
                 <Link
                     href="/turniirid"
-                    className="px-8 md:px-12 py-8 flex flex-col gap-4 border-b-3 lg:border-r-3 group border-[#007CAB] dark:border-[#00A3E0] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
+                    className="px-8 md:px-12 py-8 flex flex-col gap-4 border-b-3 lg:border-r-3 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
                 >
                     <div className="cursor-pointer flex flex-row justify-between gap-4 items-center">
                         <h2
@@ -77,7 +77,7 @@ export default function Home() {
                 </Link>
                 <Link
                     href="/messiala"
-                    className="px-8 md:px-12 py-8 flex flex-col gap-4 border-b-3 border-[#007CAB] dark:border-[#00A3E0] group hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition-all"
+                    className="px-8 md:px-12 py-8 flex flex-col gap-4 border-b-3 border-[#1F5673] group hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition-all"
                 >
                     <div className="cursor-pointer flex flex-row justify-between gap-4 items-center">
                         <h2
@@ -99,7 +99,7 @@ export default function Home() {
             {/* Date */}
             <Link
                 href="/piletid"
-                className={`p-8 md:p-12 flex flex-col ${vipnagorgialla.className} font-bold italic border-b-3 border-[#007CAB] dark:border-[#00A3E0] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] group transition`}
+                className={`p-8 md:p-12 flex flex-col ${vipnagorgialla.className} font-bold italic border-b-3 border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] group transition`}
             >
                 <div className="cursor-pointer text-left flex flex-row justify-between xl:justify-start gap-8">
                     <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] dark:group-hover:text-[#2A2C3F] text-[#2A2C3F] group-hover:text-black">
@@ -113,7 +113,7 @@ export default function Home() {
             </Link>
             {/* Sponsors */}
             <div
-                className={`p-12 flex flex-col ${vipnagorgialla.className} font-bold italic border-b-3 border-[#007CAB] dark:border-[#00A3E0]`}
+                className={`p-12 flex flex-col ${vipnagorgialla.className} font-bold italic border-b-3 border-[#1F5673]`}
             >
                 <div className="text-left flex flex-col justify-between xl:justify-start">
                     <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] text-[#2A2C3F] group-hover:text-black pb-8">

@@ -26,14 +26,14 @@ const Sidebar = ({ isOpen, toggleSidebar }: { isOpen: boolean; toggleSidebar: ()
                 onClick={toggleSidebar} // Close sidebar when clicking outside
             ></div>
             <div
-                className={`text-5xl ${vipnagorgialla.className} font-bold italic uppercase fixed flex items-center flex-col gap-8 pt-16 top-0 left-0 h-[99vh] mt-16 -skew-x-5 border-r-3 border-[#007CAB] dark:border-[#00A3E0] w-screen sm:w-128 bg-[#EEE5E5] dark:bg-[#0E0F19] text-[#2A2C3F] dark:text-[#EEE5E5] transition-transform transform z-20`}
-                style={{ transform: isOpen ? 'translateX(-10%) skewX(calc(5deg * -1)' : 'translateX(-150%) skewX(calc(5deg * -1)' }}
+                className={`text-3xl md:text-5xl ${vipnagorgialla.className} font-bold italic uppercase fixed flex items-start xs:pl-25 pl-20 sm:pl-20 md:pl-24 flex-col gap-8 pt-16 top-0 left-0 h-[99vh] mt-16 -skew-x-5 border-r-3 border-[#1F5673]  w-screen sm:w-96 md:w-128 bg-[#EEE5E5] dark:bg-[#0E0F19] text-[#2A2C3F] dark:text-[#EEE5E5] transition-transform transform z-20`}
+                style={{ transform: isOpen ? 'translateX(-13%) skewX(calc(5deg * -1)' : 'translateX(-150%) skewX(calc(5deg * -1)' }}
             >
-                <Link href="/" prefetch={true} onClick={toggleSidebar}>Avaleht</Link>
-                <Link href="/expo" prefetch={true} onClick={toggleSidebar}>Messiala</Link>
-                <Link href="/tickets" prefetch={true} onClick={toggleSidebar}>Piletid</Link>
-                <Link href="/timetable" prefetch={true} onClick={toggleSidebar}>Ajakava</Link>
-                <Link href="/tourney" prefetch={true} onClick={toggleSidebar}>Turniirid</Link>
+                <Link href="/" className="hover:text-[#00A3E0] transition duration-150">Avaleht</Link>
+                <Link href="/messiala" className="hover:text-[#00A3E0] transition duration-150">Messiala</Link>
+                <Link href="/piletid" className="hover:text-[#00A3E0] transition duration-150">Piletid</Link>
+                <Link href="/ajakava" className="hover:text-[#00A3E0] transition duration-150">Ajakava</Link>
+                <Link href="/turniirid" className="hover:text-[#00A3E0] transition duration-150">Turniirid</Link>
             </div>
         </>
     );

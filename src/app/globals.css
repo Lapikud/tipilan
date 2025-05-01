@@ -43,6 +43,10 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+@theme {
+  --breakpoint-xs: 30rem;
+}
+
 body {
   font-family: "Work Sans", Arial, Helvetica, sans-serif;
   width: 100vw;
