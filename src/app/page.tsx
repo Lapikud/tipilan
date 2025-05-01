@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <div>
             {/* Title */}
-            <div className="border-b-3 border-[#007CAB] dark:border-[#00A3E0] flex items-center justify-between pt-18 gap-12">
+            <div className="border-b-3 border-[#007CAB] dark:border-[#00A3E0] flex items-center justify-between mt-18 gap-12 py-8">
                 <Image
                     src="/tipilan-white.svg"
                     width={850}
