@@ -1,5 +1,6 @@
 // Head metadata
 // import type { Metadata } from "next";
+import Head from 'next/head';
 
 // Provides the theme context to the app
 import { ThemeProvider } from "@/components/Theme-provider"
@@ -31,6 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Head>
+        <title>TipiLAN</title>
+        <meta property="og:title" content="TipiLAN 2025" key="title" />
+        <meta name="description" content="Eesti suurim tudengite korraldatud LAN!" />
+      </Head>
       <body
         className={`${workSans} antialiased bg-[#EEE5E5] dark:bg-[#0E0F19]`}
       >
