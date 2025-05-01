@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 // Fonts
-import { vipnagorgialla } from "@/components/Vipnagorgialla";
+// import { vipnagorgialla } from "@/components/Vipnagorgialla";
 
 const Header = ({ isOpen, toggleSidebar }: { isOpen: boolean; toggleSidebar: () => void }) => {
     const { setTheme } = useTheme();
