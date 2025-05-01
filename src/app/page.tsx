@@ -6,27 +6,27 @@ export default function Home() {
     return (
         <div>
             {/* Title */}
-            <div className="border-b-3 border-[#1F5673] flex items-center justify-between mt-18 gap-12 py-8">
+            <div className="border-b-3 border-[#1F5673] grid grid-cols-1 md:grid-cols-[2fr_1fr] items-center justify-between mt-18 gap-12 py-8">
                 <Image
                     src="/tipilan-white.svg"
                     width={850}
                     height={120}
                     alt="TipiLAN Logo"
-                    className="px-8 py-8 md:px-12 md:py-14 dark:hidden w-[max(300px,min(100%-6rem,850px))] h-auto"
+                    className="px-8 py-8 md:px-12 md:py-14 dark:hidden w-[max(300px,min(100%,850px))] h-auto"
                 />
                 <Image
                     src="/tipilan-dark.svg"
                     width={850}
                     height={120}
                     alt="TipiLAN Logo"
-                    className="px-8 py-8 md:px-12 md:py-14 not-dark:hidden w-[max(300px,min(100%-6rem,850px))] h-auto"
+                    className="px-8 py-8 md:px-12 md:py-14 not-dark:hidden w-[max(300px,min(100%,850px))] h-auto2"
                 />
-                <div className="pr-12 hidden xl:block text-right">
-                    <h3 className={`text-[clamp(1.75rem,1.35rem+2vw,3.75rem)] ${vipnagorgialla.className} leading-[90%] font-bold italic uppercase dark:text-[#EEE5E5] text-[#2A2C3F]`}>
+                <div className="pr-12 hidden md:block text-right">
+                    <h3 className={`text-[clamp(1.25rem,0.75rem+2.5vw,3.75rem)] ${vipnagorgialla.className} leading-[90%] font-bold italic uppercase dark:text-[#EEE5E5] text-[#2A2C3F]`}>
                         Auhinnafond
                     </h3>
                     <h2
-                        className={`text-[clamp(3.5rem,3rem+2.5vw,6rem)] ${vipnagorgialla.className} leading-[90%] font-bold italic text-[#007CAB] dark:text-[#00A3E0]`}
+                        className={`text-[clamp(2rem,1.2rem+4vw,6rem)] ${vipnagorgialla.className} leading-[90%] font-bold italic text-[#007CAB] dark:text-[#00A3E0]`}
                     >
                         10 000€
                     </h2>
@@ -50,7 +50,7 @@ export default function Home() {
                         <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">event_note</span>
                         <p className="text-[clamp(0.875rem,0.75rem+0.5vw,1.25rem)] tracking-[-0.045rem] dark:group-hover:text-[#2A2C3F] group-hover:text-black">
                             TipiLAN on pungil põnevatest turniiridest,
-                            mini-võistlustest, loengutest ja paljust muust.
+                            mini-võistlustest ja paljust muust.
                         </p>
                     </div>
                 </Link>

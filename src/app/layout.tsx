@@ -38,7 +38,7 @@ export default function RootLayout({
         <meta name="description" content="TipiLAN 2025 – Eesti suurim tudengite korraldatud LAN!" />
       </Head>
       <body
-        className={`${workSans} antialiased bg-[#EEE5E5] dark:bg-[#0E0F19]`}
+        className={`${workSans.className} antialiased bg-[#EEE5E5] dark:bg-[#0E0F19]`}
       >
         <ThemeProvider
             attribute="class"
