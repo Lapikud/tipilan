@@ -138,6 +138,42 @@ export default function Home() {
                                 className="object-contain"
                             />
                         </Link>
+                        <Link href="https://www.alecoq.ee">
+                            <Image
+                                src="/sponsors/alecoq.svg"
+                                alt="Alecoq"
+                                width={200}
+                                height={200}
+                                className="object-contain"
+                            />
+                        </Link>
+                         <Link href="https://arvutimuuseum.ee">
+                            <Image
+                                src="/sponsors/arvutimuuseum.png"
+                                alt="Eesti Arvutimuuseum"
+                                width={200}
+                                height={200}
+                                className="object-contain"
+                            />
+                        </Link>
+                         <Link href="https://www.simracing.ee/">
+                            <Image
+                                src="/sponsors/EVAL.png"
+                                alt="EVAL"
+                                width={200}
+                                height={200}
+                                className="object-contain"
+                            />
+                        </Link>
+                         <Link href="https://balsnack.ee">
+                            <Image
+                                src="/sponsors/balsnack.svg"
+                                alt="Balsnack"
+                                width={200}
+                                height={200}
+                                className="object-contain"
+                            />
+                        </Link>
                     </div>
                 </div>
             </div>
