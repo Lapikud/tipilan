@@ -119,7 +119,7 @@ export default function Home() {
                     <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] text-[#2A2C3F] group-hover:text-black pb-8">
                         TipiLANi tõmbab käima...
                     </h3>
-                    <div className="flex flex-row gap-32 items-center">
+                    <div className="flex flex-row flex-wrap gap-8 md:gap-32 items-center">
                         <Link href="https://taltech.ee">
                             <Image
                                 src="/sponsors/taltech-color.png"
