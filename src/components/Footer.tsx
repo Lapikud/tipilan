@@ -13,7 +13,7 @@ const Footer = () => (
           width={300}
           height={50}
           alt="TipiLAN Logo"
-          className="h-16 dark:hidden"
+          className="h-9 ml-3 dark:hidden"
         />
         <Image
           src="/tipilan-dark.svg"
