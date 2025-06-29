@@ -94,7 +94,9 @@ const Footer = () => (
           <div>
             <p className="text-[#aaa]">
               Registrikood:{" "}
-              <span className="font-semibold text-white">80391807</span>
+              <span className="font-semibold text-[#007CAB] dark:text-[#00A3E0]">
+                80391807
+              </span>
             </p>
             <p className="text-[#aaa]">
               ICO-210, Raja tn 4c, Tallinn, Harjumaa, 12616
