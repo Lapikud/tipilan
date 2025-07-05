@@ -19,11 +19,4 @@ export const scheduleData: Record<string, any[]> = {
       location: "Tudengimaja",
     },
   ],
-  "26. oktoober": [
-    {
-      time: "00:00",
-      title: "Ajakava lisatakse peagi",
-      location: "",
-    },
-  ],
 };
