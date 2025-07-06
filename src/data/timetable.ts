@@ -1,4 +1,10 @@
-export const scheduleData: Record<string, any[]> = {
+type ScheduleItem = {
+  time?: string; // Aeg on ajutine praegu kuna pole 100% kindlalt paigas
+  title: string;
+  location: string;
+};
+
+export const scheduleData: Record<string, ScheduleItem[]> = {
   "24. oktoober": [
     {
       title: "League of Legends põhiturniir",
