@@ -1,7 +1,8 @@
-type ScheduleItem = {
+export type ScheduleItem = {
   time?: string; // Aeg on ajutine praegu kuna pole 100% kindlalt paigas
   title: string;
   location: string;
+  description?: string;
 };
 
 export const scheduleData: Record<string, ScheduleItem[]> = {
