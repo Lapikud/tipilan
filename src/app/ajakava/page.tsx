@@ -24,7 +24,7 @@ export default function Timetable() {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`${vipnagorgialla.className} uppercase italic px-4 py-2 text-sm sm:text-base font-semibold ${
+            className={`${vipnagorgialla.className} uppercase italic px-4 py-2 text-lg font-semibold ${
               activeTab === tab
                 ? "bg-[#00A3E0] text-white"
                 : "bg-[#007CAB] dark:bg-[#007CAB] text-[#EEE5E5] hover:bg-[#00A3E0] dark:hover:bg-[#007CAB]"
@@ -43,23 +43,23 @@ export default function Timetable() {
             className="border-l-3 border-[#007CAB] pl-4 flex flex-row gap-12"
           >
             <div
-              className={` ${vipnagorgialla.className} text-[#00A3E0] text-4xl font-bold italic`}
+              className={` ${vipnagorgialla.className} text-[#00A3E0] text-5xl font-bold italic`}
             >
               {item.time}
             </div>
             <div>
               <div
-                className={`${vipnagorgialla.className} text-3xl italic font-bold text-[#2A2C3F] dark:text-[#EEE5E5]`}
+                className={`${vipnagorgialla.className} text-4xl italic font-bold text-[#2A2C3F] dark:text-[#EEE5E5]`}
               >
                 {item.title}
               </div>
               {item.description && (
-                <div className="text-xl text-[#938BA1] dark:text-[#938BA1]">
+                <div className="text-2xl text-[#938BA1] dark:text-[#938BA1]">
                   {item.description}
                 </div>
               )}
               {item.location && (
-                <div className="text-xl text-[#938BA1] dark:text-[#938BA1]">
+                <div className="text-2xl text-[#938BA1] dark:text-[#938BA1]">
                   {item.location}
                 </div>
               )}
