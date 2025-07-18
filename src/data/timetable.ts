@@ -10,20 +10,24 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
     {
       title: "League of Legends põhiturniir",
       location: "Aula",
+      time: "-",
     },
     {
       title: "Miniturniirid",
       location: "Tudengimaja",
+      time: "-",
     },
   ],
   "25. oktoober": [
     {
       title: "Counter-Strike 2 põhiturniir",
       location: "Aula",
+      time: "-",
     },
     {
       title: "Miniturniirid",
       location: "Tudengimaja",
+      time: "-",
     },
   ],
 };

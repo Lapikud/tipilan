@@ -44,9 +44,13 @@ const Header = ({
       </button>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon">
-            <MdSunny className="scale-150 text-[#2A2C3F] dark:hidden" />
-            <MdModeNight className="scale-150 dark:text-[#EEE5E5] not-dark:hidden" />
+          <Button
+            variant="ghost"
+            size="icon"
+            className="size-10 cursor-pointer"
+          >
+            <MdSunny className="scale-135 text-[#2A2C3F] dark:hidden" />
+            <MdModeNight className="scale-135 dark:text-[#EEE5E5] not-dark:hidden" />
             <span className="sr-only">Toggle theme</span>
           </Button>
         </DropdownMenuTrigger>
