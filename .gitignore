@@ -172,4 +172,6 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-# End of https://www.toptal.com/developers/gitignore/api/nextjs,node
+# SQLite database files
+/data/*.db
+/data/*.db-*
