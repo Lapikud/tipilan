@@ -4,13 +4,15 @@ import { vipnagorgialla } from "@/components/Vipnagorgialla";
 // Database
 import { db } from "@/db/drizzle";
 
+// Types
+import type { TeamWithMembers, MemberWithUser } from "@/types/database";
+
 import Link from "next/link";
 
 // User interface
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -66,14 +68,14 @@ export default async function AdminTeams() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {teams.map((team: any) => (
+              {teams.map((team: TeamWithMembers) => (
                 <TableRow key={team.id}>
                   <TableCell className="font-medium">{team.id}</TableCell>
                   <TableCell>{team.name}</TableCell>
                   <TableCell>
                     <div className="flex flex-col gap-1">
                       {team.members && team.members.length > 0 ? (
-                        team.members.map((member: any) => (
+                        team.members.map((member: MemberWithUser) => (
                           <div
                             key={member.id}
                             className="flex items-center gap-2 text-sm"
