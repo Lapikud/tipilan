@@ -274,7 +274,7 @@ export default function Expo() {
         Messiala
       </h1>
       <div className="mb-6">
-        <h2 className="text-2xl font-semibold mb-3 text-[#2A2C3F] dark:text-[#EEE5E5]">
+        <h2 className="text-2xl text-[#2A2C3F] dark:text-[#EEE5E5] mb-3">
           Tudengimaja
         </h2>
         <div className="flex flex-wrap gap-4">
