@@ -95,15 +95,15 @@ export default function Expo() {
         color: roomColors[0],
         name: roomNames[0],
       }, // Mänguklubi
-      {
-        width: 2.5,
-        height: 0.7,
-        depth: 0.7,
-        x: 1,
-        z: 0,
-        color: roomColors[1],
-        name: roomNames[1],
-      }, // Baariala
+      // {
+      //  width: 2.5,
+      //  height: 0.7,
+      //  depth: 0.7,
+      //  x: 1,
+      //  z: 0,
+      //  color: roomColors[1],
+      //  name: roomNames[1],
+      // }, // Baariala
       {
         width: 1.8,
         height: 0.7,
@@ -287,7 +287,7 @@ export default function Expo() {
               Mänguklubi
             </span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="items-center gap-2 hidden">
             <div
               className="w-4 h-4 border border-gray-300"
               style={{ backgroundColor: "#4ecdc4" }}
