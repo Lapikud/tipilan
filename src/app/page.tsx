@@ -135,7 +135,7 @@ export default function Home() {
           <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] text-[#2A2C3F] group-hover:text-black pb-8">
             TipiLANi tõmbab käima...
           </h3>
-          <div className="flex flex-row flex-wrap gap-8 md:gap-32 items-center">
+          <div className="flex flex-row flex-wrap gap-8 md:gap-18 items-center">
             <Link href="https://taltech.ee">
               <Image
                 src="/sponsors/taltech-color.png"
@@ -178,6 +178,15 @@ export default function Home() {
                 alt="Balsnack"
                 width={200}
                 height={200}
+                className="object-contain"
+              />
+            </Link>
+            <Link href="https://www.rara.ee/sundmused/interaktiivne-videomangude-muuseum-lvlup/">
+              <Image 
+                src="/sponsors/lvlup_logo_export.svg"
+                alt="LVLup!"
+                width={192}
+                height={192}
                 className="object-contain"
               />
             </Link>
