@@ -44,7 +44,7 @@ export default async function AdminTeams() {
   });
 
   return (
-    <div className="flex flex-col min-h-[90vh] p-12 pt-18">
+    <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
       <div className="flex items-center gap-4">
         <Link href={"/haldus"}>
           <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] translate-y-2.5 hover:-translate-x-2 dark:hover:text-[#EEE5E5] hover:text-[#2A2C3F] transition">

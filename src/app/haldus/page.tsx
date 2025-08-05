@@ -96,7 +96,7 @@ export default async function Admin({
   const teamsData = await db.query.teams.findMany();
 
   return (
-    <div className="flex flex-col min-h-[90vh] p-12 pt-18">
+    <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
       {showSuccess && <SuccessAlertDB />}
       <div className="flex items-center gap-4">
         <Link href={"/"}>

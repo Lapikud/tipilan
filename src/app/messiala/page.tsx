@@ -16,9 +16,25 @@ export default function Expo() {
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x0e0f19);
 
-    // Isometric camera setup
-    const aspect = 800 / 600;
-    const frustumSize = 14;
+    // Get responsive dimensions
+    const getResponsiveDimensions = () => {
+      const container = mountRef.current;
+      if (!container) return { width: 800, height: 600 };
+
+      const containerWidth = container.offsetWidth;
+      const maxWidth = Math.min(containerWidth, 800);
+      const width = Math.max(maxWidth, 300); // Minimum width
+      const height = (width * 600) / 800; // Maintain aspect ratio
+
+      return { width, height };
+    };
+
+    const { width, height } = getResponsiveDimensions();
+
+    // Isometric camera setup with responsive sizing
+    const aspect = width / height;
+    const baseFrustumSize = 14;
+    const frustumSize = width < 600 ? baseFrustumSize * 0.8 : baseFrustumSize; // Smaller frustum for mobile
     const camera = new THREE.OrthographicCamera(
       (frustumSize * aspect) / -2,
       (frustumSize * aspect) / 2,
@@ -34,7 +50,7 @@ export default function Expo() {
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(800, 600);
+    renderer.setSize(width, height);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     mountRef.current.appendChild(renderer.domElement);
@@ -197,6 +213,28 @@ export default function Expo() {
     ground2.receiveShadow = true;
     scene.add(ground2);
 
+    // Resize handler
+    const handleResize = () => {
+      const { width: newWidth, height: newHeight } = getResponsiveDimensions();
+
+      // Update camera
+      const newAspect = newWidth / newHeight;
+      const newFrustumSize =
+        newWidth < 600 ? baseFrustumSize * 0.8 : baseFrustumSize;
+
+      camera.left = (newFrustumSize * newAspect) / -2;
+      camera.right = (newFrustumSize * newAspect) / 2;
+      camera.top = newFrustumSize / 2;
+      camera.bottom = newFrustumSize / -2;
+      camera.updateProjectionMatrix();
+
+      // Update renderer
+      renderer.setSize(newWidth, newHeight);
+    };
+
+    // Add resize event listener
+    window.addEventListener("resize", handleResize);
+
     // Mouse event handlers
     const onMouseMove = (event: MouseEvent) => {
       const rect = renderer.domElement.getBoundingClientRect();
@@ -258,6 +296,7 @@ export default function Expo() {
 
     // Cleanup
     return () => {
+      window.removeEventListener("resize", handleResize);
       renderer.domElement.removeEventListener("mousemove", onMouseMove);
       if (mountRef.current && renderer.domElement) {
         mountRef.current.removeChild(renderer.domElement);
@@ -267,7 +306,7 @@ export default function Expo() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-[90vh] p-12 pt-18">
+    <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
       <h1
         className={`text-5xl sm:text-6xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 mb-4`}
       >
@@ -344,8 +383,8 @@ export default function Expo() {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row gap-8 items-start">
-        <div className="flex-shrink-0 border-3 border-[#1F5673]">
-          <div ref={mountRef} />
+        <div className="flex-shrink-0 border-3 border-[#1F5673] w-full max-w-[800px]">
+          <div ref={mountRef} className="w-full" />
         </div>
 
         {/* Tooltip */}
