@@ -78,7 +78,7 @@ const Footer = () => (
                 mail
               </span>
               <a href="mailto:kontakt@ituk.ee" className="underline">
-                kontakt@ituk.ee
+                tipilan@ituk.ee
               </a>
             </div>
             <div className="flex flex-row gap-2">
