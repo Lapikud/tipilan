@@ -190,6 +190,15 @@ export default function Home() {
                 className="object-contain"
               />
             </Link>
+            <Link href="https://www.facebook.com/bfglOfficial">
+              <Image 
+                src="/sponsors/BFGL.png"
+                alt="BFGL"
+                width={192}
+                height={192}
+                className="object-contain"
+              />
+            </Link>
           </div>
         </div>
       </div>
