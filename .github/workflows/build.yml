@@ -7,6 +7,12 @@ jobs:
   build:
     runs-on: prox-1
     steps:
+      - name: Configure sudo password
+        run: echo '${{ secrets.USER_AUTH }}' | sudo -S echo "Sudo configured"
+
+      - name: Clear .next cache
+        run: sudo rm -rf $GITHUB_WORKSPACE/.next
+
       - name: Checkout code
         uses: actions/checkout@v4
 
