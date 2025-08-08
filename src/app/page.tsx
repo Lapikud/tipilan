@@ -136,7 +136,7 @@ export default function Home() {
             TipiLANi tõmbab käima...
           </h3>
           <div className="flex flex-row flex-wrap gap-8 md:gap-18 items-center">
-            <Link href="https://taltech.ee">
+            <Link href="https://taltech.ee" target="_blank">
               <Image
                 src="/sponsors/taltech-color.png"
                 alt="Taltech (Tallinna Tehnikaülikool)"
@@ -145,7 +145,7 @@ export default function Home() {
                 className="object-contain"
               />
             </Link>
-            <Link href="https://www.redbull.com/ee-et/">
+            <Link href="https://www.redbull.com/ee-et/" target="_blank">
               <Image
                 src="/sponsors/redbull.png"
                 alt="Redbull"
@@ -154,7 +154,7 @@ export default function Home() {
                 className="object-contain"
               />
             </Link>
-            <Link href="https://www.alecoq.ee">
+            <Link href="https://www.alecoq.ee" target="_blank">
               <Image
                 src="/sponsors/alecoq.svg"
                 alt="Alecoq"
@@ -163,7 +163,7 @@ export default function Home() {
                 className="object-contain"
               />
             </Link>
-            <Link href="https://www.simracing.ee/">
+            <Link href="https://www.simracing.ee/" target="_blank">
               <Image
                 src="/sponsors/EVAL.png"
                 alt="EVAL"
@@ -172,7 +172,7 @@ export default function Home() {
                 className="object-contain"
               />
             </Link>
-            <Link href="https://balsnack.ee">
+            <Link href="https://balsnack.ee" target="_blank">
               <Image
                 src="/sponsors/balsnack.svg"
                 alt="Balsnack"
@@ -181,8 +181,11 @@ export default function Home() {
                 className="object-contain"
               />
             </Link>
-            <Link href="https://www.rara.ee/sundmused/interaktiivne-videomangude-muuseum-lvlup/">
-              <Image 
+            <Link
+              href="https://www.rara.ee/sundmused/interaktiivne-videomangude-muuseum-lvlup/"
+              target="_blank"
+            >
+              <Image
                 src="/sponsors/lvlup_logo_export.svg"
                 alt="LVLup!"
                 width={192}
@@ -190,8 +193,8 @@ export default function Home() {
                 className="object-contain"
               />
             </Link>
-            <Link href="https://www.facebook.com/bfglOfficial">
-              <Image 
+            <Link href="https://www.facebook.com/bfglOfficial" target="_blank">
+              <Image
                 src="/sponsors/BFGL.png"
                 alt="BFGL"
                 width={192}
