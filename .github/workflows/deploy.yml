@@ -1,0 +1,17 @@
+name: deploy
+
+on:
+  workflow_call:
+
+jobs:
+  deploy:
+    runs-on: prox-1
+    steps:
+      - name: Restart NextJS service
+        run: sudo systemctl restart nextjs.service
+
+      - name: Reload systemd daemon
+        run: sudo systemctl daemon-reload
+
+      - name: Check service status
+        run: sudo systemctl status nextjs.service --no-pager
