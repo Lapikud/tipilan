@@ -18,6 +18,11 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+      - name: Ensure symlink to database before Drizzle migrations
+        run: |
+          rm -rf $GITHUB_WORKSPACE/data
+          ln -s ~/data $GITHUB_WORKSPACE/data
+
       - name: Generate Drizzle schema
         run: bun drizzle-kit generate
 
