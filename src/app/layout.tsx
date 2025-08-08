@@ -17,8 +17,6 @@ const workSans = Work_Sans({
   subsets: ["latin"],
 });
 
-// Commented out for now, because it doesn't work having client components in the layout file
-
 export const metadata: Metadata = {
   title: "TipiLAN 2025",
   description: "TipiLAN 2025 – Eesti suurim tudengite korraldatud LAN!",

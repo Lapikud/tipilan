@@ -1,7 +1,10 @@
 import { db } from "@/db/drizzle";
-import { users, teams, members, tournamentTeams } from "@/db/schema";
+import { users } from "@/db/schema/users";
+import { teams } from "@/db/schema/teams";
+import { members } from "@/db/schema/members";
+import { tournamentTeams } from "@/db/schema/tournaments";
 import { eq, and, isNull } from "drizzle-orm";
-import { RoleEnum, type Role } from "@/db/schema";
+import { RoleEnum, type Role } from "@/db/schema/types";
 
 // Types based on the Fienta API response
 export interface FientaApiResponse {

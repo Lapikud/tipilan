@@ -1,5 +1,7 @@
 import type { InferSelectModel } from "drizzle-orm";
-import { users, teams, members } from "@/db/schema";
+import { users } from "@/db/schema/users";
+import { teams } from "@/db/schema/teams";
+import { members } from "@/db/schema/members";
 
 // Base types from schema
 export type User = InferSelectModel<typeof users>;
