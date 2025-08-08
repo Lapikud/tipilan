@@ -8,7 +8,11 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/build.yml
+    secrets:
+      USER_AUTH: ${{ secrets.USER_AUTH }}
 
   deploy:
     needs: build
     uses: ./.github/workflows/deploy.yml
+    secrets:
+      USER_AUTH: ${{ secrets.USER_AUTH }}
