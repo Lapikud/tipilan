@@ -41,7 +41,7 @@ export default function Tourney() {
                         </p>
                         <br />
                         <div className={"flex flex-row flex-wrap gap-8"}>
-                            <Link href="/kodukord" target="_blank">
+                            <Link href="/reeglid/cs2" target="_blank">
                                 <button
                                     className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic`}
                                 >
@@ -83,7 +83,7 @@ export default function Tourney() {
                     </p>
                     <br />
                     <div className="flex flex-row flex-wrap gap-8 justify-end">
-                        <Link href="/kodukord" target="_blank">
+                        <Link href="/reeglid/lol" target="_blank">
                         <button
                             className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic`}
                         >
