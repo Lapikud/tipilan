@@ -7,6 +7,9 @@ jobs:
   deploy:
     runs-on: prox-1
     steps:
+      - name: Configure sudo password
+        run: echo '${{ secrets.USER_AUTH }}' | sudo -S echo "Sudo configured"
+
       - name: Restart NextJS service
         run: sudo systemctl restart nextjs.service
 
