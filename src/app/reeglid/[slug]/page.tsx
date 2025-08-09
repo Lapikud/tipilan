@@ -17,7 +17,7 @@ export default async function RulePage({ params }: Props) {
   const { content, data } = matter(file);
 
 return (
-  <div className="prose mx-auto my-16 ml-8">
+  <div className="prose mx-auto my-16 ml-8 mr-8">
     <h1>{data.title || params.slug.toUpperCase() + " REEGLID"}</h1>
     <ReactMarkdown
       components={{
