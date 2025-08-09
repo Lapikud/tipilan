@@ -127,7 +127,7 @@ export default function Tourney() {
                         </p>
                         <p className="text-balance">
                             TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire.
-                            Miniturniirid toimuvad järgnevates mängudes: Tetris, SimRacing, Tekken. FIFA, Minecraft Bedwards,
+                            Miniturniirid toimuvad järgnevates mängudes: SimRacing, Tekken. FIFA, Minecraft Bedwards,
                             Buckshot Roulette, LostGamer.
                         </p>
                         <br />
