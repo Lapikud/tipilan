@@ -1,5 +1,6 @@
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Tourney() {
     const headingStyle = `text-3xl md:text-5xl lg:text-5xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] -skew-x-2 md:-skew-x-5`;
@@ -19,8 +20,9 @@ export default function Tourney() {
                 {/*  infot lähiajal.*/}
                 {/*</p>*/}
             <div className="flex flex-col gap-8 md:gap-16">
-                <div className={"flex flex-row gap-8 md:gap-16"}>
-                    <div className={"flex-auto ml-8 md:ml-28 -skew-x-2 md:-skew-x-5"}>
+                {/* CS2 turniir */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
+                    <div className="-skew-x-2 md:-skew-x-5">
                         <h2 className={`${headingStyle}`}>
                             CS2 turniir
                         </h2>
@@ -39,7 +41,7 @@ export default function Tourney() {
                             saavutatud kohale auhinnaks kas 600€, 300€ või 150€.
                         </p>
                         <br />
-                        <div className={"flex flex-row flex-wrap gap-4 md:gap-8"}>
+                        <div className="flex flex-row flex-wrap gap-4 md:gap-8">
                             <Link href="/kodukord" target="_blank">
                                 <button
                                     className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic`}
@@ -56,12 +58,14 @@ export default function Tourney() {
                             </a>
                         </div>
                     </div>
-                    <div className={"hidden md:block mr-4 md:mr-40 md:w-180"}>
-                        <div className={"-skew-x-2 md:-skew-x-5"}>
+                    <div className="hidden md:block">
+                        <div className="-skew-x-2 md:-skew-x-5">
                             {/* Image needs to be the div that has the skew. Outside div needs to remain so that overflow wont occur*/}
-                            <img
-                                src="images/cs2_tournament.png"
+                            <Image
+                                src="/images/cs2_tournament.png"
                                 alt="CS2 tournament"
+                                width={600}
+                                height={400}
                             />
                         </div>
                     </div>
@@ -69,17 +73,20 @@ export default function Tourney() {
 
                 <SectionDivider />
 
-                <div className={"flex flex-row gap-8 md:gap-16"}>
-                    <div className={"hidden md:block ml-4 md:ml-40 md:w-200"}>
-                        <div className={"-skew-x-2 md:-skew-x-5"}>
+                {/* LoL turniir */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
+                    <div className="hidden md:block">
+                        <div className="-skew-x-2 md:-skew-x-5">
                             {/* Image needs to be the div that has the skew. Outside div needs to remain so that overflow wont occur*/}
-                            <img
-                                src="images/lol_tournament.png"
+                            <Image
+                                src="/images/lol_tournament.png"
                                 alt="LoL tournament"
+                                width={600}
+                                height={400}
                             />
                         </div>
                     </div>
-                    <div className={"flex-auto mr-8 md:mr-42 text-right -skew-x-2 md:-skew-x-5"}>
+                    <div className="flex-auto text-right -skew-x-2 md:-skew-x-5">
                         <h2 className={`${headingStyle}`}>
                             LoL turniir
                         </h2>
@@ -117,8 +124,9 @@ export default function Tourney() {
 
                 <SectionDivider />
 
-                <div className={"flex flex-row gap-8 md:gap-16"}>
-                    <div className={"ml-8 md:ml-40 -skew-x-2 md:-skew-x-5"}>
+                {/* Mini-turniirid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
+                    <div className="-skew-x-2 md:-skew-x-5">
                         <h2 className={`${headingStyle}`}>
                             Mini&shy;turniirid
                         </h2>
@@ -135,7 +143,7 @@ export default function Tourney() {
                             Auhinnafond on kõigi turniiride peale 1250€ ja reeglina saab rahalise auhinna miniturniiri võitja.
                         </p>
                         <br />
-                        <div className={"flex flex-row flex-wrap gap-4 md:gap-8"}>
+                        <div className="flex flex-row flex-wrap gap-4 md:gap-8">
                             <Link href="/kodukord" target="_blank">
                                 <button
                                     className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic`}
@@ -152,12 +160,14 @@ export default function Tourney() {
                             </a>
                         </div>
                     </div>
-                    <div className="hidden md:block mr-4 md:mr-40 md:w-260">
+                    <div className="hidden md:block">
                         <div className="-skew-x-2 md:-skew-x-5">
                             {/* Image needs to be the div that has the skew. Outside div needs to remain so that overflow wont occur*/}
-                            <img
-                                src="images/minitournament.png"
+                            <Image
+                                src="/images/minitournament.png"
                                 alt="mini tournaments"
+                                width={600}
+                                height={400}
                             />
                         </div>
                     </div>
