@@ -308,7 +308,7 @@ export default function Expo() {
   return (
     <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
       <h1
-        className={`text-5xl sm:text-6xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 mb-4`}
+        className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4 uppercase`}
       >
         Messiala
       </h1>
