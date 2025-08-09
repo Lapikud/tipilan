@@ -56,20 +56,27 @@ export default function Tourney() {
                             </a>
                         </div>
                     </div>
-                    <div className={"mr-4 md:mr-40 md:w-180"}>
+                    <div className={"hidden md:block mr-4 md:mr-40 md:w-180"}>
                         <div className={"-skew-x-2 md:-skew-x-5"}>
                             {/* Image needs to be the div that has the skew. Outside div needs to remain so that overflow wont occur*/}
+                            <img
+                                src="images/cs2_tournament.png"
+                                alt="CS2 tournament"
+                            />
                         </div>
                     </div>
-                    {/* Image placeholder */}
                 </div>
 
                 <SectionDivider />
 
                 <div className={"flex flex-row gap-8 md:gap-16"}>
-                    <div className={"ml-4 md:ml-40 md:w-180"}>
+                    <div className={"hidden md:block ml-4 md:ml-40 md:w-200"}>
                         <div className={"-skew-x-2 md:-skew-x-5"}>
                             {/* Image needs to be the div that has the skew. Outside div needs to remain so that overflow wont occur*/}
+                            <img
+                                src="images/lol_tournament.png"
+                                alt="LoL tournament"
+                            />
                         </div>
                     </div>
                     <div className={"flex-auto mr-8 md:mr-42 text-right -skew-x-2 md:-skew-x-5"}>
@@ -145,12 +152,15 @@ export default function Tourney() {
                             </a>
                         </div>
                     </div>
-                    <div className={"mr-4 md:mr-40 md:w-180"}>
-                        <div className={"-skew-x-2 md:-skew-x-5"}>
+                    <div className="hidden md:block mr-4 md:mr-40 md:w-260">
+                        <div className="-skew-x-2 md:-skew-x-5">
                             {/* Image needs to be the div that has the skew. Outside div needs to remain so that overflow wont occur*/}
+                            <img
+                                src="images/minitournament.png"
+                                alt="mini tournaments"
+                            />
                         </div>
                     </div>
-                    {/* Image placeholder */}
                 </div>
 
                 <SectionDivider />
