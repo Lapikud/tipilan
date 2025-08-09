@@ -2,11 +2,19 @@ name: build
 
 on:
   workflow_call:
+    secrets:
+      USER_AUTH:
+        required: true
 
 jobs:
   build:
     runs-on: prox-1
     steps:
+      - name: Clear .next cache
+        env:
+          SUDO_PASSWORD: ${{ secrets.USER_AUTH }}
+        run: echo "$SUDO_PASSWORD" | sudo -S rm -rf $GITHUB_WORKSPACE/.next
+
       - name: Checkout code
         uses: actions/checkout@v4
 

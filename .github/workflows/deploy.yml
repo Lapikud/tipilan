@@ -2,16 +2,25 @@ name: deploy
 
 on:
   workflow_call:
+    secrets:
+      USER_AUTH:
+        required: true
 
 jobs:
   deploy:
     runs-on: prox-1
     steps:
       - name: Restart NextJS service
-        run: sudo systemctl restart nextjs.service
+        env:
+          SUDO_PASSWORD: ${{ secrets.USER_AUTH }}
+        run: echo "$SUDO_PASSWORD" | sudo -S systemctl restart nextjs.service
 
       - name: Reload systemd daemon
-        run: sudo systemctl daemon-reload
+        env:
+          SUDO_PASSWORD: ${{ secrets.USER_AUTH }}
+        run: echo "$SUDO_PASSWORD" | sudo -S systemctl daemon-reload
 
       - name: Check service status
-        run: sudo systemctl status nextjs.service --no-pager
+        env:
+          SUDO_PASSWORD: ${{ secrets.USER_AUTH }}
+        run: echo "$SUDO_PASSWORD" | sudo -S systemctl status nextjs.service --no-pager
