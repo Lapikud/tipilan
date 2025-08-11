@@ -3,14 +3,25 @@
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import * as THREE from "three";
 import { useEffect, useRef, useState } from "react";
+import { EyeClosed, Eye } from "lucide-react";
+
+// Define interface for the ref with toggle function
+interface MountRefCurrent extends HTMLDivElement {
+  toggleDividers?: (show: boolean) => void;
+}
 
 export default function Expo() {
-  const mountRef = useRef<HTMLDivElement>(null);
+  const mountRef = useRef<MountRefCurrent | null>(null);
   const [hoveredRoom, setHoveredRoom] = useState<string | null>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [showDividers, setShowDividers] = useState<boolean>(true);
 
   useEffect(() => {
     if (!mountRef.current) return;
+
+    // Copy ref to variable to avoid stale closure in cleanup
+    const mountElement = mountRef.current;
+    let dividersRef: THREE.Mesh[] = [];
 
     // Scene setup
     const scene = new THREE.Scene();
@@ -53,7 +64,7 @@ export default function Expo() {
     renderer.setSize(width, height);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    mountRef.current.appendChild(renderer.domElement);
+    mountElement.appendChild(renderer.domElement);
 
     // Raycaster for mouse interactions
     const raycaster = new THREE.Raycaster();
@@ -99,6 +110,7 @@ export default function Expo() {
       originalColor: number;
       originalScale: THREE.Vector3;
     }> = [];
+    const dividers: THREE.Mesh[] = [];
 
     // Define rooms with custom positions, sizes and colors
     const roomDefinitions = [
@@ -130,11 +142,11 @@ export default function Expo() {
         name: roomNames[2],
       }, // EVAL
       {
-        width: 2,
+        width: 2.2,
         height: 0.7,
-        depth: 4,
+        depth: 4.5,
         x: 5,
-        z: -1.7,
+        z: -2,
         color: roomColors[3],
         name: roomNames[3],
       }, // Redbull
@@ -193,6 +205,35 @@ export default function Expo() {
       });
     });
 
+    // Create toggleable room dividers
+    const createTogglableDivider = (
+      width: number,
+      height: number,
+      depth: number,
+      x: number,
+      z: number,
+    ) => {
+      const wallGeometry = new THREE.BoxGeometry(width, height, depth);
+      const wallMaterial = new THREE.MeshLambertMaterial({
+        color: 0x555555,
+        transparent: true,
+        opacity: 0,
+      });
+
+      const wall = new THREE.Mesh(wallGeometry, wallMaterial);
+      wall.position.set(x, height / 2, z);
+      wall.visible = false;
+      scene.add(wall);
+      dividers.push(wall);
+    };
+
+    // Add strategic dividers between major areas
+    createTogglableDivider(10, 2, 2, -2.5, 1.5); // Wall between main entrance
+    createTogglableDivider(2, 2, 2, 5.5, 1.5); // Wall right next to Mänguklubi & Redbull
+
+    // Store dividers reference for later access
+    dividersRef = [...dividers];
+
     // Ground plane
     const groundGeometry = new THREE.PlaneGeometry(14, 10.5);
     const groundMaterial = new THREE.MeshLambertMaterial({ color: 0xcccccc });
@@ -205,7 +246,9 @@ export default function Expo() {
 
     // Second ground plane
     const groundGeometry2 = new THREE.PlaneGeometry(2, 7);
-    const groundMaterial2 = new THREE.MeshLambertMaterial({ color: 0xcccccc });
+    const groundMaterial2 = new THREE.MeshLambertMaterial({
+      color: 0xcccccc,
+    });
     const ground2 = new THREE.Mesh(groundGeometry2, groundMaterial2);
     ground2.rotation.x = -Math.PI / 2;
     ground2.position.x = -12.2;
@@ -294,16 +337,36 @@ export default function Expo() {
 
     animate();
 
+    // Function to toggle dividers
+    const toggleDividers = (show: boolean) => {
+      dividersRef.forEach((divider) => {
+        divider.visible = show;
+        (divider.material as THREE.MeshLambertMaterial).opacity = show
+          ? 0.4
+          : 0;
+      });
+    };
+
+    // Expose toggle function to parent scope
+    mountElement.toggleDividers = toggleDividers;
+
     // Cleanup
     return () => {
       window.removeEventListener("resize", handleResize);
       renderer.domElement.removeEventListener("mousemove", onMouseMove);
-      if (mountRef.current && renderer.domElement) {
-        mountRef.current.removeChild(renderer.domElement);
+      if (mountElement && renderer.domElement) {
+        mountElement.removeChild(renderer.domElement);
       }
       renderer.dispose();
     };
   }, []);
+
+  // Update dividers when showDividers state changes
+  useEffect(() => {
+    if (mountRef.current?.toggleDividers) {
+      mountRef.current.toggleDividers(showDividers);
+    }
+  }, [showDividers]);
 
   return (
     <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
@@ -316,7 +379,7 @@ export default function Expo() {
         <h2 className="text-2xl text-[#2A2C3F] dark:text-[#EEE5E5] mb-3">
           Tudengimaja
         </h2>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 pb-4">
           <div className="flex items-center gap-2">
             <div
               className="w-4 h-4 border border-gray-300"
@@ -381,10 +444,22 @@ export default function Expo() {
             </span>
           </div>
         </div>
-      </div>
-      <div className="flex flex-col lg:flex-row gap-8 items-start">
-        <div className="flex-shrink-0 border-3 border-[#1F5673] w-full max-w-[800px]">
-          <div ref={mountRef} className="w-full" />
+        <div className="flex flex-col lg:flex-row gap-8 items-start">
+          <div className="flex-shrink-0 border-3 border-[#1F5673] w-full max-w-[800px] relative">
+            <div ref={mountRef} className="w-full" />
+            <button
+              onClick={() => setShowDividers(!showDividers)}
+              className={`absolute top-2 right-2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10`}
+            >
+              {showDividers ? (
+                <EyeClosed className="w-6 h-6 mr-2" />
+              ) : (
+                <Eye className="w-6 h-6 mr-2" />
+              )}
+
+              {showDividers ? "Peida" : "Näita"}
+            </button>
+          </div>
         </div>
 
         {/* Tooltip */}
