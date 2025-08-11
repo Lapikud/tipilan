@@ -5,22 +5,22 @@ import Image from "next/image";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 
 const Footer = () => (
-  <div className="flex flex-col justify-center sm:justify-between px-12 py-16 gap-8">
-    <div className="flex items-center justify-center sm:justify-between">
-      <div className="flex flex-col gap-4 items-center">
+  <div className="flex flex-col justify-center sm:justify-between px-6 py-8 md:px-12 md:py-16 gap-4 md:gap-8">
+    <div className="flex md:items-center gap-8 md:gap-0 justify-between flex-col md:flex-row">
+      <div className="flex flex-col items-start md:items-center">
         <Image
           src="/tipilan-white.svg"
-          width={300}
-          height={50}
+          width={250}
+          height={36}
           alt="TipiLAN Logo"
-          className="h-9 ml-3 dark:hidden"
+          className="h-9 dark:hidden"
         />
         <Image
           src="/tipilan-dark.svg"
-          width={300}
-          height={50}
+          width={250}
+          height={36}
           alt="TipiLAN Logo"
-          className="h-9 ml-3 not-dark:hidden"
+          className="h-9 not-dark:hidden"
         />
       </div>
       {/* Social media */}
@@ -28,7 +28,7 @@ const Footer = () => (
         <a
           href="https://discord.gg/eB7sVqgJ9b"
           target="_blank"
-          className="mx-4"
+          className="mx-4 ml-0 md:ml-4"
           rel="noopener noreferrer"
         >
           <SiDiscord
@@ -63,7 +63,7 @@ const Footer = () => (
         </a>
       </div>
     </div>
-    <div className="flex flex-col gap-4 ml-9">
+    <div className="flex flex-col">
       <h2
         className={`text-3xl sm:text-4xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 mb-4`}
       >

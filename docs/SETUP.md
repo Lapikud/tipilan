@@ -3,6 +3,7 @@
 ## Prerequisites
 - Git
 - Bun
+- If on Windows, it's recommended to use WSL (Windows Subsystem for Linux) and do the following steps there.
 
 ## Installation
 
@@ -48,6 +49,6 @@
    git push origin <branch-name>
    ```
 - Create a pull request:
-   ```bash
-   git pull-request
+   Go to Github,
+    open up this project's repository and make a new pull request.
    ```

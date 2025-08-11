@@ -4,11 +4,11 @@ export default function Rulebook() {
   return (
     <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
       <h1
-        className={`text-5xl sm:text-6xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 mb-4`}
+        className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4 uppercase`}
       >
         Kodukord
       </h1>
-      <ol className="list-decimal ml-6 text-xl text-[#2A2C3F] dark:text-[#EEE5E5] y-4">
+      <ol className="list-decimal ml-6 md:text-xl text-[#2A2C3F] dark:text-[#EEE5E5] y-4">
         <li>
           Keelatud on:
           <ol className="list-[lower-alpha] ml-6 y-2">
@@ -54,7 +54,7 @@ export default function Rulebook() {
           vanusepiirangutest
         </li>
       </ol>
-      <p className="text-xl text-[#2A2C3F] dark:text-[#EEE5E5] y-4 mt-4">
+      <p className="md:text-xl text-[#2A2C3F] dark:text-[#EEE5E5] y-4 mt-4">
         NB! Reeglite rikkumise puhul on korraldajatel õigus mängija (koos tema
         meeskonnaga) eemaldada ja rakendada edasist keeldu TipiLAN-i üritustelt.
       </p>
