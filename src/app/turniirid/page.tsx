@@ -41,8 +41,9 @@ export default function Tourney() {
                             saavutatud kohale auhinnaks kas 600€, 300€ või 150€.
                         </p>
                         <br />
-                        <div className="flex flex-row flex-wrap gap-4 md:gap-8">
-                            <Link href="/kodukord" target="_blank">
+
+                        <div className={"flex flex-row flex-wrap gap-8"}>
+                            <Link href="/reeglid/cs2" target="_blank">
                                 <button
                                     className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic`}
                                 >
@@ -72,6 +73,7 @@ export default function Tourney() {
                 </div>
 
                 <SectionDivider />
+
 
                 {/* LoL turniir */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
@@ -119,6 +121,8 @@ export default function Tourney() {
                                 </button>
                             </a>
                         </div>
+
+           
                     </div>
                 </div>
 
