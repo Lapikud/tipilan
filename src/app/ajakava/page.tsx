@@ -11,9 +11,9 @@ export default function Timetable() {
   const schedule = scheduleData[activeTab];
 
   return (
-    <div className="flex flex-col min-h-[90vh] p-6 sm:p-12 pt-18">
+    <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
       <h1
-        className={`text-5xl sm:text-6xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mt-14 mb-8`}
+        className={`text-5xl sm:text-6xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-8`}
       >
         Ajakava
       </h1>
