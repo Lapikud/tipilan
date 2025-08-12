@@ -9,16 +9,16 @@ export default function Tourney() {
 
     return (
         <div className="flex flex-col min-h-[90vh] mt-16">
-                <h1
-                    className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4 m-6 md:m-16`}
-                >
-                    Turniirid
-                </h1>
+            <h1
+                className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4 m-6 md:m-16`}
+            >
+                Turniirid
+            </h1>
 
-                {/*<p className="text-2xl text-[#2A2C3F] dark:text-[#EEE5E5]">*/}
-                {/*  Kui tahate oma oskusi proovile panna, siis vaadake siia tagasi! Rohkem*/}
-                {/*  infot lähiajal.*/}
-                {/*</p>*/}
+            {/*<p className="text-2xl text-[#2A2C3F] dark:text-[#EEE5E5]">*/}
+            {/*  Kui tahate oma oskusi proovile panna, siis vaadake siia tagasi! Rohkem*/}
+            {/*  infot lähiajal.*/}
+            {/*</p>*/}
             <div className="flex flex-col gap-8 md:gap-16">
                 {/* CS2 turniir */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
@@ -62,7 +62,7 @@ export default function Tourney() {
                         <div className="-skew-x-2 md:-skew-x-5">
                             {/* Image needs to be the div that has the skew. Outside div needs to remain so that overflow wont occur*/}
                             <Image
-                                src="/images/cs2_tournament.png"
+                                src="/images/cs2_tournament_logo.png"
                                 alt="CS2 tournament"
                                 width={600}
                                 height={400}
@@ -79,7 +79,7 @@ export default function Tourney() {
                         <div className="-skew-x-2 md:-skew-x-5">
                             {/* Image needs to be the div that has the skew. Outside div needs to remain so that overflow wont occur*/}
                             <Image
-                                src="/images/lol_tournament.png"
+                                src="/images/lol_tournament_logo.png"
                                 alt="LoL tournament"
                                 width={600}
                                 height={400}
@@ -105,11 +105,11 @@ export default function Tourney() {
                         <br />
                         <div className="flex flex-row flex-wrap gap-4 md:gap-8 justify-end">
                             <Link href="/kodukord" target="_blank">
-                            <button
-                                className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic`}
-                            >
-                                LOE REEGLEID
-                            </button>
+                                <button
+                                    className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic`}
+                                >
+                                    LOE REEGLEID
+                                </button>
                             </Link>
                             <a href="https://fienta.com/et/tipilan" target="_blank">
                                 <button
@@ -164,7 +164,7 @@ export default function Tourney() {
                         <div className="-skew-x-2 md:-skew-x-5">
                             {/* Image needs to be the div that has the skew. Outside div needs to remain so that overflow wont occur*/}
                             <Image
-                                src="/images/minitournament.png"
+                                src="/images/minitournament_logo.png"
                                 alt="mini tournaments"
                                 width={600}
                                 height={400}
