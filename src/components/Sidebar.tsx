@@ -72,6 +72,14 @@ const Sidebar = ({
         >
           Kodukord
         </Link>
+        <Link 
+            href="/reeglid"
+            className="hover:text-[#00A3E0] transition duration-150"
+        >
+          Reeglid
+        </Link>
+              
+              
       </div>
     </>
   );
