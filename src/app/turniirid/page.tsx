@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Tourney() {
-    const headingStyle = `text-3xl md:text-5xl lg:text-5xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] -skew-x-2 md:-skew-x-5`;
+    const headingStyle = `text-3xl md:text-5xl lg:text-5xl ${vipnagorgialla.className} font-bold uppercase text-[#2A2C3F] dark:text-[#EEE5E5] -skew-x-2 md:-skew-x-5`;
 
     const SectionDivider = () => <hr className="border-t-[3px] border-[#1F5673]" />;
 
@@ -19,6 +19,7 @@ export default function Tourney() {
             {/*  Kui tahate oma oskusi proovile panna, siis vaadake siia tagasi! Rohkem*/}
             {/*  infot lähiajal.*/}
             {/*</p>*/}
+            
             <div className="flex flex-col gap-8 md:gap-16">
                 {/* CS2 turniir */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
@@ -60,8 +61,8 @@ export default function Tourney() {
                         </div>
                     </div>
                     <div className="hidden md:block">
-                        <div className="-skew-x-2 md:-skew-x-5">
-                            {/* Image needs to be the div that has the skew. Outside div needs to remain so that overflow wont occur*/}
+                        <div>
+                            {/* Outside div needs to remain so that overflow won't occur*/}
                             <Image
                                 src="/images/cs2_tournament_logo.png"
                                 alt="CS2 tournament"
@@ -78,8 +79,8 @@ export default function Tourney() {
                 {/* LoL turniir */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
                     <div className="hidden md:block">
-                        <div className="-skew-x-2 md:-skew-x-5">
-                            {/* Image needs to be the div that has the skew. Outside div needs to remain so that overflow wont occur*/}
+                        <div>
+                            {/* Outside div needs to remain so that overflow won't occur*/}
                             <Image
                                 src="/images/lol_tournament_logo.png"
                                 alt="LoL tournament"
@@ -165,8 +166,8 @@ export default function Tourney() {
                         </div>
                     </div>
                     <div className="hidden md:block">
-                        <div className="-skew-x-2 md:-skew-x-5">
-                            {/* Image needs to be the div that has the skew. Outside div needs to remain so that overflow wont occur*/}
+                        <div>
+                            {/* Outside div needs to remain so that overflow won't occur*/}
                             <Image
                                 src="/images/minitournament_logo.png"
                                 alt="mini tournaments"
