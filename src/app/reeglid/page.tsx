@@ -1,5 +1,6 @@
 import {vipnagorgialla} from "@/components/Vipnagorgialla";
 import Link from "next/link";
+import SectionDivider from "@/components/SectionDivider";
 
 export default function RulesMenu() {
     const headingStyle = `text-5xl sm:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5]`;
@@ -8,7 +9,7 @@ export default function RulesMenu() {
     
     const boxTextStyle = `text-3xl ${vipnagorgialla.className} font-bold uppercase text-[#EEE5E5] pb-2`;
 
-    const SectionDivider = () => <div className="border-b-[3px] border-[#1F5673] w-full"/>;
+    // const SectionDivider = () => <div className="border-b-[3px] border-[#1F5673] w-full"/>;
 
     return (
         <div>
