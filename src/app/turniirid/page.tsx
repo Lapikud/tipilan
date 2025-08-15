@@ -1,11 +1,12 @@
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import Link from "next/link";
 import Image from "next/image";
+import SectionDivider from "@/components/SectionDivider";
 
 export default function Tourney() {
     const headingStyle = `text-3xl md:text-5xl lg:text-5xl ${vipnagorgialla.className} font-bold uppercase text-[#2A2C3F] dark:text-[#EEE5E5] -skew-x-2 md:-skew-x-5`;
 
-    const SectionDivider = () => <hr className="border-t-[3px] border-[#1F5673]" />;
+    // const SectionDivider = () => <hr className="border-t-[3px] border-[#1F5673]" />;
 
     return (
         <div className="flex flex-col min-h-[90vh] mt-16">
@@ -74,8 +75,7 @@ export default function Tourney() {
                 </div>
 
                 <SectionDivider />
-
-
+                
                 {/* LoL turniir */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
                     <div className="hidden md:block">
