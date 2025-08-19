@@ -107,7 +107,7 @@ export default function Tourney() {
               </p>
               <br />
               <div className="flex flex-row flex-wrap gap-4 md:gap-8 justify-end">
-                <Link href="/kodukord" target="_blank">
+                <Link href="/reeglid/lol" target="_blank">
                   <button
                     className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
                   >
