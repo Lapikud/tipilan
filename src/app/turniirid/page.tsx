@@ -4,22 +4,16 @@ import Image from "next/image";
 
 export default function Tourney() {
   const headingStyle = `text-3xl md:text-5xl lg:text-5xl ${vipnagorgialla.className} font-bold uppercase text-[#2A2C3F] dark:text-[#EEE5E5] -skew-x-2 md:-skew-x-5`;
-
-  // const SectionDivider = () => <hr className="border-t-[3px] border-[#1F5673]" />;
-
+  
   return (
     <div className="flex flex-col min-h-[90vh] mt-16">
       <h1
-        className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4 m-6 md:m-16`}
+        className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic uppercase 
+                text-[#2A2C3F] dark:text-[#EEE5E5] md:m-16`}
       >
         Turniirid
       </h1>
-
-      {/*<p className="text-2xl text-[#2A2C3F] dark:text-[#EEE5E5]">*/}
-      {/*  Kui tahate oma oskusi proovile panna, siis vaadake siia tagasi! Rohkem*/}
-      {/*  infot lähiajal.*/}
-      {/*</p>*/}
-
+      
       <div className="flex flex-col">
         {/* CS2 turniir */}
         <div className="hover:bg-[#007CAB] py-8 md:py-16 transition group">
@@ -133,7 +127,7 @@ export default function Tourney() {
         </div>
 
         {/* Mini-turniirid */}
-        <div className="hover:bg-[#007CAB] py-8 md:py-16 border-t-[3px] border-[#1F5673] transition group">
+        <div className="hover:bg-[#007CAB] py-8 md:py-16 border-t-[3px] border-b-[3px] border-[#1F5673] transition group">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
             <div className="-skew-x-2 md:-skew-x-5">
               <h2 className={`${headingStyle}`}>Mini&shy;turniirid</h2>

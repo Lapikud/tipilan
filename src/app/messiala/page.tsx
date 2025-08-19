@@ -4,6 +4,7 @@ import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import * as THREE from "three";
 import { useEffect, useRef, useState } from "react";
 import { EyeClosed, Eye } from "lucide-react";
+import SectionDivider from "@/components/SectionDivider";
 
 // Define interface for the ref with toggle function
 interface MountRefCurrent extends HTMLDivElement {
@@ -379,121 +380,125 @@ export default function Expo() {
   }, [showDividers]);
 
   return (
-    <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
-      <h1
-        className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4 uppercase`}
-      >
-        Messiala
-      </h1>
-      <div className="mb-6">
-        <h2 className="text-2xl text-[#2A2C3F] dark:text-[#EEE5E5] mb-3">
-          Tudengimaja
-        </h2>
-        <div className="flex flex-wrap gap-4 pb-4">
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#4ecdc4" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              Baariala
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#ffe66d" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              EVAL
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#343434" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              Lauamängude ala
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#080682" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              LVLup!
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#C02841" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              Red Bull
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#ff6600" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              Red Bull Sim Racing
-            </span>
-          </div>
-          <div className="items-center gap-2 hidden">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#3498db" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              Sony
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#ff1493" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              Võitlusmängu ala
-            </span>
-          </div>
-        </div>
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
-          <div className="flex-shrink-0 border-3 border-[#1F5673] w-full max-w-[800px] relative">
-            <div ref={mountRef} className="w-full" />
-            <button
-              onClick={() => setShowDividers(!showDividers)}
-              className={`absolute top-2 right-2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10`}
-            >
-              {showDividers ? (
-                <EyeClosed className="w-6 h-6 mr-2" />
-              ) : (
-                <Eye className="w-6 h-6 mr-2" />
-              )}
-
-              {showDividers ? "Peida" : "Näita"}
-            </button>
-          </div>
-        </div>
-
-        {/* Tooltip */}
-        {hoveredRoom && (
-          <div
-            className="fixed bg-black bg-opacity-80 text-white px-3 py-2 rounded-lg text-sm pointer-events-none z-50"
-            style={{
-              left: mousePosition.x + 10,
-              top: mousePosition.y - 10,
-            }}
+      <div> 
+        <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16 ">
+          <h1
+            className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4 uppercase`}
           >
-            {hoveredRoom}
+            Messiala
+          </h1>
+          <div className="mb-6">
+            <h2 className="text-2xl text-[#2A2C3F] dark:text-[#EEE5E5] mb-3">
+              Tudengimaja
+            </h2>
+            <div className="flex flex-wrap gap-4 pb-4">
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#4ecdc4" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  Baariala
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#ffe66d" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  EVAL
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#343434" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  Lauamängude ala
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#080682" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  LVLup!
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#C02841" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  Red Bull
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#ff6600" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  Red Bull Sim Racing
+                </span>
+              </div>
+              <div className="items-center gap-2 hidden">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#3498db" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  Sony
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#ff1493" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  Võitlusmängu ala
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-col lg:flex-row gap-8 items-start">
+              <div className="flex-shrink-0 border-3 border-[#1F5673] w-full max-w-[800px] relative">
+                <div ref={mountRef} className="w-full" />
+                <button
+                  onClick={() => setShowDividers(!showDividers)}
+                  className={`absolute top-2 right-2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10`}
+                >
+                  {showDividers ? (
+                    <EyeClosed className="w-6 h-6 mr-2" />
+                  ) : (
+                    <Eye className="w-6 h-6 mr-2" />
+                  )}
+    
+                  {showDividers ? "Peida" : "Näita"}
+                </button>
+              </div>
+            </div>
+    
+            {/* Tooltip */}
+            {hoveredRoom && (
+              <div
+                className="fixed bg-black bg-opacity-80 text-white px-3 py-2 rounded-lg text-sm pointer-events-none z-50"
+                style={{
+                  left: mousePosition.x + 10,
+                  top: mousePosition.y - 10,
+                }}
+              >
+                {hoveredRoom}
+              </div>
+            )}
           </div>
-        )}
-      </div>
+        </div>
+          
+      <SectionDivider />
     </div>
   );
 }
