@@ -26,7 +26,7 @@ export default function Timetable() {
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            className={`${vipnagorgialla.className} uppercase italic px-4 py-2 text-lg font-semibold ${
+                            className={`${vipnagorgialla.className} cursor-pointer uppercase italic px-4 py-2 text-lg font-semibold ${
                                 activeTab === tab
                                     ? "bg-[#00A3E0] text-white"
                                     : "bg-[#007CAB] dark:bg-[#007CAB] text-[#EEE5E5] hover:bg-[#00A3E0] dark:hover:bg-[#007CAB]"

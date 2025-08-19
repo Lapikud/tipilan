@@ -8,6 +8,11 @@ export type ScheduleItem = {
 export const scheduleData: Record<string, ScheduleItem[]> = {
   "24. oktoober": [
     {
+      title: "Uksed avatakse",
+      location: "Registreerimine ja setup aulas",
+      time: "17.00",
+    },
+    {
       title: "League of Legends põhiturniir",
       location: "Aula",
       time: "-",
@@ -17,6 +22,7 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       location: "Tudengimaja",
       time: "-",
     },
+    
   ],
   "25. oktoober": [
     {
