@@ -50,7 +50,7 @@ export default function Home() {
         {/* Stream iframe from Twitch */}
         <div className="border-[#1F5673] -ml-0.75 border-l-0 md:border-l-3 border-b-3 h-full pt-0 md:pt-16">
           <iframe
-            src="https://player.twitch.tv/?channel=shroud&parent=localhost&parent=tipilan.ee"
+            src="https://player.twitch.tv/?channel=tipilan_ee&parent=localhost&parent=tipilan.ee"
             height="100%"
             width="100%"
             className="w-full h-full min-h-[400px]"
