@@ -1,49 +1,103 @@
-import {vipnagorgialla} from "@/components/Vipnagorgialla";
-import path from "node:path";
-import fs from "node:fs/promises";
-import ReactMarkdown from "react-markdown";
+import { notFound } from "next/navigation";
+import ReactMarkdown, { Components } from "react-markdown";
+import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import SectionDivider from "@/components/SectionDivider";
 
-type Props = {
-    params: Promise<{ slug: string }>;
-};
+// Map of valid slugs to their corresponding file paths and titles
+const rulesMap = {
+  lol: {
+    filePath: "src/data/rules/lol.md",
+    title: "LOL Reeglid",
+  },
+  cs2: {
+    filePath: "src/data/rules/cs2.md",
+    title: "CS2 Reeglid",
+  },
+} as const;
 
-export default async function RulePage({params}: Props) {
-    const {slug} = await params;
+type RuleSlug = keyof typeof rulesMap;
 
-    const filePath = path.join(process.cwd(), "src/data/rules", `${slug}.md`);
-    let file: string;
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
 
-    try {
-        file = await fs.readFile(filePath, "utf8");
-    } catch {
-        file = `# ${slug.toUpperCase()} REEGLID\n\nSisu hetkel puudub.`;
-    }
+async function getRuleContent(slug: string) {
+  if (!Object.keys(rulesMap).includes(slug)) {
+    return null;
+  }
 
-    const data = {title: undefined as string | undefined};
+  const ruleConfig = rulesMap[slug as RuleSlug];
 
-    return (
-        <>
-            <div className="mb-16">
-                <h1
-                    className={`not-prose ${vipnagorgialla.className} font-bold italic uppercase text-[64px] leading-[96px] tracking-[-0.02em] text-[#2A2C3F] dark:text-[#EEE5E5] mx-auto mt-16 mb-6 px-8`}
-                >
-                    {data.title || `${slug.toUpperCase()} REEGLID`}
-                </h1>
+  try {
+    const file = Bun.file(ruleConfig.filePath);
+    const content = await file.text();
+    return {
+      content,
+      title: ruleConfig.title,
+    };
+  } catch (error) {
+    console.error(`Error reading rule file for slug ${slug}:`, error);
+    return null;
+  }
+}
 
-                <div
-                    className={`mx-auto px-8 font-worksans
-                      [&_ol]:ml-6
-                      [&_ol_ol]:ml-10
-                      [&_ol_ol_ol]:ml-14
-                      [&_h2]:font-bold
-                    `}
-                >
-                    <ReactMarkdown>{file}</ReactMarkdown>
-                </div>
-            </div>
+export default async function RulePage({ params }: PageProps) {
+  const { slug } = await params;
+  const ruleData = await getRuleContent(slug);
 
-            <SectionDivider/>
-        </>
-    );
+  if (!ruleData) {
+    notFound();
+  }
+
+  const headingStyle = `text-5xl sm:text-6xl ${vipnagorgialla.className} font-bold uppercase italic text-[#2A2C3F] dark:text-[#EEE5E5]`;
+
+  return (
+    <div>
+      <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
+        <h1 className={`${headingStyle} mt-8 md:mt-16 mb-4`}>
+          {ruleData.title}
+        </h1>
+
+        <div className="prose prose-lg dark:prose-invert max-w-none">
+          <ReactMarkdown
+            components={
+              {
+                h1: (props) => (
+                  <h1 className="text-3xl md:text-4xl font-bold my-4">
+                    {props.children}
+                  </h1>
+                ),
+                h2: (props) => (
+                  <h2 className="text-2xl md:text-3xl font-semibold my-3">
+                    {props.children}
+                  </h2>
+                ),
+                ol: (props) => (
+                  <ol className="list-none ml-6 md:text-xl">
+                    {props.children}
+                  </ol>
+                ),
+                ul: (props) => (
+                  <ul className="list-disc ml-6 md:text-xl">
+                    {props.children}
+                  </ul>
+                ),
+                p: (props) => <p className="md:text-xl">{props.children}</p>,
+              } as Components
+            }
+          >
+            {ruleData.content}
+          </ReactMarkdown>
+        </div>
+      </div>
+
+      <SectionDivider />
+    </div>
+  );
+}
+
+export async function generateStaticParams() {
+  return Object.keys(rulesMap).map((slug) => ({
+    slug,
+  }));
 }
