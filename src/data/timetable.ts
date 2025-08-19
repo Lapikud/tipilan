@@ -10,30 +10,60 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
     {
       title: "Uksed avatakse",
       location: "Registreerimine ja setup aulas",
-      time: "17.00",
+      time: "17:00",
     },
     {
-      title: "League of Legends põhiturniir",
+      title: "Põhiturniirid algavad",
       location: "Aula",
-      time: "-",
+      time: "20:00",
     },
     {
-      title: "Miniturniirid",
+      title: "Miniturniiride kick-off",
       location: "Tudengimaja",
-      time: "-",
+      time: "18:00",
+    },
+    {
+      title: "Fighting games turniiride algus",
+      location: "Tudengimaja",
+      time: "18:30",
+    },
+    {
+      title: "Uksed suletakse",
+      location: "Aula ja Tudengimaja",
+      time: "*01:00",
     },
     
   ],
   "25. oktoober": [
     {
-      title: "Counter-Strike 2 põhiturniir",
-      location: "Aula",
-      time: "-",
+      title: "Uksed avatakse",
+      location: "Aula ja Tudengimaja",
+      time: "10:00",
     },
     {
-      title: "Miniturniirid",
+      title: "Miniturniirid algavad",
       location: "Tudengimaja",
-      time: "-",
+      time: "11:00",
+    },
+    {
+      title: "Granblue turniir",
+      location: "Tudengimaja",
+      time: "11:30",
+    },
+    {
+      title: "Põhiturniirid algavad",
+      location: "Aula",
+      time: "12:00",
+    },
+    {
+      title: " Gran Turismo turniir",
+      location: "Tudengimaja",
+      time: "20:00",
+    },
+    {
+      title: "Uksed suletakse",
+      location: "Aula ja Tudengimaja",
+      time: "*01:00",
     },
   ],
 };

@@ -42,26 +42,30 @@ export default function Timetable() {
                     {schedule.map((item, idx) => (
                         <div
                             key={idx}
-                            className="border-l-3 border-[#007CAB] pl-4 flex flex-row gap-12"
+                            className="border-l-3 border-[#007CAB] pl-4 flex flex-row flex-wrap gap-5 items-stretch"
                         >
                             <div
-                                className={` ${vipnagorgialla.className} text-[#00A3E0] text-5xl font-bold italic`}
+                                className={`${vipnagorgialla.className} text-[#00A3E0] text-4xl font-bold italic flex-shrink-0 flex items-center justify-center`}
+                                style={{ width: "180px", minWidth: "180px" }}
                             >
                                 {item.time}
                             </div>
-                            <div>
+                            <div
+                                className="flex-1 flex flex-col justify-center min-h-[120px]"
+                                style={{ minWidth: "0" }}
+                            >
                                 <div
-                                    className={`${vipnagorgialla.className} text-4xl italic font-bold text-[#2A2C3F] dark:text-[#EEE5E5]`}
+                                    className={`${vipnagorgialla.className} text-3xl italic font-bold text-[#2A2C3F] dark:text-[#EEE5E5] text-balance`}
                                 >
                                     {item.title}
                                 </div>
                                 {item.description && (
-                                    <div className="text-2xl text-[#938BA1] dark:text-[#938BA1]">
+                                    <div className="text-2xl text-[#938BA1] dark:text-[#938BA1] text-balance">
                                         {item.description}
                                     </div>
                                 )}
                                 {item.location && (
-                                    <div className="text-2xl text-[#938BA1] dark:text-[#938BA1]">
+                                    <div className="text-2xl text-[#938BA1] dark:text-[#938BA1] text-balance">
                                         {item.location}
                                     </div>
                                 )}
