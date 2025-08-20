@@ -2,8 +2,16 @@
 import ReactMarkdown, { Components } from "react-markdown";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import SectionDivider from "@/components/SectionDivider";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export default async function Page() {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale });
   const file = Bun.file("src/data/kodukord.md");
   const content = await file.text();
 
@@ -14,7 +22,7 @@ export default async function Page() {
         <h1
           className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4 uppercase`}
         >
-          Kodukord
+          {t("rules.houseRules")}
         </h1>
 
         <div className="prose prose-lg dark:prose-invert max-w-none">

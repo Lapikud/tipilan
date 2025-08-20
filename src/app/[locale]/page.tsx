@@ -1,8 +1,18 @@
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
+import NextLink from "next/link";
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale });
+
   return (
     <div>
       {/* Title */}
@@ -25,7 +35,7 @@ export default function Home() {
           <h3
             className={`text-[clamp(1.25rem,0.75rem+2.5vw,3.75rem)] ${vipnagorgialla.className} leading-[90%] font-bold italic uppercase dark:text-[#EEE5E5] text-[#2A2C3F]`}
           >
-            Auhinnafond
+            {t("tournaments.prizePool")}
           </h3>
           <h2
             className={`text-[clamp(2rem,1.2rem+4vw,6rem)] ${vipnagorgialla.className} leading-[90%] font-bold italic text-[#007CAB] dark:text-[#00A3E0]`}
@@ -44,7 +54,7 @@ export default function Home() {
             <h2
               className={`text-[clamp(2rem,1.8rem+1vw,3rem)] ${vipnagorgialla.className} font-bold italic uppercase dark:text-[#EEE5E5] text-[#2A2C3F] group-hover:text-black dark:group-hover:text-[#2A2C3F]`}
             >
-              Ajakava
+              {t("navigation.schedule")}
             </h2>
             <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
               arrow_right_alt
@@ -55,8 +65,7 @@ export default function Home() {
               event_note
             </span>
             <p className="text-[clamp(0.875rem,0.75rem+0.5vw,1.25rem)] tracking-[-0.045rem] dark:group-hover:text-[#2A2C3F] group-hover:text-black">
-              TipiLAN on pungil põnevatest turniiridest, mini-võistlustest ja
-              paljust muust.
+              {t("home.sections.schedule.description")}
             </p>
           </div>
         </Link>
@@ -66,9 +75,9 @@ export default function Home() {
         >
           <div className="cursor-pointer flex flex-row justify-between gap-4 items-center">
             <h2
-              className={`text-[clamp(2rem,1.8rem+1vw,3rem)] ${vipnagorgialla.className} font-bold italic uppercase dark:text-[#EEE5E5] text-[#2A2C3F] dark:group-hover:text-[#2A2C3F] group-hover:text-black`}
+              className={`text-[clamp(2rem,1.8rem+1vw,3rem)] ${vipnagorgialla.className} font-bold italic break-all uppercase dark:text-[#EEE5E5] text-[#2A2C3F] dark:group-hover:text-[#2A2C3F] group-hover:text-black`}
             >
-              Turniirid
+              {t("navigation.tournaments")}
             </h2>
             <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
               arrow_right_alt
@@ -80,8 +89,7 @@ export default function Home() {
               trophy
             </span>
             <p className="text-[clamp(0.875rem,0.75rem+0.5vw,1.25rem)] tracking-[-0.045rem] dark:group-hover:text-[#2A2C3F] group-hover:text-black">
-              TipiLANil toimuvad suurejoonelised CS2 ja LoL turniirid, mille
-              auhinnafond on 10 000€.
+              {t("home.sections.tournaments.description")}
             </p>
           </div>
         </Link>
@@ -93,7 +101,7 @@ export default function Home() {
             <h2
               className={`text-[clamp(2rem,1.8rem+1vw,3rem)] ${vipnagorgialla.className} font-bold italic uppercase dark:text-[#EEE5E5] text-[#2A2C3F] dark:group-hover:text-[#2A2C3F] group-hover:text-black`}
             >
-              Messiala
+              {t("navigation.expo")}
             </h2>
             <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
               arrow_right_alt
@@ -104,8 +112,7 @@ export default function Home() {
               weekend
             </span>
             <p className="text-[clamp(0.875rem,0.75rem+0.5vw,1.25rem)] tracking-[-0.045rem] dark:group-hover:text-[#2A2C3F] group-hover:text-black">
-              TipiLANi messialal paiknevad ettevõtted, lisategevused ja toimuvad
-              loengud.
+              {t("home.sections.expo.description")}
             </p>
           </div>
         </Link>
@@ -117,7 +124,7 @@ export default function Home() {
       >
         <div className="cursor-pointer text-left flex flex-row justify-between xl:justify-start gap-8">
           <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] dark:group-hover:text-[#2A2C3F] text-[#2A2C3F] group-hover:text-black">
-            Bro&shy;neeri oma koht juba täna!
+            {t("home.sections.reserveSpot")}
           </h3>
           <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] hidden md:block group-hover:translate-x-2 group-hover:text-[#EEE5E5] dark:group-hover:text-[#EEE5E5] transition">
             arrow_right_alt
@@ -133,10 +140,10 @@ export default function Home() {
       >
         <div className="text-left flex flex-col justify-between xl:justify-start">
           <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] text-[#2A2C3F] group-hover:text-black pb-8">
-            TipiLANi tõmbab käima...
+            {t("home.sections.poweredBy")}
           </h3>
           <div className="flex flex-row flex-wrap gap-8 md:gap-18 items-center">
-            <Link href="https://taltech.ee" target="_blank">
+            <NextLink href="https://taltech.ee" target="_blank">
               <Image
                 src="/sponsors/taltech-color.png"
                 alt="Taltech (Tallinna Tehnikaülikool)"
@@ -144,8 +151,8 @@ export default function Home() {
                 height={192}
                 className="object-contain"
               />
-            </Link>
-            <Link href="https://www.redbull.com/ee-et/" target="_blank">
+            </NextLink>
+            <NextLink href="https://www.redbull.com/ee-et/" target="_blank">
               <Image
                 src="/sponsors/redbull.png"
                 alt="Redbull"
@@ -153,8 +160,8 @@ export default function Home() {
                 height={80}
                 className="object-contain"
               />
-            </Link>
-            <Link href="https://www.alecoq.ee" target="_blank">
+            </NextLink>
+            <NextLink href="https://www.alecoq.ee" target="_blank">
               <Image
                 src="/sponsors/alecoq.svg"
                 alt="Alecoq"
@@ -162,8 +169,8 @@ export default function Home() {
                 height={200}
                 className="object-contain"
               />
-            </Link>
-            <Link href="https://www.simracing.ee/" target="_blank">
+            </NextLink>
+            <NextLink href="https://www.simracing.ee/" target="_blank">
               <Image
                 src="/sponsors/EVAL.png"
                 alt="EVAL"
@@ -171,8 +178,8 @@ export default function Home() {
                 height={200}
                 className="object-contain"
               />
-            </Link>
-            <Link href="https://balsnack.ee" target="_blank">
+            </NextLink>
+            <NextLink href="https://balsnack.ee" target="_blank">
               <Image
                 src="/sponsors/balsnack.svg"
                 alt="Balsnack"
@@ -180,8 +187,8 @@ export default function Home() {
                 height={200}
                 className="object-contain"
               />
-            </Link>
-            <Link
+            </NextLink>
+            <NextLink
               href="https://www.rara.ee/sundmused/interaktiivne-videomangude-muuseum-lvlup/"
               target="_blank"
             >
@@ -192,8 +199,11 @@ export default function Home() {
                 height={192}
                 className="object-contain"
               />
-            </Link>
-            <Link href="https://www.facebook.com/bfglOfficial" target="_blank">
+            </NextLink>
+            <NextLink
+              href="https://www.facebook.com/bfglOfficial"
+              target="_blank"
+            >
               <Image
                 src="/sponsors/BFGL.png"
                 alt="BFGL"
@@ -201,7 +211,7 @@ export default function Home() {
                 height={192}
                 className="object-contain"
               />
-            </Link>
+            </NextLink>
           </div>
         </div>
       </div>

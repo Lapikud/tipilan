@@ -2,23 +2,24 @@ import { notFound } from "next/navigation";
 import ReactMarkdown, { Components } from "react-markdown";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import SectionDivider from "@/components/SectionDivider";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-// Map of valid slugs to their corresponding file paths and titles
+// Map of valid slugs to their corresponding file paths and translation keys
 const rulesMap = {
   lol: {
     filePath: "src/data/rules/lol.md",
-    title: "LOL Reeglid",
+    titleKey: "rules.lolRules",
   },
   cs2: {
     filePath: "src/data/rules/cs2.md",
-    title: "CS2 Reeglid",
+    titleKey: "rules.cs2Rules",
   },
 } as const;
 
 type RuleSlug = keyof typeof rulesMap;
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }
 
 async function getRuleContent(slug: string) {
@@ -33,7 +34,7 @@ async function getRuleContent(slug: string) {
     const content = await file.text();
     return {
       content,
-      title: ruleConfig.title,
+      titleKey: ruleConfig.titleKey,
     };
   } catch (error) {
     console.error(`Error reading rule file for slug ${slug}:`, error);
@@ -42,7 +43,9 @@ async function getRuleContent(slug: string) {
 }
 
 export default async function RulePage({ params }: PageProps) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale });
   const ruleData = await getRuleContent(slug);
 
   if (!ruleData) {
@@ -55,7 +58,7 @@ export default async function RulePage({ params }: PageProps) {
     <div>
       <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
         <h1 className={`${headingStyle} mt-8 md:mt-16 mb-4`}>
-          {ruleData.title}
+          {t(ruleData.titleKey)}
         </h1>
 
         <div className="prose prose-lg dark:prose-invert max-w-none">

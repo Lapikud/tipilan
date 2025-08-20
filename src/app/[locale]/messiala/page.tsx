@@ -2,8 +2,10 @@
 
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import * as THREE from "three";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { EyeClosed, Eye } from "lucide-react";
+import SectionDivider from "@/components/SectionDivider";
+import { useTranslations } from "next-intl";
 
 // Define interface for the ref with toggle function
 interface MountRefCurrent extends HTMLDivElement {
@@ -15,6 +17,21 @@ export default function Expo() {
   const [hoveredRoom, setHoveredRoom] = useState<string | null>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showDividers, setShowDividers] = useState<boolean>(true);
+  const t = useTranslations();
+
+  // Define room names with translations
+  const roomNames = useMemo(
+    () => ({
+      boardGames: t("expo.areas.boardGames"),
+      bar: t("expo.areas.bar"),
+      eval: "EVAL",
+      simRacing: t("expo.areas.simRacing"),
+      fighting: t("expo.areas.fighting"),
+      lvlup: "LVLup!",
+      redbull: "Red Bull",
+    }),
+    [t],
+  );
 
   useEffect(() => {
     if (!mountRef.current) return;
@@ -113,7 +130,7 @@ export default function Expo() {
         x: 2.5,
         z: 4,
         color: roomColors[0],
-        name: "Lauamängude ala",
+        name: roomNames.boardGames,
       },
       {
         width: 3.5,
@@ -122,7 +139,7 @@ export default function Expo() {
         x: 0.7,
         z: -0.3,
         color: roomColors[1],
-        name: "Baariala",
+        name: roomNames.bar,
       },
       {
         width: 1.8,
@@ -131,7 +148,7 @@ export default function Expo() {
         x: 1,
         z: -3.5,
         color: roomColors[2],
-        name: "EVAL",
+        name: roomNames.eval,
       },
       {
         width: 2,
@@ -140,7 +157,7 @@ export default function Expo() {
         x: 5.2,
         z: -2,
         color: roomColors[3],
-        name: "Red Bull Sim Racing",
+        name: roomNames.simRacing,
       },
       {
         width: 3,
@@ -149,7 +166,7 @@ export default function Expo() {
         x: -1.7,
         z: -3.5,
         color: roomColors[4],
-        name: "Võitlusmängu ala",
+        name: roomNames.fighting,
       },
       // {
       //   width: 1.8,
@@ -167,7 +184,7 @@ export default function Expo() {
         x: -3.5,
         z: -0.5,
         color: roomColors[7],
-        name: "LVLup!",
+        name: roomNames.lvlup,
       },
       //{
       //  width: 2,
@@ -185,7 +202,7 @@ export default function Expo() {
         x: 3,
         z: -3.5,
         color: roomColors[8],
-        name: "Red Bull",
+        name: roomNames.redbull,
       },
     ];
 
@@ -369,7 +386,7 @@ export default function Expo() {
       }
       renderer.dispose();
     };
-  }, []);
+  }, [roomNames]);
 
   // Update dividers when showDividers state changes
   useEffect(() => {
@@ -379,121 +396,125 @@ export default function Expo() {
   }, [showDividers]);
 
   return (
-    <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
-      <h1
-        className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4 uppercase`}
-      >
-        Messiala
-      </h1>
-      <div className="mb-6">
-        <h2 className="text-2xl text-[#2A2C3F] dark:text-[#EEE5E5] mb-3">
-          Tudengimaja
-        </h2>
-        <div className="flex flex-wrap gap-4 pb-4">
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#4ecdc4" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              Baariala
-            </span>
+    <div>
+      <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16 ">
+        <h1
+          className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4 uppercase`}
+        >
+          {t("expo.title")}
+        </h1>
+        <div className="mb-6">
+          <h2 className="text-2xl text-[#2A2C3F] dark:text-[#EEE5E5] mb-3">
+            {t("schedule.locations.studentHouse")}
+          </h2>
+          <div className="flex flex-wrap gap-4 pb-4">
+            <div className="flex items-center gap-2">
+              <div
+                className="w-4 h-4 border border-gray-300"
+                style={{ backgroundColor: "#4ecdc4" }}
+              ></div>
+              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                {t("expo.areas.bar")}
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div
+                className="w-4 h-4 border border-gray-300"
+                style={{ backgroundColor: "#ffe66d" }}
+              ></div>
+              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                EVAL
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div
+                className="w-4 h-4 border border-gray-300"
+                style={{ backgroundColor: "#343434" }}
+              ></div>
+              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                {t("expo.areas.boardGames")}
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div
+                className="w-4 h-4 border border-gray-300"
+                style={{ backgroundColor: "#080682" }}
+              ></div>
+              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                LVLup!
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div
+                className="w-4 h-4 border border-gray-300"
+                style={{ backgroundColor: "#C02841" }}
+              ></div>
+              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                Red Bull
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div
+                className="w-4 h-4 border border-gray-300"
+                style={{ backgroundColor: "#ff6600" }}
+              ></div>
+              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                {t("expo.areas.simRacing")}
+              </span>
+            </div>
+            <div className="items-center gap-2 hidden">
+              <div
+                className="w-4 h-4 border border-gray-300"
+                style={{ backgroundColor: "#3498db" }}
+              ></div>
+              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                Sony
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div
+                className="w-4 h-4 border border-gray-300"
+                style={{ backgroundColor: "#ff1493" }}
+              ></div>
+              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                {t("expo.areas.fighting")}
+              </span>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#ffe66d" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              EVAL
-            </span>
+          <div className="flex flex-col lg:flex-row gap-8 items-start">
+            <div className="flex-shrink-0 border-3 border-[#1F5673] w-full max-w-[800px] relative">
+              <div ref={mountRef} className="w-full" />
+              <button
+                onClick={() => setShowDividers(!showDividers)}
+                className={`absolute top-2 right-2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10`}
+              >
+                {showDividers ? (
+                  <EyeClosed className="w-6 h-6 mr-2" />
+                ) : (
+                  <Eye className="w-6 h-6 mr-2" />
+                )}
+
+                {showDividers ? t("expo.hide") : t("expo.show")}
+              </button>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
+
+          {/* Tooltip */}
+          {hoveredRoom && (
             <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#343434" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              Lauamängude ala
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#080682" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              LVLup!
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#C02841" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              Red Bull
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#ff6600" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              Red Bull Sim Racing
-            </span>
-          </div>
-          <div className="items-center gap-2 hidden">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#3498db" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              Sony
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div
-              className="w-4 h-4 border border-gray-300"
-              style={{ backgroundColor: "#ff1493" }}
-            ></div>
-            <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-              Võitlusmängu ala
-            </span>
-          </div>
-        </div>
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
-          <div className="flex-shrink-0 border-3 border-[#1F5673] w-full max-w-[800px] relative">
-            <div ref={mountRef} className="w-full" />
-            <button
-              onClick={() => setShowDividers(!showDividers)}
-              className={`absolute top-2 right-2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10`}
+              className="fixed bg-black bg-opacity-80 text-white px-3 py-2 rounded-lg text-sm pointer-events-none z-50"
+              style={{
+                left: mousePosition.x + 10,
+                top: mousePosition.y - 10,
+              }}
             >
-              {showDividers ? (
-                <EyeClosed className="w-6 h-6 mr-2" />
-              ) : (
-                <Eye className="w-6 h-6 mr-2" />
-              )}
-
-              {showDividers ? "Peida" : "Näita"}
-            </button>
-          </div>
+              {hoveredRoom}
+            </div>
+          )}
         </div>
-
-        {/* Tooltip */}
-        {hoveredRoom && (
-          <div
-            className="fixed bg-black bg-opacity-80 text-white px-3 py-2 rounded-lg text-sm pointer-events-none z-50"
-            style={{
-              left: mousePosition.x + 10,
-              top: mousePosition.y - 10,
-            }}
-          >
-            {hoveredRoom}
-          </div>
-        )}
       </div>
+
+      <SectionDivider />
     </div>
   );
 }
