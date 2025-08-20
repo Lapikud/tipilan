@@ -116,6 +116,7 @@
       "buyTicket": "OSTA PILET"
     },
     "mini": {
+      "titleSingular": "Miniturniiride",
       "title": "Miniturniirid",
       "timing": "Toimumisaeg veel selgumisel",
       "description1": "TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Miniturniirid toimuvad järgnevates mängudes: SimRacing, Tekken, FIFA, Minecraft Bedwars, Buckshot Roulette, LostGamer ja palju muud.",
