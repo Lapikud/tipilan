@@ -1,42 +1,48 @@
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import Link from "next/link";
 import Image from "next/image";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export default function Tourney() {
+export default async function Tourney({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale });
   const headingStyle = `text-3xl md:text-5xl lg:text-5xl ${vipnagorgialla.className} font-bold uppercase text-[#2A2C3F] dark:text-[#EEE5E5] -skew-x-2 md:-skew-x-5`;
-  
+
   return (
     <div className="flex flex-col min-h-[90vh] mt-16">
       <h1
-        className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic uppercase 
+        className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic uppercase
                 text-[#2A2C3F] dark:text-[#EEE5E5] md:m-16`}
       >
-        Turniirid
+        {t("tournaments.title")}
       </h1>
-      
+
       <div className="flex flex-col">
         {/* CS2 turniir */}
         <div className="hover:bg-[#007CAB] py-8 md:py-16 transition group">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
             <div className="-skew-x-2 md:-skew-x-5">
-              <h2 className={`${headingStyle}`}>CS2 turniir</h2>
+              <h2 className={`${headingStyle}`}>
+                {t("tournaments.cs2.title")}
+              </h2>
               <p
                 className={
                   "text-2xl mb-4 text-neutral-500 group-hover:text-black"
                 }
               >
-                Toimumisaeg veel selgumisel
+                {t("tournaments.cs2.timing")}
               </p>
               <p className="text-balance">
-                TipiLANil toimub Eesti ühe suurima auhinnafondiga CS2 turniire
-                juba sel sügisel. Haara kaasa sõbrad ja saa osa
-                adrenaliinirohkest kogemusest!
+                {t("tournaments.cs2.description1")}
               </p>
               <br />
               <p className="text-balance">
-                Auhinnafond on suuruses 5250€, mis jaotatakse TOP3 meeskonna
-                vahel ära. Iga tiimiliige saab vastavalt saavutatud kohale
-                auhinnaks kas 600€, 300€ või 150€.
+                {t("tournaments.cs2.description2")}
               </p>
               <br />
 
@@ -45,14 +51,14 @@ export default function Tourney() {
                   <button
                     className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
                   >
-                    LOE REEGLEID
+                    {t("tournaments.cs2.readRules")}
                   </button>
                 </Link>
                 <a href="https://fienta.com/et/tipilan" target="_blank">
                   <button
                     className={`px-4 py-2 bg-[#007CAB] group-hover:bg-black cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
                   >
-                    OSTA PILET
+                    {t("tournaments.cs2.buyTicket")}
                   </button>
                 </a>
               </div>
@@ -86,24 +92,22 @@ export default function Tourney() {
               </div>
             </div>
             <div className="flex-auto text-right -skew-x-2 md:-skew-x-5">
-              <h2 className={`${headingStyle}`}>LoL turniir</h2>
+              <h2 className={`${headingStyle}`}>
+                {t("tournaments.lol.title")}
+              </h2>
               <p
                 className={
                   "text-2xl mb-4 text-neutral-500 group-hover:text-black"
                 }
               >
-                Toimumisaeg veel selgumisel
+                {t("tournaments.lol.timing")}
               </p>
               <p className="text-balance">
-                TipiLANil toimub Eesti ühe suurima auhinnafondiga LoL turniire
-                juba sel sügisel. Haara kaasa sõbrad ja saa osa
-                adrenaliinirohkest kogemusest!
+                {t("tournaments.lol.description1")}
               </p>
               <br />
               <p className="text-balance">
-                Auhinnafond on suuruses 3500€, mis jaotatakse TOP3 meeskonna
-                vahel ära. Iga tiimiliige saab vastavalt saavutatud kohale
-                auhinnaks kas 400€, 200€ või 100€.
+                {t("tournaments.lol.description2")}
               </p>
               <br />
               <div className="flex flex-row flex-wrap gap-4 md:gap-8 justify-end">
@@ -111,14 +115,14 @@ export default function Tourney() {
                   <button
                     className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
                   >
-                    LOE REEGLEID
+                    {t("tournaments.lol.readRules")}
                   </button>
                 </Link>
                 <a href="https://fienta.com/et/tipilan" target="_blank">
                   <button
                     className={`px-4 py-2 bg-[#007CAB] group-hover:bg-black cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
                   >
-                    OSTA PILET
+                    {t("tournaments.lol.buyTicket")}
                   </button>
                 </a>
               </div>
@@ -130,24 +134,22 @@ export default function Tourney() {
         <div className="hover:bg-[#007CAB] py-8 md:py-16 border-t-[3px] border-b-[3px] border-[#1F5673] transition group">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
             <div className="-skew-x-2 md:-skew-x-5">
-              <h2 className={`${headingStyle}`}>Mini&shy;turniirid</h2>
+              <h2 className={`${headingStyle}`}>
+                {t("tournaments.mini.title")}
+              </h2>
               <p
                 className={
                   "text-2xl mb-4 text-neutral-500 group-hover:text-black"
                 }
               >
-                Toimumisaeg veel selgumisel
+                {t("tournaments.mini.timing")}
               </p>
               <p className="text-balance">
-                TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu
-                tekitavaid miniturniire. Miniturniirid toimuvad järgnevates
-                mängudes: SimRacing, Tekken, FIFA, Minecraft Bedwars, Buckshot
-                Roulette, LostGamer ja palju muud.
+                {t("tournaments.mini.description1")}
               </p>
               <br />
               <p className="text-balance">
-                Auhinnafond on kõigi turniiride peale 1250€ ja reeglina saab
-                rahalise auhinna miniturniiri võitja.
+                {t("tournaments.mini.description2")}
               </p>
               <br />
               <div className="flex flex-row flex-wrap gap-4 md:gap-8">
@@ -155,14 +157,14 @@ export default function Tourney() {
                   <button
                     className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
                   >
-                    LOE REEGLEID
+                    {t("tournaments.mini.readRules")}
                   </button>
                 </Link>
                 <a href="https://fienta.com/et/tipilan" target="_blank">
                   <button
                     className={`px-4 py-2 bg-[#007CAB] group-hover:bg-black cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
                   >
-                    OSTA PILET
+                    {t("tournaments.mini.buyTicket")}
                   </button>
                 </a>
               </div>

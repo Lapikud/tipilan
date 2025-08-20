@@ -1,68 +1,67 @@
 export type ScheduleItem = {
   time?: string; // Aeg on ajutine praegu kuna pole 100% kindlalt paigas
-  title: string;
-  location: string;
+  titleKey: string;
+  locationKey: string;
   description?: string;
 };
 
 export const scheduleData: Record<string, ScheduleItem[]> = {
-  "24. oktoober": [
+  oct24: [
     {
-      title: "Uksed avatakse",
-      location: "Registreerimine ja setup aulas",
+      titleKey: "schedule.events.doorsOpen",
+      locationKey: "schedule.locations.registrationSetup",
       time: "17:00",
     },
     {
-      title: "Põhiturniirid algavad",
-      location: "Aula",
+      titleKey: "schedule.events.mainTournamentsStart",
+      locationKey: "schedule.locations.auditorium",
       time: "20:00",
     },
     {
-      title: "Miniturniiride kick-off",
-      location: "Tudengimaja",
+      titleKey: "schedule.events.miniTournamentsKickoff",
+      locationKey: "schedule.locations.studentHouse",
       time: "18:00",
     },
     {
-      title: "Fighting games turniiride algus",
-      location: "Tudengimaja",
+      titleKey: "schedule.events.fightingGamesStart",
+      locationKey: "schedule.locations.studentHouse",
       time: "18:30",
     },
     {
-      title: "Uksed suletakse",
-      location: "Aula ja Tudengimaja",
+      titleKey: "schedule.events.doorsClose",
+      locationKey: "schedule.locations.auditoriumAndStudentHouse",
       time: "*01:00",
     },
-    
   ],
-  "25. oktoober": [
+  oct25: [
     {
-      title: "Uksed avatakse",
-      location: "Aula ja Tudengimaja",
+      titleKey: "schedule.events.doorsOpen",
+      locationKey: "schedule.locations.auditoriumAndStudentHouse",
       time: "10:00",
     },
     {
-      title: "Miniturniirid algavad",
-      location: "Tudengimaja",
+      titleKey: "schedule.events.miniTournamentsStart",
+      locationKey: "schedule.locations.studentHouse",
       time: "11:00",
     },
     {
-      title: "Granblue turniir",
-      location: "Tudengimaja",
+      titleKey: "schedule.events.granblue",
+      locationKey: "schedule.locations.studentHouse",
       time: "11:30",
     },
     {
-      title: "Põhiturniirid algavad",
-      location: "Aula",
+      titleKey: "schedule.events.mainTournamentsStart",
+      locationKey: "schedule.locations.auditorium",
       time: "12:00",
     },
     {
-      title: " Gran Turismo turniir",
-      location: "Tudengimaja",
+      titleKey: "schedule.events.granTurismo",
+      locationKey: "schedule.locations.studentHouse",
       time: "20:00",
     },
     {
-      title: "Uksed suletakse",
-      location: "Aula ja Tudengimaja",
+      titleKey: "schedule.events.doorsClose",
+      locationKey: "schedule.locations.auditoriumAndStudentHouse",
       time: "*01:00",
     },
   ],
