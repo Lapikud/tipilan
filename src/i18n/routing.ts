@@ -24,7 +24,7 @@ export const routing = defineRouting({
     },
     "/kodukord": {
       et: "/kodukord",
-      en: "/rules",
+      en: "/houserules",
     },
     "/messiala": {
       et: "/messiala",
@@ -36,7 +36,7 @@ export const routing = defineRouting({
     },
     "/reeglid": {
       et: "/reeglid",
-      en: "/regulations",
+      en: "/gamerules",
     },
     "/striim": {
       et: "/striim",
