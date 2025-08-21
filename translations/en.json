@@ -6,7 +6,7 @@
     "houserules": "House rules",
     "expo": "Expo",
     "tickets": "Tickets",
-    "rules": "Rules",
+    "rules": "Game rules",
     "stream": "Stream",
     "tournaments": "Tournaments"
   },
@@ -116,7 +116,6 @@
       "buyTicket": "BUY TICKETS"
     },
     "mini": {
-      "titleSingular": "Mini-tournament",
       "title": "Mini-tournaments",
       "timing": "Timing to be announced",
       "description1": "TipiLAN hosts various fun and competitive mini-tournaments. Mini-tournaments take place in the following games: SimRacing, Tekken, FIFA, Minecraft Bedwars, Buckshot Roulette, LostGamer and many more.",
@@ -185,7 +184,8 @@
     "title": "Rules",
     "houseRules": "House Rules",
     "cs2Rules": "CS2 Rules",
-    "lolRules": "LoL Rules"
+    "lolRules": "LoL Rules",
+    "miniRules": "Mini-tournament Rules"
   },
   "admin": {
     "title": "Admin",
