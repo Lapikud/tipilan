@@ -177,8 +177,8 @@
       "simRacing": "Red Bull Sim Racing",
       "fighting": "Võitlusmängu ala"
     },
-    "hide": "Peida",
-    "show": "Näita"
+    "hide": "Peida seinad",
+    "show": "Näita seinu"
   },
   "rules": {
     "title": "Reeglid",

@@ -177,8 +177,8 @@
       "simRacing": "Red Bull Sim Racing",
       "fighting": "Fighting Games Area"
     },
-    "hide": "Hide",
-    "show": "Show"
+    "hide": "Hide walls",
+    "show": "Show walls"
   },
   "rules": {
     "title": "Rules",
