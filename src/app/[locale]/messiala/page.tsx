@@ -2,6 +2,7 @@
 
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { useEffect, useRef, useState, useMemo } from "react";
 import { EyeClosed, Eye } from "lucide-react";
 import SectionDivider from "@/components/SectionDivider";
@@ -10,6 +11,7 @@ import { useTranslations } from "next-intl";
 // Define interface for the ref with toggle function
 interface MountRefCurrent extends HTMLDivElement {
   toggleDividers?: (show: boolean) => void;
+  switchView?: (view: "tudengimaja" | "fuajee") => void;
 }
 
 export default function Expo() {
@@ -17,6 +19,10 @@ export default function Expo() {
   const [hoveredRoom, setHoveredRoom] = useState<string | null>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showDividers, setShowDividers] = useState<boolean>(true);
+  const [currentView, setCurrentView] = useState<"tudengimaja" | "fuajee">(
+    "tudengimaja",
+  );
+  const currentViewRef = useRef<"tudengimaja" | "fuajee">("tudengimaja");
   const t = useTranslations();
 
   // Define room names with translations
@@ -29,6 +35,15 @@ export default function Expo() {
       fighting: t("expo.areas.fighting"),
       lvlup: "LVLup!",
       redbull: "Red Bull",
+      // fuajee rooms
+      ityk: t("expo.areas.ityk"),
+      estoniagamedev: t("expo.areas.estoniagamedev"),
+      info: t("expo.areas.info"),
+      tartuyk: t("expo.areas.tartuyk"),
+      tly: t("expo.areas.tly"),
+      gameup: "GameUP!",
+      ittk: t("expo.areas.ittk"),
+      photobooth: t("expo.areas.photobooth"),
     }),
     [t],
   );
@@ -39,6 +54,10 @@ export default function Expo() {
     // Copy ref to variable to avoid stale closure in cleanup
     const mountElement = mountRef.current;
     let dividersRef: THREE.Mesh[] = [];
+    const fuajeeMeshes: THREE.Mesh[] = [];
+    let tudengimajaObjects: THREE.Object3D[] = [];
+    let fuajeeMesh: THREE.Group | null = null;
+    const fuajeeRooms: THREE.Mesh[] = [];
 
     // Scene setup
     const scene = new THREE.Scene();
@@ -62,7 +81,7 @@ export default function Expo() {
     // Isometric camera setup with responsive sizing
     const aspect = width / height;
     const baseFrustumSize = 14;
-    const frustumSize = width < 600 ? baseFrustumSize * 0.8 : baseFrustumSize; // Smaller frustum for mobile
+    const frustumSize = baseFrustumSize; // Keep consistent frustum size
     const camera = new THREE.OrthographicCamera(
       (frustumSize * aspect) / -2,
       (frustumSize * aspect) / 2,
@@ -72,9 +91,21 @@ export default function Expo() {
       1000,
     );
 
-    // Position camera for isometric view
-    camera.position.set(10, 10, 14);
-    camera.lookAt(-1.4, 0, 0);
+    // Camera positions for different views
+    const cameraPositions = {
+      tudengimaja: {
+        position: new THREE.Vector3(10, 10, 14),
+        lookAt: new THREE.Vector3(-1.4, 0, 0),
+      },
+      fuajee: {
+        position: new THREE.Vector3(30, 20, 15),
+        lookAt: new THREE.Vector3(0, 0, 0),
+      },
+    };
+
+    // Position camera for isometric view (default to tudengimaja)
+    camera.position.copy(cameraPositions.tudengimaja.position);
+    camera.lookAt(cameraPositions.tudengimaja.lookAt);
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -118,6 +149,7 @@ export default function Expo() {
       name: string;
       originalColor: number;
       originalScale: THREE.Vector3;
+      view: "tudengimaja" | "fuajee";
     }> = [];
     const dividers: THREE.Mesh[] = [];
 
@@ -229,6 +261,7 @@ export default function Expo() {
         name: roomDef.name,
         originalColor: roomDef.color,
         originalScale: room.scale.clone(),
+        view: "tudengimaja",
       });
     });
 
@@ -283,14 +316,168 @@ export default function Expo() {
     ground2.receiveShadow = true;
     scene.add(ground2);
 
+    // Store tudengimaja objects (rooms, ground, dividers)
+    tudengimajaObjects = [...rooms, ground, ground2, ...dividers];
+
+    // Load fuajee GLTF model
+    const loader = new GLTFLoader();
+    loader.load(
+      "/spaces/fuajeeTalTech.glb",
+      (gltf) => {
+        fuajeeMesh = gltf.scene;
+        fuajeeMesh.position.set(-1.5, 1, 0);
+        fuajeeMesh.scale.set(0.3, 0.3, 0.3);
+        fuajeeMesh.visible = false; // Initially hidden
+
+        // Traverse the model to collect meshes
+        fuajeeMesh.traverse((child) => {
+          if (child instanceof THREE.Mesh) {
+            child.castShadow = true;
+            child.receiveShadow = true;
+            fuajeeMeshes.push(child);
+          }
+        });
+
+        scene.add(fuajeeMesh);
+
+        // Create example rooms for fuajee after the model loads
+        createfuajeeRooms();
+      },
+      (progress) => {
+        console.log(
+          "Loading progress:",
+          (progress.loaded / progress.total) * 100 + "%",
+        );
+      },
+      (error) => {
+        console.error("Error loading GLTF:", error);
+      },
+    );
+
+    // Function to create example rooms for fuajee
+    const createfuajeeRooms = () => {
+      const fuajeeRoomColors = [
+        0x7b1642, // ITÜK - Cherry Red
+        0x365591, // Light Blue - Tartu Ülikool
+        0xa82838, // Red - Tallinna Ülikool
+        0x183bbf, // Dark Blue - Eesti Gamedev
+        0xd12e7d, // Purple - Taltech
+        0x228b22, // Green - GameUP
+        0xff6347, // Orange - Info
+        0x20b2aa, // Light Sea Green - Photobooth
+      ];
+
+      const fuajeeRoomDefinitions = [
+        {
+          width: 5,
+          height: 0.5,
+          depth: 3.5,
+          x: -6,
+          z: 2.8,
+          color: fuajeeRoomColors[0],
+          name: roomNames.ityk,
+        },
+        {
+          width: 5,
+          height: 0.5,
+          depth: 2,
+          x: 2.2,
+          z: -1.5,
+          color: fuajeeRoomColors[1],
+          name: roomNames.tartuyk,
+        },
+        {
+          width: 6,
+          height: 0.5,
+          depth: 2,
+          x: -5.8,
+          z: -1.2,
+          color: fuajeeRoomColors[3],
+          name: roomNames.estoniagamedev,
+        },
+        {
+          width: 2,
+          height: 0.5,
+          depth: 2,
+          x: -1.5,
+          z: -1.5,
+          color: fuajeeRoomColors[6],
+          name: roomNames.info,
+        },
+        {
+          width: 2,
+          height: 0.5,
+          depth: 1.5,
+          x: 6,
+          z: -1.7,
+          color: fuajeeRoomColors[2],
+          name: roomNames.tly,
+        },
+        {
+          width: 2,
+          height: 0.5,
+          depth: 1.5,
+          x: 11,
+          z: -1.7,
+          color: fuajeeRoomColors[4],
+          name: roomNames.ittk,
+        },
+        {
+          width: 2,
+          height: 0.5,
+          depth: 1.5,
+          x: 13.5,
+          z: -1.7,
+          color: fuajeeRoomColors[7],
+          name: roomNames.photobooth,
+        },
+        {
+          width: 2,
+          height: 0.5,
+          depth: 1.5,
+          x: 8.5,
+          z: -1.7,
+          color: fuajeeRoomColors[5],
+          name: roomNames.gameup,
+        },
+      ];
+
+      fuajeeRoomDefinitions.forEach((roomDef) => {
+        const geometry = new THREE.BoxGeometry(
+          roomDef.width,
+          roomDef.height,
+          roomDef.depth,
+        );
+        const material = new THREE.MeshLambertMaterial({
+          color: roomDef.color,
+        });
+
+        const room = new THREE.Mesh(geometry, material);
+        room.position.set(roomDef.x, roomDef.height / 2 + 2, roomDef.z);
+        room.castShadow = true;
+        room.receiveShadow = true;
+        room.userData = { name: roomDef.name, originalColor: roomDef.color };
+        room.visible = false; // Initially hidden
+
+        scene.add(room);
+        fuajeeRooms.push(room);
+        roomData.push({
+          mesh: room,
+          name: roomDef.name,
+          originalColor: roomDef.color,
+          originalScale: room.scale.clone(),
+          view: "fuajee",
+        });
+      });
+    };
+
     // Resize handler
     const handleResize = () => {
       const { width: newWidth, height: newHeight } = getResponsiveDimensions();
 
       // Update camera
       const newAspect = newWidth / newHeight;
-      const newFrustumSize =
-        newWidth < 600 ? baseFrustumSize * 0.8 : baseFrustumSize;
+      const newFrustumSize = baseFrustumSize;
 
       camera.left = (newFrustumSize * newAspect) / -2;
       camera.right = (newFrustumSize * newAspect) / 2;
@@ -314,29 +501,68 @@ export default function Expo() {
       // Update mouse position for tooltip
       setMousePosition({ x: event.clientX, y: event.clientY });
 
-      // Update raycaster
-      raycaster.setFromCamera(mouse, camera);
-      const intersects = raycaster.intersectObjects(rooms);
+      // Handle mouse interactions based on current view
+      if (currentViewRef.current === "tudengimaja") {
+        // Update raycaster
+        raycaster.setFromCamera(mouse, camera);
+        const intersects = raycaster.intersectObjects(rooms);
 
-      // Reset all rooms to original state
-      roomData.forEach(({ mesh, originalColor, originalScale }) => {
-        (mesh.material as THREE.MeshLambertMaterial).color.setHex(
-          originalColor,
-        );
-        mesh.scale.copy(originalScale);
-      });
+        // Reset all tudengimaja rooms to original state
+        roomData
+          .filter((r) => r.view === "tudengimaja")
+          .forEach(({ mesh, originalColor, originalScale }) => {
+            (mesh.material as THREE.MeshLambertMaterial).color.setHex(
+              originalColor,
+            );
+            mesh.scale.copy(originalScale);
+          });
 
-      if (intersects.length > 0) {
-        const hoveredMesh = intersects[0].object as THREE.Mesh;
-        const roomInfo = roomData.find((r) => r.mesh === hoveredMesh);
+        if (intersects.length > 0) {
+          const hoveredMesh = intersects[0].object as THREE.Mesh;
+          const roomInfo = roomData.find((r) => r.mesh === hoveredMesh);
 
-        if (roomInfo) {
-          // Apply hover effects
-          (hoveredMesh.material as THREE.MeshLambertMaterial).color.setHex(
-            0xffffff,
-          );
-          hoveredMesh.scale.multiplyScalar(1.02);
-          setHoveredRoom(roomInfo.name);
+          if (roomInfo) {
+            // Apply hover effects
+            (hoveredMesh.material as THREE.MeshLambertMaterial).color.setHex(
+              0xffffff,
+            );
+            hoveredMesh.scale.multiplyScalar(1.02);
+            setHoveredRoom(roomInfo.name);
+          }
+        } else {
+          setHoveredRoom(null);
+        }
+      } else if (currentViewRef.current === "fuajee") {
+        // Update raycaster for fuajee rooms
+        raycaster.setFromCamera(mouse, camera);
+        const intersects = raycaster.intersectObjects(fuajeeRooms);
+
+        // Reset all fuajee rooms to original state
+        roomData
+          .filter((r) => r.view === "fuajee")
+          .forEach(({ mesh, originalColor, originalScale }) => {
+            (mesh.material as THREE.MeshLambertMaterial).color.setHex(
+              originalColor,
+            );
+
+            mesh.scale.copy(originalScale);
+          });
+
+        if (intersects.length > 0) {
+          const hoveredMesh = intersects[0].object as THREE.Mesh;
+          const roomInfo = roomData.find((r) => r.mesh === hoveredMesh);
+
+          if (roomInfo) {
+            // Apply hover effects with better visibility
+            (hoveredMesh.material as THREE.MeshLambertMaterial).color.setHex(
+              0xffffff,
+            );
+
+            hoveredMesh.scale.multiplyScalar(1.1);
+            setHoveredRoom(roomInfo.name);
+          }
+        } else {
+          setHoveredRoom(null);
         }
       } else {
         setHoveredRoom(null);
@@ -346,18 +572,99 @@ export default function Expo() {
     // Add mouse event listener
     renderer.domElement.addEventListener("mousemove", onMouseMove);
 
+    // Function to switch camera views
+    const switchView = (view: "tudengimaja" | "fuajee") => {
+      const targetPosition = cameraPositions[view].position;
+      const targetLookAt = cameraPositions[view].lookAt;
+
+      // Animate camera transition
+      const startPosition = camera.position.clone();
+      const startLookAt = new THREE.Vector3();
+      camera.getWorldDirection(startLookAt);
+      startLookAt.multiplyScalar(-1).add(camera.position);
+
+      let progress = 0;
+      const animateCamera = () => {
+        progress += 0.05;
+        if (progress >= 1) {
+          progress = 1;
+        }
+
+        // Smooth interpolation
+        const easeProgress = 1 - Math.cos(progress * Math.PI * 0.5);
+
+        camera.position.lerpVectors(
+          startPosition,
+          targetPosition,
+          easeProgress,
+        );
+        const currentLookAt = new THREE.Vector3().lerpVectors(
+          startLookAt,
+          targetLookAt,
+          easeProgress,
+        );
+        camera.lookAt(currentLookAt);
+
+        if (progress < 1) {
+          requestAnimationFrame(animateCamera);
+        }
+      };
+
+      animateCamera();
+
+      // Reset hover state when switching views
+      setHoveredRoom(null);
+
+      // Reset all room states to original
+      roomData.forEach(({ mesh, originalColor, originalScale }) => {
+        (mesh.material as THREE.MeshLambertMaterial).color.setHex(
+          originalColor,
+        );
+        mesh.scale.copy(originalScale);
+      });
+
+      // Toggle visibility of objects based on view
+      if (view === "fuajee") {
+        tudengimajaObjects.forEach((obj) => (obj.visible = false));
+        if (fuajeeMesh) {
+          fuajeeMesh.visible = true;
+        }
+        fuajeeRooms.forEach((room) => (room.visible = true));
+      } else {
+        tudengimajaObjects.forEach((obj) => (obj.visible = true));
+        if (fuajeeMesh) {
+          fuajeeMesh.visible = false;
+        }
+        fuajeeRooms.forEach((room) => (room.visible = false));
+        // Re-apply divider visibility state
+        if (mountElement.toggleDividers) {
+          mountElement.toggleDividers(showDividers);
+        }
+      }
+    };
+
     // Animation loop
     const animate = () => {
       requestAnimationFrame(animate);
 
       // Gentle floating animation for rooms
-      rooms.forEach((room, index) => {
-        const originalY = 0.25; // height / 2 for the room height of 0.5
-        const baseY = originalY + Math.sin(Date.now() * 0.001 + index) * 0.05;
+      if (currentViewRef.current === "tudengimaja") {
+        rooms.forEach((room, index) => {
+          const originalY = 0.25; // height / 2 for the room height of 0.5
+          const baseY = originalY + Math.sin(Date.now() * 0.001 + index) * 0.05;
 
-        // Maintain current scale while updating Y position
-        room.position.y = baseY;
-      });
+          // Maintain current scale while updating Y position
+          room.position.y = baseY;
+        });
+      } else if (currentViewRef.current === "fuajee") {
+        fuajeeRooms.forEach((room, index) => {
+          const originalY = 2.25; // height / 2 for the room height of 0.5 + 2 offset
+          const baseY = originalY + Math.sin(Date.now() * 0.001 + index) * 0.05;
+
+          // Maintain current scale while updating Y position
+          room.position.y = baseY;
+        });
+      }
 
       renderer.render(scene, camera);
     };
@@ -374,8 +681,9 @@ export default function Expo() {
       });
     };
 
-    // Expose toggle function to parent scope
+    // Expose functions to parent scope
     mountElement.toggleDividers = toggleDividers;
+    mountElement.switchView = switchView;
 
     // Cleanup
     return () => {
@@ -395,6 +703,16 @@ export default function Expo() {
     }
   }, [showDividers]);
 
+  // Handle view switching
+  const handleViewSwitch = (view: "tudengimaja" | "fuajee") => {
+    setCurrentView(view);
+    currentViewRef.current = view; // Update ref immediately
+    setHoveredRoom(null); // Clear any existing hover state
+    if (mountRef.current?.switchView) {
+      mountRef.current.switchView(view);
+    }
+  };
+
   return (
     <div>
       <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16 ">
@@ -405,112 +723,248 @@ export default function Expo() {
         </h1>
         <div className="mb-6">
           <h2 className="text-2xl text-[#2A2C3F] dark:text-[#EEE5E5] mb-3">
-            {t("schedule.locations.studentHouse")}
+            {currentView === "tudengimaja"
+              ? t("schedule.locations.studentHouse")
+              : t("schedule.locations.entranceHall")}
           </h2>
-          <div className="flex flex-wrap gap-4 pb-4">
-            <div className="flex items-center gap-2">
-              <div
-                className="w-4 h-4 border border-gray-300"
-                style={{ backgroundColor: "#4ecdc4" }}
-              ></div>
-              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                {t("expo.areas.bar")}
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div
-                className="w-4 h-4 border border-gray-300"
-                style={{ backgroundColor: "#ffe66d" }}
-              ></div>
-              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                EVAL
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div
-                className="w-4 h-4 border border-gray-300"
-                style={{ backgroundColor: "#343434" }}
-              ></div>
-              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                {t("expo.areas.boardGames")}
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div
-                className="w-4 h-4 border border-gray-300"
-                style={{ backgroundColor: "#080682" }}
-              ></div>
-              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                LVLup!
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div
-                className="w-4 h-4 border border-gray-300"
-                style={{ backgroundColor: "#C02841" }}
-              ></div>
-              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                Red Bull
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div
-                className="w-4 h-4 border border-gray-300"
-                style={{ backgroundColor: "#ff6600" }}
-              ></div>
-              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                {t("expo.areas.simRacing")}
-              </span>
-            </div>
-            <div className="items-center gap-2 hidden">
-              <div
-                className="w-4 h-4 border border-gray-300"
-                style={{ backgroundColor: "#3498db" }}
-              ></div>
-              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                Sony
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div
-                className="w-4 h-4 border border-gray-300"
-                style={{ backgroundColor: "#ff1493" }}
-              ></div>
-              <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                {t("expo.areas.fighting")}
-              </span>
-            </div>
-          </div>
-          <div className="flex flex-col lg:flex-row gap-8 items-start">
-            <div className="flex-shrink-0 border-3 border-[#1F5673] w-full max-w-[800px] relative">
-              <div ref={mountRef} className="w-full" />
-              <button
-                onClick={() => setShowDividers(!showDividers)}
-                className={`absolute top-2 right-2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10`}
-              >
-                {showDividers ? (
-                  <EyeClosed className="w-6 h-6 mr-2" />
-                ) : (
-                  <Eye className="w-6 h-6 mr-2" />
-                )}
 
-                {showDividers ? t("expo.hide") : t("expo.show")}
-              </button>
-            </div>
-          </div>
-
-          {/* Tooltip */}
-          {hoveredRoom && (
-            <div
-              className="fixed bg-black bg-opacity-80 text-white px-3 py-2 rounded-lg text-sm pointer-events-none z-50"
-              style={{
-                left: mousePosition.x + 10,
-                top: mousePosition.y - 10,
-              }}
-            >
-              {hoveredRoom}
+          {currentView === "tudengimaja" && (
+            <div className="flex flex-wrap gap-4 pb-4">
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#4ecdc4" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.bar")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#ffe66d" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  EVAL
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#343434" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.boardGames")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#080682" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  LVLup!
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#C02841" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  Red Bull
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#ff6600" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.simRacing")}
+                </span>
+              </div>
+              <div className="items-center gap-2 hidden">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#3498db" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  Sony
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#ff1493" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.fighting")}
+                </span>
+              </div>
             </div>
           )}
+
+          {currentView === "fuajee" && (
+            <div className="flex flex-wrap gap-4 pb-4">
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#7b1642" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.ityk")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#365591" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.tartuyk")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#183bbf" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.estoniagamedev")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#a82838" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.tly")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#d12e7d" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.ittk")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#ff6347" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.info")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#228b22" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.gameup")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#20b2aa" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.photobooth")}
+                </span>
+              </div>
+            </div>
+          )}
+
+          <div className="flex flex-col lg:flex-row gap-8 items-start">
+            <div className="relative w-full max-w-[800px]">
+              <div className="flex-shrink-0 border-3 border-[#1F5673] w-full relative">
+                <div ref={mountRef} className="w-full" />
+                {/* Left Arrow - Only show when on fuajee to go back to tudengimaja */}
+                {currentView === "fuajee" && (
+                  <button
+                    onClick={() => handleViewSwitch("tudengimaja")}
+                    className="group absolute left-4 bottom-4 p-4 md:p-6 transition-all duration-300 hover:scale-110 z-20 touch-manipulation min-h-[48px] min-w-[48px] flex items-center justify-center"
+                    title="Switch to Tudengimaja"
+                    aria-label="Switch to Tudengimaja view"
+                  >
+                    <span className="material-symbols-outlined !text-[clamp(2.5rem,2rem+2vw,4rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] group-hover:-translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition transform rotate-180">
+                      arrow_right_alt
+                    </span>
+                  </button>
+                )}
+
+                {/* Right Arrow - Only show when on tudengimaja to go to fuajee */}
+                {currentView === "tudengimaja" && (
+                  <button
+                    onClick={() => handleViewSwitch("fuajee")}
+                    className="group absolute right-4 bottom-4 p-4 md:p-6 transition-all duration-300 hover:scale-110 z-20 touch-manipulation min-h-[48px] min-w-[48px] flex items-center justify-center"
+                    title="Switch to Fuajee"
+                    aria-label="Switch to Fuajee view"
+                  >
+                    <span className="material-symbols-outlined !text-[clamp(2.5rem,2rem+2vw,4rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
+                      arrow_right_alt
+                    </span>
+                  </button>
+                )}
+
+                {currentView === "tudengimaja" && (
+                  <button
+                    onClick={() => setShowDividers(!showDividers)}
+                    className={`absolute top-2 right-2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10`}
+                  >
+                    {showDividers ? (
+                      <EyeClosed className="w-6 h-6 mr-2" />
+                    ) : (
+                      <Eye className="w-6 h-6 mr-2" />
+                    )}
+
+                    {showDividers ? t("expo.hide") : t("expo.show")}
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Tooltip - only show for current view */}
+          {hoveredRoom &&
+            ((currentView === "tudengimaja" &&
+              [
+                roomNames.boardGames,
+                roomNames.bar,
+                roomNames.eval,
+                roomNames.simRacing,
+                roomNames.fighting,
+                roomNames.lvlup,
+                roomNames.redbull,
+              ].includes(hoveredRoom)) ||
+              (currentView === "fuajee" &&
+                [
+                  roomNames.ityk,
+                  roomNames.tartuyk,
+                  roomNames.estoniagamedev,
+                  roomNames.info,
+                  roomNames.tly,
+                  roomNames.ittk,
+                  roomNames.photobooth,
+                  roomNames.gameup,
+                ].includes(hoveredRoom))) && (
+              <div
+                className="fixed bg-black bg-opacity-80 text-white px-3 py-2 rounded-lg text-sm pointer-events-none z-50"
+                style={{
+                  left: mousePosition.x + 10,
+                  top: mousePosition.y - 10,
+                }}
+              >
+                {hoveredRoom}
+              </div>
+            )}
         </div>
       </div>
 

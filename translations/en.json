@@ -146,7 +146,8 @@
       "registrationSetup": "Registration and setup in auditorium",
       "auditorium": "Auditorium",
       "studentHouse": "Student House (Tudengimaja)",
-      "auditoriumAndStudentHouse": "Auditorium and Student House"
+      "auditoriumAndStudentHouse": "Auditorium and Student House",
+      "entranceHall": "Entrance Hall"
     }
   },
   "stream": {
@@ -175,7 +176,15 @@
       "bar": "Bar Area",
       "boardGames": "Board Games Area",
       "simRacing": "Red Bull Sim Racing",
-      "fighting": "Fighting Games Area"
+      "fighting": "Fighting Games Area",
+      "photobooth": "Photo booth",
+      "ityk": "TalTech IT Faculty Student Council",
+      "tartuyk": "Tartu University",
+      "estoniagamedev": "Estonia Gamedev",
+      "info": "Information booth",
+      "tly": "Tallinn University",
+      "ittk": "TalTech School of Information Technologies",
+      "gameup": "GameUP!"
     },
     "hide": "Hide walls",
     "show": "Show walls"
