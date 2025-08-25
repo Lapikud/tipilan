@@ -6,7 +6,7 @@
     "houserules": "House rules",
     "expo": "Expo",
     "tickets": "Tickets",
-    "rules": "Rules",
+    "rules": "Game rules",
     "stream": "Stream",
     "tournaments": "Tournaments"
   },
@@ -116,7 +116,6 @@
       "buyTicket": "BUY TICKETS"
     },
     "mini": {
-      "titleSingular": "Mini-tournament",
       "title": "Mini-tournaments",
       "timing": "Timing to be announced",
       "description1": "TipiLAN hosts various fun and competitive mini-tournaments. Mini-tournaments take place in the following games: SimRacing, Tekken, FIFA, Minecraft Bedwars, Buckshot Roulette, LostGamer and many more.",
@@ -147,7 +146,8 @@
       "registrationSetup": "Registration and setup in auditorium",
       "auditorium": "Auditorium",
       "studentHouse": "Student House (Tudengimaja)",
-      "auditoriumAndStudentHouse": "Auditorium and Student House"
+      "auditoriumAndStudentHouse": "Auditorium and Student House",
+      "entranceHall": "Entrance Hall"
     }
   },
   "stream": {
@@ -176,16 +176,25 @@
       "bar": "Bar Area",
       "boardGames": "Board Games Area",
       "simRacing": "Red Bull Sim Racing",
-      "fighting": "Fighting Games Area"
+      "fighting": "Fighting Games Area",
+      "photobooth": "Photo booth",
+      "ityk": "TalTech IT Faculty Student Council",
+      "tartuyk": "Tartu University",
+      "estoniagamedev": "Estonia Gamedev",
+      "info": "Information booth",
+      "tly": "Tallinn University",
+      "ittk": "TalTech School of Information Technologies",
+      "gameup": "GameUP!"
     },
-    "hide": "Hide",
-    "show": "Show"
+    "hide": "Hide walls",
+    "show": "Show walls"
   },
   "rules": {
     "title": "Rules",
     "houseRules": "House Rules",
     "cs2Rules": "CS2 Rules",
-    "lolRules": "LoL Rules"
+    "lolRules": "LoL Rules",
+    "miniRules": "Mini-tournament Rules"
   },
   "admin": {
     "title": "Admin",

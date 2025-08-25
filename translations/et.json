@@ -147,7 +147,8 @@
       "registrationSetup": "Registreerimine ja setup aulas",
       "auditorium": "Aula",
       "studentHouse": "Tudengimaja",
-      "auditoriumAndStudentHouse": "Aula ja Tudengimaja"
+      "auditoriumAndStudentHouse": "Aula ja Tudengimaja",
+      "entranceHall": "Fuajee"
     }
   },
   "stream": {
@@ -176,16 +177,25 @@
       "bar": "Baariala",
       "boardGames": "Lauamängude ala",
       "simRacing": "Red Bull Sim Racing",
-      "fighting": "Võitlusmängu ala"
+      "fighting": "Võitlusmängu ala",
+      "photobooth": "Fotoboks",
+      "ityk": "IT-teaduskonna üliõpilaskogu",
+      "tartuyk": "Tartu Ülikool",
+      "estoniagamedev": "Eesti Gamedev",
+      "info": "Infoboks",
+      "tly": "Tallinna Ülikool",
+      "ittk": "TalTech IT-Teaduskond",
+      "gameup": "GameUP!"
     },
-    "hide": "Peida",
-    "show": "Näita"
+    "hide": "Peida seinad",
+    "show": "Näita seinu"
   },
   "rules": {
     "title": "Reeglid",
     "houseRules": "Kodukord",
     "cs2Rules": "CS2 Reeglid",
-    "lolRules": "LoL Reeglid"
+    "lolRules": "LoL Reeglid",
+    "miniRules": "Miniturniiride Reeglid"
   },
   "admin": {
     "title": "Haldus",
