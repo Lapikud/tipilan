@@ -206,7 +206,7 @@ export default async function Home({
             >
               <Image
                 src="/sponsors/BFGL.png"
-                alt="Haridusamet"
+                alt="BFGL"
                 width={192}
                 height={192}
                 className="object-contain"
@@ -215,7 +215,7 @@ export default async function Home({
             <NextLink href="https://www.tallinn.ee/et/haridus" target="_blank">
               <Image
                 src="/sponsors/tallinnaharidusamet.jpg"
-                alt="Tallinna haridusamet"
+                alt="Tallinna Haridusamet"
                 width={192}
                 height={192}
                 className="object-contain"
