@@ -72,7 +72,7 @@ export default function SidebarLayoutClient({
             <Link
               key={item.href}
               href={item.href}
-              className="hover:text-[#00A3E0] transition duration-150"
+              className="hover:text-[#00A3E0] md:hover:translate-x-2 transition duration-150"
             >
               {item.label}
             </Link>

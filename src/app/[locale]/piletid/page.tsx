@@ -15,7 +15,7 @@ export default async function Tickets({
     <div>
       <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
         <h1
-          className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4`}
+          className={`text-4xl wrap-break-word md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4`}
         >
           {t("tickets.title")}
         </h1>

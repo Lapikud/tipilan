@@ -38,7 +38,7 @@ const Footer = () => {
             <SiDiscord
               title="Discord"
               size={"2em"}
-              className="text-[#2A2C3F] dark:text-[#EEE5E5]"
+              className="text-[#2A2C3F] dark:text-[#EEE5E5]  hover:text-[#007CAB] hover:dark:text-[#00A3E0] transition"
             />
           </a>
           <a
@@ -50,7 +50,7 @@ const Footer = () => {
             <SiInstagram
               title="Instagram"
               size={"2em"}
-              className="text-[#2A2C3F] dark:text-[#EEE5E5]"
+              className="text-[#2A2C3F] dark:text-[#EEE5E5] hover:text-[#007CAB] hover:dark:text-[#00A3E0] transition"
             />
           </a>
           <a
@@ -62,7 +62,7 @@ const Footer = () => {
             <SiFacebook
               title="Facebook"
               size={"2em"}
-              className="text-[#2A2C3F] dark:text-[#EEE5E5]"
+              className="text-[#2A2C3F] dark:text-[#EEE5E5] hover:text-[#007CAB] hover:dark:text-[#00A3E0] transition"
             />
           </a>
         </div>
@@ -98,17 +98,33 @@ const Footer = () => {
               {t("footer.organization")}
             </h3>
             <div>
-              <p className="text-[#aaa]">
+              <p>
                 {t("footer.registrationCode")}:{" "}
                 <span className="font-semibold text-[#007CAB] dark:text-[#00A3E0]">
                   80391807
                 </span>
               </p>
-              <p className="text-[#aaa]">
-                ICO-210, Raja tn 4c, Tallinn, Harjumaa, 12616
-              </p>
+              <p className="">ICO-210, Raja tn 4c, Tallinn, Harjumaa, 12616</p>
             </div>
           </div>
+        </div>
+        <div className="block align-middle text-center pt-16">
+          {t("footer.madeBy")}{" "}
+          <a
+            target="_blank"
+            href="https://lapikud.ee/"
+            className="text-[#E3983E] font-bold"
+          >
+            MTÜ Lapikud
+          </a>{" "}
+          {t("footer.withHelpFrom")}{" "}
+          <a
+            target="_blank"
+            href="https://ituk.ee/"
+            className="bg-[#7B1642] font-bold not-dark:text-white"
+          >
+            MTÜ For Tsükkel/ITÜK
+          </a>
         </div>
       </div>
     </div>

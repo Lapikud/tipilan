@@ -163,7 +163,9 @@
     "terms": "Terms",
     "studentUnion": "IT Faculty Student Council",
     "organization": "MTÜ For Tsükkel",
-    "registrationCode": "Registration code"
+    "registrationCode": "Registration code",
+    "madeBy": "The TipiLAN website is made with love by",
+    "withHelpFrom": "with the help of"
   },
   "notFound": {
     "title": "404",
