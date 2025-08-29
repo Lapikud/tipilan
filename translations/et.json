@@ -164,7 +164,9 @@
     "terms": "Tingimused",
     "studentUnion": "IT-teaduskonna üliõpilaskogu",
     "organization": "MTÜ For Tsükkel",
-    "registrationCode": "Registrikood"
+    "registrationCode": "Registrikood",
+    "madeBy": "TipiLANi veebileht on tehtud armastusega",
+    "withHelpFrom": "poolt, kellele oli abiks"
   },
   "notFound": {
     "title": "404",

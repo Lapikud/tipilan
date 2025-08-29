@@ -142,7 +142,7 @@ export default async function Home({
           <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] text-[#2A2C3F] group-hover:text-black pb-8">
             {t("home.sections.poweredBy")}
           </h3>
-          <div className="flex flex-row flex-wrap gap-8 md:gap-18 items-center">
+          <div className="flex flex-row flex-wrap gap-8 md:gap-18 items-center justify-center">
             <NextLink href="https://taltech.ee" target="_blank">
               <Image
                 src="/sponsors/taltech-color.png"
@@ -207,6 +207,15 @@ export default async function Home({
               <Image
                 src="/sponsors/BFGL.png"
                 alt="BFGL"
+                width={192}
+                height={192}
+                className="object-contain"
+              />
+            </NextLink>
+            <NextLink href="https://www.tallinn.ee/et/haridus" target="_blank">
+              <Image
+                src="/sponsors/tallinnaharidusamet.jpg"
+                alt="Tallinna Haridusamet"
                 width={192}
                 height={192}
                 className="object-contain"
