@@ -898,13 +898,14 @@ export default function Expo() {
                 {currentView === "fuajee" && (
                   <button
                     onClick={() => handleViewSwitch("tudengimaja")}
-                    className="group absolute left-4 bottom-4 p-4 md:p-6 transition-all duration-300 hover:scale-110 z-20 touch-manipulation min-h-[48px] min-w-[48px] flex items-center justify-center cursor-pointer bg-[#1F5673]"
+                    className={`absolute bottom-2 left-1/2 transform -translate-x-1/2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10 cursor-pointer`}
                     title="Switch to Tudengimaja"
                     aria-label="Switch to Tudengimaja view"
                   >
-                    <span className="material-symbols-outlined !text-[clamp(2.5rem,2rem+2vw,4rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] group-hover:-translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition transform rotate-180">
+                    <span className="material-symbols-outlined !text-2xl !font-bold text-white mr-2 transform rotate-180">
                       arrow_right_alt
                     </span>
+                    {t("schedule.locations.studentHouse")}
                   </button>
                 )}
 
@@ -912,11 +913,12 @@ export default function Expo() {
                 {currentView === "tudengimaja" && (
                   <button
                     onClick={() => handleViewSwitch("fuajee")}
-                    className="group absolute right-4 bottom-4 p-4 md:p-6 transition-all duration-300 hover:scale-110 z-20 touch-manipulation min-h-[48px] min-w-[48px] flex items-center justify-center cursor-pointer bg-[#1F5673]"
+                    className={`absolute bottom-2 left-1/2 transform -translate-x-1/2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10 cursor-pointer`}
                     title="Switch to Fuajee"
                     aria-label="Switch to Fuajee view"
                   >
-                    <span className="material-symbols-outlined !text-[clamp(2.5rem,2rem+2vw,4rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
+                    {t("schedule.locations.entranceHall")}
+                    <span className="material-symbols-outlined !text-2xl !font-bold text-white ml-2">
                       arrow_right_alt
                     </span>
                   </button>
@@ -925,7 +927,7 @@ export default function Expo() {
                 {currentView === "tudengimaja" && (
                   <button
                     onClick={() => setShowDividers(!showDividers)}
-                    className={`absolute top-2 right-2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10 cursor-pointer bg-`}
+                    className={`absolute top-2 right-2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10 cursor-pointer`}
                   >
                     {showDividers ? (
                       <EyeClosed className="w-6 h-6 mr-2" />
