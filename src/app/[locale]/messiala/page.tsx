@@ -20,9 +20,9 @@ export default function Expo() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [showDividers, setShowDividers] = useState<boolean>(true);
   const [currentView, setCurrentView] = useState<"tudengimaja" | "fuajee">(
-    "tudengimaja",
+    "fuajee",
   );
-  const currentViewRef = useRef<"tudengimaja" | "fuajee">("tudengimaja");
+  const currentViewRef = useRef<"tudengimaja" | "fuajee">("fuajee");
   const t = useTranslations();
 
   // Define room names with translations
@@ -103,9 +103,9 @@ export default function Expo() {
       },
     };
 
-    // Position camera for isometric view (default to tudengimaja)
-    camera.position.copy(cameraPositions.tudengimaja.position);
-    camera.lookAt(cameraPositions.tudengimaja.lookAt);
+    // Position camera for isometric view (default to fuajee)
+    camera.position.copy(cameraPositions.fuajee.position);
+    camera.lookAt(cameraPositions.fuajee.lookAt);
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -319,6 +319,9 @@ export default function Expo() {
     // Store tudengimaja objects (rooms, ground, dividers)
     tudengimajaObjects = [...rooms, ground, ground2, ...dividers];
 
+    // Set initial visibility for fuajee default view
+    tudengimajaObjects.forEach((obj) => (obj.visible = false));
+
     // Load fuajee GLTF model
     const loader = new GLTFLoader();
     loader.load(
@@ -327,7 +330,7 @@ export default function Expo() {
         fuajeeMesh = gltf.scene;
         fuajeeMesh.position.set(-1.5, 1, 0);
         fuajeeMesh.scale.set(0.3, 0.3, 0.3);
-        fuajeeMesh.visible = false; // Initially hidden
+        fuajeeMesh.visible = true; // Initially visible for fuajee default
 
         // Traverse the model to collect meshes
         fuajeeMesh.traverse((child) => {
@@ -342,6 +345,11 @@ export default function Expo() {
 
         // Create example rooms for fuajee after the model loads
         createfuajeeRooms();
+
+        // Set initial visibility for fuajee view
+        tudengimajaObjects.forEach((obj) => (obj.visible = false));
+        fuajeeMesh.visible = true;
+        fuajeeRooms.forEach((room) => (room.visible = true));
       },
       (progress) => {
         console.log(
@@ -457,7 +465,7 @@ export default function Expo() {
         room.castShadow = true;
         room.receiveShadow = true;
         room.userData = { name: roomDef.name, originalColor: roomDef.color };
-        room.visible = false; // Initially hidden
+        room.visible = true; // Initially visible for fuajee default
 
         scene.add(room);
         fuajeeRooms.push(room);
@@ -890,7 +898,7 @@ export default function Expo() {
                 {currentView === "fuajee" && (
                   <button
                     onClick={() => handleViewSwitch("tudengimaja")}
-                    className="group absolute left-4 bottom-4 p-4 md:p-6 transition-all duration-300 hover:scale-110 z-20 touch-manipulation min-h-[48px] min-w-[48px] flex items-center justify-center"
+                    className="group absolute left-4 bottom-4 p-4 md:p-6 transition-all duration-300 hover:scale-110 z-20 touch-manipulation min-h-[48px] min-w-[48px] flex items-center justify-center cursor-pointer bg-[#1F5673]"
                     title="Switch to Tudengimaja"
                     aria-label="Switch to Tudengimaja view"
                   >
@@ -904,7 +912,7 @@ export default function Expo() {
                 {currentView === "tudengimaja" && (
                   <button
                     onClick={() => handleViewSwitch("fuajee")}
-                    className="group absolute right-4 bottom-4 p-4 md:p-6 transition-all duration-300 hover:scale-110 z-20 touch-manipulation min-h-[48px] min-w-[48px] flex items-center justify-center"
+                    className="group absolute right-4 bottom-4 p-4 md:p-6 transition-all duration-300 hover:scale-110 z-20 touch-manipulation min-h-[48px] min-w-[48px] flex items-center justify-center cursor-pointer bg-[#1F5673]"
                     title="Switch to Fuajee"
                     aria-label="Switch to Fuajee view"
                   >
@@ -917,7 +925,7 @@ export default function Expo() {
                 {currentView === "tudengimaja" && (
                   <button
                     onClick={() => setShowDividers(!showDividers)}
-                    className={`absolute top-2 right-2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10`}
+                    className={`absolute top-2 right-2 px-3 py-2 bg-[#1F5673] text-white hover:bg-[#2A7A9B] ${vipnagorgialla.className} uppercase italic text-sm font-semibold flex items-center transition-colors shadow-lg z-10 cursor-pointer bg-`}
                   >
                     {showDividers ? (
                       <EyeClosed className="w-6 h-6 mr-2" />
