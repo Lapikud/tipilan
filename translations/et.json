@@ -1,0 +1,227 @@
+{
+  "navigation": {
+    "home": "Avaleht",
+    "schedule": "Ajakava",
+    "admin": "Haldus",
+    "houserules": "Kodukord",
+    "expo": "Messiala",
+    "tickets": "Piletid",
+    "rules": "Reeglid",
+    "stream": "Striim",
+    "tournaments": "Turniirid"
+  },
+  "common": {
+    "loading": "Laadimine...",
+    "error": "Viga",
+    "success": "Õnnestus",
+    "save": "Salvesta",
+    "cancel": "Tühista",
+    "delete": "Kustuta",
+    "edit": "Muuda",
+    "close": "Sulge",
+    "next": "Järgmine",
+    "previous": "Eelmine",
+    "search": "Otsi",
+    "filter": "Filtreeri",
+    "reset": "Lähtesta",
+    "theme": {
+      "light": "Hele",
+      "dark": "Tume",
+      "system": "Süsteemipõhine"
+    },
+    "language": {
+      "et": "Eesti",
+      "en": "English"
+    }
+  },
+  "home": {
+    "title": "TipiLAN 2025",
+    "subtitle": "Eesti suurim tudengite korraldatud LAN!",
+    "welcome": "Tere tulemast TipiLAN 2025 sündmusele!",
+    "description": "Liitu meiega Eesti suurimal tudengite korraldatud LAN-üritusel. Mängud, võistlused ja palju muud ootavad sind!",
+    "sections": {
+      "schedule": {
+        "description": "TipiLAN on pungil põnevatest turniiridest, mini-võistlustest ja paljust muust."
+      },
+      "tournaments": {
+        "description": "TipiLANil toimuvad suurejoonelised CS2 ja LoL turniirid, mille auhinnafond on 10 000€."
+      },
+      "expo": {
+        "description": "TipiLANi messialal paiknevad ettevõtted, lisategevused ja toimuvad loengud."
+      },
+      "reserveSpot": "Broneeri oma koht juba täna!",
+      "poweredBy": "TipiLANi tõmbab käima..."
+    }
+  },
+  "tickets": {
+    "title": "PILETID JA REGISTREERIMINE",
+    "buyNow": "Osta nüüd",
+    "soldOut": "Välja müüdud",
+    "available": "Saadaval",
+    "price": "Hind",
+    "includes": "Sisaldab",
+    "computerParticipant": {
+      "title": "Arvutiga osaleja",
+      "price": "8€",
+      "features": [
+        "Isiklik laud, voolu- ja internetiühendus",
+        "Ligipääs demoalale",
+        "Turniiride pealt vaatamine",
+        "Võimalus osaleda miniturniiridel"
+      ]
+    },
+    "competitor": {
+      "title": "Võistleja",
+      "price": "12-15€",
+      "features": [
+        "Võimalus osaleda CS2 või LoL turniiril",
+        "Isiklik laud, voolu- ja internetiühendus",
+        "Ligipääs demoalale",
+        "Turniiride pealt vaatamine",
+        "Võimalus osaleda miniturniiridel"
+      ]
+    },
+    "visitor": {
+      "title": "Külastaja",
+      "price": "6€",
+      "features": [
+        "Ligipääs demoalale",
+        "Turniiride pealt vaatamine",
+        "Võimalus osaleda miniturniiridel"
+      ]
+    },
+    "buyTicket": "OSTA PILET"
+  },
+  "tournaments": {
+    "title": "Turniirid",
+    "register": "Registreeru",
+    "participants": "Osalejad",
+    "prizePool": "Auhinnafond",
+    "schedule": "Ajakava",
+    "rules": "Reeglid",
+    "cs2": {
+      "title": "CS2 turniir",
+      "timing": "Toimumisaeg veel selgumisel",
+      "description1": "TipiLANil toimub Eesti ühe suurima auhinnafondiga CS2 turniire juba sel sügisel. Haara kaasa sõbrad ja saa osa adrenaliinirohkest kogemusest!",
+      "description2": "Auhinnafond on suuruses 5250€, mis jaotatakse TOP3 meeskonna vahel ära. Iga tiimiliige saab vastavalt saavutatud kohale auhinnaks kas 600€, 300€ või 150€.",
+      "readRules": "LOE REEGLEID",
+      "buyTicket": "OSTA PILET"
+    },
+    "lol": {
+      "title": "LoL turniir",
+      "timing": "Toimumisaeg veel selgumisel",
+      "description1": "TipiLANil toimub Eesti ühe suurima auhinnafondiga LoL turniire juba sel sügisel. Haara kaasa sõbrad ja saa osa adrenaliinirohkest kogemusest!",
+      "description2": "Auhinnafond on suuruses 3500€, mis jaotatakse TOP3 meeskonna vahel ära. Iga tiimiliige saab vastavalt saavutatud kohale auhinnaks kas 400€, 200€ või 100€.",
+      "readRules": "LOE REEGLEID",
+      "buyTicket": "OSTA PILET"
+    },
+    "mini": {
+      "title": "Miniturniirid",
+      "timing": "Toimumisaeg veel selgumisel",
+      "description1": "TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Miniturniirid toimuvad järgnevates mängudes: SimRacing, Tekken, FIFA, Minecraft Bedwars, Buckshot Roulette, LostGamer ja palju muud.",
+      "description2": "Auhinnafond on kõigi turniiride peale 1250€ ja reeglina saab rahalise auhinna miniturniiri võitja.",
+      "readRules": "LOE REEGLEID",
+      "buyTicket": "OSTA PILET"
+    }
+  },
+  "schedule": {
+    "title": "Ajakava",
+    "day": "Päev",
+    "time": "Aeg",
+    "event": "Sündmus",
+    "location": "Asukoht",
+    "oct24": "24. oktoober",
+    "oct25": "25. oktoober",
+    "events": {
+      "doorsOpen": "Uksed avatakse",
+      "mainTournamentsStart": "Põhiturniirid algavad",
+      "miniTournamentsKickoff": "Miniturniiride kick-off",
+      "fightingGamesStart": "Fighting games turniiride algus",
+      "doorsClose": "Uksed suletakse",
+      "miniTournamentsStart": "Miniturniirid algavad",
+      "granblue": "Granblue turniir",
+      "granTurismo": "Gran Turismo turniir"
+    },
+    "locations": {
+      "registrationSetup": "Registreerimine ja setup aulas",
+      "auditorium": "Aula",
+      "studentHouse": "Tudengimaja",
+      "auditoriumAndStudentHouse": "Aula ja Tudengimaja",
+      "entranceHall": "Fuajee"
+    }
+  },
+  "stream": {
+    "title": "Striim",
+    "live": "Otse-eetris",
+    "offline": "Väljas",
+    "watchNow": "Vaata nüüd"
+  },
+  "footer": {
+    "copyright": "© 2025 TipiLAN. Kõik õigused kaitstud.",
+    "contact": "Kontakt",
+    "privacy": "Privaatsus",
+    "terms": "Tingimused",
+    "studentUnion": "IT-teaduskonna üliõpilaskogu",
+    "organization": "MTÜ For Tsükkel",
+    "registrationCode": "Registrikood",
+    "madeBy": "TipiLANi veebileht on tehtud armastusega",
+    "withHelpFrom": "poolt, kellele oli abiks"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Seda lehte me ei leidnud."
+  },
+  "expo": {
+    "title": "Messiala",
+    "description": "TipiLANi messialal paiknevad ettevõtted, lisategevused ja toimuvad loengud.",
+    "areas": {
+      "bar": "Baariala",
+      "boardGames": "Lauamängude ala",
+      "simRacing": "Red Bull Sim Racing",
+      "fighting": "Võitlusmängu ala",
+      "photobooth": "Fotoboks",
+      "ityk": "IT-teaduskonna üliõpilaskogu",
+      "tartuyk": "Tartu Ülikool",
+      "estoniagamedev": "Eesti Gamedev",
+      "info": "Infoboks",
+      "tly": "Tallinna Ülikool",
+      "ittk": "TalTech IT-Teaduskond",
+      "gameup": "GameUP!"
+    },
+    "hide": "Peida seinad",
+    "show": "Näita seinu"
+  },
+  "rules": {
+    "title": "Reeglid",
+    "houseRules": "Kodukord",
+    "cs2Rules": "CS2 Reeglid",
+    "lolRules": "LoL Reeglid",
+    "miniRules": "Miniturniiride Reeglid"
+  },
+  "admin": {
+    "title": "Haldus",
+    "users": "Kasutajaid",
+    "teams": "Meeskondasid",
+    "success": {
+      "title": "Toiming oli edukas!",
+      "description": "Andmebaasi andmed on uuendatud."
+    },
+    "sync": {
+      "title": "Kas soovite värskendada andmebaasi?",
+      "description1": "See tõmbab Fientast praegused andmed ning asendab",
+      "all": "KÕIK",
+      "description2": "olemasolevad andmed andmebaasis!",
+      "warning": "Kui sa ei ole kindel, vajuta \"Tühista\".",
+      "update": "Värskenda"
+    },
+    "roles": {
+      "captain": "Kapten",
+      "teammate": "Meeskonnaliige"
+    },
+    "table": {
+      "name": "Nimi",
+      "members": "Liikmed",
+      "noMembers": "Liikmeid puuduvad"
+    }
+  }
+}

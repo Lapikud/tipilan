@@ -1,0 +1,227 @@
+{
+  "navigation": {
+    "home": "Home",
+    "schedule": "Schedule",
+    "admin": "Admin",
+    "houserules": "House rules",
+    "expo": "Expo",
+    "tickets": "Tickets",
+    "rules": "Game rules",
+    "stream": "Stream",
+    "tournaments": "Tournaments"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "reset": "Reset",
+    "theme": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "language": {
+      "et": "Eesti",
+      "en": "English"
+    }
+  },
+  "home": {
+    "title": "TipiLAN 2025",
+    "subtitle": "Estonia's largest student-organized LAN event!",
+    "welcome": "Welcome to TipiLAN 2025!",
+    "description": "Join us at Estonia's largest student-organized LAN event. Games, competitions and much more await you!",
+    "sections": {
+      "schedule": {
+        "description": "TipiLAN is packed with exciting tournaments, mini-competitions and much more."
+      },
+      "tournaments": {
+        "description": "TipiLAN features massive CS2 and LoL tournaments with a prize pool of €10,000."
+      },
+      "expo": {
+        "description": "The TipiLAN expo area hosts companies, additional activities and lectures."
+      },
+      "reserveSpot": "Reserve your spot today!",
+      "poweredBy": "TipiLAN is powered by..."
+    }
+  },
+  "tickets": {
+    "title": "TICKETS AND REGISTRATION",
+    "buyNow": "Buy now",
+    "soldOut": "Sold out",
+    "available": "Available",
+    "price": "Price",
+    "includes": "Includes",
+    "computerParticipant": {
+      "title": "Computer Participant",
+      "price": "8€",
+      "features": [
+        "Personal desk, power and internet connection",
+        "Access to demo area",
+        "Tournament spectating",
+        "Ability to participate in mini-tournaments"
+      ]
+    },
+    "competitor": {
+      "title": "Competitor",
+      "price": "12-15€",
+      "features": [
+        "Ability to participate in the CS2 or LoL tournament",
+        "Personal desk, power and internet connection",
+        "Access to demo area",
+        "Tournament spectating",
+        "Ability to participate in mini-tournaments"
+      ]
+    },
+    "visitor": {
+      "title": "Visitor",
+      "price": "6€",
+      "features": [
+        "Access to demo area",
+        "Tournament spectating",
+        "Ability to participate in mini-tournaments"
+      ]
+    },
+    "buyTicket": "BUY TICKETS"
+  },
+  "tournaments": {
+    "title": "Tournaments",
+    "register": "Register",
+    "participants": "Participants",
+    "prizePool": "Prize pool",
+    "schedule": "Schedule",
+    "rules": "Rules",
+    "cs2": {
+      "title": "CS2 Tournament",
+      "timing": "Timing to be announced",
+      "description1": "TipiLAN hosts one of Estonia's largest CS2 tournaments with a significant prize pool this fall. Grab your friends and experience the adrenaline rush!",
+      "description2": "The prize pool is €5,250, distributed among the TOP3 teams. Each team member receives €600, €300, or €150 based on their placement.",
+      "readRules": "READ RULES",
+      "buyTicket": "BUY TICKETS"
+    },
+    "lol": {
+      "title": "LoL Tournament",
+      "timing": "Timing to be announced",
+      "description1": "TipiLAN hosts one of Estonia's largest LoL tournaments with a significant prize pool this fall. Grab your friends and experience the adrenaline rush!",
+      "description2": "The prize pool is €3,500, distributed among the TOP3 teams. Each team member receives €400, €200, or €100 based on their placement.",
+      "readRules": "READ RULES",
+      "buyTicket": "BUY TICKETS"
+    },
+    "mini": {
+      "title": "Mini-tournaments",
+      "timing": "Timing to be announced",
+      "description1": "TipiLAN hosts various fun and competitive mini-tournaments. Mini-tournaments take place in the following games: SimRacing, Tekken, FIFA, Minecraft Bedwars, Buckshot Roulette, LostGamer and many more.",
+      "description2": "The total prize pool for all tournaments is €1,250 and typically the mini-tournament winner receives a cash prize.",
+      "readRules": "READ RULES",
+      "buyTicket": "BUY TICKETS"
+    }
+  },
+  "schedule": {
+    "title": "Schedule",
+    "day": "Day",
+    "time": "Time",
+    "event": "Event",
+    "location": "Location",
+    "oct24": "October 24th",
+    "oct25": "October 25th",
+    "events": {
+      "doorsOpen": "Doors open",
+      "mainTournamentsStart": "Main tournaments begin",
+      "miniTournamentsKickoff": "Mini-tournaments kick-off",
+      "fightingGamesStart": "Fighting game tournaments start",
+      "doorsClose": "Doors close",
+      "miniTournamentsStart": "Mini-tournaments begin",
+      "granblue": "Granblue tournament",
+      "granTurismo": "Gran Turismo tournament"
+    },
+    "locations": {
+      "registrationSetup": "Registration and setup in auditorium",
+      "auditorium": "Auditorium",
+      "studentHouse": "Student House (Tudengimaja)",
+      "auditoriumAndStudentHouse": "Auditorium and Student House",
+      "entranceHall": "Entrance Hall"
+    }
+  },
+  "stream": {
+    "title": "Stream",
+    "live": "Live",
+    "offline": "Offline",
+    "watchNow": "Watch now"
+  },
+  "footer": {
+    "copyright": "© 2025 TipiLAN. All rights reserved.",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "studentUnion": "IT Faculty Student Council",
+    "organization": "MTÜ For Tsükkel",
+    "registrationCode": "Registration code",
+    "madeBy": "The TipiLAN website is made with love by",
+    "withHelpFrom": "with the help of"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "We couldn't find this page."
+  },
+  "expo": {
+    "title": "Expo Area",
+    "description": "The TipiLAN expo area hosts companies, additional activities and lectures.",
+    "areas": {
+      "bar": "Bar Area",
+      "boardGames": "Board Games Area",
+      "simRacing": "Red Bull Sim Racing",
+      "fighting": "Fighting Games Area",
+      "photobooth": "Photo booth",
+      "ityk": "TalTech IT Faculty Student Council",
+      "tartuyk": "Tartu University",
+      "estoniagamedev": "Estonia Gamedev",
+      "info": "Information booth",
+      "tly": "Tallinn University",
+      "ittk": "TalTech School of Information Technologies",
+      "gameup": "GameUP!"
+    },
+    "hide": "Hide walls",
+    "show": "Show walls"
+  },
+  "rules": {
+    "title": "Rules",
+    "houseRules": "House Rules",
+    "cs2Rules": "CS2 Rules",
+    "lolRules": "LoL Rules",
+    "miniRules": "Mini-tournament Rules"
+  },
+  "admin": {
+    "title": "Admin",
+    "users": "Users",
+    "teams": "Teams",
+    "success": {
+      "title": "Operation was successful!",
+      "description": "Database data has been updated."
+    },
+    "sync": {
+      "title": "Do you want to update the database?",
+      "description1": "This will pull current data from Fienta and replace",
+      "all": "ALL",
+      "description2": "existing data in the database!",
+      "warning": "If you're not sure, click \"Cancel\".",
+      "update": "Update"
+    },
+    "roles": {
+      "captain": "Captain",
+      "teammate": "Teammate"
+    },
+    "table": {
+      "name": "Name",
+      "members": "Members",
+      "noMembers": "No members"
+    }
+  }
+}

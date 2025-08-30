@@ -1,33 +1,68 @@
 export type ScheduleItem = {
   time?: string; // Aeg on ajutine praegu kuna pole 100% kindlalt paigas
-  title: string;
-  location: string;
+  titleKey: string;
+  locationKey: string;
   description?: string;
 };
 
 export const scheduleData: Record<string, ScheduleItem[]> = {
-  "24. oktoober": [
+  oct24: [
     {
-      title: "League of Legends põhiturniir",
-      location: "Aula",
-      time: "-",
+      titleKey: "schedule.events.doorsOpen",
+      locationKey: "schedule.locations.registrationSetup",
+      time: "17:00",
     },
     {
-      title: "Miniturniirid",
-      location: "Tudengimaja",
-      time: "-",
+      titleKey: "schedule.events.mainTournamentsStart",
+      locationKey: "schedule.locations.auditorium",
+      time: "20:00",
+    },
+    {
+      titleKey: "schedule.events.miniTournamentsKickoff",
+      locationKey: "schedule.locations.studentHouse",
+      time: "18:00",
+    },
+    {
+      titleKey: "schedule.events.fightingGamesStart",
+      locationKey: "schedule.locations.studentHouse",
+      time: "18:30",
+    },
+    {
+      titleKey: "schedule.events.doorsClose",
+      locationKey: "schedule.locations.auditoriumAndStudentHouse",
+      time: "*01:00",
     },
   ],
-  "25. oktoober": [
+  oct25: [
     {
-      title: "Counter-Strike 2 põhiturniir",
-      location: "Aula",
-      time: "-",
+      titleKey: "schedule.events.doorsOpen",
+      locationKey: "schedule.locations.auditoriumAndStudentHouse",
+      time: "10:00",
     },
     {
-      title: "Miniturniirid",
-      location: "Tudengimaja",
-      time: "-",
+      titleKey: "schedule.events.miniTournamentsStart",
+      locationKey: "schedule.locations.studentHouse",
+      time: "11:00",
+    },
+    {
+      titleKey: "schedule.events.granblue",
+      locationKey: "schedule.locations.studentHouse",
+      time: "11:30",
+    },
+    {
+      titleKey: "schedule.events.mainTournamentsStart",
+      locationKey: "schedule.locations.auditorium",
+      time: "12:00",
+    },
+    {
+      titleKey: "schedule.events.granTurismo",
+      locationKey: "schedule.locations.studentHouse",
+      time: "20:00",
+    },
+    {
+      titleKey: "schedule.events.doorsClose",
+      locationKey: "schedule.locations.auditoriumAndStudentHouse",
+      time: "*01:00",
     },
   ],
 };

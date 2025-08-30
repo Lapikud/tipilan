@@ -1,22 +1,14 @@
-'use client';
-
-import { useState } from "react";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+import SidebarLayoutServer from "./SidebarLayoutServer";
 
 const SidebarParent = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggleSidebar = () => setIsOpen(!isOpen);
-    
-    return (
-        <div className="fixed w-screen top-0 z-9999">
-            <Header isOpen={isOpen} toggleSidebar={toggleSidebar} />
-            <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}/>
-        </div>
-    );
+  return (
+    <div className="fixed w-screen top-0 z-9999">
+      <SidebarLayoutServer />
+    </div>
+  );
 };
 
-// This component is responsible for rendering the sidebar and header together. 
-// It manages the state of the sidebar (open/closed) and passes the necessary props to both the Header and Sidebar components.
+// This component is responsible for rendering the sidebar and header together.
+// Server-side translations are handled by SidebarLayoutServer.
 
 export default SidebarParent;

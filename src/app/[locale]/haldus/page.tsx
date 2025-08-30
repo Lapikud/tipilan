@@ -17,9 +17,10 @@ import {
   X,
 } from "lucide-react";
 
-import Link from "next/link";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { revalidatePath } from "next/cache";
 import { redirect, RedirectType } from "next/navigation";
+import NextLink from "next/link";
 
 import { Button } from "@/components/ui/button";
 
@@ -53,13 +54,13 @@ async function dismissAlert() {
   redirect("/haldus", RedirectType.replace);
 }
 
-const SuccessAlertDB = () => {
+const SuccessAlertDB = ({ t }: { t: (key: string) => string }) => {
   return (
     <Alert className="flex items-start mt-8">
       <CheckCircle2Icon className="mt-0.5" />
       <div className="flex-1">
-        <AlertTitle>Toiming oli edukas!</AlertTitle>
-        <AlertDescription>Andmebaasi andmed on uuendatud.</AlertDescription>
+        <AlertTitle>{t("admin.success.title")}</AlertTitle>
+        <AlertDescription>{t("admin.success.description")}</AlertDescription>
       </div>
       <form action={dismissAlert} className="ml-2">
         <Button
@@ -76,10 +77,15 @@ const SuccessAlertDB = () => {
 };
 
 export default async function Admin({
+  params,
   searchParams,
 }: {
+  params: Promise<{ locale: string }>;
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale });
   const alarmStatus = await searchParams;
   const showSuccess = alarmStatus.success === "true";
 
@@ -97,31 +103,31 @@ export default async function Admin({
 
   return (
     <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
-      {showSuccess && <SuccessAlertDB />}
+      {showSuccess && <SuccessAlertDB t={t} />}
       <div className="flex items-center gap-4">
-        <Link href={"/"}>
+        <NextLink href={"/"}>
           <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] translate-y-2.5 hover:-translate-x-2 dark:hover:text-[#EEE5E5] hover:text-[#2A2C3F] transition">
             arrow_left_alt
           </span>
-        </Link>
+        </NextLink>
         <h1
           className={`text-5xl sm:text-6xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 mb-4`}
         >
-          Haldus
+          {t("admin.title")}
         </h1>
       </div>
       <div className="text-2xl text-[#2A2C3F] dark:text-[#EEE5E5]">
         <div className="pl-2 flex gap-8 pb-4">
           <div className="flex text-lg md:text-2xl flex-row items-center">
             <Users className="mr-2" />
-            Kasutajaid: {usersData.length}
+            {t("admin.users")}: {usersData.length}
           </div>
-          <Link href="/haldus/meeskonnad" className="flex items-center">
+          <NextLink href="/haldus/meeskonnad" className="flex items-center">
             <div className="flex text-lg md:text-2xl flex-row items-center">
               <IdCardLanyard className="mr-2" />
-              Meeskondasid: {teamsData.length}
+              {t("admin.teams")}: {teamsData.length}
             </div>
-          </Link>
+          </NextLink>
           <AlertDialog>
             <AlertDialogTrigger asChild>
               <div className="ml-auto">
@@ -135,24 +141,24 @@ export default async function Admin({
               </div>
             </AlertDialogTrigger>
             <AlertDialogContent>
-              <AlertDialogTitle>
-                Kas soovite värskendada andmebaasi?
-              </AlertDialogTitle>
+              <AlertDialogTitle>{t("admin.sync.title")}</AlertDialogTitle>
               <AlertDialogDescription>
-                See tõmbab Fientast praegused andmed ning asendab{" "}
-                <span className="text-red-600 font-semibold">KÕIK</span>{" "}
-                olemasolevad andmed andmebaasis!
+                {t("admin.sync.description1")}{" "}
+                <span className="text-red-600 font-semibold">
+                  {t("admin.sync.all")}
+                </span>{" "}
+                {t("admin.sync.description2")}
                 <br />
                 <br />
-                Kui sa ei ole kindel, vajuta &quot;Tühista&quot;.
+                {t("admin.sync.warning")}
               </AlertDialogDescription>
               <AlertDialogFooter>
                 <AlertDialogCancel className="cursor-pointer">
-                  Tühista
+                  {t("common.cancel")}
                 </AlertDialogCancel>
                 <form action={syncAction}>
                   <AlertDialogAction type="submit" className="cursor-pointer">
-                    Värskenda
+                    {t("admin.sync.update")}
                   </AlertDialogAction>
                 </form>
               </AlertDialogFooter>
