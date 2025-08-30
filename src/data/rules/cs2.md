@@ -1,4 +1,5 @@
-## 1. Üldist 1.  **1.1.** Counter-Strike 2 (edaspidi CS2) turniir toimub 24.-26. Oktoober, 2025 Tallinna Tehnikaülikooli (TalTech) ruumides, Ehitajate tee 5, Tallinn.  2. **1.2** Turniiri auhinnafondiks on 5250€, mis jaguneb järgnevalt:
+## 1. Üldist 
+1.  **1.1.** Counter-Strike 2 (edaspidi CS2) turniir toimub 24.-26. Oktoober, 2025 Tallinna Tehnikaülikooli (TalTech) ruumides, Ehitajate tee 5, Tallinn.  2. **1.2** Turniiri auhinnafondiks on 5250€, mis jaguneb järgnevalt:
     1. **1.2.1** Esimese koha saanud võistkond - 600€ võistleja kohta
     2. **1.2.2** Teise koha saanud võistkond - 300€ võistleja kohta
     3. **1.2.3** Kolmanda koha saanud võistkond - 150€ võistleja kohta
@@ -120,4 +121,4 @@
     **8.10.2**Korraldustiimil on aega kuni 25 minutit, et teha otsus protesti osas. Sellel ajal on mänguvoor pausil ning tiimid ei tohi oma kohtadelt lahkuda.
 11. **8.11** Mänguvana teavitab eksimusest, selle sisust ja tagajärjest reegleid rikkunud tiimiliiget, tema tiimi ja vastastiimi.
 12. **8.12** Korraldustiimil on õigus panna mänguvoor pausile ja lõpetada paus ükskõik millise hetkel vastavalt vajadusele.
-13. **8.13** Korraldustiimil on kohustus kõikidest väljalangemistest ja -arvamistest ning edasistest muudatustest avalikult teada anda.
+Korraldustiimil on kohustus kõikidest väljalangemistest ja -arvamistest ning edasistest muudatustest avalikult teada anda.
