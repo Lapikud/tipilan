@@ -22,9 +22,10 @@
    ```
 4. Run the application:
    ```bash
-   bun run dev
+   bun --bun run dev
    ```
-5. Build the application:
+
+(ONLY FOR PRODUCTION!!) Build the application:
    ```bash
    bun run build
    ```
