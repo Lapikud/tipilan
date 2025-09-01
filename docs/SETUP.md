@@ -27,7 +27,7 @@
 
 (ONLY FOR PRODUCTION!!) Build the application:
    ```bash
-   bun run build
+   bun --bun run build
    ```
 ## Accessing the Application
 - The application is now running at `http://localhost:3000`.
