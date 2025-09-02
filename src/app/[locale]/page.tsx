@@ -221,6 +221,24 @@ export default async function Home({
                 className="object-contain"
               />
             </NextLink>
+            <NextLink href="https://www.militaarseiklus.ee/" target="_blank">
+              <Image
+                src="/sponsors/militaarseiklus.png"
+                alt="Militaarseiklus"
+                width={200}
+                height={200}
+                className="object-contain"
+              />
+            </NextLink>
+            <NextLink href="https://www.arvutimuuseum.ee" target="_blank">
+              <Image
+                src="/sponsors/arvutimuuseum.png"
+                alt="Arvutimuuseum"
+                width={200}
+                height={200}
+                className="object-contain"
+              />
+            </NextLink>
           </div>
         </div>
       </div>
