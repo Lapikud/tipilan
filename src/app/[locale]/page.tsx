@@ -232,7 +232,11 @@ export default async function Home({
             </NextLink>
             <NextLink href="https://www.arvutimuuseum.ee" target="_blank">
               <Image
+<<<<<<< HEAD
                 src="/sponsors/arvutimuuseum.svg"
+=======
+                src="/sponsors/arvutimuuseum.png"
+>>>>>>> f26f8518b4bc260c3098e534cc7ac7fdce081394
                 alt="Arvutimuuseum"
                 width={200}
                 height={200}
