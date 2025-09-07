@@ -101,24 +101,24 @@
     "rules": "Rules",
     "cs2": {
       "title": "CS2 Tournament",
-      "timing": "Timing to be announced",
+      "timing": "24th-26th October",
       "description1": "TipiLAN hosts one of Estonia's largest CS2 tournaments with a significant prize pool this fall. Grab your friends and experience the adrenaline rush!",
-      "description2": "The prize pool is €5,250, distributed among the TOP3 teams. Each team member receives €600, €300, or €150 based on their placement.",
+      "description2": "The prize pool is €5,750 distributed among the TOP3 teams. Each team receives €2500, €1500, or €1000 based on their placement.",
       "readRules": "READ RULES",
       "buyTicket": "BUY TICKETS"
     },
     "lol": {
       "title": "LoL Tournament",
-      "timing": "Timing to be announced",
+      "timing": "24th-25th October",
       "description1": "TipiLAN hosts one of Estonia's largest LoL tournaments with a significant prize pool this fall. Grab your friends and experience the adrenaline rush!",
-      "description2": "The prize pool is €3,500, distributed among the TOP3 teams. Each team member receives €400, €200, or €100 based on their placement.",
+      "description2": "The prize pool is €3,000, distributed among the TOP3 teams. Each team receives €1500, €1000, or €500 based on their placement.",
       "readRules": "READ RULES",
       "buyTicket": "BUY TICKETS"
     },
     "mini": {
       "title": "Mini-tournaments",
-      "timing": "Timing to be announced",
-      "description1": "TipiLAN hosts various fun and competitive mini-tournaments. Mini-tournaments take place in the following games: SimRacing, Tekken, FIFA, Minecraft Bedwars, Buckshot Roulette, LostGamer and many more.",
+      "timing": "24th-25th October",
+      "description1": "TipiLAN hosts various fun and competitive mini-tournaments. Mini-tournaments take place in the following games: SimRacing, Tekken, FIFA, Buckshot Roulette, LostGamer and many more.",
       "description2": "The total prize pool for all tournaments is €1,250 and typically the mini-tournament winner receives a cash prize.",
       "readRules": "READ RULES",
       "buyTicket": "BUY TICKETS"
