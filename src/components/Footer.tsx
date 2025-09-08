@@ -81,7 +81,7 @@ const Footer = () => {
                 <span className="material-symbols-outlined !font-bold text-[#007CAB] dark:text-[#00A3E0]">
                   mail
                 </span>
-                <a href="mailto:kontakt@ituk.ee" className="underline">
+                <a href="mailto:tipilan@ituk.ee" className="underline">
                   tipilan@ituk.ee
                 </a>
               </div>
