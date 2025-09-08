@@ -101,25 +101,27 @@
     "rules": "Reeglid",
     "cs2": {
       "title": "CS2 turniir",
-      "timing": "Toimumisaeg veel selgumisel",
+      "timing": "24.-26. oktoober",
       "description1": "TipiLANil toimub Eesti ühe suurima auhinnafondiga CS2 turniire juba sel sügisel. Haara kaasa sõbrad ja saa osa adrenaliinirohkest kogemusest!",
-      "description2": "Auhinnafond on suuruses 5250€, mis jaotatakse TOP3 meeskonna vahel ära. Iga tiimiliige saab vastavalt saavutatud kohale auhinnaks kas 600€, 300€ või 150€.",
+      "description2": "Auhinnafond on suuruses 5750€, mis jaotatakse nii põhiturniiri parimate kui ka 'Teise Šansi' turniiri võitjate vahel, pakkudes võiduvõimalust kõikidele osalejatele.",
+      "description3": "TOP3 meeskonda jagavad omavahel 5000€ ning 'Teise Šansi' turniiri kaks parimat meeskonda 750€.",
+
       "readRules": "LOE REEGLEID",
       "buyTicket": "OSTA PILET"
     },
     "lol": {
       "title": "LoL turniir",
-      "timing": "Toimumisaeg veel selgumisel",
+      "timing": "24.-25. oktoober",
       "description1": "TipiLANil toimub Eesti ühe suurima auhinnafondiga LoL turniire juba sel sügisel. Haara kaasa sõbrad ja saa osa adrenaliinirohkest kogemusest!",
-      "description2": "Auhinnafond on suuruses 3500€, mis jaotatakse TOP3 meeskonna vahel ära. Iga tiimiliige saab vastavalt saavutatud kohale auhinnaks kas 400€, 200€ või 100€.",
+      "description2": "Auhinnafond on suuruses 3000€, mis jaotatakse TOP3 meeskonna vahel ära. Iga tiimiliige saab vastavalt saavutatud kohale auhinnaks kas 1500€, 1000€ või 500€.",
       "readRules": "LOE REEGLEID",
       "buyTicket": "OSTA PILET"
     },
     "mini": {
       "titleSingular": "Miniturniiride",
       "title": "Miniturniirid",
-      "timing": "Toimumisaeg veel selgumisel",
-      "description1": "TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Miniturniirid toimuvad järgnevates mängudes: SimRacing, Tekken, FIFA, Minecraft Bedwars, Buckshot Roulette, LostGamer ja palju muud.",
+      "timing": "24.-25. oktoober",
+      "description1": "TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Miniturniirid toimuvad järgnevates mängudes: SimRacing, Tekken, FIFA, Buckshot Roulette, LostGamer ja palju muud.",
       "description2": "Auhinnafond on kõigi turniiride peale 1250€ ja reeglina saab rahalise auhinna miniturniiri võitja.",
       "readRules": "LOE REEGLEID",
       "buyTicket": "OSTA PILET"

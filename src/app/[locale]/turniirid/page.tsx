@@ -44,6 +44,9 @@ export default async function Tourney({
               <p className="text-balance">
                 {t("tournaments.cs2.description2")}
               </p>
+              <p className="text-balance">
+                {t("tournaments.cs2.description3")}
+              </p>
               <br />
 
               <div className={"flex flex-row flex-wrap gap-8"}>
