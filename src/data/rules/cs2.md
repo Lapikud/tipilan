@@ -74,9 +74,7 @@
 5. **5.5** Tehniline paus: igal tiimil on vajadusel õigus kasutada tehnilist pausi. Pausi alustamiseks tuleb mängusisesesse chatti sisestada käsklus “.tech”. Tehnilist pausi tohib kasutada üksnes mõjuval põhjusel, tehniliste probleemide esinemisel, ning selle põhjusest tuleb korraldajaid viivitamatult teavitada Discordi kaudu pärast pausi alustamist.
 
 ## 6.  Kaardivalik
-1. **6.1** Turniir toimub kahes etapis:
-    1. **6.1.1** Swiss-süsteem: algfaasis mängitakse Bo1 formaadis. Kõik otsustavad mängud (mängud, mis tagavad edasipääsu või turniirilt väljalangemise) on Bo3 formaadis. 8 parimat meeskonda pääsevad finaaletappi.
-    2. **6.1.2** Finaaletapp: kõik kohtumised on Bo3. Toimuvad veerandfinaalid, poolfinaalid, finaal ning 3. koha mäng.
+1. **6.1** Turniiri lõplik formaat avalikustatakse oktoobris.
 2. **6.2** Mängitav kaart valitakse välja hetkel aktiivsete Valve’i kaardigrupi (Valve Active Duty Map Group) kaartidest.
 3. **6.3** Parim ühest (Bo1): mündiviske võitja otsustab, kas nad on võistkond A või võistkond B. Võistkond A alustab ning protsess on järgmine:
     1. **6.3.1** Võistkond A eemaldab kaks kaarti.
