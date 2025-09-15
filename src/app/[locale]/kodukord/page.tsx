@@ -3,6 +3,7 @@ import ReactMarkdown, { Components } from "react-markdown";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import SectionDivider from "@/components/SectionDivider";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { loadRulesBun } from "@/lib/loadRules";
 
 export default async function Page({
   params,
@@ -12,8 +13,7 @@ export default async function Page({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale });
-  const file = Bun.file("src/data/kodukord.md");
-  const content = await file.text();
+  const content = await loadRulesBun("kodukord", locale as "et" | "en");
 
   return (
     <div>

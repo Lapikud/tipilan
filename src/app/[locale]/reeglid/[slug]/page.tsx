@@ -3,6 +3,7 @@ import ReactMarkdown, { Components } from "react-markdown";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import SectionDivider from "@/components/SectionDivider";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { loadRulesBun } from "@/lib/loadRules";
 
 // Map of valid slugs to their translation keys
 const rulesMap = {
@@ -28,20 +29,10 @@ async function getRuleContent(slug: string, locale: string) {
   const ruleConfig = rulesMap[slug as RuleSlug];
 
   try {
-    // Try to load the file for the current locale first
-    let filePath = `src/data/rules/${locale}/${slug}.md`;
-    let file = Bun.file(filePath);
-
-    // Check if file exists, if not fallback to Estonian
-    if (!(await file.exists()) && locale !== "et") {
-      console.warn(
-        `Rules file not found for ${slug} in ${locale}, falling back to Estonian`,
-      );
-      filePath = `src/data/rules/et/${slug}.md`;
-      file = Bun.file(filePath);
-    }
-
-    const content = await file.text();
+    const content = await loadRulesBun(
+      slug as "cs2" | "lol",
+      locale as "et" | "en",
+    );
     return {
       content,
       titleKey: ruleConfig.titleKey,
