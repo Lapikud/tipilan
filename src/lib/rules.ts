@@ -45,7 +45,7 @@ export async function getRules(
         return fallbackContent;
       } catch (fallbackError) {
         throw new Error(
-          `Rules file not found for ${ruleType} in either ${locale} or et locale`,
+          `Rules file not found for ${ruleType} in either ${locale} or et locale: ${fallbackError}`,
         );
       }
     }

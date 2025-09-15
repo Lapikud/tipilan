@@ -946,7 +946,6 @@ export default function Expo() {
               ].includes(hoveredRoom)) ||
               (currentView === "fuajee" &&
                 [
-                  roomNames.ityk,
                   roomNames.tartuyk,
                   roomNames.estoniagamedev,
                   roomNames.info,

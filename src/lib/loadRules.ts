@@ -15,7 +15,7 @@ export async function loadRules(
   locale: Locale,
 ): Promise<string> {
   // Try to load the file for the current locale first
-  let filePath = path.join(
+  const filePath = path.join(
     process.cwd(),
     "src",
     "data",
@@ -28,7 +28,7 @@ export async function loadRules(
     // Check if file exists for current locale
     if (fs.existsSync(filePath)) {
       const file = await import("fs").then(() =>
-        fs.readFileSync(filePath, "utf8")
+        fs.readFileSync(filePath, "utf8"),
       );
       return file;
     }
@@ -60,7 +60,7 @@ export async function loadRules(
       error,
     );
     throw new Error(
-      `Failed to load rules for ${ruleType}: ${error instanceof Error ? error.message : 'Unknown error'}`,
+      `Failed to load rules for ${ruleType}: ${error instanceof Error ? error.message : "Unknown error"}`,
     );
   }
 }
@@ -97,7 +97,7 @@ export async function loadRulesBun(
       error,
     );
     throw new Error(
-      `Failed to load rules for ${ruleType}: ${error instanceof Error ? error.message : 'Unknown error'}`,
+      `Failed to load rules for ${ruleType}: ${error instanceof Error ? error.message : "Unknown error"}`,
     );
   }
 }
