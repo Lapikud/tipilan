@@ -4,14 +4,12 @@ import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import SectionDivider from "@/components/SectionDivider";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-// Map of valid slugs to their corresponding file paths and translation keys
+// Map of valid slugs to their translation keys
 const rulesMap = {
   lol: {
-    filePath: "src/data/rules/lol.md",
     titleKey: "rules.lolRules",
   },
   cs2: {
-    filePath: "src/data/rules/cs2.md",
     titleKey: "rules.cs2Rules",
   },
 } as const;
@@ -22,7 +20,7 @@ interface PageProps {
   params: Promise<{ slug: string; locale: string }>;
 }
 
-async function getRuleContent(slug: string) {
+async function getRuleContent(slug: string, locale: string) {
   if (!Object.keys(rulesMap).includes(slug)) {
     return null;
   }
@@ -30,14 +28,29 @@ async function getRuleContent(slug: string) {
   const ruleConfig = rulesMap[slug as RuleSlug];
 
   try {
-    const file = Bun.file(ruleConfig.filePath);
+    // Try to load the file for the current locale first
+    let filePath = `src/data/rules/${locale}/${slug}.md`;
+    let file = Bun.file(filePath);
+
+    // Check if file exists, if not fallback to Estonian
+    if (!(await file.exists()) && locale !== "et") {
+      console.warn(
+        `Rules file not found for ${slug} in ${locale}, falling back to Estonian`,
+      );
+      filePath = `src/data/rules/et/${slug}.md`;
+      file = Bun.file(filePath);
+    }
+
     const content = await file.text();
     return {
       content,
       titleKey: ruleConfig.titleKey,
     };
   } catch (error) {
-    console.error(`Error reading rule file for slug ${slug}:`, error);
+    console.error(
+      `Error reading rule file for slug ${slug} in locale ${locale}:`,
+      error,
+    );
     return null;
   }
 }
@@ -46,7 +59,7 @@ export default async function RulePage({ params }: PageProps) {
   const { slug, locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale });
-  const ruleData = await getRuleContent(slug);
+  const ruleData = await getRuleContent(slug, locale);
 
   if (!ruleData) {
     notFound();

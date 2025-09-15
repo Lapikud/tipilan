@@ -36,7 +36,6 @@ export default function Expo() {
       lvlup: "LVLup!",
       redbull: "Red Bull",
       // fuajee rooms
-      ityk: t("expo.areas.ityk"),
       estoniagamedev: t("expo.areas.estoniagamedev"),
       info: t("expo.areas.info"),
       tartuyk: t("expo.areas.tartuyk"),
@@ -382,8 +381,8 @@ export default function Expo() {
           depth: 3.5,
           x: -6,
           z: 2.8,
-          color: fuajeeRoomColors[0],
-          name: roomNames.ityk,
+          color: fuajeeRoomColors[4],
+          name: roomNames.ittk,
         },
         {
           width: 5,
@@ -818,55 +817,10 @@ export default function Expo() {
               <div className="flex items-center gap-2">
                 <div
                   className="w-4 h-4 border border-gray-300"
-                  style={{ backgroundColor: "#7b1642" }}
-                ></div>
-                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                  {t("expo.areas.ityk")}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div
-                  className="w-4 h-4 border border-gray-300"
-                  style={{ backgroundColor: "#365591" }}
-                ></div>
-                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                  {t("expo.areas.tartuyk")}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div
-                  className="w-4 h-4 border border-gray-300"
                   style={{ backgroundColor: "#183bbf" }}
                 ></div>
                 <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
                   {t("expo.areas.estoniagamedev")}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div
-                  className="w-4 h-4 border border-gray-300"
-                  style={{ backgroundColor: "#a82838" }}
-                ></div>
-                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                  {t("expo.areas.tly")}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div
-                  className="w-4 h-4 border border-gray-300"
-                  style={{ backgroundColor: "#d12e7d" }}
-                ></div>
-                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                  {t("expo.areas.ittk")}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div
-                  className="w-4 h-4 border border-gray-300"
-                  style={{ backgroundColor: "#ff6347" }}
-                ></div>
-                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                  {t("expo.areas.info")}
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -881,10 +835,46 @@ export default function Expo() {
               <div className="flex items-center gap-2">
                 <div
                   className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#ff6347" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.info")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#d12e7d" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.ittk")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
                   style={{ backgroundColor: "#20b2aa" }}
                 ></div>
                 <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
                   {t("expo.areas.photobooth")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#365591" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.tartuyk")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#a82838" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.tly")}
                 </span>
               </div>
             </div>
