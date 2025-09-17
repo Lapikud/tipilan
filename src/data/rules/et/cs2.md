@@ -115,8 +115,8 @@
 9. **8.9** Ainult tiimikapten saab tiimiliikme/tiimi diskvalifitseerimist vaidlustada. Vaidlustus tuleb korraldustiimile esitada 15 minuti jooksul alates diskvalifikatsiooni teavitamisest tiimile.
     1. **8.9.1** Korraldustiimil on aega kuni 25 minutit, et teha otsus vaidlustuse osas. Sellel ajal on mänguvoor pausil ning tiimid ei tohi oma kohtadelt lahkuda.
 10. **8.10** Tiimidel on õigus esitada protest olukorras, kus esineb probleem, mis võib mõjutada või mõjutab mänguvooru või tiimi:
-    **8.10.1** Protesti on õigus esitada korraldustiimile 5 minuti jooksul alates probleemi avastamisest.
-    **8.10.2**Korraldustiimil on aega kuni 25 minutit, et teha otsus protesti osas. Sellel ajal on mänguvoor pausil ning tiimid ei tohi oma kohtadelt lahkuda.
+    1. **8.10.1** Protesti on õigus esitada korraldustiimile 5 minuti jooksul alates probleemi avastamisest.
+    2. **8.10.2** Korraldustiimil on aega kuni 25 minutit, et teha otsus protesti osas. Sellel ajal on mänguvoor pausil ning tiimid ei tohi oma kohtadelt lahkuda.
 11. **8.11** Mänguvana teavitab eksimusest, selle sisust ja tagajärjest reegleid rikkunud tiimiliiget, tema tiimi ja vastastiimi.
 12. **8.12** Korraldustiimil on õigus panna mänguvoor pausile ja lõpetada paus ükskõik millise hetkel vastavalt vajadusele.
-Korraldustiimil on kohustus kõikidest väljalangemistest ja -arvamistest ning edasistest muudatustest avalikult teada anda.
+13. **8.13** Korraldustiimil on kohustus kõikidest väljalangemistest ja -arvamistest ning edasistest muudatustest avalikult teada anda.

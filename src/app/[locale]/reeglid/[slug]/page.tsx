@@ -3,15 +3,14 @@ import ReactMarkdown, { Components } from "react-markdown";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import SectionDivider from "@/components/SectionDivider";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { loadRulesBun } from "@/lib/loadRules";
 
-// Map of valid slugs to their corresponding file paths and translation keys
+// Map of valid slugs to their translation keys
 const rulesMap = {
   lol: {
-    filePath: "src/data/rules/lol.md",
     titleKey: "rules.lolRules",
   },
   cs2: {
-    filePath: "src/data/rules/cs2.md",
     titleKey: "rules.cs2Rules",
   },
 } as const;
@@ -22,7 +21,7 @@ interface PageProps {
   params: Promise<{ slug: string; locale: string }>;
 }
 
-async function getRuleContent(slug: string) {
+async function getRuleContent(slug: string, locale: string) {
   if (!Object.keys(rulesMap).includes(slug)) {
     return null;
   }
@@ -30,14 +29,19 @@ async function getRuleContent(slug: string) {
   const ruleConfig = rulesMap[slug as RuleSlug];
 
   try {
-    const file = Bun.file(ruleConfig.filePath);
-    const content = await file.text();
+    const content = await loadRulesBun(
+      slug as "cs2" | "lol",
+      locale as "et" | "en",
+    );
     return {
       content,
       titleKey: ruleConfig.titleKey,
     };
   } catch (error) {
-    console.error(`Error reading rule file for slug ${slug}:`, error);
+    console.error(
+      `Error reading rule file for slug ${slug} in locale ${locale}:`,
+      error,
+    );
     return null;
   }
 }
@@ -46,7 +50,7 @@ export default async function RulePage({ params }: PageProps) {
   const { slug, locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale });
-  const ruleData = await getRuleContent(slug);
+  const ruleData = await getRuleContent(slug, locale);
 
   if (!ruleData) {
     notFound();
