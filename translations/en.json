@@ -62,7 +62,8 @@
     "includes": "Includes",
     "computerParticipant": {
       "title": "Computer Participant",
-      "price": "8€",
+      "earlyPrice": "8€",
+      "latePrice":"10€",
       "features": [
         "Personal desk, power and internet connection",
         "Access to demo area",
@@ -83,7 +84,8 @@
     },
     "visitor": {
       "title": "Visitor",
-      "price": "6€",
+      "earlyPrice": "6€",
+      "latePrice": "8€",
       "features": [
         "Access to demo area",
         "Tournament spectating",
