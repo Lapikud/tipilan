@@ -72,7 +72,7 @@ export default async function Tickets({
             </ul>
             {/*<Link href="https://fienta.com/et/tipilan" target="_blank">*/}
               <button
-                className={`px-4 py-2 bg-[#007CAB] text-white ${vipnagorgialla.className} font-bold text-xl italic uppercase`}
+                className={`px-4 py-2 bg-[#007CAB] text-white ${vipnagorgialla.className} font-bold text-xl italic uppercase opacity-55`}
               >
                 {t("tickets.soldOut")}!
               </button>
