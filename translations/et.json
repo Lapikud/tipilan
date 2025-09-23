@@ -62,7 +62,8 @@
     "includes": "Sisaldab",
     "computerParticipant": {
       "title": "Arvutiga osaleja",
-      "price": "8€",
+      "earlyPrice": "8€",
+      "latePrice":"10€",
       "features": [
         "Isiklik laud, voolu- ja internetiühendus",
         "Ligipääs demoalale",
@@ -83,7 +84,8 @@
     },
     "visitor": {
       "title": "Külastaja",
-      "price": "6€",
+      "earlyPrice": "6€",
+      "latePrice": "8€",
       "features": [
         "Ligipääs demoalale",
         "Turniiride pealt vaatamine",
