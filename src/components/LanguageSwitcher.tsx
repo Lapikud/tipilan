@@ -39,7 +39,7 @@ export default function LanguageSwitcher() {
       onClick={handleLanguageSwitch}
       variant="ghost"
       size="lg"
-      className={`${vipnagorgialla.className} text-3xl font-bold italic uppercase hover:bg-[#007CAB]/10 dark:hover:bg-[#00A3E0]/10 text-[#007CAB] dark:text-[#00A3E0] hover:text-[#2A2C3F] dark:hover:text-[#EEE5E5] transition-colors`}
+      className={`${vipnagorgialla.className} text-3xl font-bold italic uppercase cursor-pointer hover:bg-[#007CAB]/10 dark:hover:bg-[#00A3E0]/10 text-[#007CAB] dark:text-[#00A3E0] hover:text-[#2A2C3F] dark:hover:text-[#EEE5E5] transition-colors`}
     >
       {getNextLanguageName()}
     </Button>

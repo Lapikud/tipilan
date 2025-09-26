@@ -236,7 +236,7 @@ export default async function Home({
                 alt="Arvutimuuseum"
                 width={200}
                 height={200}
-                className="object-contain"
+                className="object-contain not-dark:invert"
               />
             </NextLink>
           </div>

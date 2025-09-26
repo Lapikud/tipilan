@@ -13,11 +13,6 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       time: "17:00",
     },
     {
-      titleKey: "schedule.events.mainTournamentsStart",
-      locationKey: "schedule.locations.auditorium",
-      time: "20:00",
-    },
-    {
       titleKey: "schedule.events.miniTournamentsKickoff",
       locationKey: "schedule.locations.studentHouse",
       time: "18:00",
@@ -26,6 +21,11 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       titleKey: "schedule.events.fightingGamesStart",
       locationKey: "schedule.locations.studentHouse",
       time: "18:30",
+    },
+    {
+      titleKey: "schedule.events.mainTournamentsStart",
+      locationKey: "schedule.locations.auditorium",
+      time: "20:00",
     },
     {
       titleKey: "schedule.events.doorsClose",
