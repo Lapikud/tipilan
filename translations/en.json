@@ -135,15 +135,22 @@
     "location": "Location",
     "oct24": "October 24th",
     "oct25": "October 25th",
+    "oct26": "October 26th",
     "events": {
       "doorsOpen": "Doors open",
-      "mainTournamentsStart": "Main tournaments begin",
-      "miniTournamentsKickoff": "Mini-tournaments kick-off",
-      "fightingGamesStart": "Fighting game tournaments start",
+      "preTournamentWarmup": "Pre-tournament warmup and start of mini tournaments",
+      "killerInstinct": "Killer Instinct tournament",
+      "mainTournamentsStart": "CS2 and LoL tournaments begin",
       "doorsClose": "Doors close",
+      "warmup": "Warmup",
+      "mainTournamentsContinue": "LoL/CS2 tournaments continue",
       "miniTournamentsStart": "Mini-tournaments begin",
       "granblue": "Granblue tournament",
-      "granTurismo": "Gran Turismo tournament"
+      "granTurismoFinal": "Gran Turismo final",
+      "cs2FinalStart": "CS2 final begins",
+      "cs2Final": "CS2 final",
+      "awardCeremony": "Award ceremony",
+      "expoClosed": "Expo area is closed"
     },
     "locations": {
       "registrationSetup": "Registration and setup in auditorium",
