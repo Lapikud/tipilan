@@ -13,6 +13,71 @@ export default async function Tourney({
   const t = await getTranslations({ locale });
   const headingStyle = `text-3xl md:text-5xl lg:text-5xl ${vipnagorgialla.className} font-bold uppercase text-[#2A2C3F] dark:text-[#EEE5E5] -skew-x-2 md:-skew-x-5`;
 
+  const miniTournaments: {
+    name: string;
+    prize: string;
+    image: string;
+    objectPosition?: string;
+    bgClass?: string;
+  }[] = [
+    {
+      name: "Tekken 8",
+      prize: "350€",
+      image: "/messiala/tekken8.jpg",
+      objectPosition: "object-center",
+    },
+    {
+      name: "WRC",
+      prize: "350€",
+      image: "/messiala/wrc.jpg",
+      objectPosition: "object-center",
+    },
+    {
+      name: "Street Fighter 6",
+      prize: "200€",
+      image: "/messiala/street_fighter.jpg",
+      objectPosition: "object-right",
+    },
+    {
+      name: "Gran Turismo",
+      prize: "200€",
+      image: "/messiala/gran_turismo.jpg",
+      objectPosition: "object-center",
+    },
+    {
+      name: "FC 26",
+      prize: "100€",
+      image: "/messiala/fc26.jpg",
+      objectPosition: "object-center",
+    },
+    {
+      name: "Dwarf Escape",
+      prize: "50€",
+      image: "/messiala/dwarf_escape.png",
+      objectPosition: "object-center",
+      bgClass: "bg-black",
+    },
+    {
+      name: "Buckshot Roulette",
+      prize: "Merch",
+      image: "/messiala/buckshot_tournament.png",
+      objectPosition: "object-center",
+      bgClass: "bg-black",
+    },
+    {
+      name: "Granblue Fantasy: Versus Rising",
+      prize: "50€",
+      image: "/messiala/grandblue_fantasy.jpg",
+      objectPosition: "object-top",
+    },
+    {
+      name: "Super Smash Bros. Ultimate",
+      prize: "50€",
+      image: "/messiala/super_smash_bros.jpg",
+      objectPosition: "object-top",
+    },
+  ];
+
   return (
     <div className="flex flex-col min-h-[90vh] mt-16">
       <h1
@@ -135,8 +200,8 @@ export default async function Tourney({
 
         {/* Mini-turniirid */}
         <div className="hover:bg-[#007CAB] py-8 md:py-16 border-t-[3px] border-b-[3px] border-[#1F5673] transition group">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
-            <div className="-skew-x-2 md:-skew-x-5">
+          <div className="mx-8 md:mx-16 lg:mx-32 xl:mx-48">
+            <div className="-skew-x-2 md:-skew-x-5 mb-8">
               <h2 className={`${headingStyle}`}>
                 {t("tournaments.mini.title")}
               </h2>
@@ -149,10 +214,6 @@ export default async function Tourney({
               </p>
               <p className="text-balance">
                 {t("tournaments.mini.description1")}
-              </p>
-              <br />
-              <p className="text-balance">
-                {t("tournaments.mini.description2")}
               </p>
               <br />
               <div className="flex flex-row flex-wrap gap-4 md:gap-8">
@@ -172,16 +233,25 @@ export default async function Tourney({
                 </a>
               </div>
             </div>
-            <div className="hidden md:block">
-              <div>
-                {/* Outside div needs to remain so that overflow won't occur*/}
-                <Image
-                  src="/images/minitournament_logo.png"
-                  alt="mini tournaments"
-                  width={600}
-                  height={400}
-                />
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {miniTournaments.map((tournament) => (
+                <div key={tournament.name} className="text-center">
+                  <div className={`border-2 border-[#007CAB] p-1 rounded-md ${tournament.bgClass || ''}`}>
+                    <Image
+                      src={tournament.image}
+                      alt={tournament.name}
+                      width={400}
+                      height={300}
+                      className={`object-cover w-full h-48 ${
+                        tournament.objectPosition || "object-center"
+                      }`}
+                    />
+                  </div>
+                  <div className="-skew-x-2 md:-skew-x-5">
+                    <p className="mt-2 font-semibold">{tournament.name} - {tournament.prize}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
