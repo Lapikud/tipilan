@@ -18,6 +18,7 @@ export default async function Tourney({
     prize: string;
     image: string;
     objectPosition?: string;
+    bgClass?: string;
   }[] = [
     {
       name: "Tekken 8",
@@ -54,12 +55,14 @@ export default async function Tourney({
       prize: "50€",
       image: "/messiala/dwarf_escape.png",
       objectPosition: "object-center",
+      bgClass: "bg-black",
     },
     {
       name: "Buckshot Roulette",
       prize: "Merch",
       image: "/messiala/buckshot_tournament.png",
       objectPosition: "object-center",
+      bgClass: "bg-black",
     },
     {
       name: "Granblue Fantasy: Versus Rising",
@@ -196,7 +199,7 @@ export default async function Tourney({
         </div>
 
         {/* Mini-turniirid */}
-        <div className="py-8 md:py-16 border-t-[3px] border-b-[3px] border-[#1F5673]">
+        <div className="hover:bg-[#007CAB] py-8 md:py-16 border-t-[3px] border-b-[3px] border-[#1F5673] transition group">
           <div className="mx-8 md:mx-16 lg:mx-32 xl:mx-48">
             <div className="-skew-x-2 md:-skew-x-5 mb-8">
               <h2 className={`${headingStyle}`}>
@@ -204,7 +207,7 @@ export default async function Tourney({
               </h2>
               <p
                 className={
-                  "text-2xl mb-4 text-neutral-500"
+                  "text-2xl mb-4 text-neutral-500 group-hover:text-black"
                 }
               >
                 {t("tournaments.mini.timing")}
@@ -237,7 +240,7 @@ export default async function Tourney({
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
               {miniTournaments.map((tournament) => (
                 <div key={tournament.name} className="text-center">
-                  <div className="border-2 border-[#007CAB] p-1 rounded-md">
+                  <div className={`border-2 border-[#007CAB] p-1 rounded-md ${tournament.bgClass || ''}`}>
                     <Image
                       src={tournament.image}
                       alt={tournament.name}
