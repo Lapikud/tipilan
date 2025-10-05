@@ -119,10 +119,10 @@
       "buyTicket": "BUY TICKETS"
     },
     "mini": {
+      "titleSingular": "Mini-tournament",
       "title": "Mini-tournaments",
       "timing": "24th-25th October",
-      "description1": "TipiLAN hosts various fun and competitive mini-tournaments. Mini-tournaments take place in the following games: SimRacing, Tekken, FIFA, Buckshot Roulette, LostGamer and many more.",
-      "description2": "The total prize pool for all tournaments is €1,250 and typically the mini-tournament winner receives a cash prize.",
+      "description1": "TipiLAN hosts a variety of fun and competitive mini-tournaments. The prize pool for each tournament is displayed.",
       "readRules": "READ RULES",
       "buyTicket": "BUY TICKETS"
     }
