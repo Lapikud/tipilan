@@ -230,10 +230,10 @@ export default async function Home({
                 className="object-contain"
               />
             </NextLink>
-            <NextLink href="https://www.arvutimuuseum.ee" target="_blank">
+            <NextLink href="https://www.linkedin.com/company/gamedev-guild/" target="_blank">
               <Image
-                src="/sponsors/arvutimuuseum.svg"
-                alt="Arvutimuuseum"
+                src="/sponsors/estonian_gamedev_guild.png"
+                alt=""
                 width={200}
                 height={200}
                 className="object-contain"
