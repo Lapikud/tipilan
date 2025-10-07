@@ -119,10 +119,10 @@
       "buyTicket": "BUY TICKETS"
     },
     "mini": {
+      "titleSingular": "Mini-tournament",
       "title": "Mini-tournaments",
       "timing": "24th-25th October",
-      "description1": "TipiLAN hosts various fun and competitive mini-tournaments. Mini-tournaments take place in the following games: SimRacing, Tekken, FIFA, Buckshot Roulette, LostGamer and many more.",
-      "description2": "The total prize pool for all tournaments is €1,250 and typically the mini-tournament winner receives a cash prize.",
+      "description1": "TipiLAN hosts a variety of fun and competitive mini-tournaments. The prize pool for each tournament is displayed.",
       "readRules": "READ RULES",
       "buyTicket": "BUY TICKETS"
     }
@@ -135,15 +135,22 @@
     "location": "Location",
     "oct24": "October 24th",
     "oct25": "October 25th",
+    "oct26": "October 26th",
     "events": {
       "doorsOpen": "Doors open",
-      "mainTournamentsStart": "Main tournaments begin",
-      "miniTournamentsKickoff": "Mini-tournaments kick-off",
-      "fightingGamesStart": "Fighting game tournaments start",
+      "preTournamentWarmup": "Pre-tournament warmup and start of mini tournaments",
+      "killerInstinct": "Killer Instinct tournament",
+      "mainTournamentsStart": "CS2 and LoL tournaments begin",
       "doorsClose": "Doors close",
+      "warmup": "Warmup",
+      "mainTournamentsContinue": "LoL/CS2 tournaments continue",
       "miniTournamentsStart": "Mini-tournaments begin",
       "granblue": "Granblue tournament",
-      "granTurismo": "Gran Turismo tournament"
+      "granTurismoFinal": "Gran Turismo final",
+      "cs2FinalStart": "CS2 final begins",
+      "cs2Final": "CS2 final",
+      "awardCeremony": "Award ceremony",
+      "expoClosed": "Expo area is closed"
     },
     "locations": {
       "registrationSetup": "Registration and setup in auditorium",
