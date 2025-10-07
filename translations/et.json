@@ -205,9 +205,9 @@
   "rules": {
     "title": "Reeglid",
     "houseRules": "Kodukord",
-    "cs2Rules": "CS2 Reeglid",
-    "lolRules": "LoL Reeglid",
-    "miniRules": "Miniturniiride Reeglid"
+    "cs2Rules": "CS2 reeglid",
+    "lolRules": "LoL reeglid",
+    "miniRules": "Miniturniiride\n reeglid"
   },
   "admin": {
     "title": "Haldus",
