@@ -23,7 +23,7 @@ export default function Timetable() {
         </h1>
 
         {/* Tab menu */}
-        <div className="flex space-x-4 mb-8">
+        <div className="flex gap-4 mb-8 flex-wrap">
           {tabs.map((tab) => (
             <button
               key={tab}
