@@ -75,7 +75,7 @@ export default async function Home({
         >
           <div className="cursor-pointer flex flex-row justify-between gap-4 items-center">
             <h2
-              className={`text-[clamp(2rem,1.8rem+1vw,3rem)] ${vipnagorgialla.className} font-bold italic break-all uppercase dark:text-[#EEE5E5] text-[#2A2C3F] dark:group-hover:text-[#2A2C3F] group-hover:text-black`}
+              className={`text-[clamp(2rem,1.8rem+1vw,3rem)] ${vipnagorgialla.className} font-bold italic break-all uppercase dark:text-[#EEE5E5] text-[#2A2C3F] dark:group-hover:text-[#2A2C3F] group-hover:text-black break-normal`}
             >
               {t("navigation.tournaments")}
             </h2>
