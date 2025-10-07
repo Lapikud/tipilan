@@ -21,14 +21,14 @@ export default async function Tickets({
         </h1>
         
         <div className="flex justify-center lg:items-center flex-col lg:flex-row gap-8 md:gap-12 flex-grow mb-16 md:mt-8 lg:mt-0">
-          <div className="bg-[#007CAB] -skew-x-2 md:-skew-x-5 text-white px-8 md:px-12 py-16 hover:scale-103 transition-all duration-150 w-full md:w-xl lg:w-[400px]">
+          <div className="bg-[#007CAB] -skew-x-2 md:-skew-x-5 text-white italic px-8 md:px-12 py-16 hover:scale-103 transition-all duration-150 w-full md:w-xl lg:w-[400px]">
             <h2
-              className={`text-6xl ${vipnagorgialla.className} font-bold italic text-[#EEE5E5] pb-2`}
+              className={`text-6xl ${vipnagorgialla.className} font-bold  text-[#EEE5E5] pb-2`}
             >
               {t("tickets.computerParticipant.latePrice")}
             </h2>
             <h3
-              className={`text-3xl ${vipnagorgialla.className} font-bold italic text-[#EEE5E5] pb-4`}
+              className={`text-3xl ${vipnagorgialla.className} font-bold  text-[#EEE5E5] pb-4`}
             >
               {t("tickets.computerParticipant.title")}
             </h3>
@@ -36,28 +36,28 @@ export default async function Tickets({
               {t
                 .raw("tickets.computerParticipant.features")
                 .map((feature: string, index: number) => (
-                  <li key={index} className="text-xl italic">
+                  <li key={index} className="text-xl">  
                     {feature}
                   </li>
                 ))}
             </ul>
             <Link href="https://fienta.com/et/tipilan" target="_blank">
               <button
-                className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic`}
+                className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold`}
               >
                 {t("tickets.buyTicket")}
               </button>
             </Link>
           </div>
           
-          <div className="bg-[#1F5673] -skew-x-2 md:-skew-x-5 text-gray-400 px-8 md:px-12 py-16  w-full md:w-xl lg:w-[400px]">
+          <div className="bg-[#1F5673] -skew-x-2 md:-skew-x-5 text-gray-400 italic px-8 md:px-12 py-16  w-full md:w-xl lg:w-[400px]">
             <h2
-              className={`text-4xl ${vipnagorgialla.className} font-bold italic pb-2`}
+              className={`text-4xl ${vipnagorgialla.className} font-bold pb-2`}
             >
               <s>{t("tickets.competitor.price")}</s>
             </h2>
             <h3
-              className={`text-2xl ${vipnagorgialla.className} font-bold italic pb-4`}
+              className={`text-2xl ${vipnagorgialla.className} font-bold pb-4`}
             >
               <s>{t("tickets.competitor.title")}</s>
             </h3>
@@ -72,21 +72,21 @@ export default async function Tickets({
             </ul>
             {/*<Link href="https://fienta.com/et/tipilan" target="_blank">*/}
               <button
-                className={`px-4 py-2 bg-[#007CAB] text-white ${vipnagorgialla.className} font-bold text-xl italic uppercase opacity-55`}
+                className={`px-4 py-2 bg-[#007CAB] text-white ${vipnagorgialla.className} font-bold text-xl uppercase opacity-55`}
               >
                 {t("tickets.soldOut")}!
               </button>
             {/*</Link>*/}
           </div>
 
-          <div className="bg-[#007CAB] -skew-x-2 md:-skew-x-5 text-white px-8 md:px-12 py-16 hover:scale-103 transition-all duration-150 w-full md:w-xl lg:w-[400px]">
+          <div className="bg-[#007CAB] -skew-x-2 md:-skew-x-5 text-white italic px-8 md:px-12 py-16 hover:scale-103 transition-all duration-150 w-full md:w-xl lg:w-[400px]">
             <h2
-              className={`text-6xl ${vipnagorgialla.className} font-bold italic text-[#EEE5E5] pb-2`}
+              className={`text-6xl ${vipnagorgialla.className} font-bold text-[#EEE5E5] pb-2`}
             >
               {t("tickets.visitor.latePrice")}
             </h2>
             <h3
-              className={`text-3xl ${vipnagorgialla.className} font-bold italic text-[#EEE5E5] pb-4`}
+              className={`text-3xl ${vipnagorgialla.className} font-bold text-[#EEE5E5] pb-4`}
             >
               {t("tickets.visitor.title")}
             </h3>
@@ -101,7 +101,7 @@ export default async function Tickets({
             </ul>
             <Link href="https://fienta.com/et/tipilan" target="_blank">
               <button
-                className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic`}
+                className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold`}
               >
                 {t("tickets.buyTicket")}
               </button>
