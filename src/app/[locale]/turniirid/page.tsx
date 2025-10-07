@@ -82,7 +82,7 @@ export default async function Tourney({
     <div className="flex flex-col min-h-[90vh] mt-16">
       <h1
         className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic uppercase
-                text-[#2A2C3F] dark:text-[#EEE5E5] md:m-16`}
+                text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-8 m-6 md:m-16`}
       >
         {t("tournaments.title")}
       </h1>
