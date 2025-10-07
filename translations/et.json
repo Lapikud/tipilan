@@ -123,8 +123,7 @@
       "titleSingular": "Miniturniiride",
       "title": "Miniturniirid",
       "timing": "24.-25. oktoober",
-      "description1": "TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Miniturniirid toimuvad järgnevates mängudes: SimRacing, Tekken, FIFA, Buckshot Roulette, LostGamer ja palju muud.",
-      "description2": "Auhinnafond on kõigi turniiride peale 1250€ ja reeglina saab rahalise auhinna miniturniiri võitja.",
+      "description1": "TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Iga turniiri juures on välja toodud terve turniiri auhinnafond",
       "readRules": "LOE REEGLEID",
       "buyTicket": "OSTA PILET"
     }
@@ -137,15 +136,22 @@
     "location": "Asukoht",
     "oct24": "24. oktoober",
     "oct25": "25. oktoober",
+    "oct26": "26. oktoober",
     "events": {
       "doorsOpen": "Uksed avatakse",
-      "mainTournamentsStart": "Põhiturniirid algavad",
-      "miniTournamentsKickoff": "Miniturniiride kick-off",
-      "fightingGamesStart": "Fighting games turniiride algus",
+      "preTournamentWarmup": "Eelturniiri soojendus ja miniturniiride algus",
+      "killerInstinct": "Killer Instinct turniir",
+      "mainTournamentsStart": "CS2 ja LoL turniirid algavad",
       "doorsClose": "Uksed suletakse",
+      "warmup": "Soojendus",
+      "mainTournamentsContinue": "LoL/CS2 turniirid jätkuvad",
       "miniTournamentsStart": "Miniturniirid algavad",
       "granblue": "Granblue turniir",
-      "granTurismo": "Gran Turismo turniir"
+      "granTurismoFinal": "Gran Turismo finaal",
+      "cs2FinalStart": "CS2 finaali algus",
+      "cs2Final": "CS2 finaal",
+      "awardCeremony": "Auhinnatseremoonia",
+      "expoClosed": "Messiala on suletud"
     },
     "locations": {
       "registrationSetup": "Registreerimine ja setup aulas",
