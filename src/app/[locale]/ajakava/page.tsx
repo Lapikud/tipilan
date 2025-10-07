@@ -44,16 +44,16 @@ export default function Timetable() {
           {schedule.map((item, idx) => (
             <div
               key={idx}
-              className="border-l-3 border-[#007CAB] pl-4 flex flex-col sm:flex-row flex-wrap gap-5 items-stretch"
+              className="border-l-3 border-[#007CAB] pl-4 flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-5 items-stretch"
             >
               <div
-                className={`${vipnagorgialla.className} md:w-[180px] w-30 text-[#00A3E0] text-3xl md:text-4xl font-bold italic flex-shrink-0 flex items-center justify-center`}
+                className={`${vipnagorgialla.className} md:w-[180px] w-30 text-[#00A3E0] text-3xl md:text-4xl font-bold italic flex-shrink-0 flex items-center sm:justify-center`}
               >
                 {item.time}
               </div>
-              <div className="flex-1 flex flex-col justify-center min-w-0 min-h-[120px]">
+              <div className="flex-1 flex flex-col justify-center min-w-0 sm:min-h-[120px]">
                 <div
-                  className={`${vipnagorgialla.className} text-3xl italic font-bold text-[#2A2C3F] dark:text-[#EEE5E5] text-balance`}
+                  className={`${vipnagorgialla.className} text-2xl md:text-3xl italic font-bold text-[#2A2C3F] dark:text-[#EEE5E5] text-balance`}
                 >
                   {t(item.titleKey)}
                 </div>
