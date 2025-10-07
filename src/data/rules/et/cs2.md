@@ -26,9 +26,9 @@
     2. **2.3.2** Varumängija võib asendada ükskõik millist tiimi põhikoosseisu liiget turniiri toimumisel ajal;
     3. **2.3.2**  Varumängijale kehtivad samad õigused ja nõuded, mis tiimi põhikoosseisule.
 4. **2.4** Tiimi põhikoosseisus on lubatud välja vahetada mängijaid enne tiimide registreerimiskuupäeva lõppemist:
-    **2.4.1** Mängijate väljavahetamine toimub läbi Fienta;
-    **2.4.2** Liikme välja vahetamisel jääb tiimil jätkuvalt õigus varumängijale;
-    **2.4.3** Asendusmängijale kehtivad samad õigused ja nõuded, mis tiimi põhikoosseisule.
+    1. **2.4.1** Mängijate väljavahetamine toimub läbi Fienta;
+    2. **2.4.2** Liikme välja vahetamisel jääb tiimil jätkuvalt õigus varumängijale;
+    3. **2.4.3** Asendusmängijale kehtivad samad õigused ja nõuded, mis tiimi põhikoosseisule.
 5. **2.5** Tiimikapteni väljavahetamisel (nt varumängija või asendusmängija) otsustab tiim ise, kellele tiimikapteni õigused ja kohustused tiimisiseselt üle kanduvad;
 6. **2.6** Tiim peab 2 nädalat enne turniiri toimumist kinnitama oma osaluse, lõpliku tiimi põhikoosseisu ja tiimi nime tiimikaptenile saadetud emailis. Juhul, kui põhiliige langeb tiimi põhikoosseisut välja pärast seda, kui tiimi lõplik koosseis on kinnitatud, peab tiim rakendama oma varumängijat.
 7. **2.7** Kui tiim astub turniiril osalemisest tagasi enne registreerimistähtaega, makstakse osalemistasu tiimile tagasi.
@@ -36,7 +36,7 @@
 9. **2.9** Kõik tiimiliikmed (k.a. põhikoosseis, varumängija, asendusmängija(d)) peavad turniirile registreerimise päevaks olema vähemalt 16-aastased;
 10. **2.10** Mitte ükski tiimiliige ei tohi olla Venemaa Föderatsiooni ega Valgevene Rahvavabariigi kodanik.
 11. **2.11**Tiimidel (k.a. põhikoosseis, varumängija, asendusmängija(d)) pole lubatud:
-    1. **2.11*1** Treenerite kasutamine;
+    1. **2.11.1** Treenerite kasutamine;
     2. **2.11.2** Tiimisponsorite kajastamine turniiril;
     3. **2.11.3** Mängida teise tiimi või tiimiliikme huvides;
 12. **2.12** Tiimi nimi:

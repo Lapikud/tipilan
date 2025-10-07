@@ -150,7 +150,7 @@
       "granTurismoFinal": "Gran Turismo finaal",
       "cs2FinalStart": "CS2 finaali algus",
       "cs2Final": "CS2 finaal",
-      "awardCeremony": "Auhinnatseremoonia",
+      "awardCeremony": "Auhinna\u00ADtseremoonia",
       "expoClosed": "Messiala on suletud"
     },
     "locations": {
@@ -205,9 +205,9 @@
   "rules": {
     "title": "Reeglid",
     "houseRules": "Kodukord",
-    "cs2Rules": "CS2 Reeglid",
-    "lolRules": "LoL Reeglid",
-    "miniRules": "Miniturniiride Reeglid"
+    "cs2Rules": "CS2 reeglid",
+    "lolRules": "LoL reeglid",
+    "miniRules": "Miniturniiride\n reeglid"
   },
   "admin": {
     "title": "Haldus",

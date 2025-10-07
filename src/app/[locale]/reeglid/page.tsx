@@ -18,7 +18,7 @@ export default async function RulesMenu({
 
   const boxStyle = `-skew-x-2 md:-skew-x-5 text-white md:px-12 hover:scale-103 transition-all duration-150 w-full md:w-xl lg:w-[400px]`;
 
-  const boxTextStyle = `text-3xl ${vipnagorgialla.className} font-bold uppercase text-[#EEE5E5] pb-2`;
+  const boxTextStyle = `text-2xl md:text-3xl ${vipnagorgialla.className} font-bold uppercase text-[#EEE5E5] pb-2 break-normal whitespace-pre-line`;
   
   return (
     <div>
@@ -48,10 +48,13 @@ export default async function RulesMenu({
 
           {/* Minitourn. link coming soon*/}
           {/*<Link href="">*/}
-          <div className={`${boxStyle} bg-[#1F5673] py-16 px-8`}>
-            <h2 className={`${boxTextStyle}`}>
-              {t("rules.miniRules")} 
-            </h2>
+          {/* ajutine div. kui asendate lingiga, siis saab selle ära võtta */}
+          <div>
+            <div className={`${boxStyle} bg-[#1F5673] py-16 px-8`}>
+              <h2 className={`${boxTextStyle}`}>
+                {t("rules.miniRules")}
+              </h2>
+            </div>
           </div>
           {/*</Link>*/}
         </div>
