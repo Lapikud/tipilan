@@ -121,7 +121,7 @@ export default function Sponsors({ showTitle = true, className = "" }: SponsorsP
           <NextLink href="https://thotell.ee/" target="_blank">
             <Image
               src="/sponsors/thotell.png"
-              alt="Tähentorni Hotell"
+              alt="Tahentorni Hotell (Tähentorni Hotel)"
               width={200}
               height={200}
               className="object-contain"
