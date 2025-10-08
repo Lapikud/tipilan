@@ -8,7 +8,7 @@
     "tickets": "Tickets",
     "rules": "Game rules",
     "stream": "Stream",
-    "tournaments": "Tournaments"
+    "tournaments": "Tourna\u00ADments"
   },
   "common": {
     "loading": "Loading...",
@@ -102,7 +102,7 @@
     "schedule": "Schedule",
     "rules": "Rules",
     "cs2": {
-      "title": "CS2 Tournament",
+      "title": "CS2 Tourna\u00ADment",
       "timing": "24th-26th October",
       "description1": "TipiLAN hosts one of Estonia's largest CS2 tournaments with a significant prize pool this fall. Grab your friends and experience the adrenaline rush!",
       "description2": "The prize pool is €5,750 distributed amongst the best teams and winners of 'Second Chance' tournament, giving all participants a chance to win.",
@@ -111,7 +111,7 @@
       "buyTicket": "BUY TICKETS"
     },
     "lol": {
-      "title": "LoL Tournament",
+      "title": "LoL Tourna\u00ADment",
       "timing": "24th-25th October",
       "description1": "TipiLAN hosts one of Estonia's largest LoL tournaments with a significant prize pool this fall. Grab your friends and experience the adrenaline rush!",
       "description2": "The prize pool is €3,000, distributed among the TOP3 teams. Each team receives €1500, €1000, or €500 based on their placement.",
@@ -206,7 +206,7 @@
     "houseRules": "House Rules",
     "cs2Rules": "CS2 Rules",
     "lolRules": "LoL Rules",
-    "miniRules": "Mini-tournament Rules"
+    "miniRules": "Mini-tournament\n Rules"
   },
   "admin": {
     "title": "Admin",

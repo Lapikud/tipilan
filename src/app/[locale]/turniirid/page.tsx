@@ -11,7 +11,7 @@ export default async function Tourney({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale });
-  const headingStyle = `text-3xl md:text-5xl lg:text-5xl ${vipnagorgialla.className} font-bold uppercase text-[#2A2C3F] dark:text-[#EEE5E5] -skew-x-2 md:-skew-x-5`;
+  const headingStyle = `text-3xl md:text-5xl lg:text-5xl ${vipnagorgialla.className} font-bold uppercase text-[#2A2C3F] dark:text-[#EEE5E5] -skew-x-2 md:-skew-x-5 break-normal`;
 
   const miniTournaments: {
     name: string;
@@ -36,7 +36,7 @@ export default async function Tourney({
       name: "Street Fighter 6",
       prize: "200€",
       image: "/messiala/street_fighter.jpg",
-      objectPosition: "object-right",
+      objectPosition: "object-center",
     },
     {
       name: "Gran Turismo",
@@ -82,12 +82,69 @@ export default async function Tourney({
     <div className="flex flex-col min-h-[90vh] mt-16">
       <h1
         className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic uppercase
-                text-[#2A2C3F] dark:text-[#EEE5E5] md:m-16`}
+                text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-8 m-6 md:m-16`}
       >
         {t("tournaments.title")}
       </h1>
 
       <div className="flex flex-col">
+
+        {/* Mini-turniirid */}
+        <div className="hover:bg-[#007CAB] py-8 md:py-16 border-b-[3px] border-[#1F5673] transition group">
+          <div className="mx-8 md:mx-16 lg:mx-32 xl:mx-48">
+            <div className="-skew-x-2 md:-skew-x-5 mb-8">
+              <h2 className={`${headingStyle}`}>
+                {t("tournaments.mini.title")}
+              </h2>
+              <p
+                className={
+                  "text-2xl mb-4 text-neutral-500 group-hover:text-black"
+                }
+              >
+                {t("tournaments.mini.timing")}
+              </p>
+              <p className="text-balance">
+                {t("tournaments.mini.description1")}
+              </p>
+              <br />
+              <div className="flex flex-row flex-wrap gap-4 md:gap-8">
+                <Link href="/kodukord" target="_blank">
+                  <button
+                    className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
+                  >
+                    {t("tournaments.mini.readRules")}
+                  </button>
+                </Link>
+                <a href="https://fienta.com/et/tipilan" target="_blank">
+                  <button
+                    className={`px-4 py-2 bg-[#00A3E0] group-hover:bg-black cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
+                  >
+                    {t("tournaments.mini.buyTicket")}
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+              {miniTournaments.map((tournament) => (
+                <div key={tournament.name} className="text-center">
+                    <Image
+                      src={tournament.image}
+                      alt={tournament.name}
+                      width={400}
+                      height={300}
+                      className={`border-10 border-[#00A3E0] bg-black object-cover w-full aspect-video -skew-x-2 md:-skew-x-5 ${
+                        tournament.objectPosition || "object-center"
+                      }`}
+                    />
+                  <div className="-skew-x-2 md:-skew-x-5">
+                    <p className="mt-2 font-semibold">{tournament.name} - {tournament.prize}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* CS2 turniir */}
         <div className="hover:bg-[#007CAB] py-8 md:py-16 transition group">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
@@ -124,7 +181,7 @@ export default async function Tourney({
                 </Link>
                 <a href="https://fienta.com/et/tipilan" target="_blank">
                   <button
-                    className={`px-4 py-2 bg-[#007CAB] group-hover:bg-black cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
+                    className={`px-4 py-2 bg-[#00A3E0] group-hover:bg-black cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
                   >
                     {t("tournaments.cs2.buyTicket")}
                   </button>
@@ -146,7 +203,7 @@ export default async function Tourney({
         </div>
 
         {/* LoL turniir */}
-        <div className="hover:bg-[#007CAB] py-8 md:py-16 border-t-[3px] border-[#1F5673] transition group">
+        <div className="hover:bg-[#007CAB] py-8 md:py-16 border-t-[3px] border-b-[3px] border-[#1F5673] transition group">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center mx-8 md:mx-16 lg:mx-32 xl:mx-48">
             <div className="hidden md:block">
               <div>
@@ -188,7 +245,7 @@ export default async function Tourney({
                 </Link>
                 <a href="https://fienta.com/et/tipilan" target="_blank">
                   <button
-                    className={`px-4 py-2 bg-[#007CAB] group-hover:bg-black cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
+                    className={`px-4 py-2 bg-[#00A3E0] group-hover:bg-black cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
                   >
                     {t("tournaments.lol.buyTicket")}
                   </button>
@@ -198,63 +255,6 @@ export default async function Tourney({
           </div>
         </div>
 
-        {/* Mini-turniirid */}
-        <div className="hover:bg-[#007CAB] py-8 md:py-16 border-t-[3px] border-b-[3px] border-[#1F5673] transition group">
-          <div className="mx-8 md:mx-16 lg:mx-32 xl:mx-48">
-            <div className="-skew-x-2 md:-skew-x-5 mb-8">
-              <h2 className={`${headingStyle}`}>
-                {t("tournaments.mini.title")}
-              </h2>
-              <p
-                className={
-                  "text-2xl mb-4 text-neutral-500 group-hover:text-black"
-                }
-              >
-                {t("tournaments.mini.timing")}
-              </p>
-              <p className="text-balance">
-                {t("tournaments.mini.description1")}
-              </p>
-              <br />
-              <div className="flex flex-row flex-wrap gap-4 md:gap-8">
-                <Link href="/kodukord" target="_blank">
-                  <button
-                    className={`px-4 py-2 bg-[#1F5673] cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
-                  >
-                    {t("tournaments.mini.readRules")}
-                  </button>
-                </Link>
-                <a href="https://fienta.com/et/tipilan" target="_blank">
-                  <button
-                    className={`px-4 py-2 bg-[#007CAB] group-hover:bg-black cursor-pointer ${vipnagorgialla.className} font-bold italic text-[#ECE5E5]`}
-                  >
-                    {t("tournaments.mini.buyTicket")}
-                  </button>
-                </a>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-              {miniTournaments.map((tournament) => (
-                <div key={tournament.name} className="text-center">
-                  <div className={`border-2 border-[#007CAB] p-1 rounded-md ${tournament.bgClass || ''}`}>
-                    <Image
-                      src={tournament.image}
-                      alt={tournament.name}
-                      width={400}
-                      height={300}
-                      className={`object-cover w-full h-48 ${
-                        tournament.objectPosition || "object-center"
-                      }`}
-                    />
-                  </div>
-                  <div className="-skew-x-2 md:-skew-x-5">
-                    <p className="mt-2 font-semibold">{tournament.name} - {tournament.prize}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
