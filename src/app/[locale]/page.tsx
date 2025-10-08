@@ -1,8 +1,8 @@
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
+import Sponsors from "@/components/Sponsors";
 import { Link } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
-import NextLink from "next/link";
 
 export default async function Home({
   params,
@@ -135,113 +135,7 @@ export default async function Home({
         </h2>
       </Link>
       {/* Sponsors */}
-      <div
-        className={`p-12 flex flex-col ${vipnagorgialla.className} font-bold italic border-b-3 border-[#1F5673]`}
-      >
-        <div className="text-left flex flex-col justify-between xl:justify-start">
-          <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] text-[#2A2C3F] group-hover:text-black pb-8">
-            {t("home.sections.poweredBy")}
-          </h3>
-          <div className="flex flex-row flex-wrap gap-8 md:gap-18 items-center">
-            <NextLink href="https://taltech.ee" target="_blank">
-              <Image
-                src="/sponsors/taltech-color.png"
-                alt="Taltech (Tallinna Tehnikaülikool)"
-                width={192}
-                height={192}
-                className="object-contain"
-              />
-            </NextLink>
-            <NextLink href="https://www.redbull.com/ee-et/" target="_blank">
-              <Image
-                src="/sponsors/redbull.png"
-                alt="Redbull"
-                width={80}
-                height={80}
-                className="object-contain"
-              />
-            </NextLink>
-            <NextLink href="https://www.alecoq.ee" target="_blank">
-              <Image
-                src="/sponsors/alecoq.svg"
-                alt="Alecoq"
-                width={200}
-                height={200}
-                className="object-contain"
-              />
-            </NextLink>
-            <NextLink href="https://www.simracing.ee/" target="_blank">
-              <Image
-                src="/sponsors/EVAL.png"
-                alt="EVAL"
-                width={200}
-                height={200}
-                className="object-contain"
-              />
-            </NextLink>
-            <NextLink href="https://balsnack.ee" target="_blank">
-              <Image
-                src="/sponsors/balsnack.svg"
-                alt="Balsnack"
-                width={200}
-                height={200}
-                className="object-contain"
-              />
-            </NextLink>
-            <NextLink
-              href="https://www.rara.ee/sundmused/interaktiivne-videomangude-muuseum-lvlup/"
-              target="_blank"
-            >
-              <Image
-                src="/sponsors/lvlup_logo_export.svg"
-                alt="LVLup!"
-                width={192}
-                height={192}
-                className="object-contain"
-              />
-            </NextLink>
-            <NextLink
-              href="https://www.facebook.com/bfglOfficial"
-              target="_blank"
-            >
-              <Image
-                src="/sponsors/BFGL.png"
-                alt="BFGL"
-                width={192}
-                height={192}
-                className="object-contain"
-              />
-            </NextLink>
-            <NextLink href="https://www.tallinn.ee/et/haridus" target="_blank">
-              <Image
-                src="/sponsors/Tallinna_Haridusamet_logo_RGB.svg"
-                alt="Tallinna Haridusamet"
-                width={192}
-                height={192}
-                className="object-contain"
-              />
-            </NextLink>
-            <NextLink href="https://www.militaarseiklus.ee/" target="_blank">
-              <Image
-                src="/sponsors/militaarseiklus.png"
-                alt="Militaarseiklus"
-                width={200}
-                height={200}
-                className="object-contain"
-              />
-            </NextLink>
-            <NextLink href="https://www.linkedin.com/company/gamedev-guild/" target="_blank">
-              <Image
-                src="/sponsors/estonian_gamedev_guild.png"
-                alt=""
-                width={200}
-                height={200}
-                className="object-contain"
-              />
-            </NextLink>
-          </div>
-        </div>
-      </div>
+      <Sponsors />
     </div>
   );
 }
