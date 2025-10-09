@@ -50,7 +50,8 @@
         "description": "TipiLANi messialal paiknevad ettevõtted, lisategevused ja toimuvad loengud."
       },
       "reserveSpot": "Broneeri oma koht juba täna!",
-      "poweredBy": "TipiLANi tõmbab käima..."
+      "poweredBy": "TipiLANi tõmbab käima...",
+      "dateAndLocation": "24.-26. okt. TalTechi peahoones"
     }
   },
   "tickets": {

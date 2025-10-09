@@ -131,7 +131,7 @@ export default async function Home({
           </span>
         </div>
         <h2 className="text-[clamp(2.5rem,2.25rem+1.25vw,3.75rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
-          24.-26. okt.
+          {t("home.sections.dateAndLocation")}
         </h2>
       </Link>
       {/* Sponsors */}
