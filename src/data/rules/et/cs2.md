@@ -1,16 +1,28 @@
 ## 1. Üldist 
-1.  **1.1.** Counter-Strike 2 (edaspidi CS2) turniir toimub 24.-26. Oktoober, 2025 Tallinna Tehnikaülikooli (TalTech) ruumides, Ehitajate tee 5, Tallinn.  2. **1.2** Turniiri auhinnafondiks on 5250€, mis jaguneb järgnevalt:
-    1. **1.2.1** Esimese koha saanud võistkond - 600€ võistleja kohta
-    2. **1.2.2** Teise koha saanud võistkond - 300€ võistleja kohta
-    3. **1.2.3** Kolmanda koha saanud võistkond - 150€ võistleja kohta
-3.  **1.3** Võidusumma makstakse välja võistleja pangakontole.
-    **1.3.1** Alaealise võistleja puhul makstakse võit vanema/eestkostja pangakontole.
-4.  **1.4** Terve turniiri vältel tuleb igal osalejal lähtuda Eesti Vabariigi seadusest, TipiLAN kodukorrast ja ürituse reeglistikust.
-5. **1.5** Piletiostuga annab iga osaleja loa end pildistada, filmida ja kasutada kogu fotograafilist, audio- ja videomaterjali ürituse jäädvustamiseks ja turundamiseks.  6. **1.6** CS2 põhiturniiri salvestatakse ning kantakse üle voogedastusplatvormidel Twitch ja YouTube.
+1. **1.1** Counter-Strike 2 (edaspidi CS2) turniir toimub 24.-26.5. **5.5*Tehniline paus: igal tiimil on vajadusel õigus kasutada tehnilist pausi. Pausi alustamiseks tuleb mängusisesesse chatti sisestada käsklus ".tech". Tehnilist pausi tohib kasutada üksnes mõjuval põhjusel, tehniliste probleemide esinemisel, ning selle põhjusest tuleb korraldajaid viivitamatult teavitada Discordi kaudu pärast pausi alustamist.
+
+## 6. Kaardivalik
+1. **6.1** Turniir toimub kahes etapis:
+   1. **6.1.1** Swiss-süsteem: algfaasis mängitakse Bo1 formaadis. Kõik otsustavad mängud (mängud, mis tagavad edasipääsu või turniirilt väljalangemise) on Bo3 formaadis. 8 parimat meeskonda pääsevad finaaletappi.
+   2. **6.1.2** Finaaletapp: kõik kohtumised on Bo3. Toimuvad veerandfinaalid, poolfinaalid, finaal ning 3. koha mäng.
+2. **6.2** Mängitav kaart valitakse välja hetkel aktiivsete Valve'i kaardigrupi (Valve Active Duty Map Group) kaartidest.toober, 2025 Tallinna Tehnikaülikooli (TalTech) ruumides, Ehitajate tee 5, Tallinn.
+2. **1.2** Turniiri auhinnafondiks on 5750€, mis jaguneb järgnevalt:
+   1. **1.2.1** TOP 3 auhinna fond on 5000€:
+      - **1.2.1.1** Esimese koha saanud võistkond - 500€ võistleja kohta
+      - **1.2.1.2** Teise koha saanud võistkond - 300€ võistleja kohta
+      - **1.2.1.3** Kolmanda koha saanud võistkond - 200€ võistleja kohta
+   2. **1.2.2** LCQ auhinna fond on 750€:
+      - **1.2.2.1** Esimese koha saanud võistkond - 100€ võistleja kohta
+      - **1.2.2.2** Teise koha saanud võistkond - 50€ võistleja kohta
+3. **1.3** Võidusumma makstakse välja võistleja pangakontole.
+   1. **1.3.1** Alaealise võistleja puhul makstakse võit vanema/eestkostja pangakontole.
+4. **1.4** Terve turniiri vältel tuleb igal osalejal lähtuda Eesti Vabariigi seadusest, TipiLAN kodukorrast ja ürituse reeglistikust.
+5. **1.5** Piletiostuga annab iga osaleja loa end pildistada, filmida ja kasutada kogu fotograafilist, audio- ja videomaterjali ürituse jäädvustamiseks ja turundamiseks.
+6. **1.6** CS2 põhiturniiri salvestatakse ning kantakse üle voogedastusplatvormidel Twitch ja YouTube.
 7. **1.7** Kõik turniiriga seotud suhtlused tiimiliikmete vahel (nt mängusisene chat, häälvestlused, Discordi vestlused jne) salvestatakse.
 8. **1.8** Ise mängu üle kandmise puhul peab otseülekande viivis (delay) olema vähemalt 5 minutit.
-9. **1.9** Korraldajatel on õigus kasutada osalejate isiklikku informatsiooni vaid ürituse läbiviimise raames.i
-10. **1.10** Korraldustiimil on õigus reegleid vajadusel muuta ja redigeerida etteteatamatI.
+9. **1.9** Korraldajatel on õigus kasutada osalejate isiklikku informatsiooni vaid ürituse läbiviimise raames.
+10. **1.10** Korraldustiimil on õigus reegleid vajadusel muuta ja redigeerida etteteatamata.
 11. **1.11** Korraldustiim on kõikide osalejate suhtes erapooletud.
 
 ## 2. CS2 põhiturniiri tiim ja tiimi koosseis
@@ -120,3 +132,13 @@
 11. **8.11** Mänguvana teavitab eksimusest, selle sisust ja tagajärjest reegleid rikkunud tiimiliiget, tema tiimi ja vastastiimi.
 12. **8.12** Korraldustiimil on õigus panna mänguvoor pausile ja lõpetada paus ükskõik millise hetkel vastavalt vajadusele.
 13. **8.13** Korraldustiimil on kohustus kõikidest väljalangemistest ja -arvamistest ning edasistest muudatustest avalikult teada anda.
+
+## 9. Kontakt
+Igasuguste üritust puudutavate küsimuste, probleemide, murede jne korral võtta ühendust TipiLAN korraldustiimiga.
+
+## 10. Viited
+- https://pro.eslgaming.com/csgo/proleague/rules/
+- https://github.com/ValveSoftware/counter-strike_rules_and_regs/blob/main/tournament-operation-requirements.md
+- https://www.hltv.org/events/8037/iem-dallas-2025
+- https://www.hltv.org
+- https://liquipedia.net/counterstrike/Portal:Maps/CS2
