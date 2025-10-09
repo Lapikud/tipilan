@@ -129,7 +129,7 @@ export default function Sponsors({ showTitle = true, className = "" }: SponsorsP
           </NextLink>
           <NextLink href="https://www.dominos.ee/" target="_blank">
             <Image
-              src="/sponsors/Domino's Pizza transp.png"
+              src="/sponsors/dominos.png"
               alt="Domino's Pizza"
               width={200}
               height={200}
