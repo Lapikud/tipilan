@@ -1,11 +1,15 @@
 ## 1. General Information
-1. **1.1.** The Counter-Strike 2 (hereinafter CS2) tournament takes place on October 24-26, 2025 at Tallinn University of Technology (TalTech) premises, Ehitajate tee 5, Tallinn.
-2. **1.2** The tournament prize pool is 5250€, distributed as follows:
-   1. **1.2.1** First place team - 600€ per participant
-   2. **1.2.2** Second place team - 300€ per participant
-   3. **1.2.3** Third place team - 150€ per participant
-3. **1.3** Prize money will be paid to the participant's bank account.
-   **1.3.1** For underage participants, the prize will be paid to their parent/guardian's bank account.
+1. **1.1** The Counter-Strike 2 (hereinafter CS2) tournament takes place October 24-26, 2025 at Tallinn University of Technology (TalTech) premises, Ehitajate tee 5, Tallinn.
+2. **1.2** The tournament prize pool is 5,750€, distributed as follows:
+   1. **1.2.1** TOP 3 prize pool is 5,000€:
+      - **1.2.1.1** First place team - 500€ per player
+      - **1.2.1.2** Second place team - 300€ per player
+      - **1.2.1.3** Third place team - 200€ per player
+   2. **1.2.2** LCQ prize pool is 750€:
+      - **1.2.2.1** First place team - 100€ per player
+      - **1.2.2.2** Second place team - 50€ per player
+3. **1.3** Prize money will be paid to the player's bank account.
+   1. **1.3.1** For underage players, the prize will be paid to the parent/guardian's bank account.
 4. **1.4** Throughout the tournament, all participants must comply with the laws of the Republic of Estonia, TipiLAN house rules, and event regulations.
 5. **1.5** By purchasing a ticket, each participant gives permission to be photographed, filmed, and for all photographic, audio, and video material to be used for event documentation and marketing.
 6. **1.6** The CS2 main tournament will be recorded and streamed on Twitch and YouTube platforms.
@@ -88,7 +92,9 @@
 5. **5.5** Technical pause: each team has the right to use a technical pause when necessary. To start a pause, the command ".tech" must be entered in the in-game chat. Technical pauses may only be used for valid reasons, when technical problems occur, and organizers must be immediately notified via Discord after starting the pause.
 
 ## 6. Map Selection
-1. **6.1** The final tournament format will be announced in October.
+1. **6.1** The tournament takes place in two stages:
+   1. **6.1.1** Swiss system: initial phase played in Bo1 format. All decisive matches (matches that secure advancement or elimination from the tournament) are in Bo3 format. The top 8 teams advance to the playoff stage.
+   2. **6.1.2** Playoff stage: all matches are Bo3. Quarter-finals, semi-finals, finals, and 3rd place match take place.
 2. **6.2** Maps are selected from the currently active Valve Active Duty Map Group.
 3. **6.3** Best of 1 (Bo1): coin flip winner decides whether they are Team A or Team B. Team A starts and the process is as follows:
    1. **6.3.1** Team A removes two maps.
@@ -135,3 +141,13 @@
 11. **8.11** The match referee notifies the rule-violating team member, their team, and the opposing team of the violation, its content, and consequences.
 12. **8.12** The organizing team has the right to pause a match round and end the pause at any time as needed.
 13. **8.13** The organizing team is obligated to publicly announce all eliminations and calculations and further changes.
+
+## 9. Contact
+For any event-related questions, problems, concerns, etc., contact the TipiLAN organizing team.
+
+## 10. References
+- https://pro.eslgaming.com/csgo/proleague/rules/
+- https://github.com/ValveSoftware/counter-strike_rules_and_regs/blob/main/tournament-operation-requirements.md
+- https://www.hltv.org/events/8037/iem-dallas-2025
+- https://www.hltv.org
+- https://liquipedia.net/counterstrike/Portal:Maps/CS2
