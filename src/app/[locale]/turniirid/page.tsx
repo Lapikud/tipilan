@@ -65,9 +65,9 @@ export default async function Tourney({
       bgClass: "bg-black",
     },
     {
-      name: "Granblue Fantasy: Versus Rising",
+      name: "2XKO",
       prize: "50€",
-      image: "/images/miniturniirid/grandblue_fantasy.jpg",
+      image: "/images/miniturniirid/2xko.png",
       objectPosition: "object-top",
     },
     {
