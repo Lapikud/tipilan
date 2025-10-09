@@ -22,7 +22,7 @@ export default async function Tourney({
   }[] = [
     {
       name: "Tekken 8",
-      prize: "350€",
+      prize: "200€",
       image: "/images/miniturniirid/tekken8.jpg",
       objectPosition: "object-center",
     },
@@ -34,7 +34,7 @@ export default async function Tourney({
     },
     {
       name: "Street Fighter 6",
-      prize: "200€",
+      prize: "150€",
       image: "/images/miniturniirid/street_fighter.jpg",
       objectPosition: "object-center",
     },
@@ -66,13 +66,13 @@ export default async function Tourney({
     },
     {
       name: "2XKO",
-      prize: "50€",
+      prize: "100€",
       image: "/images/miniturniirid/2xko.png",
       objectPosition: "object-top",
     },
     {
       name: "Super Smash Bros. Ultimate",
-      prize: "50€",
+      prize: "100€",
       image: "/images/miniturniirid/super_smash_bros.jpg",
       objectPosition: "object-top",
     },
