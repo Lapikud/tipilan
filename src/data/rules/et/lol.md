@@ -92,7 +92,7 @@
     1. **7.11.1 VÄLISE ABI KASUTAMINE:** see eksimus läheb kirja, kui tiim suhtleb mängu ajal ükskõik kelle muuga peale omaenda tiimi ning selle tagajärjel, kohtuniku otsustusel, saab mängus eelise. Eksimuse puhul eeldatakse, et tegu ei olnud tahtliku kavatsusega sohki teha. Tahtlikult ebaõiglase eelise otsimine läheb punkti Mittesobilik käitumine - Sohk alla. Karistuseks on hoiatus.
     2. **7.11.2 JUHISTE EIRAMINE:** Igal mängijal on kohustus järgida Korraldaja ja kohtunike juhiseid. Nende eiramine võib endaga kaasa tuua viivitusi ning vaidlusi. Karistuseks on esimese valiku tegemise kaotus.
 12. **7.12** Mittesobilik käitumine.
-Mittesobilik käitumine on turniiri käiku häiriv ning võib olla negatiivselt mõjutada turvalisust, võistlushimu, mängurõõmu või turniiri ausameelsust ning terviklikkust. Mittesobilik käitumine ei ole sama, mis konkurentsihimuline käitumine.
+Mittesobilik käitumine on turniiri käiku häiriv ning võib negatiivselt mõjutada turvalisust, võistlushimu, mängurõõmu või turniiri ausameelsust ning terviklikkust. Mittesobilik käitumine ei ole sama, mis konkurentsihimuline käitumine.
 Mittesobiliku käitumise eksimused jagunevad:
     1. **7.12.1 KERGE EKSIMUS:** siia kuulub käitumine, mis on ebameeldiv, ebaeetiline või häiriv, näiteks liigne ropendamine; nõudmine, et vastane saaks karistuse peale seda, kui kohtunik on teinud oma otsuse; lõugamine; prügi maha loopimine jne.
 Kerge eksimuse karistuseks on hoiatus.
