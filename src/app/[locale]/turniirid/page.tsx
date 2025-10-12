@@ -106,6 +106,9 @@ export default async function Tourney({
               <p className="text-balance">
                 {t("tournaments.mini.description1")}
               </p>
+              <p className="text-balance">
+                {t("tournaments.mini.description2")}
+              </p>
               <br />
               <div className="flex flex-row flex-wrap gap-4 md:gap-8">
                 <Link href="/kodukord" target="_blank">
