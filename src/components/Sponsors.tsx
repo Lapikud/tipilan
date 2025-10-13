@@ -21,7 +21,7 @@ export default function Sponsors({ showTitle = true, className = "" }: SponsorsP
             {t("home.sections.poweredBy")}
           </h3>
         )}
-        <div className="flex flex-row flex-wrap gap-8 md:gap-18 items-center">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-8 md:gap-18 items-center justify-center xl:justify-start">
           <NextLink href="https://taltech.ee" target="_blank">
             <Image
               src="/sponsors/taltech-color.png"
@@ -95,8 +95,8 @@ export default function Sponsors({ showTitle = true, className = "" }: SponsorsP
             <Image
               src="/sponsors/Tallinna_Haridusamet_logo_RGB.svg"
               alt="Tallinna Haridusamet"
-              width={192}
-              height={192}
+              width={292}
+              height={292}
               className="object-contain"
             />
           </NextLink>
@@ -115,7 +115,7 @@ export default function Sponsors({ showTitle = true, className = "" }: SponsorsP
               alt="Estonian Gamedev Guild"
               width={200}
               height={200}
-              className="object-contain"
+              className="object-contain not-dark:invert"
             />
           </NextLink>
           <NextLink href="https://thotell.ee/" target="_blank">
@@ -131,16 +131,16 @@ export default function Sponsors({ showTitle = true, className = "" }: SponsorsP
             <Image
               src="/sponsors/dominos.png"
               alt="Domino's Pizza"
-              width={200}
-              height={200}
+              width={250}
+              height={250}
               className="object-contain"
             />
           </NextLink>
           <NextLink href="https://www.tomorrow.ee/" target="_blank">
             <Image
-              src="/sponsors/tomorrow.png"
+              src="/sponsors/nt.png"
               alt="Network Tomorrow"
-              width={200}
+              width={300}
               height={200}
               className="object-contain"
             />
@@ -149,7 +149,7 @@ export default function Sponsors({ showTitle = true, className = "" }: SponsorsP
             <Image
               src="/sponsors/driftikeskus.png"
               alt="Driftikeskus"
-              width={200}
+              width={300}
               height={200}
               className="object-contain"
             />
