@@ -136,6 +136,34 @@ export default function Sponsors({ showTitle = true, className = "" }: SponsorsP
               className="object-contain"
             />
           </NextLink>
+          <NextLink href="https://www.tomorrow.ee/" target="_blank">
+            <Image
+              src="/sponsors/tomorrow.png"
+              alt="Network Tomorrow"
+              width={200}
+              height={200}
+              className="object-contain"
+            />
+          </NextLink>
+          <NextLink href="https://driftikeskus.ee/" target="_blank">
+            <Image
+              src="/sponsors/driftikeskus.png"
+              alt="Driftikeskus"
+              width={200}
+              height={200}
+              className="object-contain"
+            />
+          </NextLink>
+          <NextLink href="https://ingame.ee/" target="_blank">
+            <Image
+              src="/sponsors/ingame.png"
+              alt="Ingame"
+              width={200}
+              height={200}
+              className="object-contain"
+            />
+          </NextLink>
+          
         </div>
       </div>
     </div>
