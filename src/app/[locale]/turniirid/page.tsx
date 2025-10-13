@@ -135,7 +135,7 @@ export default async function Tourney({
                       alt={tournament.name}
                       width={400}
                       height={300}
-                      className={`border-10 border-[#00A3E0] bg-black object-cover w-full aspect-video -skew-x-2 md:-skew-x-5 ${
+                      className={`outline-10 outline-[#007CAB] bg-black object-cover w-full aspect-video -skew-x-2 md:-skew-x-5 ${
                         tournament.objectPosition || "object-center"
                       }`}
                     />
