@@ -67,7 +67,7 @@
       "latePrice":"10€",
       "features": [
         "Isiklik laud, voolu- ja internetiühendus",
-        "Ligipääs demoalale",
+        "Ligipääs messialale",
         "Turniiride pealt vaatamine",
         "Võimalus osaleda miniturniiridel"
       ]
@@ -78,7 +78,7 @@
       "features": [
         "Võimalus osaleda CS2 või LoL turniiril",
         "Isiklik laud, voolu- ja internetiühendus",
-        "Ligipääs demoalale",
+        "Ligipääs messialale",
         "Turniiride pealt vaatamine",
         "Võimalus osaleda miniturniiridel"
       ]
@@ -88,7 +88,7 @@
       "earlyPrice": "6€",
       "latePrice": "8€",
       "features": [
-        "Ligipääs demoalale",
+        "Ligipääs messialale",
         "Turniiride pealt vaatamine",
         "Võimalus osaleda miniturniiridel"
       ]
@@ -141,19 +141,25 @@
     "oct26": "26. oktoober",
     "events": {
       "doorsOpen": "Uksed avatakse",
-      "preTournamentWarmup": "Eelturniiri soojendus ja miniturniiride algus",
-      "killerInstinct": "Killer Instinct turniir",
-      "mainTournamentsStart": "CS2 ja LoL turniirid algavad",
+      "miniTournaments": "Miniturniirid",
+      "tournamentRegistration": "Turniiride registreerimine",
+      "streetFighter6": "Street Fighter 6 turniir",
+      "smashBrosUltimate": "Smash Bros. Ultimate turniir",
+      "cs2Tournament": "CS2 turniir",
+      "lolTournament": "LoL turniir",
+      "sf6SsbuFinale": "SF6 ja SSBU finaal",
       "doorsClose": "Uksed suletakse",
-      "warmup": "Soojendus",
-      "mainTournamentsContinue": "LoL/CS2 turniirid jätkuvad",
-      "miniTournamentsStart": "Miniturniirid algavad",
-      "granblue": "Granblue turniir",
-      "granTurismoFinal": "Gran Turismo finaal",
-      "cs2FinalStart": "CS2 finaali algus",
-      "cs2Final": "CS2 finaal",
-      "awardCeremony": "Auhinna\u00ADtseremoonia",
-      "expoClosed": "Messiala on suletud"
+      "cs2Continue": "CS2 turniir jätkub",
+      "lolContinue": "LoL turniir jätkub",
+      "2xkoTournament": "2XKO turniir",
+      "tekken8Tournament": "Tekken 8 turniir",
+      "2xkoTekken8Finale": "2XKO ja Tekken 8 finaal",
+      "lolFinale": "LoL finaal",
+      "granTurismoFinale": "Gran Turismo finaal",
+      "lolTournamentSemifinals": "LoL turniiri poolfinaalid",
+      "cs2Finale": "CS2 finaal",
+      "cs2FinalMatch": "CS2 finaalimäng",
+      "cs2TournamentFinale": "CS2 turniiri finaal"
     },
     "locations": {
       "registrationSetup": "Registreerimine ja setup aulas",

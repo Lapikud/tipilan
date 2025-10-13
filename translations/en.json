@@ -67,7 +67,7 @@
       "latePrice":"10€",
       "features": [
         "Personal desk, power and internet connection",
-        "Access to demo area",
+        "Access to expo area",
         "Tournament spectating",
         "Ability to participate in mini-tournaments"
       ]
@@ -78,7 +78,7 @@
       "features": [
         "Ability to participate in the CS2 or LoL tournament",
         "Personal desk, power and internet connection",
-        "Access to demo area",
+        "Access to expo area",
         "Tournament spectating",
         "Ability to participate in mini-tournaments"
       ]
@@ -88,7 +88,7 @@
       "earlyPrice": "6€",
       "latePrice": "8€",
       "features": [
-        "Access to demo area",
+        "Access to expo area",
         "Tournament spectating",
         "Ability to participate in mini-tournaments"
       ]
@@ -140,19 +140,25 @@
     "oct26": "October 26th",
     "events": {
       "doorsOpen": "Doors open",
-      "preTournamentWarmup": "Pre-tournament warmup and start of mini tournaments",
-      "killerInstinct": "Killer Instinct tournament",
-      "mainTournamentsStart": "CS2 and LoL tournaments begin",
+      "miniTournaments": "Mini tournaments",
+      "tournamentRegistration": "Tournament registration",
+      "streetFighter6": "Street Fighter 6 tournament",
+      "smashBrosUltimate": "Smash Bros. Ultimate tournament",
+      "cs2Tournament": "CS2 tournament",
+      "lolTournament": "LoL tournament",
+      "sf6SsbuFinale": "SF6 & SSBU finale",
       "doorsClose": "Doors close",
-      "warmup": "Warmup",
-      "mainTournamentsContinue": "LoL/CS2 tournaments continue",
-      "miniTournamentsStart": "Mini-tournaments begin",
-      "granblue": "Granblue tournament",
-      "granTurismoFinal": "Gran Turismo final",
-      "cs2FinalStart": "CS2 final begins",
-      "cs2Final": "CS2 final",
-      "awardCeremony": "Award ceremony",
-      "expoClosed": "Expo area is closed"
+      "cs2Continue": "CS2 tournament continues",
+      "lolContinue": "LoL tournament continues",
+      "2xkoTournament": "2XKO tournament",
+      "tekken8Tournament": "Tekken 8 tournament",
+      "2xkoTekken8Finale": "2XKO & Tekken 8 finale",
+      "lolFinale": "LoL finale",
+      "granTurismoFinale": "Gran Turismo finale",
+      "lolTournamentSemifinals": "LoL tournament semifinals",
+      "cs2Finale": "CS2 finale",
+      "cs2FinalMatch": "CS2 final match",
+      "cs2TournamentFinale": "CS2 tournament finale"
     },
     "locations": {
       "registrationSetup": "Registration and setup in auditorium",
