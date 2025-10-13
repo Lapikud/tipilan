@@ -22,58 +22,58 @@ export default async function Tourney({
   }[] = [
     {
       name: "Tekken 8",
-      prize: "350€",
-      image: "/messiala/tekken8.jpg",
+      prize: "200€",
+      image: "/images/miniturniirid/tekken8.jpg",
       objectPosition: "object-center",
     },
     {
       name: "WRC",
       prize: "350€",
-      image: "/messiala/wrc.jpg",
+      image: "/images/miniturniirid/wrc.jpg",
       objectPosition: "object-center",
     },
     {
       name: "Street Fighter 6",
-      prize: "200€",
-      image: "/messiala/street_fighter.jpg",
+      prize: "150€",
+      image: "/images/miniturniirid/street_fighter.jpg",
       objectPosition: "object-center",
     },
     {
       name: "Gran Turismo",
       prize: "200€",
-      image: "/messiala/gran_turismo.jpg",
+      image: "/images/miniturniirid/gran_turismo.jpg",
       objectPosition: "object-center",
     },
     {
       name: "FC 26",
       prize: "100€",
-      image: "/messiala/fc26.jpg",
+      image: "/images/miniturniirid/fc26.jpg",
       objectPosition: "object-center",
     },
     {
       name: "Dwarf Escape",
       prize: "50€",
-      image: "/messiala/dwarf_escape.png",
+      image: "/images/miniturniirid/dwarf_escape.png",
       objectPosition: "object-center",
       bgClass: "bg-black",
     },
     {
       name: "Buckshot Roulette",
       prize: "Merch",
-      image: "/messiala/buckshot_tournament.png",
+      image: "/images/miniturniirid/buckshot_tournament.png",
       objectPosition: "object-center",
       bgClass: "bg-black",
     },
     {
-      name: "Granblue Fantasy: Versus Rising",
-      prize: "50€",
-      image: "/messiala/grandblue_fantasy.jpg",
+      name: "2XKO",
+      prize: "100€",
+      image: "/images/miniturniirid/2xko.png",
       objectPosition: "object-top",
     },
     {
       name: "Super Smash Bros. Ultimate",
-      prize: "50€",
-      image: "/messiala/super_smash_bros.jpg",
+      prize: "100€",
+      image: "/images/miniturniirid/super_smash_bros.jpg",
       objectPosition: "object-top",
     },
   ];
@@ -105,6 +105,9 @@ export default async function Tourney({
               </p>
               <p className="text-balance">
                 {t("tournaments.mini.description1")}
+              </p>
+              <p className="text-balance">
+                {t("tournaments.mini.description2")}
               </p>
               <br />
               <div className="flex flex-row flex-wrap gap-4 md:gap-8">
