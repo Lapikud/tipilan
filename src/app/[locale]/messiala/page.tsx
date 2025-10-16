@@ -968,6 +968,97 @@ export default function Expo() {
       </div>
 
       <SectionDivider />
+
+      {/* PUHKA JA MÄNGI Section */}
+      <div className="flex flex-col m-6 md:m-16 mb-16">
+        <h2
+          className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mb-8 uppercase`}
+        >
+          PUHKA JA MÄNGI
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Card 1 - Chill-ala */}
+          <div className="flex flex-col">
+            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden mb-4">
+              <div className="relative h-48">
+                <img
+                  src="/images/EXPO/chill_ala.jpg"
+                  alt="Chill-ala"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <h3 
+              className="text-[#2A2C3F] dark:text-[#EEE5E5]"
+              style={{
+                fontFamily: 'Work Sans',
+                fontWeight: 700,
+                fontSize: '36px',
+                lineHeight: '100%',
+                letterSpacing: '-3%',
+                verticalAlign: 'middle'
+              }}
+            >
+              Chill-ala koos turniiride otseülekandega
+            </h3>
+          </div>
+
+          {/* Card 2 - Mänguklubi */}
+          <div className="flex flex-col">
+            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden mb-4">
+              <div className="relative h-48">
+                <img
+                  src="/images/EXPO/mklubi.jpg"
+                  alt="Mänguklubi"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <h3 
+              className="text-[#2A2C3F] dark:text-[#EEE5E5]"
+              style={{
+                fontFamily: 'Work Sans',
+                fontWeight: 700,
+                fontSize: '36px',
+                lineHeight: '100%',
+                letterSpacing: '-3%',
+                verticalAlign: 'middle'
+              }}
+            >
+              Mänguklubi lauamängud ja konsoolid
+            </h3>
+          </div>
+
+          {/* Card 3 - Baariala */}
+          <div className="flex flex-col">
+            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden mb-4">
+              <div className="relative h-48">
+                <img
+                  src="/images/EXPO/baar.jpg"
+                  alt="Baariala"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <h3 
+              className="text-[#2A2C3F] dark:text-[#EEE5E5]"
+              style={{
+                fontFamily: 'Work Sans',
+                fontWeight: 700,
+                fontSize: '36px',
+                lineHeight: '100%',
+                letterSpacing: '-3%',
+                verticalAlign: 'middle'
+              }}
+            >
+              Baariala jookide ja snäkkidega
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <SectionDivider />
     </div>
   );
 }
