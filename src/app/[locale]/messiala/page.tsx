@@ -969,6 +969,35 @@ export default function Expo() {
 
       <SectionDivider />
 
+      {/* MINITURNIIRID Section */}
+      <div className="flex flex-col lg:flex-row items-center gap-8 m-6 md:m-16 mb-16">
+        <div className="flex-1">
+          <h2
+            className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mb-6 uppercase`}
+          >
+            MINITURNIIRID
+          </h2>
+          <p className="text-[#2A2C3F] dark:text-[#EEE5E5] text-lg mb-4">
+            TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Osaleda saavad ka niisama külastajad! Auhinnafond on kõigi turniiride peale 1250€.
+          </p>
+        </div>
+        <div className="flex-shrink-0 relative overflow-hidden">
+          <img
+            src="/images/minitournament_logo.png"
+            alt="Miniturniirid logo"
+            style={{
+              width: '649.7214965820312px',
+              height: '400.99997840027544px',
+              transform: 'rotate(0deg)',
+              opacity: 1,
+              position: 'relative'
+            }}
+          />
+        </div>
+      </div>
+
+      <SectionDivider />
+
       {/* PUHKA JA MÄNGI Section */}
       <div className="flex flex-col m-6 md:m-16 mb-16">
         <h2
