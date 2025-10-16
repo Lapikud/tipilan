@@ -1102,7 +1102,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/Lostbyte/lost_byte_logo.png"
+                src="/images/EXPO/GameDev logos/Lostbyte.png"
                 alt="Broken Alliance"
                 className="w-full h-full object-contain p-4"
               />
@@ -1112,12 +1112,12 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/Mishura Games/buckshot_roulette_logo.png"
-                alt="Buckshot Roulette"
+                src="/images/EXPO/GameDev logos/Eleball.png"
+                alt="Eleball"
                 className="w-full h-full object-contain p-4"
               />
             </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Buckshot Roulette</h3>
+            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Eleball</h3>
           </div>
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
@@ -1164,7 +1164,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/Delusional/DELUSIONAL_logo.svg"
+                src="/images/EXPO/GameDev logos/Cyber_Doc_Rogue.png"
                 alt="Delusional"
                 className="w-full h-full object-contain p-4"
               />
@@ -1174,7 +1174,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/Eleball/EleBallLogoHigh.png"
+                src="/images/EXPO/GameDev logos/Eleball.png"
                 alt="Eleball"
                 className="w-full h-full object-contain p-4"
               />
@@ -1186,7 +1186,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/Packet Tracers/hardwired_logo.png"
+                src="/images/EXPO/GameDev logos/Hardwired.png"
                 alt="Hardwired"
                 className="w-full h-full object-contain p-4"
               />
@@ -1196,7 +1196,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/HardBoyled Games-HexWave/Game Logo/HexWave Logo 512.png"
+                src="/images/EXPO/GameDev logos/Hexwave.png"
                 alt="HexWave"
                 className="w-full h-full object-contain p-4"
               />
@@ -1206,7 +1206,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/ImagoGames/immortal_logo.png"
+                src="/images/EXPO/GameDev logos/Immortal.png"
                 alt="IMMORTAL: And the death that follows"
                 className="w-full h-full object-contain p-4"
               />
@@ -1216,7 +1216,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/Kalawindow/kalawindow.png"
+                src="/images/EXPO/GameDev logos/Kalawindow.png"
                 alt="Kalawindow"
                 className="w-full h-full object-contain p-4"
               />
@@ -1228,7 +1228,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/Korter 1996/korter1996_logo.png"
+                src="/images/EXPO/GameDev logos/Korter1996.png"
                 alt="Kortel 1996"
                 className="w-full h-full object-contain p-4"
               />
@@ -1238,7 +1238,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/Tiim _Skill Issue_/midnight_souvenirs_logo.png"
+                src="/images/EXPO/GameDev logos/Midnight_Souveneirs.png"
                 alt="Midnight Souveneirs"
                 className="w-full h-full object-contain p-4"
               />
@@ -1248,7 +1248,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/Nullis/nullis_logo.PNG"
+                src="/images/EXPO/GameDev logos/Nullis.png"
                 alt="Nullis"
                 className="w-full h-full object-contain p-4"
               />
@@ -1258,7 +1258,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/Void of Hermes/planet_hoarders_logo.png"
+                src="/images/EXPO/GameDev logos/Planet_hoarders.png"
                 alt="Planet Hoarders"
                 className="w-full h-full object-contain p-4"
               />
@@ -1270,7 +1270,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/Realm Hearts/realm_hearts_logo.png"
+                src="/images/EXPO/GameDev logos/Realm Hearts/realm_hearts.png"
                 alt="Realm Hearts"
                 className="w-full h-full object-contain p-4"
               />
@@ -1280,7 +1280,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="/images/EXPO/GameDev logos/Seasons of Solitude/seasons_of_solitude_logo.png"
+                src="/images/EXPO/GameDev logos/Seasons_of_Solitude.png"
                 alt="Season of Solitude"
                 className="w-full h-full object-contain p-4"
               />
@@ -1290,7 +1290,7 @@ export default function Expo() {
           <div className="flex flex-col">
             <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
               <img
-                src="public/images/EXPO/GameDev logos/War-Torn/war_torn.png"
+                src="/images/EXPO/GameDev logos/War_torn.png"
                 alt="War-thorn"
                 className="w-full h-full object-contain p-4"
               />
