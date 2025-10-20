@@ -93,8 +93,8 @@
 
 ## 6. Map Selection
 1. **6.1** The tournament takes place in two stages:
-   1. **6.1.1** Swiss system: initial phase played in Bo1 format. All decisive matches (matches that secure advancement or elimination from the tournament) are in Bo3 format. The top 8 teams advance to the playoff stage.
-   2. **6.1.2** Playoff stage: all matches are Bo3. Quarter-finals, semi-finals, finals, and 3rd place match take place.
+   1. **6.1.1** Swiss system: initial phase played in Bo1 format. The top 16 teams advance to the playoffs.
+   2. **6.1.2** Playoffs: played in double elimination format, where winners' bracket matches are Bo3 and losers' bracket matches are Bo1.
 2. **6.2** Maps are selected from the currently active Valve Active Duty Map Group.
 3. **6.3** Best of 1 (Bo1): coin flip winner decides whether they are Team A or Team B. Team A starts and the process is as follows:
    1. **6.3.1** Team A removes two maps.
