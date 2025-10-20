@@ -7,6 +7,7 @@ import { useEffect, useRef, useState, useMemo } from "react";
 import { EyeClosed, Eye } from "lucide-react";
 import SectionDivider from "@/components/SectionDivider";
 import { useTranslations } from "next-intl";
+import gamedevData from "@/data/gamedev.json";
 
 // Define interface for the ref with toggle function
 interface MountRefCurrent extends HTMLDivElement {
@@ -1098,206 +1099,79 @@ export default function Expo() {
         </h2>
         
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {/* Row 1 - 4 items */}
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Lostbyte.png"
-                alt="Broken Alliance"
-                className="w-full h-full object-contain p-4"
-              />
+          {gamedevData.games.map((game) => (
+            <div key={game.id} className="flex flex-col">
+              <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
+                <img
+                  src={game.logo}
+                  alt={game.name}
+                  className="w-full h-full object-contain p-4"
+                />
+              </div>
+              <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold mb-1">
+                {game.name}
+              </h3>
+              <p className="text-[#666] dark:text-[#AAA] text-center text-sm">
+                {game.developer}
+              </p>
             </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Broken Alliance</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Eleball.png"
-                alt="Eleball"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Eleball</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Placeholder Gameworks/craftcraft_simulator_logo.png"
-                alt="CraftCraft Simulator"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">CraftCraft Simulator</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/HRA - CYBER DOC ROGUE/cyber_dog_rogue_logo.png"
-                alt="Cyber Dog Rescue"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Cyber Dog Rescue</h3>
-          </div>
-
-          {/* Row 2 - 4 items */}
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Placeholder Gameworks/death_and_taxes_logo.png"
-                alt="Death and Taxes"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Death and Taxes</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Path of Pixels/deep_pixel_melancholy_logo.png"
-                alt="Deep Pixel Melancholy"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Deep Pixel Melancholy</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Cyber_Doc_Rogue.png"
-                alt="Delusional"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Delusional</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Eleball.png"
-                alt="Eleball"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Eleball</h3>
-          </div>
-
-          {/* Row 3 - 4 items */}
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Hardwired.png"
-                alt="Hardwired"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Hardwired</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Hexwave.png"
-                alt="HexWave"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">HexWave</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Immortal.png"
-                alt="IMMORTAL: And the death that follows"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">IMMORTAL: And the death that follows</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Kalawindow.png"
-                alt="Kalawindow"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Kalawindow</h3>
-          </div>
-
-          {/* Row 4 - 4 items */}
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Korter1996.png"
-                alt="Kortel 1996"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Kortel 1996</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Midnight_Souveneirs.png"
-                alt="Midnight Souveneirs"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Midnight Souveneirs</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Nullis.png"
-                alt="Nullis"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Nullis</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Planet_hoarders.png"
-                alt="Planet Hoarders"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Planet Hoarders</h3>
-          </div>
-
-          {/* Row 5 - 3 items (last row) */}
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Realm Hearts/realm_hearts.png"
-                alt="Realm Hearts"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Realm Hearts</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/Seasons_of_Solitude.png"
-                alt="Season of Solitude"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">Season of Solitude</h3>
-          </div>
-          <div className="flex flex-col">
-            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
-              <img
-                src="/images/EXPO/GameDev logos/War_torn.png"
-                alt="War-thorn"
-                className="w-full h-full object-contain p-4"
-              />
-            </div>
-            <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold">War-thorn</h3>
-          </div>
+          ))}
         </div>
+      </div>
+
+      <SectionDivider />
+
+      {/* ÜLIKOOLID Section */}
+      <div className="flex flex-col m-6 md:m-16 mb-16">
+        <h2
+          className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mb-8 uppercase`}
+        >
+          Ülikoolid
+        </h2>
+        
+        {/* First 12 games in 3x4 grid */}
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-6 mb-6">
+          {gamedevData.universities?.slice(0, 12).map((university) => (
+            <div key={university.id} className="flex flex-col">
+              <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
+                <img
+                  src={university.logo}
+                  alt={university.name}
+                  className="w-full h-full object-contain p-4"
+                />
+              </div>
+              <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold mb-1">
+                {university.name}
+              </h3>
+              <p className="text-[#666] dark:text-[#AAA] text-center text-sm">
+                {university.university}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Remaining games in new grid */}
+        {gamedevData.universities && gamedevData.universities.length > 12 && (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {gamedevData.universities.slice(12).map((university) => (
+              <div key={university.id} className="flex flex-col">
+                <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
+                  <img
+                    src={university.logo}
+                    alt={university.name}
+                    className="w-full h-full object-contain p-4"
+                  />
+                </div>
+                <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold mb-1">
+                  {university.name}
+                </h3>
+                <p className="text-[#666] dark:text-[#AAA] text-center text-sm">
+                  {university.university}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       <SectionDivider />
