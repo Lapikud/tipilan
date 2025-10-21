@@ -1,0 +1,231 @@
+{
+  "games": [
+    {
+      "id": "broken-alliance",
+      "name": "Broken Alliance",
+      "logo": "/images/EXPO/GameDev logos/broken_alliance.png",
+      "developer": "Placeholder Gameworks",
+      "description": ""
+    },
+    {
+      "id": "buckshot-tournament",
+      "name": "Buckshot Tournament",
+      "logo": "/images/miniturniirid/buckshot_tournament.png",
+      "developer": "Mike Klubnika",
+      "description": ""
+    },
+    {
+      "id": "eleball",
+      "name": "Eleball",
+      "logo": "/images/EXPO/GameDev logos/Eleball.png",
+      "developer": "Pulsar Twin",
+      "description": ""
+    },
+    {
+      "id": "craftcraft-simulator",
+      "name": "CraftCraft Simulator",
+      "logo": "/images/EXPO/GameDev logos/craftcat_sim.png",
+      "developer": "Placeholder Gameworks",
+      "description": ""
+    },
+    {
+      "id": "cyber-dog-rescue",
+      "name": "Cyber Dog Rescue",
+      "logo": "/images/EXPO/GameDev logos/Cyber_Doc_Rogue.png",
+      "developer": "HRA Interactive",
+      "description": ""
+    },
+    {
+      "id": "death-and-taxes",
+      "name": "Death and Taxes",
+      "logo": "/images/EXPO/GameDev logos/death_and_taxes.png",
+      "developer": "Placeholder Gameworks",
+      "description": ""
+    },
+    {
+      "id": "deep-pixel-melancholy",
+      "name": "Deep Pixel Melancholy",
+      "logo": "/images/EXPO/GameDev logos/deep_pixel_melancholy.svg",
+      "developer": "ok/no",
+      "description": ""
+    },
+    {
+      "id": "delusional",
+      "name": "Delusional",
+      "logo": "/images/EXPO/GameDev logos/DELUSIONAL_logo.svg",
+      "developer": "AUTOPLAY",
+      "description": ""
+    },
+    {
+      "id": "hardwired",
+      "name": "Hardwired",
+      "logo": "/images/EXPO/GameDev logos/Hardwired.png",
+      "developer": "Lostbyte",
+      "description": ""
+    },
+    {
+      "id": "hexwave",
+      "name": "HexWave",
+      "logo": "/images/EXPO/GameDev logos/Hexwave.png",
+      "developer": "HardBoyled Games",
+      "description": ""
+    },
+    {
+      "id": "immortal",
+      "name": "IMMORTAL: And the death that follows",
+      "logo": "/images/EXPO/GameDev logos/Immortal.png",
+      "developer": "Mishura Games",
+      "description": ""
+    },
+    {
+      "id": "kalawindow",
+      "name": "Kalawindow",
+      "logo": "/images/EXPO/GameDev logos/Kalawindow.png",
+      "developer": "Lost Empire Entertainment",
+      "description": ""
+    },
+    {
+      "id": "kortel-1996",
+      "name": "Kortel 1996",
+      "logo": "/images/EXPO/GameDev logos/Korter1996.png",
+      "developer": "Mari-Anna Lepasson",
+      "description": ""
+    },
+    {
+      "id": "midnight-souveneirs",
+      "name": "Midnight Souveneirs",
+      "logo": "/images/EXPO/GameDev logos/Midnight_Souveneirs.png",
+      "developer": "Path of Pixels",
+      "description": ""
+    },
+
+    {
+      "id": "planet-hoarders",
+      "name": "Planet Hoarders",
+      "logo": "/images/EXPO/GameDev logos/Planet_hoarders.png",
+      "developer": "Imago Games",
+      "description": ""
+    },
+    {
+      "id": "realm-hearts",
+      "name": "Realm Hearts",
+      "logo": "/images/EXPO/GameDev logos/realm_hearts.png",
+      "developer": "Dreamaster",
+      "description": ""
+    },
+    {
+      "id": "season-of-solitude",
+      "name": "Season of Solitude",
+      "logo": "/images/EXPO/GameDev logos/Seasons_of_Solitude.png",
+      "developer": "Ninjarithm Studio",
+      "description": ""
+    },
+    {
+      "id": "war-thorn",
+      "name": "War-thorn",
+      "logo": "/images/EXPO/GameDev logos/War_torn.png",
+      "developer": "KingOfTheEnd, ForgottenCup",
+      "description": ""
+    }
+  ],
+  "universities": [
+    {
+      "id": "deltavr",
+      "name": "DeltaVR",
+      "logo": "/images/EXPO/ylikoolid/deltavr.png",
+      "university": "Tartu Ülikool",
+      "description": ""
+    },
+    {
+      "id": "tiksu-toksu",
+      "name": "Tiksu-Toksu",
+      "logo": "/images/EXPO/ylikoolid/tiksu-toksu.jpg",
+      "university": "Tartu Ülikool",
+      "description": ""
+    },
+    {
+      "id": "psyrreal",
+      "name": "Psyrreal",
+      "logo": "/images/EXPO/ylikoolid/psyrreal.png", 
+      "university": "Tartu Ülikool",
+      "description": ""
+    },
+    {
+      "id": "blastronaut", 
+      "name": "Blastronaut",
+      "logo": "/images/EXPO/ylikoolid/blastronaut.png",
+      "university": "Tartu Ülikool",
+      "description": ""
+    },
+    {
+      "id": "oh-crap",
+      "name": "Oh Crap!", 
+      "logo": "/images/EXPO/ylikoolid/oh_crap.png",
+      "university": "Tallinna Tehnikaülikool",
+      "description": ""
+    },
+    {
+      "id": "dwarf-escape",
+      "name": "Dwarf Escape",
+      "logo": "/images/EXPO/ylikoolid/dwarf_escape.png",
+      "university": "Tallinna Tehnikaülikool",
+      "description": ""
+    },
+    {
+      "id": "void-of-hermes",
+      "name": "Void of Hermes",
+      "logo": "/images/EXPO/ylikoolid/void_of_hermes.png",
+      "university": "Tallinna Tehnikaülikool",
+      "description": ""
+    },
+    {
+      "id": "nullis",
+      "name": "Nullis",
+      "logo": "/images/EXPO/GameDev logos/Nullis.png",
+      "university": "Tallinna Tehnikaülikool",
+      "description": ""
+    },
+    {
+      "id": "packet-tracers",
+      "name": "Packet Tracers",
+      "logo": "/images/EXPO/ylikoolid/packet_tracers.png",
+      "university": "Tallinna Tehnikaülikool", 
+      "description": ""
+    },
+    {
+      "id": "a-bottles-journey",
+      "name": "A Bottle's Journey",
+      "logo": "/images/EXPO/ylikoolid/a_bottles_journey.png",
+      "university": "Tallinna Ülikool",
+      "description": ""
+    },
+    {
+      "id": "wildings",
+      "name": "Wildings",
+      "logo": "/images/EXPO/ylikoolid/wildings.png",
+      "university": "Tallinna Ülikool",
+      "description": ""
+    },
+    {
+      "id": "the-return",
+      "name": "The Return",
+      "logo": "/images/EXPO/ylikoolid/the_return.png",
+      "university": "Tallinna Ülikool",
+      "description": ""
+    },
+    {
+      "id": "magic-mineral",
+      "name": "Magic Mineral",
+      "logo": "/images/EXPO/ylikoolid/magic_mineral.png",
+      "university": "Tallinna Ülikool",
+      "description": ""
+    },
+    {
+      "id": "type-n-magic",
+      "name": "Type 'n Magic", 
+      "logo": "/images/EXPO/ylikoolid/type_n_magic.png",
+      "university": "Tallinna Ülikool",
+      "description": ""
+    }
+  ]
+}

@@ -13,6 +13,7 @@ import {
   roomMeta,
   RoomNameKey,
 } from "@/data/roomNames";
+import gamedevData from "@/data/gamedev.json";
 
 // Define interface for the ref with toggle function
 interface MountRefCurrent extends HTMLDivElement {
@@ -854,6 +855,212 @@ export default function Expo() {
               </div>
             )}
         </div>
+      </div>
+
+      <SectionDivider />
+
+      {/* MINITURNIIRID Section */}
+      <div className="flex flex-col lg:flex-row items-center gap-8 m-6 md:m-16 mb-16">
+        <div className="flex-1">
+          <h2
+            className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mb-6 uppercase`}
+          >
+            MINITURNIIRID
+          </h2>
+          <p className="text-[#2A2C3F] dark:text-[#EEE5E5] text-lg mb-4">
+            TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Osaleda saavad ka niisama külastajad! Auhinnafond on kõigi turniiride peale 1250€.
+          </p>
+        </div>
+        <div className="flex-shrink-0 relative overflow-hidden">
+          <img
+            src="/images/minitournament_logo.png"
+            alt="Miniturniirid logo"
+            style={{
+              width: '649.7214965820312px',
+              height: '400.99997840027544px',
+              transform: 'rotate(0deg)',
+              opacity: 1,
+              position: 'relative'
+            }}
+          />
+        </div>
+      </div>
+
+      <SectionDivider />
+
+      {/* PUHKA JA MÄNGI Section */}
+      <div className="flex flex-col m-6 md:m-16 mb-16">
+        <h2
+          className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mb-8 uppercase`}
+        >
+          PUHKA JA MÄNGI
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Card 1 - Chill-ala */}
+          <div className="flex flex-col">
+            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden mb-4">
+              <div className="relative h-48">
+                <img
+                  src="/images/EXPO/chill_ala.jpg"
+                  alt="Chill-ala"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <h3 
+              className="text-[#2A2C3F] dark:text-[#EEE5E5]"
+              style={{
+                fontFamily: 'Work Sans',
+                fontWeight: 700,
+                fontSize: '36px',
+                lineHeight: '100%',
+                letterSpacing: '-3%',
+                verticalAlign: 'middle'
+              }}
+            >
+              Chill-ala koos turniiride otseülekandega
+            </h3>
+          </div>
+
+          {/* Card 2 - Mänguklubi */}
+          <div className="flex flex-col">
+            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden mb-4">
+              <div className="relative h-48">
+                <img
+                  src="/images/EXPO/mklubi.jpg"
+                  alt="Mänguklubi"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <h3 
+              className="text-[#2A2C3F] dark:text-[#EEE5E5]"
+              style={{
+                fontFamily: 'Work Sans',
+                fontWeight: 700,
+                fontSize: '36px',
+                lineHeight: '100%',
+                letterSpacing: '-3%',
+                verticalAlign: 'middle'
+              }}
+            >
+              Mänguklubi lauamängud ja konsoolid
+            </h3>
+          </div>
+
+          {/* Card 3 - Baariala */}
+          <div className="flex flex-col">
+            <div className="bg-[#1a1a2e] rounded-lg overflow-hidden mb-4">
+              <div className="relative h-48">
+                <img
+                  src="/images/EXPO/baar.jpg"
+                  alt="Baariala"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <h3 
+              className="text-[#2A2C3F] dark:text-[#EEE5E5]"
+              style={{
+                fontFamily: 'Work Sans',
+                fontWeight: 700,
+                fontSize: '36px',
+                lineHeight: '100%',
+                letterSpacing: '-3%',
+                verticalAlign: 'middle'
+              }}
+            >
+              Baariala jookide ja snäkkidega
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <SectionDivider />
+
+      {/* EESTI MÄNGUARENDAJAD Section */}
+      <div className="flex flex-col m-6 md:m-16 mb-16">
+        <h2
+          className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mb-8 uppercase`}
+        >
+          Eesti mänguarendajad
+        </h2>
+        
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          {gamedevData.games.map((game) => (
+            <div key={game.id} className="flex flex-col">
+              <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
+                <img
+                  src={game.logo}
+                  alt={game.name}
+                  className="w-full h-full object-contain p-4"
+                />
+              </div>
+              <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold mb-1">
+                {game.name}
+              </h3>
+              <p className="text-[#666] dark:text-[#AAA] text-center text-sm">
+                {game.developer}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <SectionDivider />
+
+      {/* ÜLIKOOLID Section */}
+      <div className="flex flex-col m-6 md:m-16 mb-16">
+        <h2
+          className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mb-8 uppercase`}
+        >
+          Ülikoolid
+        </h2>
+        
+        {/* First 12 games in 3x4 grid */}
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-6 mb-6">
+          {gamedevData.universities?.slice(0, 12).map((university) => (
+            <div key={university.id} className="flex flex-col">
+              <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
+                <img
+                  src={university.logo}
+                  alt={university.name}
+                  className="w-full h-full object-contain p-4"
+                />
+              </div>
+              <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold mb-1">
+                {university.name}
+              </h3>
+              <p className="text-[#666] dark:text-[#AAA] text-center text-sm">
+                {university.university}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Remaining games in new grid */}
+        {gamedevData.universities && gamedevData.universities.length > 12 && (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {gamedevData.universities.slice(12).map((university) => (
+              <div key={university.id} className="flex flex-col">
+                <div className="bg-[#1a1a2e] rounded-lg overflow-hidden aspect-square mb-2">
+                  <img
+                    src={university.logo}
+                    alt={university.name}
+                    className="w-full h-full object-contain p-4"
+                  />
+                </div>
+                <h3 className="text-[#2A2C3F] dark:text-[#EEE5E5] text-center font-semibold mb-1">
+                  {university.name}
+                </h3>
+                <p className="text-[#666] dark:text-[#AAA] text-center text-sm">
+                  {university.university}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       <SectionDivider />

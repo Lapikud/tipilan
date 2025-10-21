@@ -1,13 +1,7 @@
 ## 1. Üldist 
-1. **1.1** Counter-Strike 2 (edaspidi CS2) turniir toimub 24.-26.5. **5.5*Tehniline paus: igal tiimil on vajadusel õigus kasutada tehnilist pausi. Pausi alustamiseks tuleb mängusisesesse chatti sisestada käsklus ".tech". Tehnilist pausi tohib kasutada üksnes mõjuval põhjusel, tehniliste probleemide esinemisel, ning selle põhjusest tuleb korraldajaid viivitamatult teavitada Discordi kaudu pärast pausi alustamist.
-
-## 6. Kaardivalik
-1. **6.1** Turniir toimub kahes etapis:
-   1. **6.1.1** Swiss-süsteem: algfaasis mängitakse Bo1 formaadis. Kõik otsustavad mängud (mängud, mis tagavad edasipääsu või turniirilt väljalangemise) on Bo3 formaadis. 8 parimat meeskonda pääsevad finaaletappi.
-   2. **6.1.2** Finaaletapp: kõik kohtumised on Bo3. Toimuvad veerandfinaalid, poolfinaalid, finaal ning 3. koha mäng.
-2. **6.2** Mängitav kaart valitakse välja hetkel aktiivsete Valve'i kaardigrupi (Valve Active Duty Map Group) kaartidest.toober, 2025 Tallinna Tehnikaülikooli (TalTech) ruumides, Ehitajate tee 5, Tallinn.
+1. **1.1** Counter-Strike 2 (edaspidi CS2) turniir toimub 24.-26. Oktoober, 2025 Tallinna Tehnikaülikooli (TalTech) ruumides, Ehitajate tee 5, Tallinn.
 2. **1.2** Turniiri auhinnafondiks on 5750€, mis jaguneb järgnevalt:
-   1. **1.2.1** TOP 3 auhinna fond on 5000€:
+   1. **1.2.1** TOP 3 auhinna found on 5000€:
       - **1.2.1.1** Esimese koha saanud võistkond - 500€ võistleja kohta
       - **1.2.1.2** Teise koha saanud võistkond - 300€ võistleja kohta
       - **1.2.1.3** Kolmanda koha saanud võistkond - 200€ võistleja kohta
@@ -36,7 +30,7 @@
 3. **2.3** Igal tiimil võib olla üks varumängija, kes ei kuulu tiimi põhikoosseisu:
     1. **2.3.1** Varumängija peab soetama endale eraldi varumängija pileti;
     2. **2.3.2** Varumängija võib asendada ükskõik millist tiimi põhikoosseisu liiget turniiri toimumisel ajal;
-    3. **2.3.2**  Varumängijale kehtivad samad õigused ja nõuded, mis tiimi põhikoosseisule.
+    3. **2.3.3** Varumängijale kehtivad samad õigused ja nõuded, mis tiimi põhikoosseisule.
 4. **2.4** Tiimi põhikoosseisus on lubatud välja vahetada mängijaid enne tiimide registreerimiskuupäeva lõppemist:
     1. **2.4.1** Mängijate väljavahetamine toimub läbi Fienta;
     2. **2.4.2** Liikme välja vahetamisel jääb tiimil jätkuvalt õigus varumängijale;
@@ -47,7 +41,7 @@
 8. **2.8** Kõik tiimiliikmed (k.a. põhikoosseis, varumängija, asendusmängija(d)) võivad turniiril kuulda vaid ühte tiimi korraga ja esindada vaid iseennast (st keelatud on lasta kellelgi teisel enda eest mängida);
 9. **2.9** Kõik tiimiliikmed (k.a. põhikoosseis, varumängija, asendusmängija(d)) peavad turniirile registreerimise päevaks olema vähemalt 16-aastased;
 10. **2.10** Mitte ükski tiimiliige ei tohi olla Venemaa Föderatsiooni ega Valgevene Rahvavabariigi kodanik.
-11. **2.11**Tiimidel (k.a. põhikoosseis, varumängija, asendusmängija(d)) pole lubatud:
+11. **2.11** Tiimidel (k.a. põhikoosseis, varumängija, asendusmängija(d)) pole lubatud:
     1. **2.11.1** Treenerite kasutamine;
     2. **2.11.2** Tiimisponsorite kajastamine turniiril;
     3. **2.11.3** Mängida teise tiimi või tiimiliikme huvides;
@@ -86,7 +80,9 @@
 5. **5.5** Tehniline paus: igal tiimil on vajadusel õigus kasutada tehnilist pausi. Pausi alustamiseks tuleb mängusisesesse chatti sisestada käsklus “.tech”. Tehnilist pausi tohib kasutada üksnes mõjuval põhjusel, tehniliste probleemide esinemisel, ning selle põhjusest tuleb korraldajaid viivitamatult teavitada Discordi kaudu pärast pausi alustamist.
 
 ## 6.  Kaardivalik
-1. **6.1** Turniiri lõplik formaat avalikustatakse oktoobris.
+1. **6.1** Turniir toimub kahes etapis:
+    1. **6.1.1** Swiss-süsteem: algfaasis mängitakse Bo1 formaadis. 16 parimat meeskonda pääsevad playoffidele.
+    2. **6.1.2** Playoffid: mängitakse double elimination formaadis, kus winners' bracket mängud on Bo3 ja losers' bracket mängud on Bo1.
 2. **6.2** Mängitav kaart valitakse välja hetkel aktiivsete Valve’i kaardigrupi (Valve Active Duty Map Group) kaartidest.
 3. **6.3** Parim ühest (Bo1): mündiviske võitja otsustab, kas nad on võistkond A või võistkond B. Võistkond A alustab ning protsess on järgmine:
     1. **6.3.1** Võistkond A eemaldab kaks kaarti.
@@ -134,7 +130,8 @@
 13. **8.13** Korraldustiimil on kohustus kõikidest väljalangemistest ja -arvamistest ning edasistest muudatustest avalikult teada anda.
 
 ## 9. Kontakt
-Igasuguste üritust puudutavate küsimuste, probleemide, murede jne korral võtta ühendust TipiLAN korraldustiimiga.
+Igasuguste üritust puudutavate küsimuste, probleemide, murede jne korral võtta ühendust TipiLAN korraldustiimiga:
+(kontaktid)
 
 ## 10. Viited
 - https://pro.eslgaming.com/csgo/proleague/rules/
