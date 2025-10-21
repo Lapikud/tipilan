@@ -64,7 +64,7 @@
     "computerParticipant": {
       "title": "Arvutiga osaleja",
       "earlyPrice": "8€",
-      "latePrice":"10€",
+      "latePrice": "10€",
       "features": [
         "Isiklik laud, voolu- ja internetiühendus",
         "Ligipääs messialale",
@@ -194,18 +194,21 @@
     "title": "Messiala",
     "description": "TipiLANi messialal paiknevad ettevõtted, lisategevused ja toimuvad loengud.",
     "areas": {
-      "bar": "Baariala",
+      "bar": "Baar",
       "boardGames": "Lauamängude ala",
-      "simRacing": "Red Bull Sim Racing",
-      "fighting": "Võitlusmängu ala",
-      "photobooth": "Fotoboks",
+      "simRacing": "Red Bull rallisimulaatorid",
+      "fighting": "Balti Võitlusmängude Liiga",
       "ityk": "IT-teaduskonna üliõpilaskogu",
       "tartuyk": "Tartu Ülikool",
-      "estoniagamedev": "Eesti Gamedev",
+      "estoniagamedev": "Eesti mänguarendajad",
       "info": "Infoboks",
       "tly": "Tallinna Ülikool",
       "ittk": "TalTech IT-Teaduskond",
-      "gameup": "GameUP!"
+      "gameup": "GameUP!",
+      "photowall": "Fotosein",
+      "lvlup": "LVLup! videomängude muuseum",
+      "studentformula": "Tudengivormel",
+      "chillArea": "Chill-ala"
     },
     "hide": "Peida seinad",
     "show": "Näita seinu"
