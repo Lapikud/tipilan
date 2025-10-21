@@ -64,7 +64,7 @@
     "computerParticipant": {
       "title": "Computer Participant",
       "earlyPrice": "8€",
-      "latePrice":"10€",
+      "latePrice": "10€",
       "features": [
         "Personal desk, power and internet connection",
         "Access to expo area",
@@ -174,7 +174,7 @@
       "auditorium": "Auditorium",
       "studentHouse": "Student House (Tudengimaja)",
       "auditoriumAndStudentHouse": "Auditorium and Student House",
-      "entranceHall": "Entrance Hall"
+      "entranceHall": "Lobby"
     }
   },
   "stream": {
@@ -202,18 +202,21 @@
     "title": "Expo Area",
     "description": "The TipiLAN expo area hosts companies, additional activities and lectures.",
     "areas": {
-      "bar": "Bar Area",
+      "bar": "Bar",
       "boardGames": "Board Games Area",
-      "simRacing": "Red Bull Sim Racing",
-      "fighting": "Fighting Games Area",
-      "photobooth": "Photo booth",
+      "simRacing": "Red Bull Rally Simulators",
+      "fighting": "Baltic Fighting Games League",
       "ityk": "TalTech IT Faculty Student Council",
       "tartuyk": "Tartu University",
-      "estoniagamedev": "Estonia Gamedev",
+      "estoniagamedev": "Estonian game developers",
       "info": "Information booth",
       "tly": "Tallinn University",
-      "ittk": "TalTech School of Information Technologies",
-      "gameup": "GameUP!"
+      "ittk": "TalTech School of IT",
+      "gameup": "GameUP!",
+      "photowall": "Photo wall",
+      "lvlup": "LVLup! video game museum",
+      "studentformula": "Student Formula",
+      "chillArea": "Chill area"
     },
     "hide": "Hide walls",
     "show": "Show walls"

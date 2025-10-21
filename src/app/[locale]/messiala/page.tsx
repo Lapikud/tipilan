@@ -7,6 +7,12 @@ import { useEffect, useRef, useState, useMemo } from "react";
 import { EyeClosed, Eye } from "lucide-react";
 import SectionDivider from "@/components/SectionDivider";
 import { useTranslations } from "next-intl";
+import {
+  roomNameKeys,
+  staticRoomNames,
+  roomMeta,
+  RoomNameKey,
+} from "@/data/roomNames";
 import gamedevData from "@/data/gamedev.json";
 
 // Define interface for the ref with toggle function
@@ -26,27 +32,19 @@ export default function Expo() {
   const currentViewRef = useRef<"tudengimaja" | "fuajee">("fuajee");
   const t = useTranslations();
 
-  // Define room names with translations
-  const roomNames = useMemo(
-    () => ({
-      boardGames: t("expo.areas.boardGames"),
-      bar: t("expo.areas.bar"),
-      eval: "EVAL",
-      simRacing: t("expo.areas.simRacing"),
-      fighting: t("expo.areas.fighting"),
-      lvlup: "LVLup!",
-      redbull: "Red Bull",
-      // fuajee rooms
-      estoniagamedev: t("expo.areas.estoniagamedev"),
-      info: t("expo.areas.info"),
-      tartuyk: t("expo.areas.tartuyk"),
-      tly: t("expo.areas.tly"),
-      gameup: "GameUP!",
-      ittk: t("expo.areas.ittk"),
-      photobooth: t("expo.areas.photobooth"),
-    }),
-    [t],
-  );
+  // Room names using translations and staticRoomNames
+  const roomNames = useMemo(() => {
+    const names: Record<RoomNameKey, string> = {} as never;
+    roomNameKeys.forEach((key) => {
+      if (staticRoomNames[key]) {
+        names[key] = staticRoomNames[key]!;
+      } else {
+        // fallback to translation key or just key
+        names[key] = t(`expo.areas.${key}`, { default: key });
+      }
+    });
+    return names;
+  }, [t]);
 
   useEffect(() => {
     if (!mountRef.current) return;
@@ -129,20 +127,7 @@ export default function Expo() {
     directionalLight.shadow.mapSize.height = 2048;
     scene.add(directionalLight);
 
-    // Room colors and names
-    const roomColors = [
-      0x343434, // Gray - Lauamängude ala
-      0x4ecdc4, // Turquoise - Baariala
-      0xffe66d, // Yellow - EVAL
-      0xff6600, // Orange - Redbull Sim Racing
-      0xff1493, // Deep Pink - Võitlusmängu ala
-      0x3498db, // Blue - Sony
-      0x2ecc71, // Green - Lava
-      0x080682, // Dark Blue - LVLup!
-      0xc02841, // Red - RedBull
-    ];
-
-    // Create individual rooms as rectangles with custom positions
+    // Create individual rooms as rectangles with custom positions using roomMeta
     const rooms: THREE.Mesh[] = [];
     const roomData: Array<{
       mesh: THREE.Mesh;
@@ -153,115 +138,36 @@ export default function Expo() {
     }> = [];
     const dividers: THREE.Mesh[] = [];
 
-    // Define rooms with custom positions, sizes and colors
-    const roomDefinitions = [
-      {
-        width: 7,
-        height: 0.7,
-        depth: 3,
-        x: 2.5,
-        z: 4,
-        color: roomColors[0],
-        name: roomNames.boardGames,
-      },
-      {
-        width: 3.5,
-        height: 0.7,
-        depth: 1.2,
-        x: 0.7,
-        z: -0.3,
-        color: roomColors[1],
-        name: roomNames.bar,
-      },
-      {
-        width: 1.8,
-        height: 0.7,
-        depth: 1.5,
-        x: 1,
-        z: -3.5,
-        color: roomColors[2],
-        name: roomNames.eval,
-      },
-      {
-        width: 2,
-        height: 0.7,
-        depth: 4.5,
-        x: 5.2,
-        z: -2,
-        color: roomColors[3],
-        name: roomNames.simRacing,
-      },
-      {
-        width: 3,
-        height: 0.7,
-        depth: 1.5,
-        x: -1.7,
-        z: -3.5,
-        color: roomColors[4],
-        name: roomNames.fighting,
-      },
-      // {
-      //   width: 1.8,
-      //   height: 0.7,
-      //   depth: 1.5,
-      //   x: -4.3,
-      //   z: -3.5,
-      //   color: roomColors[5],
-      //   name: "Sony",
-      // },
-      {
-        width: 3,
-        height: 0.7,
-        depth: 1.7,
-        x: -3.5,
-        z: -0.5,
-        color: roomColors[7],
-        name: roomNames.lvlup,
-      },
-      //{
-      //  width: 2,
-      //  height: 0.7,
-      //  depth: 4,
-      //  x: -6.4,
-      //  z: -2.3,
-      //  color: roomColors[6],
-      //  name: "Lava",
-      //},
-      {
-        width: 1.8,
-        height: 0.7,
-        depth: 1.5,
-        x: 3,
-        z: -3.5,
-        color: roomColors[8],
-        name: roomNames.redbull,
-      },
-    ];
+    // Generate rooms for tudengimaja and fuajee using roomMeta
+    roomNameKeys.forEach((key) => {
+      const metas = roomMeta[key];
+      if (!metas) return;
+      metas.forEach((meta) => {
+        if (meta.view !== "tudengimaja") return;
+        const geometry = new THREE.BoxGeometry(
+          meta.size.width,
+          meta.size.height,
+          meta.size.depth,
+        );
+        const material = new THREE.MeshLambertMaterial({
+          color: meta.color,
+        });
+        const room = new THREE.Mesh(geometry, material);
+        room.position.set(meta.position.x, meta.position.y, meta.position.z);
+        room.castShadow = true;
+        room.receiveShadow = true;
+        room.userData = { name: roomNames[key], originalColor: meta.color };
 
-    roomDefinitions.forEach((roomDef) => {
-      const geometry = new THREE.BoxGeometry(
-        roomDef.width,
-        roomDef.height,
-        roomDef.depth,
-      );
-      const material = new THREE.MeshLambertMaterial({
-        color: roomDef.color,
-      });
+        scene.add(room);
+        rooms.push(room);
 
-      const room = new THREE.Mesh(geometry, material);
-      room.position.set(roomDef.x, roomDef.height / 2, roomDef.z);
-      room.castShadow = true;
-      room.receiveShadow = true;
-      room.userData = { name: roomDef.name, originalColor: roomDef.color };
-
-      scene.add(room);
-      rooms.push(room);
-      roomData.push({
-        mesh: room,
-        name: roomDef.name,
-        originalColor: roomDef.color,
-        originalScale: room.scale.clone(),
-        view: "tudengimaja",
+        roomData.push({
+          mesh: room,
+          name: roomNames[key],
+          originalColor: meta.color,
+          originalScale: room.scale.clone(),
+          view: "tudengimaja",
+        });
       });
     });
 
@@ -275,9 +181,9 @@ export default function Expo() {
     ) => {
       const wallGeometry = new THREE.BoxGeometry(width, height, depth);
       const wallMaterial = new THREE.MeshLambertMaterial({
-        color: 0x555555,
-        transparent: true,
-        opacity: 0,
+        color: 0x2e5570,
+        // transparent: true,
+        // opacity: 0,
       });
 
       const wall = new THREE.Mesh(wallGeometry, wallMaterial);
@@ -288,8 +194,10 @@ export default function Expo() {
     };
 
     // Add strategic dividers between major areas
-    createTogglableDivider(10, 2, 2, -2.5, 1.5); // Wall between main entrance
-    createTogglableDivider(2, 2, 2, 5.5, 1.5); // Wall right next to Lauamängud & Redbull Sim Racing
+    createTogglableDivider(2, 2, 1, -6.5, 1); // Wall behind photowall
+    createTogglableDivider(4, 2, 2, -3.5, 1.5); // Wall between main entrance
+    createTogglableDivider(2, 2, 1, -0.5, 1.5); // Wall behind bar
+    createTogglableDivider(2, 2, 2, 1.5, 1.5); // Wall between main entrance
 
     // Store dividers reference for later access
     dividersRef = [...dividers];
@@ -306,10 +214,7 @@ export default function Expo() {
 
     // Second ground plane
     const groundGeometry2 = new THREE.PlaneGeometry(2, 7);
-    const groundMaterial2 = new THREE.MeshLambertMaterial({
-      color: 0xcccccc,
-    });
-    const ground2 = new THREE.Mesh(groundGeometry2, groundMaterial2);
+    const ground2 = new THREE.Mesh(groundGeometry2, groundMaterial);
     ground2.rotation.x = -Math.PI / 2;
     ground2.position.x = -12.2;
     ground2.position.y = -5;
@@ -362,119 +267,39 @@ export default function Expo() {
       },
     );
 
-    // Function to create example rooms for fuajee
+    // Function to create rooms for fuajee using roomMeta
     const createfuajeeRooms = () => {
-      const fuajeeRoomColors = [
-        0x7b1642, // ITÜK - Cherry Red
-        0x365591, // Light Blue - Tartu Ülikool
-        0xa82838, // Red - Tallinna Ülikool
-        0x183bbf, // Dark Blue - Eesti Gamedev
-        0xd12e7d, // Purple - Taltech
-        0x228b22, // Green - GameUP
-        0xff6347, // Orange - Info
-        0x20b2aa, // Light Sea Green - Photobooth
-      ];
+      roomNameKeys.forEach((key) => {
+        const metas = roomMeta[key];
+        if (!metas) return;
+        metas.forEach((meta) => {
+          if (meta.view !== "fuajee") return;
+          const geometry = new THREE.BoxGeometry(
+            meta.size.width,
+            meta.size.height,
+            meta.size.depth,
+          );
+          const material = new THREE.MeshLambertMaterial({
+            color: meta.color,
+          });
 
-      const fuajeeRoomDefinitions = [
-        {
-          width: 5,
-          height: 0.5,
-          depth: 3.5,
-          x: -6,
-          z: 2.8,
-          color: fuajeeRoomColors[4],
-          name: roomNames.ittk,
-        },
-        {
-          width: 5,
-          height: 0.5,
-          depth: 2,
-          x: 2.2,
-          z: -1.5,
-          color: fuajeeRoomColors[1],
-          name: roomNames.tartuyk,
-        },
-        {
-          width: 6,
-          height: 0.5,
-          depth: 2,
-          x: -5.8,
-          z: -1.2,
-          color: fuajeeRoomColors[3],
-          name: roomNames.estoniagamedev,
-        },
-        {
-          width: 2,
-          height: 0.5,
-          depth: 2,
-          x: -1.5,
-          z: -1.5,
-          color: fuajeeRoomColors[6],
-          name: roomNames.info,
-        },
-        {
-          width: 2,
-          height: 0.5,
-          depth: 1.5,
-          x: 6,
-          z: -1.7,
-          color: fuajeeRoomColors[2],
-          name: roomNames.tly,
-        },
-        {
-          width: 2,
-          height: 0.5,
-          depth: 1.5,
-          x: 11,
-          z: -1.7,
-          color: fuajeeRoomColors[4],
-          name: roomNames.ittk,
-        },
-        {
-          width: 2,
-          height: 0.5,
-          depth: 1.5,
-          x: 13.5,
-          z: -1.7,
-          color: fuajeeRoomColors[7],
-          name: roomNames.photobooth,
-        },
-        {
-          width: 2,
-          height: 0.5,
-          depth: 1.5,
-          x: 8.5,
-          z: -1.7,
-          color: fuajeeRoomColors[5],
-          name: roomNames.gameup,
-        },
-      ];
+          const room = new THREE.Mesh(geometry, material);
+          room.position.set(meta.position.x, meta.position.y, meta.position.z);
+          room.castShadow = true;
+          room.receiveShadow = true;
+          room.userData = { name: roomNames[key], originalColor: meta.color };
+          room.visible = true; // Initially visible for fuajee default
 
-      fuajeeRoomDefinitions.forEach((roomDef) => {
-        const geometry = new THREE.BoxGeometry(
-          roomDef.width,
-          roomDef.height,
-          roomDef.depth,
-        );
-        const material = new THREE.MeshLambertMaterial({
-          color: roomDef.color,
-        });
+          scene.add(room);
+          fuajeeRooms.push(room);
 
-        const room = new THREE.Mesh(geometry, material);
-        room.position.set(roomDef.x, roomDef.height / 2 + 2, roomDef.z);
-        room.castShadow = true;
-        room.receiveShadow = true;
-        room.userData = { name: roomDef.name, originalColor: roomDef.color };
-        room.visible = true; // Initially visible for fuajee default
-
-        scene.add(room);
-        fuajeeRooms.push(room);
-        roomData.push({
-          mesh: room,
-          name: roomDef.name,
-          originalColor: roomDef.color,
-          originalScale: room.scale.clone(),
-          view: "fuajee",
+          roomData.push({
+            mesh: room,
+            name: roomNames[key],
+            originalColor: meta.color,
+            originalScale: room.scale.clone(),
+            view: "fuajee",
+          });
         });
       });
     };
@@ -738,6 +563,7 @@ export default function Expo() {
 
           {currentView === "tudengimaja" && (
             <div className="flex flex-wrap gap-4 pb-4">
+              {/* Bar */}
               <div className="flex items-center gap-2">
                 <div
                   className="w-4 h-4 border border-gray-300"
@@ -747,15 +573,17 @@ export default function Expo() {
                   {t("expo.areas.bar")}
                 </span>
               </div>
+              {/* EVAL */}
               <div className="flex items-center gap-2">
                 <div
                   className="w-4 h-4 border border-gray-300"
-                  style={{ backgroundColor: "#ffe66d" }}
+                  style={{ backgroundColor: "#4d86f7" }}
                 ></div>
                 <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
                   EVAL
                 </span>
               </div>
+              {/* Board Games */}
               <div className="flex items-center gap-2">
                 <div
                   className="w-4 h-4 border border-gray-300"
@@ -765,49 +593,104 @@ export default function Expo() {
                   {t("expo.areas.boardGames")}
                 </span>
               </div>
+              {/* LVLup */}
               <div className="flex items-center gap-2">
                 <div
                   className="w-4 h-4 border border-gray-300"
-                  style={{ backgroundColor: "#080682" }}
+                  style={{ backgroundColor: "#d34e35" }}
                 ></div>
                 <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
                   LVLup!
                 </span>
               </div>
+              {/* Red Bull */}
               <div className="flex items-center gap-2">
                 <div
                   className="w-4 h-4 border border-gray-300"
-                  style={{ backgroundColor: "#C02841" }}
+                  style={{ backgroundColor: "#c02841" }}
                 ></div>
                 <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
                   Red Bull
                 </span>
               </div>
+              {/* Sim Racing */}
               <div className="flex items-center gap-2">
                 <div
                   className="w-4 h-4 border border-gray-300"
-                  style={{ backgroundColor: "#ff6600" }}
+                  style={{ backgroundColor: "#d8b43c" }}
                 ></div>
                 <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
                   {t("expo.areas.simRacing")}
                 </span>
               </div>
-              <div className="items-center gap-2 hidden">
-                <div
-                  className="w-4 h-4 border border-gray-300"
-                  style={{ backgroundColor: "#3498db" }}
-                ></div>
-                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                  Sony
-                </span>
-              </div>
+              {/* Fighting */}
               <div className="flex items-center gap-2">
                 <div
                   className="w-4 h-4 border border-gray-300"
-                  style={{ backgroundColor: "#ff1493" }}
+                  style={{ backgroundColor: "#a8f494" }}
                 ></div>
                 <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
                   {t("expo.areas.fighting")}
+                </span>
+              </div>
+              {/* K-space */}
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#2c5da3" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  K-space.ee
+                </span>
+              </div>
+              {/* Photowall */}
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#d12e7d" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.photowall")}
+                </span>
+              </div>
+              {/* Buckshot Roulette */}
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#edb4b1" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  Buckshot Roulette
+                </span>
+              </div>
+              {/* Chill Area */}
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#05512e" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  {t("expo.areas.chillArea")}
+                </span>
+              </div>
+              {/* Alzgamer */}
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#d08331" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  Alzgamer
+                </span>
+              </div>
+              {/* WC */}
+              <div className="flex items-center gap-2">
+                <div
+                  className="w-4 h-4 border border-gray-300"
+                  style={{ backgroundColor: "#332b5d" }}
+                ></div>
+                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
+                  WC
                 </span>
               </div>
             </div>
@@ -857,7 +740,7 @@ export default function Expo() {
                   style={{ backgroundColor: "#20b2aa" }}
                 ></div>
                 <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                  {t("expo.areas.photobooth")}
+                  {t("expo.areas.studentformula")}
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -944,6 +827,12 @@ export default function Expo() {
                 roomNames.fighting,
                 roomNames.lvlup,
                 roomNames.redbull,
+                roomNames.kspace,
+                roomNames.photowall,
+                roomNames.buckshotroulette,
+                roomNames.wc,
+                roomNames.chillArea,
+                roomNames.alzgamer,
               ].includes(hoveredRoom)) ||
               (currentView === "fuajee" &&
                 [
@@ -952,8 +841,8 @@ export default function Expo() {
                   roomNames.info,
                   roomNames.tly,
                   roomNames.ittk,
-                  roomNames.photobooth,
                   roomNames.gameup,
+                  roomNames.studentformula,
                 ].includes(hoveredRoom))) && (
               <div
                 className="fixed bg-black bg-opacity-80 text-white px-3 py-2 rounded-lg text-sm pointer-events-none z-50"
