@@ -163,6 +163,33 @@ export default function Sponsors({ showTitle = true, className = "" }: SponsorsP
               className="object-contain"
             />
           </NextLink>
+          <NextLink href="https://alzgamer.ee/" target="_blank">
+            <Image
+              src="/sponsors/alzgamer.png"
+              alt="AlzGamer"
+              width={200}
+              height={200}
+              className="object-contain"
+            />
+          </NextLink>
+          <NextLink href="https://k-space.ee/" target="_blank">
+            <Image
+              src="/sponsors/k-space_ee-white.png"
+              alt="K-Space"
+              width={200}
+              height={200}
+              className="object-contain"
+            />
+          </NextLink>
+          <NextLink href="https://globalproductions.ee/" target="_blank">
+            <Image
+              src="/sponsors/Global-productions.png"
+              alt="Global Productions"
+              width={200}
+              height={200}
+              className="object-contain"
+            />
+          </NextLink>
           
         </div>
       </div>
