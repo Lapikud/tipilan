@@ -16,7 +16,7 @@
     },
     {
       "id": "eleball",
-      "name": "Eleball",
+      "name": "EleBall",
       "logo": "/images/EXPO/GameDev logos/Eleball.png",
       "developer": "Pulsar Twin",
       "description": ""
@@ -29,8 +29,8 @@
       "description": ""
     },
     {
-      "id": "cyber-dog-rescue",
-      "name": "Cyber Dog Rescue",
+      "id": "cyber-dog-rogue",
+      "name": "Cyber Dog Rogue",
       "logo": "/images/EXPO/GameDev logos/Cyber_Doc_Rogue.png",
       "developer": "HRA Interactive",
       "description": ""
@@ -121,8 +121,8 @@
       "description": ""
     },
     {
-      "id": "war-thorn",
-      "name": "War-thorn",
+      "id": "war-torn",
+      "name": "War-torn",
       "logo": "/images/EXPO/GameDev logos/War_torn.png",
       "developer": "KingOfTheEnd, ForgottenCup",
       "description": ""
@@ -182,7 +182,7 @@
       "id": "nullis",
       "name": "Nullis",
       "logo": "/images/EXPO/GameDev logos/Nullis.png",
-      "university": "Tallinna Tehnikaülikool",
+      "university": "Tartu Ülikool",
       "description": ""
     },
     {
