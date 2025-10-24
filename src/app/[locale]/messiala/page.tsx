@@ -583,16 +583,6 @@ export default function Expo() {
                   EVAL
                 </span>
               </div>
-              {/* Board Games */}
-              <div className="flex items-center gap-2">
-                <div
-                  className="w-4 h-4 border border-gray-300"
-                  style={{ backgroundColor: "#343434" }}
-                ></div>
-                <span className="text-sm text-[#2A2C3F] dark:text-[#EEE5E5]">
-                  {t("expo.areas.boardGames")}
-                </span>
-              </div>
               {/* LVLup */}
               <div className="flex items-center gap-2">
                 <div
@@ -868,7 +858,9 @@ export default function Expo() {
             MINITURNIIRID
           </h2>
           <p className="text-[#2A2C3F] dark:text-[#EEE5E5] text-lg mb-4">
-            TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Osaleda saavad ka niisama külastajad! Auhinnafond on kõigi turniiride peale 1250€.
+            TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu
+            tekitavaid miniturniire. Osaleda saavad ka niisama külastajad!
+            Auhinnafond on kõigi turniiride peale 1250€.
           </p>
         </div>
         <div className="flex-shrink-0 relative overflow-hidden">
@@ -876,11 +868,11 @@ export default function Expo() {
             src="/images/minitournament_logo.png"
             alt="Miniturniirid logo"
             style={{
-              width: '649.7214965820312px',
-              height: '400.99997840027544px',
-              transform: 'rotate(0deg)',
+              width: "649.7214965820312px",
+              height: "400.99997840027544px",
+              transform: "rotate(0deg)",
               opacity: 1,
-              position: 'relative'
+              position: "relative",
             }}
           />
         </div>
@@ -895,7 +887,7 @@ export default function Expo() {
         >
           PUHKA JA MÄNGI
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1 - Chill-ala */}
           <div className="flex flex-col">
@@ -908,15 +900,15 @@ export default function Expo() {
                 />
               </div>
             </div>
-            <h3 
+            <h3
               className="text-[#2A2C3F] dark:text-[#EEE5E5]"
               style={{
-                fontFamily: 'Work Sans',
+                fontFamily: "Work Sans",
                 fontWeight: 700,
-                fontSize: '36px',
-                lineHeight: '100%',
-                letterSpacing: '-3%',
-                verticalAlign: 'middle'
+                fontSize: "36px",
+                lineHeight: "100%",
+                letterSpacing: "-3%",
+                verticalAlign: "middle",
               }}
             >
               Chill-ala koos turniiride otseülekandega
@@ -934,15 +926,15 @@ export default function Expo() {
                 />
               </div>
             </div>
-            <h3 
+            <h3
               className="text-[#2A2C3F] dark:text-[#EEE5E5]"
               style={{
-                fontFamily: 'Work Sans',
+                fontFamily: "Work Sans",
                 fontWeight: 700,
-                fontSize: '36px',
-                lineHeight: '100%',
-                letterSpacing: '-3%',
-                verticalAlign: 'middle'
+                fontSize: "36px",
+                lineHeight: "100%",
+                letterSpacing: "-3%",
+                verticalAlign: "middle",
               }}
             >
               Mänguklubi lauamängud ja konsoolid
@@ -960,15 +952,15 @@ export default function Expo() {
                 />
               </div>
             </div>
-            <h3 
+            <h3
               className="text-[#2A2C3F] dark:text-[#EEE5E5]"
               style={{
-                fontFamily: 'Work Sans',
+                fontFamily: "Work Sans",
                 fontWeight: 700,
-                fontSize: '36px',
-                lineHeight: '100%',
-                letterSpacing: '-3%',
-                verticalAlign: 'middle'
+                fontSize: "36px",
+                lineHeight: "100%",
+                letterSpacing: "-3%",
+                verticalAlign: "middle",
               }}
             >
               Baariala jookide ja snäkkidega
@@ -986,7 +978,7 @@ export default function Expo() {
         >
           Eesti mänguarendajad
         </h2>
-        
+
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {gamedevData.games.map((game) => (
             <div key={game.id} className="flex flex-col">
@@ -1017,7 +1009,7 @@ export default function Expo() {
         >
           Ülikoolid
         </h2>
-        
+
         {/* First 12 games in 3x4 grid */}
         <div className="grid grid-cols-3 md:grid-cols-4 gap-6 mb-6">
           {gamedevData.universities?.slice(0, 12).map((university) => (
