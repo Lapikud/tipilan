@@ -22,6 +22,20 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/et",
+        destination: "/striim",
+        permanent: false,
+      },
+      {
+        source: "/en",
+        destination: "/stream",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

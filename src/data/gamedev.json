@@ -29,8 +29,8 @@
       "description": ""
     },
     {
-      "id": "cyber-dog-rogue",
-      "name": "Cyber Dog Rogue",
+      "id": "cyber-doc-rogue",
+      "name": "CYBER DOC ROGUE",
       "logo": "/images/EXPO/GameDev logos/Cyber_Doc_Rogue.png",
       "developer": "HRA Interactive",
       "description": ""
@@ -126,6 +126,13 @@
       "logo": "/images/EXPO/GameDev logos/War_torn.png",
       "developer": "KingOfTheEnd, ForgottenCup",
       "description": ""
+    },
+    {
+      "id": "type-n-magic",
+      "name": "Type 'n Magic",
+      "logo": "/images/EXPO/ylikoolid/type_n_magic.png",
+      "developer": "Mikhail Fiadotau",
+      "description": ""
     }
   ],
   "universities": [
@@ -217,13 +224,6 @@
       "id": "magic-mineral",
       "name": "Magic Mineral",
       "logo": "/images/EXPO/ylikoolid/magic_mineral.png",
-      "university": "Tallinna Ülikool",
-      "description": ""
-    },
-    {
-      "id": "type-n-magic",
-      "name": "Type 'n Magic", 
-      "logo": "/images/EXPO/ylikoolid/type_n_magic.png",
       "university": "Tallinna Ülikool",
       "description": ""
     }

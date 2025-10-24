@@ -8,7 +8,10 @@ interface SponsorsProps {
   className?: string;
 }
 
-export default function Sponsors({ showTitle = true, className = "" }: SponsorsProps) {
+export default function Sponsors({
+  showTitle = true,
+  className = "",
+}: SponsorsProps) {
   const t = useTranslations();
 
   return (
@@ -109,7 +112,10 @@ export default function Sponsors({ showTitle = true, className = "" }: SponsorsP
               className="object-contain"
             />
           </NextLink>
-          <NextLink href="https://www.linkedin.com/company/gamedev-guild/" target="_blank">
+          <NextLink
+            href="https://www.linkedin.com/company/gamedev-guild/"
+            target="_blank"
+          >
             <Image
               src="/sponsors/estonian_gamedev_guild.png"
               alt="Estonian Gamedev Guild"
@@ -178,7 +184,7 @@ export default function Sponsors({ showTitle = true, className = "" }: SponsorsP
               alt="K-Space"
               width={200}
               height={200}
-              className="object-contain"
+              className="object-contain not-dark:invert"
             />
           </NextLink>
           <NextLink href="https://globalproductions.ee/" target="_blank">
@@ -190,7 +196,6 @@ export default function Sponsors({ showTitle = true, className = "" }: SponsorsP
               className="object-contain"
             />
           </NextLink>
-          
         </div>
       </div>
     </div>
