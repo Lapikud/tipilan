@@ -48,20 +48,10 @@ export default async function Home({
       {/* Farewell message */}
       <div>
         <section
-            // href="/"
             className={`p-8 md:p-12 flex flex-col ${vipnagorgialla.className} font-bold italic border-b-3 border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] group transition`}
         >
-            <div className="cursor-pointer text-left flex-row justify-between xl:justify-start gap-8 hidden">
-                <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] dark:group-hover:text-[#2A2C3F] text-[#2A2C3F] group-hover:text-black">
-                    {t("home.sections.reserveSpot")}
-                </h3>
-                <span
-                    className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] hidden md:block group-hover:translate-x-2 group-hover:text-[#EEE5E5] dark:group-hover:text-[#EEE5E5] transition">
-                  arrow_right_alt
-                </span>
-            </div>
-            <h2 className="text-[clamp(2.5rem,2.25rem+1.25vw,3.75rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
-                {t("home.sections.farewellMessage")}
+            <h2 className="text-[clamp(2rem,1.5rem+0.5vw,3rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
+                {t("home.sections.farewellMessage")} <span className="not-italic">🩵</span>
             </h2>
         </section>
       </div>
@@ -139,10 +129,32 @@ export default async function Home({
           </div>
         </Link>
       </div>
+
+      {/* Section preserved for next year development */}
       {/* Date */}
+      {/*  <div>*/}
+      {/*      <Link*/}
+      {/*      href="/piletid"*/}
+      {/*      className={`p-8 md:p-12 flex flex-col ${vipnagorgialla.className} font-bold italic border-b-3 border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] group transition`}*/}
+      {/*  >*/}
+      {/*      <div className="cursor-pointer text-left flex flex-row justify-between xl:justify-start gap-8">*/}
+      {/*          <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] dark:group-hover:text-[#2A2C3F] text-[#2A2C3F] group-hover:text-black">*/}
+      {/*              {t("home.sections.reserveSpot")}*/}
+      {/*          </h3>*/}
+      {/*          <span*/}
+      {/*              className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] hidden md:block group-hover:translate-x-2 group-hover:text-[#EEE5E5] dark:group-hover:text-[#EEE5E5] transition">*/}
+      {/*      arrow_right_alt*/}
+      {/*    </span>*/}
+      {/*      </div>*/}
+      {/*      <h2 className="text-[clamp(2.5rem,2.25rem+1.25vw,3.75rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">*/}
+      {/*          {t("home.sections.dateAndLocation")}*/}
+      {/*      </h2>*/}
+      {/*    </Link>*/}
+      {/*  </div>*/}
 
       {/* Sponsors */}
       <Sponsors />
+
     </div>
   );
 }
