@@ -30,7 +30,7 @@ const Footer = () => {
         {/* Social media */}
         <div className="flex flex-row">
           <a
-            href="https://discord.gg/tipilan"
+            href="https://discord.gg/pPhhatZAfA"
             target="_blank"
             className="mx-4 ml-0 md:ml-4"
             rel="noopener noreferrer"
