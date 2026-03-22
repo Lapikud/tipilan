@@ -1,8 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale, getMessages } from "next-intl/server";
-import { ThemeProvider } from "@/components/Theme-provider";
-import SidebarParent from "@/components/SidebarParent";
-import Footer from "@/components/Footer";
 
 export default async function LocaleLayout({
   children,
@@ -22,16 +19,7 @@ export default async function LocaleLayout({
   return (
     <div lang={locale}>
       <NextIntlClientProvider messages={messages}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <SidebarParent />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        {children}
       </NextIntlClientProvider>
     </div>
   );

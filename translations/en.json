@@ -1,258 +1,52 @@
 {
-  "navigation": {
-    "home": "Home",
-    "schedule": "Schedule",
-    "admin": "Admin",
-    "houserules": "House rules",
-    "expo": "Expo",
-    "tickets": "Tickets",
-    "rules": "Game rules",
-    "stream": "Stream",
-    "tournaments": "Tourna\u00ADments"
-  },
-  "common": {
-    "loading": "Loading...",
-    "error": "Error",
-    "success": "Success",
-    "save": "Save",
-    "cancel": "Cancel",
-    "delete": "Delete",
-    "edit": "Edit",
-    "close": "Close",
-    "next": "Next",
-    "previous": "Previous",
-    "search": "Search",
-    "filter": "Filter",
-    "reset": "Reset",
-    "theme": {
-      "light": "Light",
-      "dark": "Dark",
-      "system": "System"
+  "teaser": {
+    "countdown": {
+      "days": "days",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds"
     },
-    "language": {
-      "et": "Eesti",
-      "en": "English"
+    "carousel": {
+      "heading": "Come to Tipi",
+      "headingSuffix": " and..."
+    },
+    "compete": {
+      "title": "Compete",
+      "description": "Prove yourself at TipiLAN's CS2 and LoL main tournaments: thousands of euros in prize money, players from all over Europe, and HLTV-rated competition that puts you on the world map."
+    },
+    "play": {
+      "title": "Play",
+      "description": "You don't have to be a pro to win. At the LAN area and mini-tournaments, from retro games to simulators, everyone finds something to their taste. The prizes are pretty good too."
+    },
+    "explore": {
+      "title": "Explore",
+      "description": "Soak in the gaming atmosphere at the expo area: watch tournaments on big screens, try games made by local game developers, and discover dozens of different activities - all under one roof."
+    },
+    "tickets": {
+      "earlyVisitor": "Early visitor ticket (until XX.XX)",
+      "supporter": "Supporter ticket (TipiLAN T-shirt)",
+      "cta": "Buy an early ticket from Fienta!",
+      "buyButton": "Buy tickets here"
+    },
+    "sponsors": {
+      "visitors": "TipiLAN 2025\nvisitor count",
+      "streamViewers": "2025 livestream\nviewer count",
+      "cta": "Bring your booth to our expo area!",
+      "contactButton": "Write to us"
+    },
+    "footer": {
+      "organization": "MTÜ FOR Tsükkel",
+      "regCode": "Registration code: 80391807",
+      "bankAccount": "LHV EE617700771002582855",
+      "copyright": "TipiLAN 2025-2026",
+      "studentUnion": "ITÜK | TalTech IT Faculty Student Council",
+      "email": "tipilan@ituk.ee",
+      "phone": "+372 5693 1193",
+      "address": "ICO-210, Raja tn 4c, Tallinn, Harjumaa, 12616"
     }
-  },
-  "home": {
-    "title": "TipiLAN 2025",
-    "subtitle": "Estonia's largest student-organized LAN event!",
-    "welcome": "Welcome to TipiLAN 2025!",
-    "description": "Join us at Estonia's largest student-organized LAN event. Games, competitions and much more await you!",
-    "sections": {
-      "schedule": {
-        "description": "TipiLAN is packed with exciting tournaments, mini-competitions and much more."
-      },
-      "tournaments": {
-        "description": "TipiLAN features massive CS2 and LoL tournaments with a prize pool of €10,000."
-      },
-      "expo": {
-        "description": "The TipiLAN expo area hosts companies, additional activities and lectures."
-      },
-      "reserveSpot": "Reserve your spot today!",
-      "poweredBy": "TipiLAN is powered by...",
-      "dateAndLocation": "24th-26th Oct. @ TalTech main building",
-      "farewellMessage": "Thank you for partici\u00ADpating in TipiLAN 2025! We hope to see you again next time!"
-    }
-  },
-  "tickets": {
-    "title": "TICKETS AND REGISTRATION",
-    "buyNow": "Buy now",
-    "soldOut": "Sold out",
-    "available": "Available",
-    "price": "Price",
-    "includes": "Includes",
-    "computerParticipant": {
-      "title": "Computer Participant",
-      "earlyPrice": "8€",
-      "latePrice": "10€",
-      "features": [
-        "Personal desk, power and internet connection",
-        "Access to expo area",
-        "Tournament spectating",
-        "Ability to participate in mini-tournaments"
-      ]
-    },
-    "competitor": {
-      "title": "Competitor",
-      "price": "12-15€",
-      "features": [
-        "Ability to participate in the CS2 or LoL tournament",
-        "Personal desk, power and internet connection",
-        "Access to expo area",
-        "Tournament spectating",
-        "Ability to participate in mini-tournaments"
-      ]
-    },
-    "visitor": {
-      "title": "Visitor",
-      "earlyPrice": "6€",
-      "latePrice": "8€",
-      "features": [
-        "Access to expo area",
-        "Tournament spectating",
-        "Ability to participate in mini-tournaments"
-      ]
-    },
-    "buyTicket": "BUY TICKETS"
-  },
-  "tournaments": {
-    "title": "Tournaments",
-    "register": "Register",
-    "participants": "Participants",
-    "prizePool": "Prize pool",
-    "schedule": "Schedule",
-    "rules": "Rules",
-    "cs2": {
-      "title": "CS2 Tourna\u00ADment",
-      "timing": "24th-26th October",
-      "description1": "TipiLAN hosts one of Estonia's largest CS2 tournaments with a significant prize pool this fall. Grab your friends and experience the adrenaline rush!",
-      "description2": "The prize pool is €5,750 distributed amongst the best teams and winners of 'Second Chance' tournament, giving all participants a chance to win.",
-      "description3": "The TOP3 teams share €5,000 and the two best teams from the 'Second Chance' tournament share €750.",
-      "readRules": "READ RULES",
-      "buyTicket": "BUY TICKETS"
-    },
-    "lol": {
-      "title": "LoL Tourna\u00ADment",
-      "timing": "24th-25th October",
-      "description1": "TipiLAN hosts one of Estonia's largest LoL tournaments with a significant prize pool this fall. Grab your friends and experience the adrenaline rush!",
-      "description2": "The prize pool is €3,000, distributed among the TOP3 teams. Each team receives €1500, €1000, or €500 based on their placement.",
-      "readRules": "READ RULES",
-      "buyTicket": "BUY TICKETS"
-    },
-    "mini": {
-      "titleSingular": "Mini-tournament",
-      "title": "Mini-tournaments",
-      "timing": "24th-25th October",
-      "description1": "TipiLAN hosts a variety of fun and competitive mini-tournaments. The prize pool for each tournament is displayed.",
-      "description2": "Mini-tournaments can be participated in with a regular ticket. Registration takes place on-site.",
-      "readRules": "READ RULES",
-      "buyTicket": "BUY TICKETS"
-    }
-  },
-  "schedule": {
-    "title": "Schedule",
-    "day": "Day",
-    "time": "Time",
-    "event": "Event",
-    "location": "Location",
-    "oct24": "October 24th",
-    "oct25": "October 25th",
-    "oct26": "October 26th",
-    "events": {
-      "doorsOpen": "Doors open, expo area available",
-      "doorsOpenSimple": "Doors open",
-      "expoOpens": "Expo area opens",
-      "miniTournaments": "Mini tournaments begin",
-      "tournamentRegistration": "Tournament registration",
-      "streetFighter6": "Street Fighter 6 tournament",
-      "smashBrosUltimate": "Smash Bros. Ultimate tournament",
-      "cs2Tournament": "CS2 tournament",
-      "lolTournament": "LoL tournament",
-      "cs2LolTournaments": "CS2 & LoL tournaments",
-      "sf6SsbuFinale": "SF6 & SSBU finale",
-      "doorsClose": "Doors close",
-      "cs2Continue": "CS2 tournament continues",
-      "lolContinue": "LoL tournament continues",
-      "2xkoTournament": "2XKO tournament",
-      "tekken8Tournament": "Tekken 8 tournament",
-      "2xkoTekken8Finale": "2XKO & Tekken 8 finale",
-      "lolFinale": "LoL finale and 3rd place match",
-      "cs2lbsemifinals": "CS2 lower bracket semifinals",
-      "cs2lbfinals": "CS2 lower bracket finals",
-      "cs2setup": "CS2 setup for finals",
-      "cs2semifinals": "CS2 upper bracket semifinals",
-      "Cs2finals": "CS2 finals",
-      "AwardsCeremony": "Awards ceremony",
-      "granTurismoFinale": "Gran Turismo finale",
-      "lolTournamentSemifinals": "LoL tournament semifinals",
-      "cs2Finale": "CS2 finale",
-      "cs2FinalMatch": "CS2 final match",
-      "cs2TournamentFinale": "CS2 tournament finale"
-    },
-    "locations": {
-      "registrationSetup": "Registration and setup in auditorium",
-      "auditorium": "Auditorium",
-      "studentHouse": "Student House (Tudengimaja)",
-      "auditoriumAndStudentHouse": "Auditorium and Student House",
-      "entranceHall": "Lobby"
-    }
-  },
-  "stream": {
-    "title": "Stream",
-    "live": "Live",
-    "offline": "Offline",
-    "watchNow": "Watch now"
-  },
-  "footer": {
-    "copyright": "© 2025 TipiLAN. All rights reserved.",
-    "contact": "Contact",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "studentUnion": "IT Faculty Student Council",
-    "organization": "MTÜ For Tsükkel",
-    "registrationCode": "Registration code",
-    "madeBy": "The TipiLAN website is made with love by",
-    "withHelpFrom": "with the help of"
   },
   "notFound": {
     "title": "404",
     "message": "We couldn't find this page."
-  },
-  "expo": {
-    "title": "Expo Area",
-    "description": "The TipiLAN expo area hosts companies, additional activities and lectures.",
-    "areas": {
-      "bar": "Bar",
-      "boardGames": "Board Games Area",
-      "simRacing": "Red Bull Rally Simulators",
-      "fighting": "Baltic Fighting Games League",
-      "ityk": "TalTech IT Faculty Student Council",
-      "tartuyk": "Tartu University",
-      "estoniagamedev": "Estonian game developers",
-      "info": "Information booth",
-      "tly": "Tallinn University",
-      "ittk": "TalTech School of IT",
-      "gameup": "GameUP!",
-      "photowall": "Photo wall",
-      "lvlup": "LVLup! video game museum",
-      "studentformula": "Student Formula",
-      "chillArea": "Chill area"
-    },
-    "hide": "Hide walls",
-    "show": "Show walls"
-  },
-  "rules": {
-    "title": "Rules",
-    "houseRules": "House Rules",
-    "cs2Rules": "CS2 Rules",
-    "lolRules": "LoL Rules",
-    "miniRules": "Mini-tournament\n Rules"
-  },
-  "admin": {
-    "title": "Admin",
-    "users": "Users",
-    "teams": "Teams",
-    "success": {
-      "title": "Operation was successful!",
-      "description": "Database data has been updated."
-    },
-    "sync": {
-      "title": "Do you want to update the database?",
-      "description1": "This will pull current data from Fienta and replace",
-      "all": "ALL",
-      "description2": "existing data in the database!",
-      "warning": "If you're not sure, click \"Cancel\".",
-      "update": "Update"
-    },
-    "roles": {
-      "captain": "Captain",
-      "teammate": "Teammate"
-    },
-    "table": {
-      "name": "Name",
-      "members": "Members",
-      "noMembers": "No members"
-    }
   }
 }

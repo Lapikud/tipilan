@@ -1,1 +1,0 @@
-DROP INDEX `user_steam_id_unique`;

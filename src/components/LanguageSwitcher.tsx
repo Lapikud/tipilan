@@ -3,8 +3,7 @@
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
-import { Button } from "@/components/ui/button";
-import { vipnagorgialla } from "@/components/Vipnagorgialla";
+import Image from "next/image";
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
@@ -17,31 +16,24 @@ export default function LanguageSwitcher() {
     return routing.locales[nextIndex] as "et" | "en";
   };
 
-  const getNextLanguageName = () => {
-    const nextLocale = getNextLocale();
-    switch (nextLocale) {
-      case "et":
-        return "EST";
-      case "en":
-        return "ENG";
-      default:
-        return nextLocale;
-    }
-  };
-
   const handleLanguageSwitch = () => {
     const nextLocale = getNextLocale();
     router.replace(pathname, { locale: nextLocale });
   };
 
   return (
-    <Button
+    <button
       onClick={handleLanguageSwitch}
-      variant="ghost"
-      size="lg"
-      className={`${vipnagorgialla.className} text-3xl font-bold italic uppercase cursor-pointer hover:bg-[#007CAB]/10 dark:hover:bg-[#00A3E0]/10 text-[#007CAB] dark:text-[#00A3E0] hover:text-[#2A2C3F] dark:hover:text-[#EEE5E5] transition-colors`}
+      className="relative size-[40px] cursor-pointer overflow-hidden"
+      aria-label="Switch language"
     >
-      {getNextLanguageName()}
-    </Button>
+      <Image
+        src={`/images/flag-${locale === "et" ? "en" : "et"}.svg`}
+        alt={locale === "et" ? "Switch to English" : "Vaheta eesti keelele"}
+        width={40}
+        height={30}
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+      />
+    </button>
   );
 }
