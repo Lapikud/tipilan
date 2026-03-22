@@ -45,19 +45,22 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
         />
 
         {/* Countdown */}
-        <div className="grid grid-cols-2 sm:flex gap-6 sm:gap-8 text-center">
+        <div className="grid grid-cols-[1fr_auto_1fr] sm:flex gap-x-1.5 gap-y-3 sm:gap-4 text-center items-start">
           <div className="flex flex-col items-center gap-2 lg:gap-4 min-w-0 lg:w-[104px]">
             <span className="text-countdown text-text-light">{countdown.days}</span>
             <span className="text-countdown-label text-primary whitespace-nowrap">{t("teaser.countdown.days")}</span>
           </div>
+          <span className="text-countdown text-primary sm:block">:</span>
           <div className="flex flex-col items-center gap-2 lg:gap-4 min-w-0 lg:w-[86px]">
             <span className="text-countdown text-text-light">{pad(countdown.hours)}</span>
             <span className="text-countdown-label text-primary whitespace-nowrap">{t("teaser.countdown.hours")}</span>
           </div>
+          <span className="text-countdown text-primary hidden sm:block">:</span>
           <div className="flex flex-col items-center gap-2 lg:gap-4 min-w-0 lg:w-[86px]">
             <span className="text-countdown text-text-light">{pad(countdown.minutes)}</span>
             <span className="text-countdown-label text-primary whitespace-nowrap">{t("teaser.countdown.minutes")}</span>
           </div>
+          <span className="text-countdown text-primary sm:block">:</span>
           <div className="flex flex-col items-center gap-2 lg:gap-4 min-w-0 lg:w-[103px]">
             <span className="text-countdown text-text-light">{pad(countdown.seconds)}</span>
             <span className="text-countdown-label text-primary whitespace-nowrap">{t("teaser.countdown.seconds")}</span>
