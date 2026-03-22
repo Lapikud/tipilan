@@ -36,7 +36,7 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
       <div className="relative z-[1] flex flex-col items-center justify-center h-full gap-8 lg:gap-16 px-6">
         {/* Logo */}
         <Image
-          src="/tipilan-dark.svg"
+          src="/tipilan-logo.svg"
           alt="TipiLAN"
           width={524}
           height={129}
@@ -45,7 +45,7 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
         />
 
         {/* Countdown */}
-        <div className="flex gap-6 sm:gap-8 text-center">
+        <div className="grid grid-cols-2 sm:flex gap-6 sm:gap-8 text-center">
           <div className="flex flex-col items-center gap-2 lg:gap-4 min-w-0 lg:w-[104px]">
             <span className="text-countdown text-text-light">{countdown.days}</span>
             <span className="text-countdown-label text-primary whitespace-nowrap">{t("teaser.countdown.days")}</span>

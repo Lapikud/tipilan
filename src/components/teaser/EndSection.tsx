@@ -46,24 +46,24 @@ export default function EndSection() {
 
   return (
     <section className="relative w-full border-t-4 border-primary-50 hidden lg:block">
-      <div className="flex flex-col md:flex-row min-h-dvh">
+      <div className="flex flex-row min-h-dvh">
         {/* Tickets side */}
-        <div className="relative flex-1 overflow-hidden min-h-[50dvh] md:min-h-0">
+        <div className="relative w-1/2 overflow-hidden min-h-dvh">
           <Image
             src="/images/tickets_teaser.png"
             alt=""
             fill
-            sizes="(min-width: 768px) 50vw, 100vw"
+            sizes="(min-width: 1280px) 50vw, 100vw"
             className="object-cover pointer-events-none"
           />
-          <div className="relative z-[1] flex flex-col items-center justify-center h-full gap-12 xl:gap-32 p-8 lg:p-16">
+          <div className="relative z-[1] flex flex-col items-center justify-center h-full gap-8 xl:gap-16 2xl:gap-32 p-6 lg:p-12 xl:p-16">
             {/* Ticket stats */}
-            <div className="flex gap-8 xl:gap-16 text-center text-text-light">
+            <div className="flex gap-6 xl:gap-12 text-center text-text-light">
               <CountUpStat end={0} suffix="€" label={t("teaser.tickets.earlyVisitor")} />
               <CountUpStat end={0} suffix="€" label={t("teaser.tickets.supporter")} />
             </div>
             {/* CTA */}
-            <div className="flex flex-col items-center gap-4 xl:gap-8 w-full">
+            <div className="flex flex-col items-center gap-3 xl:gap-6 w-full">
               <h2 className="text-h1 text-text-light text-center text-shadow-teaser">
                 {t("teaser.tickets.cta")}
               </h2>
@@ -74,27 +74,26 @@ export default function EndSection() {
           </div>
         </div>
 
-        {/* Separator — vertical on desktop, horizontal on stacked */}
-        <div className="hidden md:block relative w-[4px] bg-primary-50 shrink-0" />
-        <div className="block md:hidden relative h-[4px] bg-primary-50 shrink-0" />
+        {/* Separator */}
+        <div className="relative w-[4px] bg-primary-50 shrink-0" />
 
         {/* Sponsors side */}
-        <div className="relative flex-1 overflow-hidden min-h-[50dvh] md:min-h-0">
+        <div className="relative w-1/2 overflow-hidden min-h-dvh">
           <Image
             src="/images/sponsors_teaser.png"
             alt=""
             fill
-            sizes="(min-width: 768px) 50vw, 100vw"
+            sizes="(min-width: 1280px) 50vw, 100vw"
             className="object-cover pointer-events-none"
           />
-          <div className="relative z-[1] flex flex-col items-center justify-center h-full gap-12 xl:gap-32 p-8 lg:p-16">
+          <div className="relative z-[1] flex flex-col items-center justify-center h-full gap-8 xl:gap-16 2xl:gap-32 p-6 lg:p-12 xl:p-16">
             {/* Sponsor stats */}
-            <div className="flex gap-8 xl:gap-16 text-center text-text-light">
-              <CountUpStat end={900} suffix="+" label={t("teaser.sponsors.visitors")} minWidth="5ch" />
-              <CountUpStat end={10000} suffix="+" label={t("teaser.sponsors.streamViewers")} format={formatK} minWidth="5ch" />
+            <div className="flex gap-6 xl:gap-12 text-center text-text-light">
+              <CountUpStat end={900} suffix="+" label={t("teaser.sponsors.visitors")} />
+              <CountUpStat end={10000} suffix="+" label={t("teaser.sponsors.streamViewers")} format={formatK} />
             </div>
             {/* CTA */}
-            <div className="flex flex-col items-center gap-4 xl:gap-8 w-full">
+            <div className="flex flex-col items-center gap-3 xl:gap-6 w-full">
               <h2 className="text-h1 text-text-light text-center text-shadow-teaser">
                 {t("teaser.sponsors.cta")}
               </h2>

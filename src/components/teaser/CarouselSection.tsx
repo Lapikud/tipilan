@@ -98,69 +98,91 @@ export default function CarouselSection({ sectionRef }: CarouselSectionProps) {
   const headingOnRight = SLIDES[currentSlide]?.layout === "right";
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative hidden lg:block"
-      style={{ height: `${SLIDES.length * 100}dvh` }}
-    >
-      <div className="sticky top-0 h-dvh w-full overflow-hidden border-t-4 border-primary-50">
-        {/* Slides */}
+    <>
+      {/* Mobile: stacked slides, no hero images, no transitions */}
+      <div className="lg:hidden">
         {SLIDES.map((slide, i) => (
-          <div
-            key={i}
-            className="absolute inset-0 transition-opacity duration-700"
-            style={{ opacity: currentSlide === i ? 1 : 0 }}
-          >
-            <CarouselSlideComponent
-              slide={slide}
-              t={t}
-              isActive={currentSlide === i}
+          <div key={i} className="relative w-full overflow-hidden border-t-4 border-primary-50">
+            <Image
+              src={slide.bgImage}
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover pointer-events-none"
             />
+            <div className="relative z-[1] flex flex-col gap-4 justify-end h-full p-6 pb-12">
+              <h3 className="text-h1 text-text-light text-shadow-teaser">{t(slide.titleKey)}</h3>
+              <p className="text-p-lg text-text-light max-w-[500px]">{t(slide.descKey)}</p>
+            </div>
           </div>
         ))}
-
-        {/* Floating heading — slides between left/right via flex-grow spacers (ease-out) */}
-        <div className="absolute top-[72px] inset-x-0 px-8 xl:px-16 z-10 flex">
-          <div
-            className="transition-[flex-grow] duration-700 ease-out"
-            style={{ flexGrow: headingOnRight ? 1 : 0 }}
-          />
-          <div className="text-subtitle text-text-light text-shadow-teaser whitespace-nowrap shrink-0">
-            <span>{t("teaser.carousel.heading")}</span>
-            <span className="text-primary">LAN</span>
-            <span>{t("teaser.carousel.headingSuffix")}</span>
-          </div>
-          <div
-            className="transition-[flex-grow] duration-700 ease-out"
-            style={{ flexGrow: headingOnRight ? 0 : 1 }}
-          />
-        </div>
-
-        {/* Progress bar — 3 segments */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2 w-[240px]">
-          {SLIDES.map((_, i) => {
-            // Each segment: 0 = empty, 1 = full
-            const segmentStart = i / SLIDES.length;
-            const segmentEnd = (i + 1) / SLIDES.length;
-            const segmentProgress = Math.max(
-              0,
-              Math.min(1, (scrollProgress - segmentStart) / (segmentEnd - segmentStart))
-            );
-
-            return (
-              <div
-                key={i}
-                className="flex-1 h-2 rounded-full bg-white/30 overflow-hidden"
-              >
-                <div
-                  className="h-full bg-primary rounded-full transition-[width] duration-300 ease-out"
-                  style={{ width: `${segmentProgress * 100}%` }}
-                />
-              </div>
-            );
-          })}
-        </div>
       </div>
-    </section>
+
+      {/* Desktop: scroll-based carousel with transitions */}
+      <section
+        ref={sectionRef}
+        className="relative hidden lg:block"
+        style={{ height: `${SLIDES.length * 150}dvh` }}
+      >
+        <div className="sticky top-0 h-dvh w-full overflow-hidden border-t-4 border-primary-50">
+          {/* Slides */}
+          {SLIDES.map((slide, i) => (
+            <div
+              key={i}
+              className="absolute inset-0 transition-opacity duration-700"
+              style={{ opacity: currentSlide === i ? 1 : 0 }}
+            >
+              <CarouselSlideComponent
+                slide={slide}
+                t={t}
+                isActive={currentSlide === i}
+              />
+            </div>
+          ))}
+
+          {/* Floating heading — slides between left/right via flex-grow spacers (ease-out) */}
+          <div className="absolute top-[72px] inset-x-0 px-8 xl:px-16 z-10 flex">
+            <div
+              className="transition-[flex-grow] duration-700 ease-out"
+              style={{ flexGrow: headingOnRight ? 1 : 0 }}
+            />
+            <div className="text-subtitle text-text-light text-shadow-teaser whitespace-nowrap shrink-0">
+              <span>{t("teaser.carousel.heading")}</span>
+              <span className="text-primary">LAN</span>
+              <span>{t("teaser.carousel.headingSuffix")}</span>
+            </div>
+            <div
+              className="transition-[flex-grow] duration-700 ease-out"
+              style={{ flexGrow: headingOnRight ? 0 : 1 }}
+            />
+          </div>
+
+          {/* Progress bar — 3 segments */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2 w-[240px]">
+            {SLIDES.map((_, i) => {
+              // Each segment: 0 = empty, 1 = full
+              const segmentStart = i / SLIDES.length;
+              const segmentEnd = (i + 1) / SLIDES.length;
+              const segmentProgress = Math.max(
+                0,
+                Math.min(1, (scrollProgress - segmentStart) / (segmentEnd - segmentStart))
+              );
+
+              return (
+                <div
+                  key={i}
+                  className="flex-1 h-2 rounded-full bg-white/30 overflow-hidden"
+                >
+                  <div
+                    className="h-full bg-primary rounded-full transition-[width] duration-300 ease-out"
+                    style={{ width: `${segmentProgress * 100}%` }}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
