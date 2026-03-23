@@ -28,7 +28,7 @@ export default function LanguageSwitcher() {
       aria-label="Switch language"
     >
       <Image
-        src={`/images/flag-${locale === "et" ? "en" : "et"}.svg`}
+        src={`/images/flags/flag-${locale === "et" ? "en" : "et"}.svg`}
         alt={locale === "et" ? "Switch to English" : "Vaheta eesti keelele"}
         width={40}
         height={30}

@@ -1,46 +1,83 @@
-# 🎮 TIPILAN
+# TipiLAN
 
-**TIPILAN** is the official web platform for the TipiLAN LAN event — built using [Next.js](https://nextjs.org) and powered by the lightning-fast [Bun](https://bun.sh) runtime.
+Official website for **TipiLAN** — Estonia's largest student-organised LAN event.
 
-> ⚠️ This is a work in progress! Contributions welcome.
-
----
-
-## 🚀 Features
-
-- Event information & schedule
-- Stream
-- Responsive dark-themed UI
-- Built with Next.js, styled with Tailwind (if applicable), powered by Bun
+> Work in progress. Event date: **September 11, 2026**.
 
 ---
 
-## 📦 Tech Stack
+## Tech Stack
 
-- [Next.js](https://nextjs.org/)
-- [Bun](https://bun.sh/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/) *(if used)*
+- [Next.js 16](https://nextjs.org/) — App Router, SSG, Turbopack
+- [React 19](https://react.dev/)
+- [TypeScript 5](https://www.typescriptlang.org/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- [next-intl](https://next-intl.dev/) — ET / EN localisation
+- [react-icons](https://react-icons.github.io/react-icons/)
 
----
-
-## 🛠️ Setup Instructions
-
-📖 See [`docs/SETUP.md`](./docs/SETUP.md) for a full setup guide on:
-
-- ✅ Windows (native)
-- 🐧 Windows with WSL
-- 🐧 Linux (Ubuntu, Arch, Fedora, etc.)
+Requires **Node.js ≥ 22**.
 
 ---
 
-## 🧪 Scripts
+## Quickstart
 
 ```bash
-bun dev        # Run development server
-bun run build  # Build for production
-bun start      # Start production server
+npm install
+npm run dev
+```
 
-bun test       # Run tests (if configured)
-bun run lint   # Run linter (if configured)
+Open [http://localhost:3000](http://localhost:3000) — redirects to `/et` by default.
+
+---
+
+## Scripts
+
+```bash
+npm run dev        # Dev server (Turbopack, localhost:3000)
+npm run build      # Production build (outputs SSG for /et and /en)
+npm start          # Serve production build
+npm run lint:fix   # ESLint with auto-fix
+```
+
+---
+
+## Project Structure
+
+```
+src/
+  app/[locale]/        # Locale-based pages (et, en)
+  components/teaser/   # HeroSection, CarouselSection, EndSection, Footer
+  components/          # LanguageSwitcher, TeaserPage
+  i18n/                # next-intl routing + request config
+  lib/                 # blurPlaceholders.ts (auto-generated)
+  proxy.ts             # next-intl routing middleware
+
+translations/          # et.json, en.json
+public/images/
+  backgrounds/         # Full-viewport background WebPs
+  heros/               # Character/hero image WebPs
+  flags/               # Language switcher SVGs
+  original/            # Original PNG sources (not served)
+scripts/               # Image processing utilities
+```
+
+---
+
+## Image Utilities
+
+When adding or replacing images, re-run:
+
+```bash
+# Convert new PNGs → WebP (quality 85)
+node scripts/convert-images.mjs
+
+# Regenerate blur placeholders for all images
+node scripts/gen-blur-placeholders.mjs
+```
+
+---
+
+## Localisation
+
+Translation files live in `translations/et.json` and `translations/en.json`.  
+Routing is handled by `src/proxy.ts` — `/` redirects to `/et` (default locale).

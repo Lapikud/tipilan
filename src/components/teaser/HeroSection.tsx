@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useCountdown } from "@/hooks/useCountdown";
 import { EVENT_DATE } from "./constants";
+import { BLUR_PLACEHOLDERS } from "@/lib/blurPlaceholders";
 
 interface HeroSectionProps {
   onScrollDown: () => void;
@@ -19,9 +20,12 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
     <section className="relative h-dvh w-full overflow-hidden">
       {/* Background */}
       <Image
-        src="/images/hero_teaser.png"
+        src="/images/backgrounds/hero_teaser.webp"
         alt=""
         fill
+        unoptimized
+        placeholder="blur"
+        blurDataURL={BLUR_PLACEHOLDERS["backgrounds/hero_teaser"]}
         className="object-cover pointer-events-none"
         sizes="100vw"
         priority

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useCountUp } from "@/hooks/useCountUp";
+import { BLUR_PLACEHOLDERS } from "@/lib/blurPlaceholders";
 
 function formatK(n: number): string {
   if (n < 1000) return String(n);
@@ -50,13 +51,16 @@ export default function EndSection() {
         {/* Tickets side */}
         <div className="relative w-1/2 overflow-hidden min-h-dvh">
           <Image
-            src="/images/tickets_teaser.png"
+            src="/images/backgrounds/tickets_teaser.webp"
             alt=""
             fill
+            unoptimized
+            placeholder="blur"
+            blurDataURL={BLUR_PLACEHOLDERS["backgrounds/tickets_teaser"]}
             sizes="(min-width: 1280px) 50vw, 100vw"
             className="object-cover pointer-events-none"
           />
-          <div className="relative z-[1] flex flex-col items-center justify-center h-full gap-8 xl:gap-16 2xl:gap-32 p-6 lg:p-12 xl:p-16">
+          <div className="relative z-1 flex flex-col items-center justify-center h-full gap-8 xl:gap-16 2xl:gap-32 p-6 lg:p-12 xl:p-16">
             {/* Ticket stats */}
             <div className="flex gap-6 xl:gap-12 text-center text-text-light">
               <CountUpStat end={0} suffix="€" label={t("teaser.tickets.earlyVisitor")} />
@@ -80,13 +84,16 @@ export default function EndSection() {
         {/* Sponsors side */}
         <div className="relative w-1/2 overflow-hidden min-h-dvh">
           <Image
-            src="/images/sponsors_teaser.png"
+            src="/images/backgrounds/sponsors_teaser.webp"
             alt=""
             fill
+            unoptimized
+            placeholder="blur"
+            blurDataURL={BLUR_PLACEHOLDERS["backgrounds/sponsors_teaser"]}
             sizes="(min-width: 1280px) 50vw, 100vw"
             className="object-cover pointer-events-none"
           />
-          <div className="relative z-[1] flex flex-col items-center justify-center h-full gap-8 xl:gap-16 2xl:gap-32 p-6 lg:p-12 xl:p-16">
+          <div className="relative z-1 flex flex-col items-center justify-center h-full gap-8 xl:gap-16 2xl:gap-32 p-6 lg:p-12 xl:p-16">
             {/* Sponsor stats */}
             <div className="flex gap-6 xl:gap-12 text-center text-text-light">
               <CountUpStat end={900} suffix="+" label={t("teaser.sponsors.visitors")} />

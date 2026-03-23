@@ -13,22 +13,22 @@ export const SLIDES: CarouselSlide[] = [
   {
     titleKey: "teaser.compete.title",
     descKey: "teaser.compete.description",
-    bgImage: "/images/compete_teaser.png",
-    heroImage: "/images/compete_hero.png",
+    bgImage: "/images/backgrounds/compete_teaser.webp",
+    heroImage: "/images/heros/compete_hero.webp",
     layout: "left",
   },
   {
     titleKey: "teaser.play.title",
     descKey: "teaser.play.description",
-    bgImage: "/images/play_teaser.png",
-    heroImage: "/images/play_hero.png",
+    bgImage: "/images/backgrounds/play_teaser.webp",
+    heroImage: "/images/heros/play_hero.webp",
     layout: "right",
   },
   {
     titleKey: "teaser.explore.title",
     descKey: "teaser.explore.description",
-    bgImage: "/images/explore_teaser.png",
-    heroImage: "/images/explore_hero.png",
+    bgImage: "/images/backgrounds/explore_teaser.webp",
+    heroImage: "/images/heros/explore_hero.webp",
     layout: "left",
   },
 ];

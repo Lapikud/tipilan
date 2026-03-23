@@ -16,7 +16,7 @@ export default function Footer() {
   const t = useTranslations();
 
   return (
-    <footer className="bg-bg-dark w-full border-t-4 border-primary-50">
+    <footer className="bg-bg-dark w-full border-t-4 border-primary-50 lg:border-t-0">
       {/* Mobile: only social icons */}
       <div className="flex lg:hidden items-center justify-center gap-6 py-8 px-6 flex-wrap">
         {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (

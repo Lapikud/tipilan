@@ -4,6 +4,11 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { SLIDES, type CarouselSlide } from "./constants";
+import { BLUR_PLACEHOLDERS } from "@/lib/blurPlaceholders";
+
+function blurKey(src: string) {
+  return src.replace('/images/', '').replace(/\.\w+$/, '');
+}
 
 function CarouselSlideComponent({
   slide,
@@ -23,13 +28,16 @@ function CarouselSlideComponent({
         src={slide.bgImage}
         alt=""
         fill
+        unoptimized
+        placeholder="blur"
+        blurDataURL={BLUR_PLACEHOLDERS[blurKey(slide.bgImage)]}
         sizes="100vw"
         className="object-cover pointer-events-none"
       />
 
       {/* Content — top padding accounts for the floating heading */}
       <div
-        className={`relative z-[1] flex h-full gap-8 xl:gap-16 pt-[120px] px-8 xl:px-16 ${isLeft ? "items-end" : "items-end flex-row-reverse"
+        className={`relative z-1 flex h-full gap-8 xl:gap-16 pt-[120px] px-8 xl:px-16 ${isLeft ? "items-end" : "items-end flex-row-reverse"
           }`}
       >
         {/* Text content */}
@@ -51,11 +59,15 @@ function CarouselSlideComponent({
             transform: isActive ? "translateY(0)" : "translateY(110%)",
           }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={slide.heroImage}
             alt=""
-            className="absolute inset-0 w-full h-full object-cover"
+            fill
+            unoptimized
+            placeholder="blur"
+            blurDataURL={BLUR_PLACEHOLDERS[blurKey(slide.heroImage)]}
+            sizes="(min-width: 1280px) 40vw, 35vw"
+            className="object-cover"
           />
         </div>
       </div>
@@ -102,15 +114,18 @@ export default function CarouselSection({ sectionRef }: CarouselSectionProps) {
       {/* Mobile: stacked slides, no hero images, no transitions */}
       <div className="lg:hidden">
         {SLIDES.map((slide, i) => (
-          <div key={i} className="relative w-full overflow-hidden border-t-4 border-primary-50">
+          <div key={i} className="relative w-full h-[60vw] min-h-[320px] overflow-hidden border-t-4 border-primary-50">
             <Image
               src={slide.bgImage}
               alt=""
               fill
+              unoptimized
+              placeholder="blur"
+              blurDataURL={BLUR_PLACEHOLDERS[blurKey(slide.bgImage)]}
               sizes="100vw"
               className="object-cover pointer-events-none"
             />
-            <div className="relative z-[1] flex flex-col gap-4 justify-end h-full p-6 pb-12">
+            <div className="relative z-1 flex flex-col gap-4 justify-end h-full p-6 pb-12">
               <h3 className="text-h1 text-text-light text-shadow-teaser">{t(slide.titleKey)}</h3>
               <p className="text-p-lg text-text-light max-w-[500px]">{t(slide.descKey)}</p>
             </div>
