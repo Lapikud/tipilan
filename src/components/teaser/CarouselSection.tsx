@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { SLIDES, type CarouselSlide } from "./constants";
 import { BLUR_PLACEHOLDERS } from "@/lib/blurPlaceholders";
+import {gray} from "next/dist/lib/picocolors";
 
 function blurKey(src: string) {
   return src.replace('/images/', '').replace(/\.\w+$/, '');
@@ -56,7 +57,7 @@ function CarouselSlideComponent({
           className="relative shrink-0 w-[35vw] xl:w-[40vw] overflow-hidden shadow-teaser transition-transform duration-700 ease-out"
           style={{
             aspectRatio: "850 / 900",
-            transform: isActive ? "translateY(0)" : "translateY(110%)",
+            transform: isActive ? "translateY(0)" : "translateY(110%)"
           }}
         >
           <Image
@@ -68,6 +69,7 @@ function CarouselSlideComponent({
             blurDataURL={BLUR_PLACEHOLDERS[blurKey(slide.heroImage)]}
             sizes="(min-width: 1280px) 40vw, 35vw"
             className="object-cover"
+            style={{ filter: "grayscale(50%)" }}
           />
         </div>
       </div>
