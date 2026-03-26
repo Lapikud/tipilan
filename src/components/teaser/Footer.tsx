@@ -20,19 +20,19 @@ export default function Footer() {
       {/* Desktop: full footer */}
       <div className="flex flex-col-reverse lg:flex-row flex-wrap gap-y-12 gap-x-8 xl:gap-x-0 items-start justify-between p-8 xl:p-16">
         {/* Left: Organization info */}
-        <div className="flex flex-col gap-2 text-p font-bold text-text-light">
-          <p>{t("teaser.footer.organization")}</p>
+        <div className="flex flex-col gap-2 text-p text-text-light">
+          <p className="font-bold">{t("teaser.footer.organization")}</p>
           <p>{t("teaser.footer.regCode")}</p>
           <p>{t("teaser.footer.bankAccount")}</p>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 font-bold">
             <span className="text-[16px]">©</span>
             <p>{t("teaser.footer.copyright")}</p>
           </div>
         </div>
 
         {/* Center: Contact info */}
-        <div className="flex flex-col gap-2 text-p font-bold text-text-light">
-          <p>{t("teaser.footer.studentUnion")}</p>
+        <div className="flex flex-col gap-2 text-p text-text-light">
+          <p className="font-bold">{t("teaser.footer.studentUnion")}</p>
           <a href="mailto:tipilan@ituk.ee" className="underline">{t("teaser.footer.email")}</a>
           <p>{t("teaser.footer.phone")}</p>
           <p>{t("teaser.footer.address")}</p>
