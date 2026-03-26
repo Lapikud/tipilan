@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { SLIDES, type CarouselSlide } from "./constants";
 import { BLUR_PLACEHOLDERS } from "@/lib/blurPlaceholders";
-import {gray} from "next/dist/lib/picocolors";
+import { gray } from "next/dist/lib/picocolors";
 
 function blurKey(src: string) {
   return src.replace('/images/', '').replace(/\.\w+$/, '');
@@ -116,7 +116,7 @@ export default function CarouselSection({ sectionRef }: CarouselSectionProps) {
       {/* Mobile: stacked slides, no hero images, no transitions */}
       <div className="lg:hidden">
         {SLIDES.map((slide, i) => (
-          <div key={i} className="relative w-full h-[60vw] min-h-[320px] overflow-hidden border-t-4 border-primary-50">
+          <div key={i} className="relative w-full overflow-hidden border-t-4 border-primary-50">
             <Image
               src={slide.bgImage}
               alt=""
@@ -127,7 +127,7 @@ export default function CarouselSection({ sectionRef }: CarouselSectionProps) {
               sizes="100vw"
               className="object-cover pointer-events-none"
             />
-            <div className="relative z-1 flex flex-col gap-4 justify-end h-full p-6 pb-12">
+            <div className="relative z-1 flex flex-col gap-4 py-16 px-6">
               <h3 className="text-h1 text-text-light text-shadow-teaser">{t(slide.titleKey)}</h3>
               <p className="text-p-lg text-text-light max-w-[500px]">{t(slide.descKey)}</p>
             </div>

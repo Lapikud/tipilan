@@ -62,7 +62,7 @@ export default function EndSection() {
           />
           <div className="relative z-1 flex flex-col items-center justify-center h-full gap-8 xl:gap-16 2xl:gap-32 p-6 lg:p-12 xl:p-16">
             {/* Ticket stats */}
-            <div className="flex gap-6 xl:gap-12 text-center text-text-light">
+            <div className="flex flex-col xl:flex-row gap-6 xl:gap-12 text-center text-text-light">
               <CountUpStat end={0} suffix="€" label={t("teaser.tickets.earlyVisitor")} />
               <CountUpStat end={0} suffix="€" label={t("teaser.tickets.supporter")} />
             </div>
@@ -95,7 +95,7 @@ export default function EndSection() {
           />
           <div className="relative z-1 flex flex-col items-center justify-center h-full gap-8 xl:gap-16 2xl:gap-32 p-6 lg:p-12 xl:p-16">
             {/* Sponsor stats */}
-            <div className="flex gap-6 xl:gap-12 text-center text-text-light">
+            <div className="flex flex-col xl:flex-row gap-6 xl:gap-12 text-center text-text-light">
               <CountUpStat end={900} suffix="+" label={t("teaser.sponsors.visitors")} />
               <CountUpStat end={10000} suffix="+" label={t("teaser.sponsors.streamViewers")} format={formatK} />
             </div>
@@ -104,7 +104,7 @@ export default function EndSection() {
               <h2 className="text-h1 text-text-light text-center text-shadow-teaser">
                 {t("teaser.sponsors.cta")}
               </h2>
-              <a href="mailto:tipilan@ituk.ee" className="btn-primary-lg text-btn-lg hover:opacity-80">
+              <a href="mailto:tipilan@ituk.ee" className="btn-primary-lg text-btn-lg hover:opacity-80" style={{ backgroundColor: "#FFAB00", color: "#1a1a1a" }}>
                 {t("teaser.sponsors.contactButton")}
               </a>
             </div>

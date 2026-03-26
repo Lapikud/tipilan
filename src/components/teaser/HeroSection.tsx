@@ -95,6 +95,7 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
           <a
             href="mailto:tipilan@ituk.ee"
             className="btn-primary-lg text-btn-lg hover:opacity-80 text-center"
+            style={{ backgroundColor: "#FFAB00", color: "#1a1a1a" }}
           >
             {t("teaser.sponsors.contactButton")}
           </a>
