@@ -95,7 +95,7 @@ export default function EndSection() {
           />
           <div className="absolute inset-0 z-1 flex flex-col items-center justify-center gap-8 xl:gap-16 2xl:gap-32 p-6 lg:p-12 xl:p-16">
             {/* Sponsor stats */}
-            <div className="flex flex-col items-center xl:flex-row gap-6 xl:gap-12 text-center text-text-light">
+            <div className="flex flex-row items-center xl:flex-row gap-6 xl:gap-12 text-center text-text-light">
               <CountUpStat end={900} suffix="+" label={t("teaser.sponsors.visitors")} />
               <CountUpStat end={10000} suffix="+" label={t("teaser.sponsors.streamViewers")} format={formatK} />
             </div>
