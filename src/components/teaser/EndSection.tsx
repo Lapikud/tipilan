@@ -104,7 +104,7 @@ export default function EndSection() {
               <h2 className="text-h1 text-text-light text-center text-shadow-teaser">
                 {t("teaser.sponsors.cta")}
               </h2>
-              <a href="mailto:tipilan@ituk.ee" className="btn-primary-lg text-btn-lg hover:opacity-80" style={{ backgroundColor: "#FFAB00", color: "#1a1a1a" }}>
+              <a href="mailto:tipilan@ituk.ee" className="btn-secondary-lg text-btn-lg">
                 {t("teaser.sponsors.contactButton")}
               </a>
             </div>

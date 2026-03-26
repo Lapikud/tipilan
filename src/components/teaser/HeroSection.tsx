@@ -37,7 +37,7 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
       </div>
 
       {/* Center content */}
-      <div className="relative z-[1] flex flex-col items-center justify-center h-full gap-8 lg:gap-16 px-6">
+      <div className="relative z-1 flex flex-col items-center justify-center h-full gap-8 lg:gap-16 px-6">
         {/* Logo */}
         <Image
           src="/tipilan-logo.svg"
@@ -94,8 +94,7 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
           </a>
           <a
             href="mailto:tipilan@ituk.ee"
-            className="btn-primary-lg text-btn-lg hover:opacity-80 text-center"
-            style={{ backgroundColor: "#FFAB00", color: "#1a1a1a" }}
+            className="btn-secondary-lg text-btn-lg text-center"
           >
             {t("teaser.sponsors.contactButton")}
           </a>
