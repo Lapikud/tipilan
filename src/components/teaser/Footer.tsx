@@ -20,7 +20,7 @@ export default function Footer() {
       {/* Desktop: full footer */}
       <div className="flex flex-col-reverse lg:flex-row flex-wrap gap-y-12 gap-x-8 xl:gap-x-0 items-start justify-between p-8 xl:p-16">
         {/* Left: Organization info */}
-        <div className="flex flex-col gap-4 text-p font-bold text-text-light">
+        <div className="flex flex-col gap-2 text-p font-bold text-text-light">
           <p>{t("teaser.footer.organization")}</p>
           <p>{t("teaser.footer.regCode")}</p>
           <p>{t("teaser.footer.bankAccount")}</p>
@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
 
         {/* Center: Contact info */}
-        <div className="flex flex-col gap-4 text-p font-bold text-text-light">
+        <div className="flex flex-col gap-2 text-p font-bold text-text-light">
           <p>{t("teaser.footer.studentUnion")}</p>
           <a href="mailto:tipilan@ituk.ee" className="underline">{t("teaser.footer.email")}</a>
           <p>{t("teaser.footer.phone")}</p>
