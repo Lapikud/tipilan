@@ -17,24 +17,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-bg-dark w-full border-t-4 border-primary-50 lg:border-t-0">
-      {/* Mobile: only social icons */}
-      <div className="flex lg:hidden items-center justify-center gap-6 py-8 px-6 flex-wrap">
-        {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text-light hover:text-primary transition-colors"
-            aria-label={label}
-          >
-            <Icon size={32} />
-          </a>
-        ))}
-      </div>
-
       {/* Desktop: full footer */}
-      <div className="hidden lg:flex flex-wrap gap-y-12 gap-x-8 xl:gap-x-0 items-start justify-between p-8 xl:p-16">
+      <div className="flex flex-col-reverse lg:flex-row flex-wrap gap-y-12 gap-x-8 xl:gap-x-0 items-start justify-between p-8 xl:p-16">
         {/* Left: Organization info */}
         <div className="flex flex-col gap-4 text-p font-bold text-text-light">
           <p>{t("teaser.footer.organization")}</p>
