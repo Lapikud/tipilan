@@ -40,7 +40,7 @@ export default function Footer() {
 
         {/* Right: Social links */}
         <div className="flex flex-col items-end">
-          <div className="flex flex-wrap gap-6 items-center justify-center w-[169px]">
+            <div className="grid grid-cols-3 gap-8 lg:gap-6 w-[169px]">
             {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
@@ -53,7 +53,7 @@ export default function Footer() {
                 <Icon size={40} />
               </a>
             ))}
-          </div>
+            </div>
         </div>
       </div>
     </footer>
