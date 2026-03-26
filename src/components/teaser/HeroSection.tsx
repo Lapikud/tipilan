@@ -17,7 +17,7 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
   const pad = (n: number) => String(n).padStart(2, "0");
 
   return (
-    <section className="relative h-dvh w-full overflow-hidden">
+    <section className="relative min-h-dvh content-center max-h-min w-full overflow-hidden">
       {/* Background */}
       <Image
         src="/images/backgrounds/hero_teaser.webp"
@@ -37,7 +37,7 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
       </div>
 
       {/* Center content */}
-      <div className="relative z-1 flex flex-col items-center justify-center h-full gap-8 lg:gap-16 px-6">
+      <div className="relative z-1 flex flex-col items-center justify-center h-full gap-8 lg:gap-16 px-6 pt-24 pb-12 lg:pt-0 lg:pb-0">
         {/* Logo */}
         <Image
           src="/tipilan-logo.svg"
@@ -49,25 +49,37 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
         />
 
         {/* Countdown */}
-        <div className="grid grid-cols-[1fr_auto_1fr] sm:flex gap-x-1.5 gap-y-3 sm:gap-4 text-center items-start">
+        <div className="flex gap-1.5 sm:gap-4 text-center items-start justify-center flex-wrap">
           <div className="flex flex-col items-center gap-2 lg:gap-4 min-w-0 lg:w-[104px]">
-            <span className="text-countdown text-text-light">{countdown.days}</span>
-            <span className="text-countdown-label text-primary whitespace-nowrap">{t("teaser.countdown.days")}</span>
+            <span className="text-countdown lg:text-countdown-lg text-text-light">{countdown.days}</span>
+            <span className="text-countdown-label lg:text-countdown-label-lg text-primary whitespace-nowrap">
+              <span className="lg:hidden">{t("teaser.countdown.daysShort")}</span>
+              <span className="hidden lg:inline">{t("teaser.countdown.days")}</span>
+            </span>
           </div>
-          <span className="text-countdown text-primary sm:block">:</span>
+          <span className="text-countdown lg:text-countdown-lg text-primary">:</span>
           <div className="flex flex-col items-center gap-2 lg:gap-4 min-w-0 lg:w-[86px]">
-            <span className="text-countdown text-text-light">{pad(countdown.hours)}</span>
-            <span className="text-countdown-label text-primary whitespace-nowrap">{t("teaser.countdown.hours")}</span>
+            <span className="text-countdown lg:text-countdown-lg text-text-light">{pad(countdown.hours)}</span>
+            <span className="text-countdown-label lg:text-countdown-label-lg text-primary whitespace-nowrap">
+              <span className="lg:hidden">{t("teaser.countdown.hoursShort")}</span>
+              <span className="hidden lg:inline">{t("teaser.countdown.hours")}</span>
+            </span>
           </div>
-          <span className="text-countdown text-primary hidden sm:block">:</span>
+          <span className="text-countdown lg:text-countdown-lg text-primary">:</span>
           <div className="flex flex-col items-center gap-2 lg:gap-4 min-w-0 lg:w-[86px]">
-            <span className="text-countdown text-text-light">{pad(countdown.minutes)}</span>
-            <span className="text-countdown-label text-primary whitespace-nowrap">{t("teaser.countdown.minutes")}</span>
+            <span className="text-countdown lg:text-countdown-lg text-text-light">{pad(countdown.minutes)}</span>
+            <span className="text-countdown-label lg:text-countdown-label-lg text-primary whitespace-nowrap">
+              <span className="lg:hidden">{t("teaser.countdown.minutesShort")}</span>
+              <span className="hidden lg:inline">{t("teaser.countdown.minutes")}</span>
+            </span>
           </div>
-          <span className="text-countdown text-primary sm:block">:</span>
+          <span className="text-countdown lg:text-countdown-lg text-primary">:</span>
           <div className="flex flex-col items-center gap-2 lg:gap-4 min-w-0 lg:w-[103px]">
-            <span className="text-countdown text-text-light">{pad(countdown.seconds)}</span>
-            <span className="text-countdown-label text-primary whitespace-nowrap">{t("teaser.countdown.seconds")}</span>
+            <span className="text-countdown lg:text-countdown-lg text-text-light">{pad(countdown.seconds)}</span>
+            <span className="text-countdown-label lg:text-countdown-label-lg text-primary whitespace-nowrap">
+              <span className="lg:hidden">{t("teaser.countdown.secondsShort")}</span>
+              <span className="hidden lg:inline">{t("teaser.countdown.seconds")}</span>
+            </span>
           </div>
         </div>
 
@@ -88,13 +100,13 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
             href="https://fienta.com/tipilan-2026"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary-lg text-btn-lg hover:opacity-80 text-center"
+            className="btn-primary lg:btn-primary-lg text-btn lg:text-btn-lg hover:opacity-80 text-center"
           >
             {t("teaser.tickets.buyButton")}
           </a>
           <a
             href="mailto:tipilan@ituk.ee"
-            className="btn-secondary-lg text-btn-lg text-center"
+            className="btn-secondary-lg lg:btn-secondary-lg text-btn lg:text-btn-lg text-center"
           >
             {t("teaser.sponsors.contactButton")}
           </a>

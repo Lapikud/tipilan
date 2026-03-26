@@ -92,6 +92,15 @@ body {
   text-transform: uppercase;
 }
 
+@utility text-btn {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
 @utility text-p-lg {
   font-family: var(--font-body);
   font-weight: 400;
@@ -106,7 +115,7 @@ body {
   line-height: 100%;
 }
 
-@utility text-countdown {
+@utility text-countdown-lg {
   font-family: var(--font-heading);
   font-weight: 700;
   font-style: italic;
@@ -115,11 +124,29 @@ body {
   text-transform: uppercase;
 }
 
-@utility text-countdown-label {
+@utility text-countdown {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(24px, 4vw, 32px);
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+@utility text-countdown-label-lg {
   font-family: var(--font-heading);
   font-weight: 700;
   font-style: italic;
   font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+@utility text-countdown-label {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-style: italic;
+  font-size: 12px;
   line-height: 100%;
   text-transform: uppercase;
 }
@@ -155,12 +182,57 @@ body {
   }
 }
 
+@utility btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg-dark);
+  padding: 12px;
+  min-width: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.1s, color 0.1s;
+
+  &:hover {
+    background-color: var(--color-text-light);
+  }
+
+  &:active {
+    background-color: var(--color-primary);
+  }
+}
+
 @utility btn-secondary-lg {
   background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
   color: var(--color-text-light);
   box-shadow: inset 0 0 0 4px var(--color-primary);
   padding: 16px;
   min-width: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg-dark);
+  }
+
+  &:active {
+    background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+    color: var(--color-text-light);
+  }
+}
+
+@utility btn-secondary {
+  background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  color: var(--color-text-light);
+  box-shadow: inset 0 0 0 4px var(--color-primary);
+  padding: 12px;
+  min-width: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;

@@ -2,9 +2,13 @@
   "teaser": {
     "countdown": {
       "days": "päeva",
+      "daysShort": "päev",
       "hours": "tundi",
+      "hoursShort": "tund",
       "minutes": "minutit",
-      "seconds": "sekundit"
+      "minutesShort": "min",
+      "seconds": "sekundit",
+      "secondsShort": "sek"
     },
     "carousel": {
       "heading": "Tule Tipi",

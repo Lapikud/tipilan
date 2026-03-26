@@ -2,9 +2,13 @@
   "teaser": {
     "countdown": {
       "days": "days",
+      "daysShort": "day",
       "hours": "hours",
+      "hoursShort": "hour",
       "minutes": "minutes",
-      "seconds": "seconds"
+      "minutesShort": "min",
+      "seconds": "seconds",
+      "secondsShort": "sec"
     },
     "carousel": {
       "heading": "Come to Tipi",
