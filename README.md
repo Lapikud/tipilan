@@ -15,15 +15,15 @@ Official website for **TipiLAN** — Estonia's largest student-organised LAN eve
 - [next-intl](https://next-intl.dev/) — ET / EN localisation
 - [react-icons](https://react-icons.github.io/react-icons/)
 
-Requires **Node.js ≥ 22**.
+Requires **Bun**.
 
 ---
 
 ## Quickstart
 
 ```bash
-npm install
-npm run dev
+bun install
+bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) — redirects to `/et` by default.
@@ -33,10 +33,10 @@ Open [http://localhost:3000](http://localhost:3000) — redirects to `/et` by de
 ## Scripts
 
 ```bash
-npm run dev        # Dev server (Turbopack, localhost:3000)
-npm run build      # Production build (outputs SSG for /et and /en)
-npm start          # Serve production build
-npm run lint:fix   # ESLint with auto-fix
+bun dev            # Dev server (Turbopack, localhost:3000)
+bun run build      # Production build (outputs SSG for /et and /en)
+bun start          # Serve production build
+bun lint:fix       # ESLint with auto-fix
 ```
 
 ---
@@ -69,10 +69,10 @@ When adding or replacing images, re-run:
 
 ```bash
 # Convert new PNGs → WebP (quality 85)
-node scripts/convert-images.mjs
+bun scripts/convert-images.mjs
 
 # Regenerate blur placeholders for all images
-node scripts/gen-blur-placeholders.mjs
+bun scripts/gen-blur-placeholders.mjs
 ```
 
 ---
