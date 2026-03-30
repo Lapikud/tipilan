@@ -27,10 +27,10 @@
       "description": "Soak in the gaming atmosphere at the expo area: watch tournaments on big screens, try games made by local game developers, and discover dozens of different activities - all under one roof."
     },
     "tickets": {
-      "earlyVisitor": "Early visitor ticket (until XX.XX)",
+      "earlyVisitor": "Early bird ticket\n(until July 31st)",
       "supporter": "Supporter ticket (TipiLAN T-shirt)",
       "cta": "Buy an early ticket from Fienta!",
-      "tba": "We will announce prices and sale dates soon!",
+      "tba": "Get your early bird ticket now!",
       "buyButton": "Buy tickets here"
     },
     "sponsors": {

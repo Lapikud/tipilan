@@ -27,10 +27,10 @@
       "description": "Imetle mängurite õhkkonda messialal: jälgi turniire suurtel ekraanidel, proovi kohalike mänguarendajate loodud mänge ja avasta kümneid erinevaid tegevusi - kõik ühe katuse all."
     },
     "tickets": {
-      "earlyVisitor": "Varajane külastaja pilet (kuni XX.XX)",
+      "earlyVisitor": "Varajane pilet\n(kuni 31. juuli)",
       "supporter": "Toetaja pilet (TipiLANi T-särk)",
       "cta": "Osta varajane pilet Fientast!",
-      "tba": "Avaldame hinnad ja müügikuupäevad peagi!",
+      "tba": "Hangi oma varajane pilet kohe!",
       "buyButton": "Osta pilet siit"
     },
     "sponsors": {

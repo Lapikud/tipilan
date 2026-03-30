@@ -60,11 +60,11 @@ export default function EndSection() {
             sizes="(min-width: 1280px) 50vw, 100vw"
             className="object-cover pointer-events-none"
           />
-          <div className="absolute inset-0 z-1 flex flex-col items-center justify-center gap-8 xl:gap-16 2xl:gap-32 p-6 lg:p-12 xl:p-16">
+          <div className="absolute inset-0 z-1 flex flex-col items-center justify-between py-[15%] px-6 lg:px-12 xl:px-16">
             {/* Ticket stats */}
-            <div className="hidden flex-col items-center xl:flex-row gap-6 xl:gap-12 text-center text-text-light">
-              <CountUpStat end={0} suffix="€" label={t("teaser.tickets.earlyVisitor")} />
-              <CountUpStat end={0} suffix="€" label={t("teaser.tickets.supporter")} />
+            <div className="flex flex-row items-start gap-6 xl:gap-12 text-center text-text-light">
+              <CountUpStat end={8} suffix="€" label={t("teaser.tickets.earlyVisitor")} />
+              <CountUpStat end={25} suffix="€" label={t("teaser.tickets.supporter")} />
             </div>
             {/* CTA */}
             <div className="flex flex-col items-center gap-3 xl:gap-6 w-full">
@@ -93,9 +93,9 @@ export default function EndSection() {
             sizes="(min-width: 1280px) 50vw, 100vw"
             className="object-cover pointer-events-none"
           />
-          <div className="absolute inset-0 z-1 flex flex-col items-center justify-center gap-8 xl:gap-16 2xl:gap-32 p-6 lg:p-12 xl:p-16">
+          <div className="absolute inset-0 z-1 flex flex-col items-center justify-between py-[15%] px-6 lg:px-12 xl:px-16">
             {/* Sponsor stats */}
-            <div className="flex flex-row items-center xl:flex-row gap-6 xl:gap-12 text-center text-text-light">
+            <div className="flex flex-row items-start gap-6 xl:gap-12 text-center text-text-light">
               <CountUpStat end={900} suffix="+" label={t("teaser.sponsors.visitors")} />
               <CountUpStat end={10000} suffix="+" label={t("teaser.sponsors.streamViewers")} format={formatK} />
             </div>
@@ -104,7 +104,7 @@ export default function EndSection() {
               <h2 className="text-h1 text-text-light text-center text-shadow-teaser">
                 {t("teaser.sponsors.cta")}
               </h2>
-              <a href="mailto:tipilan@ituk.ee" className="btn-secondary-lg lg:btn-secondary-lg text-btn lg:text-btn-lg text-center">
+              <a href="mailto:tipilaninfo@gmail.com" className="btn-secondary-lg lg:btn-secondary-lg text-btn lg:text-btn-lg text-center">
                 {t("teaser.sponsors.contactButton")}
               </a>
             </div>
