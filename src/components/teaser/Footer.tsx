@@ -31,11 +31,9 @@ export default function Footer() {
         </div>
 
         {/* Center: Contact info */}
-        <div className="flex flex-col gap-2 text-p text-text-light">
-          <p className="font-bold">{t("teaser.footer.studentUnion")}</p>
-          <a href="mailto:tipilan@ituk.ee" className="underline">{t("teaser.footer.email")}</a>
+        <div className="flex flex-col gap-2 text-p text-text-light mt-8 lg:mt-0 lg:pt-8">
+          <a href="mailto:tipilaninfo@gmail.com" className="underline">{t("teaser.footer.email")}</a>
           <p>{t("teaser.footer.phone")}</p>
-          <p>{t("teaser.footer.address")}</p>
         </div>
 
         {/* Right: Social links */}

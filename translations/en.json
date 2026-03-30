@@ -40,14 +40,13 @@
       "contactButton": "Partner with us"
     },
     "footer": {
-      "organization": "MTÜ FOR Tsükkel",
-      "regCode": "Registration code: 80391807",
-      "bankAccount": "LHV EE617700771002582855",
+      "organization": "MTÜ Lapikud",
+      "regCode": "Registration code: 80167145",
+      "bankAccount": "Swedbank EE842200221094704780",
       "copyright": "TipiLAN 2025-2026",
-      "studentUnion": "ITÜK | TalTech IT Faculty Student Council",
-      "email": "tipilan@ituk.ee",
+      "email": "tipilaninfo@gmail.com",
       "phone": "+372 5693 1193",
-      "address": "ICO-210, Raja tn 4c, Tallinn, Harjumaa, 12616"
+      "address": "Akadeemia tee 5, 12616 Tallinn, Estonia"
     }
   },
   "notFound": {
