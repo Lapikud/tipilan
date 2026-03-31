@@ -20,7 +20,7 @@ export default function Footer() {
       {/* Desktop: full footer */}
       <div className="flex flex-col-reverse lg:flex-row flex-wrap gap-y-12 gap-x-8 xl:gap-x-0 items-start justify-between p-8 xl:p-16">
         {/* Left: Organization info */}
-        <div className="flex flex-col gap-2 text-p text-text-light">
+        <div className="flex flex-col items-center lg:items-start gap-2 text-p text-text-light text-center lg:text-left w-full lg:w-auto">
           <p className="font-bold">{t("teaser.footer.organization")}</p>
           <p>{t("teaser.footer.regCode")}</p>
           <p>{t("teaser.footer.bankAccount")}</p>
@@ -31,13 +31,13 @@ export default function Footer() {
         </div>
 
         {/* Center: Contact info */}
-        <div className="flex flex-col gap-2 text-p text-text-light mt-8 lg:mt-0 lg:pt-8">
+        <div className="flex flex-col items-center lg:items-start gap-2 text-p text-text-light text-center lg:text-left w-full lg:w-auto mt-8 lg:mt-0 lg:pt-8">
           <a href="mailto:tipilaninfo@gmail.com" className="underline">{t("teaser.footer.email")}</a>
           <p>{t("teaser.footer.phone")}</p>
         </div>
 
         {/* Right: Social links */}
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col items-center lg:items-end w-full lg:w-auto">
             <div className="grid grid-cols-3 gap-8 lg:gap-6 w-[169px]">
             {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
               <a
