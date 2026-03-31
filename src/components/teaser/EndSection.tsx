@@ -78,7 +78,7 @@ export default function EndSection() {
               <h2 className="text-h1 text-text-light text-center text-shadow-teaser">
                 {t("teaser.tickets.tba")}
               </h2>
-              <a href="https://fienta.com/tipilan" target="_blank" rel="noopener noreferrer" className="btn-primary lg:btn-primary-lg text-btn lg:text-btn-lg hover:opacity-80 text-center text-pretty">
+              <a href="https://fienta.com/et/tipilan?utm_source=homepage&utm_medium=button" target="_blank" rel="noopener noreferrer" className="btn-primary lg:btn-primary-lg text-btn lg:text-btn-lg hover:opacity-80 text-center text-pretty">
                 {t("teaser.tickets.buyButton")}
               </a>
             </div>
