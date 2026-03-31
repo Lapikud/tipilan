@@ -8,7 +8,26 @@ const workSans = Work_Sans({
 
 export const metadata: Metadata = {
   title: "TipiLAN 2026",
-  description: "TipiLAN 2026 – Eesti suurim tudengite korraldatud LAN!",
+  description: "TipiLAN 2026 - Eesti suurim tudengite korraldatud LAN!",
+  openGraph: {
+    title: "TipiLAN 2026",
+    description: "TipiLAN 2026 - Eesti suurim tudengite korraldatud LAN!",
+    images: [
+      {
+        url: "/images/TipiLAN_og.png",
+        width: 1200,
+        height: 630,
+        alt: "TipiLAN 2026",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TipiLAN 2026",
+    description: "TipiLAN 2026 - Eesti suurim tudengite korraldatud LAN!",
+    images: ["/images/TipiLAN_og.png"],
+  },
 };
 
 export default function RootLayout({
