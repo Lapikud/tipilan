@@ -54,9 +54,9 @@ export default function EndSection() {
 
   return (
     <section className="relative w-full border-t-4 border-primary-50 block">
-      <div className="flex flex-row min-h-dvh">
+      <div className="flex flex-col lg:flex-row lg:min-h-dvh">
         {/* Tickets side */}
-        <div className="relative w-1/2 overflow-hidden min-h-[300px]">
+        <div className="relative w-full lg:w-1/2 overflow-hidden min-h-[60svh] lg:min-h-dvh">
           <Image
             src="/images/backgrounds/tickets_teaser.webp"
             alt=""
@@ -64,7 +64,7 @@ export default function EndSection() {
             unoptimized
             placeholder="blur"
             blurDataURL={BLUR_PLACEHOLDERS["backgrounds/tickets_teaser"]}
-            sizes="50vw"
+            sizes="(min-width: 1280px) 50vw, 100vw"
             className="object-cover pointer-events-none"
           />
           <div className="relative z-10 flex flex-col items-center justify-center gap-12 md:gap-32 py-[15%] px-6 lg:px-12 xl:px-16 h-full">
@@ -86,10 +86,10 @@ export default function EndSection() {
         </div>
 
         {/* Separator */}
-        <div className="relative h-auto w-[4px] bg-primary-50 shrink-0" />
+        <div className="relative h-[4px] w-full bg-primary-50 shrink-0 lg:h-auto lg:w-[4px]" />
 
         {/* Sponsors side */}
-        <div className="relative w-1/2 overflow-hidden min-h-[300px]">
+        <div className="relative w-full lg:w-1/2 overflow-hidden min-h-[60svh] lg:min-h-dvh">
           <Image
             src="/images/backgrounds/sponsors_teaser.webp"
             alt=""
@@ -97,7 +97,7 @@ export default function EndSection() {
             unoptimized
             placeholder="blur"
             blurDataURL={BLUR_PLACEHOLDERS["backgrounds/sponsors_teaser"]}
-            sizes="50vw"
+            sizes="(min-width: 1280px) 50vw, 100vw"
             className="object-cover pointer-events-none"
           />
           <div className="relative z-10 flex flex-col items-center justify-center gap-12 md:gap-32 py-[15%] px-6 lg:px-12 xl:px-16 h-full">
