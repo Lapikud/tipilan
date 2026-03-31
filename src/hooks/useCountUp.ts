@@ -3,13 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 
 interface UseCountUpOptions {
-  end: number;
-  duration?: number;
-  suffix?: string;
-  prefix?: string;
+    end: number;
+    duration?: number;
 }
 
-export function useCountUp({ end, duration = 2000, suffix = "", prefix = "" }: UseCountUpOptions) {
+export function useCountUp({ end, duration = 2000 }: UseCountUpOptions): { ref: React.RefObject<HTMLElement | null>; count: number } {
   const [count, setCount] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
   const ref = useRef<HTMLElement>(null);
@@ -51,7 +49,5 @@ export function useCountUp({ end, duration = 2000, suffix = "", prefix = "" }: U
     requestAnimationFrame(animate);
   }, [hasStarted, end, duration]);
 
-  const display = `${prefix}${count}${suffix}`;
-
-  return { ref, display, count };
+  return { ref, count };
 }
