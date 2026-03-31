@@ -56,9 +56,9 @@ export default function EndSection() {
 
   return (
     <section className="relative w-full border-t-4 border-primary-50 block">
-      <div className="flex flex-col lg:flex-row lg:min-h-dvh">
+      <div className="flex flex-row min-h-dvh">
         {/* Tickets side */}
-        <div className="relative w-full lg:w-1/2 overflow-hidden min-h-[450px] lg:min-h-dvh">
+        <div className="relative w-1/2 overflow-hidden min-h-[300px]">
           <Image
             src="/images/backgrounds/tickets_teaser.webp"
             alt=""
@@ -66,10 +66,10 @@ export default function EndSection() {
             unoptimized
             placeholder="blur"
             blurDataURL={BLUR_PLACEHOLDERS["backgrounds/tickets_teaser"]}
-            sizes="(min-width: 1280px) 50vw, 100vw"
+            sizes="50vw"
             className="object-cover pointer-events-none"
           />
-          <div className="absolute inset-0 z-1 flex flex-col items-center justify-center gap-12 md:gap-32 py-[15%] px-6 lg:px-12 xl:px-16">
+          <div className="relative z-10 flex flex-col items-center justify-center gap-12 md:gap-32 py-[15%] px-6 lg:px-12 xl:px-16 h-full">
             {/* Ticket stats */}
             <div className="flex flex-row items-start gap-6 xl:gap-12 text-center text-text-light">
               <CountUpStat end={8} suffix="€" label={t("teaser.tickets.earlyVisitor")} />
@@ -88,10 +88,10 @@ export default function EndSection() {
         </div>
 
         {/* Separator */}
-        <div className="relative h-[4px] w-full bg-primary-50 shrink-0 lg:h-auto lg:w-[4px]" />
+        <div className="relative h-auto w-[4px] bg-primary-50 shrink-0" />
 
         {/* Sponsors side */}
-        <div className="relative w-full lg:w-1/2 overflow-hidden min-h-[450px] lg:min-h-dvh">
+        <div className="relative w-1/2 overflow-hidden min-h-[300px]">
           <Image
             src="/images/backgrounds/sponsors_teaser.webp"
             alt=""
@@ -99,10 +99,10 @@ export default function EndSection() {
             unoptimized
             placeholder="blur"
             blurDataURL={BLUR_PLACEHOLDERS["backgrounds/sponsors_teaser"]}
-            sizes="(min-width: 1280px) 50vw, 100vw"
+            sizes="50vw"
             className="object-cover pointer-events-none"
           />
-          <div className="absolute inset-0 z-1 flex flex-col items-center justify-center gap-12 md:gap-32 py-[15%] px-6 lg:px-12 xl:px-16">
+          <div className="relative z-10 flex flex-col items-center justify-center gap-12 md:gap-32 py-[15%] px-6 lg:px-12 xl:px-16 h-full">
             {/* Sponsor stats */}
             <div className="flex flex-row items-start gap-6 xl:gap-12 text-center text-text-light">
               <CountUpStat end={900} suffix="+" label={t("teaser.sponsors.visitors")} />
