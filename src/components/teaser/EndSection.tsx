@@ -29,11 +29,10 @@ function CountUpStat({
   const display = format ? format(count) : String(count);
 
   return (
-    <div className="flex flex-col items-center gap-4 lg:gap-8">
+    <div className="flex flex-col items-center gap-4 lg:gap-8" ref={ref as React.RefObject<HTMLDivElement>}>
       {/* Desktop version */}
       <p
         className="text-title tabular-nums hidden sm:block"
-        ref={ref as React.RefObject<HTMLParagraphElement>}
         style={{ minWidth: minWidth ?? "auto", fontSize: "clamp(3rem, 2.5rem + 3vw, 6rem)" }}
       >
         {display}<span className="text-primary">{suffix}</span>
@@ -41,7 +40,6 @@ function CountUpStat({
       {/* Mobile version */}
       <p
         className="text-title tabular-nums sm:hidden"
-        ref={ref as React.RefObject<HTMLParagraphElement>}
         style={{ minWidth: minWidth ?? "auto", fontSize: "clamp(2rem, 1.2rem + 4vw, 6rem)" }}
       >
         {display}<span className="text-primary">{suffix}</span>
