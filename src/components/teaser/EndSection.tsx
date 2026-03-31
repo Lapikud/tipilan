@@ -30,10 +30,19 @@ function CountUpStat({
 
   return (
     <div className="flex flex-col items-center gap-4 lg:gap-8">
+      {/* Desktop version */}
       <p
-        className="text-title tabular-nums"
+        className="text-title tabular-nums hidden sm:block"
         ref={ref as React.RefObject<HTMLParagraphElement>}
-        style={{ minWidth: minWidth ?? "auto" }}
+        style={{ minWidth: minWidth ?? "auto", fontSize: "clamp(3rem, 2.5rem + 3vw, 6rem)" }}
+      >
+        {display}<span className="text-primary">{suffix}</span>
+      </p>
+      {/* Mobile version */}
+      <p
+        className="text-title tabular-nums sm:hidden"
+        ref={ref as React.RefObject<HTMLParagraphElement>}
+        style={{ minWidth: minWidth ?? "auto", fontSize: "clamp(2rem, 1.2rem + 4vw, 6rem)" }}
       >
         {display}<span className="text-primary">{suffix}</span>
       </p>
@@ -49,7 +58,7 @@ export default function EndSection() {
     <section className="relative w-full border-t-4 border-primary-50 block">
       <div className="flex flex-col lg:flex-row lg:min-h-dvh">
         {/* Tickets side */}
-        <div className="relative w-full lg:w-1/2 overflow-hidden min-h-[60svh] lg:min-h-dvh">
+        <div className="relative w-full lg:w-1/2 overflow-hidden min-h-[450px] lg:min-h-dvh">
           <Image
             src="/images/backgrounds/tickets_teaser.webp"
             alt=""
@@ -60,7 +69,7 @@ export default function EndSection() {
             sizes="(min-width: 1280px) 50vw, 100vw"
             className="object-cover pointer-events-none"
           />
-          <div className="absolute inset-0 z-1 flex flex-col items-center justify-between py-[15%] px-6 lg:px-12 xl:px-16">
+          <div className="absolute inset-0 z-1 flex flex-col items-center justify-center gap-12 md:gap-32 py-[15%] px-6 lg:px-12 xl:px-16">
             {/* Ticket stats */}
             <div className="flex flex-row items-start gap-6 xl:gap-12 text-center text-text-light">
               <CountUpStat end={8} suffix="€" label={t("teaser.tickets.earlyVisitor")} />
@@ -71,7 +80,7 @@ export default function EndSection() {
               <h2 className="text-h1 text-text-light text-center text-shadow-teaser">
                 {t("teaser.tickets.tba")}
               </h2>
-              <a href="https://fienta.com/tipilan-2026" target="_blank" rel="noopener noreferrer" className="btn-primary lg:btn-primary-lg text-btn lg:text-btn-lg hover:opacity-80 text-center">
+              <a href="https://fienta.com/tipilan-2026" target="_blank" rel="noopener noreferrer" className="btn-primary lg:btn-primary-lg text-btn lg:text-btn-lg hover:opacity-80 text-center text-pretty">
                 {t("teaser.tickets.buyButton")}
               </a>
             </div>
@@ -82,7 +91,7 @@ export default function EndSection() {
         <div className="relative h-[4px] w-full bg-primary-50 shrink-0 lg:h-auto lg:w-[4px]" />
 
         {/* Sponsors side */}
-        <div className="relative w-full lg:w-1/2 overflow-hidden min-h-[60svh] lg:min-h-dvh">
+        <div className="relative w-full lg:w-1/2 overflow-hidden min-h-[450px] lg:min-h-dvh">
           <Image
             src="/images/backgrounds/sponsors_teaser.webp"
             alt=""
@@ -93,7 +102,7 @@ export default function EndSection() {
             sizes="(min-width: 1280px) 50vw, 100vw"
             className="object-cover pointer-events-none"
           />
-          <div className="absolute inset-0 z-1 flex flex-col items-center justify-between py-[15%] px-6 lg:px-12 xl:px-16">
+          <div className="absolute inset-0 z-1 flex flex-col items-center justify-center gap-12 md:gap-32 py-[15%] px-6 lg:px-12 xl:px-16">
             {/* Sponsor stats */}
             <div className="flex flex-row items-start gap-6 xl:gap-12 text-center text-text-light">
               <CountUpStat end={900} suffix="+" label={t("teaser.sponsors.visitors")} />
@@ -104,7 +113,7 @@ export default function EndSection() {
               <h2 className="text-h1 text-text-light text-center text-shadow-teaser">
                 {t("teaser.sponsors.cta")}
               </h2>
-              <a href="mailto:tipilaninfo@gmail.com" className="btn-secondary-lg lg:btn-secondary-lg text-btn lg:text-btn-lg text-center">
+              <a href="mailto:tipilaninfo@gmail.com" className="btn-secondary-lg lg:btn-secondary-lg text-btn lg:text-btn-lg text-center text-pretty">
                 {t("teaser.sponsors.contactButton")}
               </a>
             </div>
