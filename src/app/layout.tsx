@@ -7,6 +7,7 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tipilan.ee"),
   title: "TipiLAN 2026",
   description: "TipiLAN 2026 - Eesti suurim tudengite korraldatud LAN!",
   openGraph: {
