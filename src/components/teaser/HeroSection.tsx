@@ -97,7 +97,7 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
         {/* Mobile CTA buttons — only visible on small screens */}
         <div className="flex flex-col gap-4 w-full max-w-sm lg:hidden mt-4">
           <a
-            href="https://fienta.com/tipilan-2026"
+            href="https://fienta.com/et/tipilan?utm_source=homepage&utm_medium=button"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary lg:btn-primary-lg text-btn lg:text-btn-lg hover:opacity-80 text-center"
