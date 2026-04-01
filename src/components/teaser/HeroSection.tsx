@@ -105,7 +105,7 @@ export default function HeroSection({ onScrollDown }: HeroSectionProps) {
             {t("teaser.tickets.buyButton")}
           </a>
           <a
-            href="mailto:tipilan@ituk.ee"
+            href="mailto:tipilaninfo@gmail.com"
             className="btn-secondary-lg lg:btn-secondary-lg text-btn lg:text-btn-lg text-center"
           >
             {t("teaser.sponsors.contactButton")}
