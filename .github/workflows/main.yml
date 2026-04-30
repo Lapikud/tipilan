@@ -3,49 +3,17 @@ name: main
 on:
   push:
     branches:
-      - teaser-2026
       - development
   workflow_dispatch:
-    inputs:
-      ref:
-        description: Branch or tag to build and deploy
-        required: false
-        default: teaser-2026
-        type: string
 
 jobs:
-  build_teaser:
-    if: ${{ (github.event.inputs.ref || github.ref_name) == 'teaser-2026' }}
+  build:
     uses: ./.github/workflows/build.yml
-    with:
-      ref: ${{ github.event.inputs.ref || github.ref_name }}
-      runner: prox-1
     secrets:
       USER_AUTH: ${{ secrets.USER_AUTH }}
 
-  deploy_teaser:
-    if: ${{ (github.event.inputs.ref || github.ref_name) == 'teaser-2026' }}
-    needs: build_teaser
+  deploy:
+    needs: build
     uses: ./.github/workflows/deploy.yml
-    with:
-      runner: prox-1
-    secrets:
-      USER_AUTH: ${{ secrets.USER_AUTH }}
-
-  build_dev:
-    if: ${{ (github.event.inputs.ref || github.ref_name) == 'development' }}
-    uses: ./.github/workflows/build.yml
-    with:
-      ref: ${{ github.event.inputs.ref || github.ref_name }}
-      runner: prox-2
-    secrets:
-      USER_AUTH: ${{ secrets.USER_AUTH }}
-
-  deploy_dev:
-    if: ${{ (github.event.inputs.ref || github.ref_name) == 'development' }}
-    needs: build_dev
-    uses: ./.github/workflows/deploy.yml
-    with:
-      runner: prox-2
     secrets:
       USER_AUTH: ${{ secrets.USER_AUTH }}

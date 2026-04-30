@@ -2,19 +2,13 @@ name: deploy
 
 on:
   workflow_call:
-    inputs:
-      runner:
-        description: Runner label to use for the deploy
-        required: false
-        default: prox-1
-        type: string
     secrets:
       USER_AUTH:
         required: true
 
 jobs:
   deploy:
-    runs-on: ${{ inputs.runner }}
+    runs-on: prox-2
     steps:
       - name: Restart NextJS service
         env:
