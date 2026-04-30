@@ -1,7 +1,8 @@
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
-import Link from "next/link";
-import Image from "next/image";
+import Sponsors from "@/components/Sponsors";
+import { Link } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 
 export default async function Home({
   params,
@@ -73,7 +74,7 @@ export default async function Home({
         >
           <div className="cursor-pointer flex flex-row justify-between gap-4 items-center">
             <h2
-              className={`text-[clamp(2rem,1.8rem+1vw,3rem)] ${vipnagorgialla.className} font-bold italic uppercase dark:text-[#EEE5E5] text-[#2A2C3F] dark:group-hover:text-[#2A2C3F] group-hover:text-black`}
+              className={`text-[clamp(2rem,1.8rem+1vw,3rem)] ${vipnagorgialla.className} font-bold italic break-normal uppercase dark:text-[#EEE5E5] text-[#2A2C3F] dark:group-hover:text-[#2A2C3F] group-hover:text-black`}
             >
               {t("navigation.tournaments")}
             </h2>
@@ -129,114 +130,11 @@ export default async function Home({
           </span>
         </div>
         <h2 className="text-[clamp(2.5rem,2.25rem+1.25vw,3.75rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
-          24.-26. okt.
+          {t("home.sections.dateAndLocation")}
         </h2>
       </Link>
       {/* Sponsors */}
-      <div
-        className={`p-12 flex flex-col ${vipnagorgialla.className} font-bold italic border-b-3 border-[#1F5673]`}
-      >
-        <div className="text-left flex flex-col justify-between xl:justify-start">
-          <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] text-[#2A2C3F] group-hover:text-black pb-8">
-            {t("home.sections.poweredBy")}
-          </h3>
-          <div className="flex flex-row flex-wrap gap-8 md:gap-18 items-center">
-            <Link href="https://taltech.ee" target="_blank">
-              <Image
-                src="/sponsors/taltech-color.png"
-                alt="Taltech (Tallinna Tehnikaülikool)"
-                width={192}
-                height={192}
-                className="object-contain"
-              />
-            </Link>
-            <Link href="https://www.redbull.com/ee-et/" target="_blank">
-              <Image
-                src="/sponsors/redbull.png"
-                alt="Redbull"
-                width={80}
-                height={80}
-                className="object-contain"
-              />
-            </Link>
-            <Link href="https://www.alecoq.ee" target="_blank">
-              <Image
-                src="/sponsors/alecoq.svg"
-                alt="Alecoq"
-                width={200}
-                height={200}
-                className="object-contain"
-              />
-            </Link>
-            <Link href="https://www.simracing.ee/" target="_blank">
-              <Image
-                src="/sponsors/EVAL.png"
-                alt="EVAL"
-                width={200}
-                height={200}
-                className="object-contain"
-              />
-            </Link>
-            <Link href="https://balsnack.ee" target="_blank">
-              <Image
-                src="/sponsors/balsnack.svg"
-                alt="Balsnack"
-                width={200}
-                height={200}
-                className="object-contain"
-              />
-            </Link>
-            <Link
-              href="https://www.rara.ee/sundmused/interaktiivne-videomangude-muuseum-lvlup/"
-              target="_blank"
-            >
-              <Image
-                src="/sponsors/lvlup_logo_export.svg"
-                alt="LVLup!"
-                width={192}
-                height={192}
-                className="object-contain"
-              />
-            </Link>
-            <Link href="https://www.facebook.com/bfglOfficial" target="_blank">
-              <Image
-                src="/sponsors/BFGL.png"
-                alt="BFGL"
-                width={192}
-                height={192}
-                className="object-contain"
-              />
-            </Link>
-            <Link href="https://www.tallinn.ee/et/haridus" target="_blank">
-              <Image
-                src="/sponsors/Tallinna_Haridusamet_logo_RGB.svg"
-                alt="Tallinna Haridusamet"
-                width={192}
-                height={192}
-                className="object-contain"
-              />
-            </Link>
-            <Link href="https://www.militaarseiklus.ee/" target="_blank">
-              <Image
-                src="/sponsors/militaarseiklus.png"
-                alt="Militaarseiklus"
-                width={200}
-                height={200}
-                className="object-contain"
-              />
-            </Link>
-            <Link href="https://www.arvutimuuseum.ee" target="_blank">
-              <Image
-                src="/sponsors/arvutimuuseum.svg"
-                alt="Arvutimuuseum"
-                width={200}
-                height={200}
-                className="object-contain not-dark:invert"
-              />
-            </Link>
-          </div>
-        </div>
-      </div>
+      <Sponsors />
     </div>
   );
 }

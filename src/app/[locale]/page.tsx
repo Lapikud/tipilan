@@ -77,6 +77,7 @@ export default async function Home({
 
       {/* Sponsors */}
       <Sponsors />
+
     </div>
   );
 }
