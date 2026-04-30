@@ -30,17 +30,8 @@ export default function TeaserCarousel() {
 
   return (
     <div className="border-b-3 border-[#1F5673]">
-      {/* Heading */}
-      <div className="px-8 md:px-12 py-6 border-b-3 border-[#1F5673]">
-        <h2
-          className={`${vipnagorgialla.className} font-bold italic text-[clamp(1.75rem,1.4rem+2vw,3.5rem)] text-[#2A2C3F] dark:text-[#EEE5E5]`}
-        >
-          {t("heading")}
-        </h2>
-      </div>
-
       {/* Card */}
-      <div className="relative min-h-[340px] overflow-hidden">
+      <div className="relative min-h-[400px] overflow-hidden">
         {/* Background image */}
         <Image
           src={slide.image}
@@ -52,10 +43,15 @@ export default function TeaserCarousel() {
         <div className="absolute inset-0 bg-[#0E0F19]/70" />
 
         {/* Content grid */}
-        <div className="relative grid grid-cols-1 md:grid-cols-[1fr_1fr] min-h-[340px]">
+        <div className="relative grid grid-cols-1 md:grid-cols-[1fr_1fr] min-h-[400px]">
           {/* Left: text */}
           <div className="flex flex-col justify-between gap-4 px-8 py-8 md:px-12 md:py-10">
             <div className="flex flex-col gap-3">
+              <h2
+                className={`${vipnagorgialla.className} font-bold italic text-[clamp(1.1rem,0.9rem+1vw,1.75rem)] text-[#EEE5E5]/70`}
+              >
+                {t("heading")}
+              </h2>
               <Link href={slide.href}>
                 <h3
                   className={`${vipnagorgialla.className} font-bold italic text-[clamp(2.5rem,2rem+2.5vw,5rem)] leading-none text-[#EEE5E5] hover:text-[#00A3E0] transition`}
