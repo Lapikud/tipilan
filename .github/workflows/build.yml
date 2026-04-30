@@ -6,12 +6,7 @@ on:
       ref:
         description: Branch or tag to checkout
         required: false
-        default: teaser-2026
-        type: string
-      runner:
-        description: Runner label to use for the build
-        required: false
-        default: prox-1
+        default: development
         type: string
     secrets:
       USER_AUTH:
@@ -19,7 +14,7 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ inputs.runner }}
+    runs-on: prox-2
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
