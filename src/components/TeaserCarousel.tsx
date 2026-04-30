@@ -10,13 +10,14 @@ type Slide = {
   key: "compete" | "play" | "explore";
   image: string;
   imageAlt: string;
+  hero: string;
   href: "/turniirid" | "/piletid" | "/messiala";
 };
 
 const slides: Slide[] = [
-  { key: "compete", image: "/images/landing/compete_teaser.jpg", imageAlt: "Võistle", href: "/turniirid" },
-  { key: "play",    image: "/images/landing/play_teaser.png",    imageAlt: "Mängi",   href: "/piletid"   },
-  { key: "explore", image: "/images/landing/explore_teaser.png", imageAlt: "Avasta",  href: "/messiala"  },
+  { key: "compete", image: "/images/landing/compete_teaser.jpg", imageAlt: "Võistle", hero: "/images/landing/compete_hero.png", href: "/turniirid" },
+  { key: "play",    image: "/images/landing/play_teaser.png",    imageAlt: "Mängi",   hero: "/images/landing/play_hero.png",    href: "/piletid"   },
+  { key: "explore", image: "/images/landing/explore_teaser.png", imageAlt: "Avasta",  hero: "/images/landing/explore_hero.png", href: "/messiala"  },
 ];
 
 export default function TeaserCarousel() {
@@ -73,8 +74,15 @@ export default function TeaserCarousel() {
                       </p>
                     )}
                   </div>
-                  {/* Right side: image shows through */}
-                  <div className="hidden md:block" />
+                  {/* Right side: hero image */}
+                  <div className="hidden md:flex items-end justify-center relative">
+                    <Image
+                      src={slide.hero}
+                      alt={slide.imageAlt}
+                      fill
+                      className="object-contain object-bottom"
+                    />
+                  </div>
                 </div>
               </div>
             );
