@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
@@ -26,8 +26,13 @@ export default function TeaserCarousel() {
   const t = useTranslations("home.teaser");
   const [current, setCurrent] = useState(0);
 
+  const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
   const prev = () => setCurrent((c) => (c - 1 + slides.length) % slides.length);
-  const next = () => setCurrent((c) => (c + 1) % slides.length);
+
+  useEffect(() => {
+    const id = setInterval(next, 5000);
+    return () => clearInterval(id);
+  }, [next]);
 
   return (
     <div className="border-b-3 border-[#1F5673]">
@@ -58,7 +63,7 @@ export default function TeaserCarousel() {
                 <div className={`relative grid grid-cols-1 md:grid-cols-2 h-full ${slide.flip ? "md:[direction:rtl]" : ""}`}>
                   <div className={`flex flex-col justify-between gap-4 px-8 py-8 md:px-12 md:py-10 ${slide.flip ? "md:[direction:ltr]" : ""}`}>
                     <div className="flex flex-col gap-3">
-                      <h2 className={`${vipnagorgialla.className} font-bold italic text-[clamp(1.1rem,0.9rem+1vw,1.75rem)] text-[#EEE5E5]`}>
+                      <h2 className={`${vipnagorgialla.className} font-bold italic text-[64px] leading-none tracking-normal uppercase text-[#EEE5E5]`}>
                         {t("heading")}
                       </h2>
                       <Link href={slide.href}>
