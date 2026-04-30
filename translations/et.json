@@ -51,19 +51,16 @@
       "compete": {
         "title": "VÕISTLE",
         "description": "Tõesta end TipiLANi CS2 ja LoL featurniiridel: tuhanded eurod auhinnarahas, mängijad üle kogu Euroopa ja HLTV-reitinguga võistlus, mis viib sind maailmakaardile.",
-        "prize": "2500€",
         "link": "/turniirid"
       },
       "play": {
         "title": "MÄNGI",
         "description": "Naudi TipiLANi atmosfääri – too kaasa arvuti, istutle mugavalt, mängi sõpradega ja koge ühte Eesti suurimat mänguüritust.",
-        "prize": null,
         "link": "/piletid"
       },
       "explore": {
         "title": "AVASTA",
         "description": "Avasta TipiLANi messialat, kus ootavad sind erinevad ettevõtted, mini-võistlused ja palju muud põnevat.",
-        "prize": null,
         "link": "/messiala"
       }
     },

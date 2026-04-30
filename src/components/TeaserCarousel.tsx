@@ -45,8 +45,6 @@ export default function TeaserCarousel() {
           {slides.map((slide) => {
             const title       = t(`${slide.key}.title`);
             const description = t(`${slide.key}.description`);
-            const prize       = t.raw(`${slide.key}.prize`) as string | null;
-
             return (
               <div key={slide.key} className="relative flex-none w-full h-full">
                 {/* Background image */}
@@ -75,11 +73,6 @@ export default function TeaserCarousel() {
                         {description}
                       </p>
                     </div>
-                    {prize && (
-                      <p className={`${vipnagorgialla.className} font-bold italic text-[clamp(1.5rem,1.2rem+1.5vw,2.75rem)] text-[#00A3E0]`}>
-                        {prize}
-                      </p>
-                    )}
                   </div>
                   {/* Hero image */}
                   <div className={`hidden md:block relative ${slide.flip ? "md:[direction:ltr]" : ""}`}>

@@ -51,19 +51,16 @@
       "compete": {
         "title": "COMPETE",
         "description": "Prove yourself in TipiLAN's CS2 and LoL tournaments: thousands in prize money, players from across Europe, and HLTV-ranked competition that could put you on the map.",
-        "prize": "2500€",
         "link": "/turniirid"
       },
       "play": {
         "title": "PLAY",
         "description": "Enjoy the TipiLAN atmosphere — bring your computer, relax, play with friends and experience one of Estonia's largest gaming events.",
-        "prize": null,
         "link": "/piletid"
       },
       "explore": {
         "title": "EXPLORE",
         "description": "Explore the TipiLAN expo area where companies, mini-competitions and lots more exciting things await you.",
-        "prize": null,
         "link": "/messiala"
       }
     },
