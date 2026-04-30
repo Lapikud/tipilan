@@ -49,7 +49,7 @@ export default function HeroSection() {
         {/* Right: prize pool + award */}
         <div className="flex flex-col items-start md:items-end gap-3">
           <div className={`${vipnagorgialla.className} font-bold italic text-right`}>
-            <p className="text-[clamp(1rem,0.8rem+1vw,1.5rem)] text-[#EEE5E5] uppercase">
+            <p className="text-[64px] leading-none tracking-normal uppercase text-[#EEE5E5]">
               {t("hero.prizePool")}
             </p>
             <h2 className="text-[clamp(3rem,2rem+4vw,6rem)] leading-none text-[#00A3E0]">
@@ -64,7 +64,7 @@ export default function HeroSection() {
               alt="TalTech student award"
               className="object-contain"
             />
-            <p className={`text-[0.75rem] text-[#EEE5E5] ${vipnagorgialla.className} font-bold italic uppercase text-right`}>
+            <p className={`text-[32px] leading-none tracking-normal uppercase text-right text-[#EEE5E5] ${vipnagorgialla.className} font-bold italic`}>
               {t("hero.award")}
             </p>
           </div>
