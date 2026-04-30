@@ -31,7 +31,7 @@ export default function TeaserCarousel() {
   return (
     <div className="border-b-3 border-[#1F5673]">
       {/* Card */}
-      <div className="relative min-h-[400px] overflow-hidden">
+      <div className="relative h-[729px] overflow-hidden">
         {/* Background image */}
         <Image
           src={slide.image}
@@ -43,7 +43,7 @@ export default function TeaserCarousel() {
         <div className="absolute inset-0 bg-[#0E0F19]/70" />
 
         {/* Content grid */}
-        <div className="relative grid grid-cols-1 md:grid-cols-[1fr_1fr] min-h-[400px]">
+        <div className="relative grid grid-cols-1 md:grid-cols-[1fr_1fr] h-full">
           {/* Left: text */}
           <div className="flex flex-col justify-between gap-4 px-8 py-8 md:px-12 md:py-10">
             <div className="flex flex-col gap-3">

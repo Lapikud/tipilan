@@ -7,7 +7,7 @@ export default function HeroSection() {
   const t = useTranslations("home");
 
   return (
-    <section className="relative overflow-hidden border-b-3 border-[#1F5673]">
+    <section className="relative h-[569px] overflow-hidden border-b-3 border-[#1F5673]">
       {/* Background image */}
       <Image
         src="/images/landing/main_teaser.jpg"
@@ -20,7 +20,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[#0E0F19]/75" />
 
       {/* Content */}
-      <div className="relative grid grid-cols-1 md:grid-cols-[3fr_2fr] items-center gap-8 px-8 py-10 md:px-12 md:py-14">
+      <div className="relative h-full grid grid-cols-1 md:grid-cols-[3fr_2fr] items-center gap-8 px-8 md:px-12">
         {/* Left: logo + info + CTA */}
         <div className="flex flex-col gap-5">
           <Image

@@ -22,10 +22,10 @@ export default async function Home({
       </div>
 
       {/* Nav cards: Piletid + Turniirid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 border-b-3 border-[#1F5673]">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:h-[260px] border-b-3 border-[#1F5673]">
         <Link
           href="/piletid"
-          className="px-8 md:px-12 py-8 flex flex-col gap-4 border-b-3 md:border-b-0 md:border-r-3 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
+          className="px-8 md:px-12 py-8 flex flex-col justify-center gap-4 border-b-3 md:border-b-0 md:border-r-3 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
         >
           <div className="flex flex-row justify-between gap-4 items-center">
             <h2
@@ -49,7 +49,7 @@ export default async function Home({
 
         <Link
           href="/turniirid"
-          className="px-8 md:px-12 py-8 flex flex-col gap-4 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
+          className="px-8 md:px-12 py-8 flex flex-col justify-center gap-4 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
         >
           <div className="flex flex-row justify-between gap-4 items-center">
             <h2
