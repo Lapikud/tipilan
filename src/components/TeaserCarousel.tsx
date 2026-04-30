@@ -12,12 +12,14 @@ type Slide = {
   imageAlt: string;
   hero: string;
   href: "/turniirid" | "/piletid" | "/messiala";
+  flip?: boolean;
+  fullBrightness?: boolean;
 };
 
 const slides: Slide[] = [
   { key: "compete", image: "/images/landing/compete_teaser.jpg", imageAlt: "Võistle", hero: "/images/landing/compete_hero.png", href: "/turniirid" },
-  { key: "play",    image: "/images/landing/play_teaser.png",    imageAlt: "Mängi",   hero: "/images/landing/play_hero.png",    href: "/piletid"   },
-  { key: "explore", image: "/images/landing/explore_teaser.png", imageAlt: "Avasta",  hero: "/images/landing/explore_hero.png", href: "/messiala"  },
+  { key: "play",    image: "/images/landing/play_teaser.png",    imageAlt: "Mängi",   hero: "/images/landing/play_hero.png",    href: "/piletid",  flip: true,  fullBrightness: true },
+  { key: "explore", image: "/images/landing/explore_teaser.png", imageAlt: "Avasta",  hero: "/images/landing/explore_hero.png", href: "/messiala", fullBrightness: true },
 ];
 
 export default function TeaserCarousel() {
@@ -49,12 +51,12 @@ export default function TeaserCarousel() {
                   fill
                   className="object-cover object-center"
                 />
-                {/* Gradient: dark on left, fades out on right */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0E0F19]/90 via-[#0E0F19]/60 to-[#0E0F19]/20" />
+                {/* Overlay */}
+                <div className={`absolute inset-0 ${slide.fullBrightness ? "" : "bg-gradient-to-r from-[#0E0F19]/90 via-[#0E0F19]/60 to-[#0E0F19]/20"}`} />
 
                 {/* Content */}
-                <div className="relative grid grid-cols-1 md:grid-cols-2 h-full">
-                  <div className="flex flex-col justify-between gap-4 px-8 py-8 md:px-12 md:py-10">
+                <div className={`relative grid grid-cols-1 md:grid-cols-2 h-full ${slide.flip ? "md:[direction:rtl]" : ""}`}>
+                  <div className={`flex flex-col justify-between gap-4 px-8 py-8 md:px-12 md:py-10 ${slide.flip ? "md:[direction:ltr]" : ""}`}>
                     <div className="flex flex-col gap-3">
                       <h2 className={`${vipnagorgialla.className} font-bold italic text-[clamp(1.1rem,0.9rem+1vw,1.75rem)] text-[#EEE5E5]`}>
                         {t("heading")}
@@ -74,8 +76,8 @@ export default function TeaserCarousel() {
                       </p>
                     )}
                   </div>
-                  {/* Right side: hero image */}
-                  <div className="hidden md:flex items-end justify-center relative">
+                  {/* Hero image */}
+                  <div className={`hidden md:block relative ${slide.flip ? "md:[direction:ltr]" : ""}`}>
                     <Image
                       src={slide.hero}
                       alt={slide.imageAlt}
