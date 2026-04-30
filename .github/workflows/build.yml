@@ -30,11 +30,10 @@ jobs:
         run: bun install
 
       - name: Ensure symlink to database before Drizzle migrations
-        if: ${{ inputs.ref == 'main' }}
         run: |
-          rm -rf $GITHUB_WORKSPACE/data
-          ln -s ~/data $GITHUB_WORKSPACE/data
-
+          rm -rf "$GITHUB_WORKSPACE/data"
+          ln -s /home/github/data "$GITHUB_WORKSPACE/data"
+          
       - name: Generate Drizzle schema
         if: ${{ inputs.ref == 'main' }}
         run: bun drizzle-kit generate
