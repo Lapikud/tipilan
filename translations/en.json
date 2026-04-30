@@ -35,10 +35,38 @@
     }
   },
   "home": {
-    "title": "TipiLAN 2025",
+    "title": "TipiLAN 2026",
     "subtitle": "Estonia's largest student-organized LAN event!",
-    "welcome": "Welcome to TipiLAN 2025!",
+    "welcome": "Welcome to TipiLAN 2026!",
     "description": "Join us at Estonia's largest student-organized LAN event. Games, competitions and much more await you!",
+    "hero": {
+      "date": "11–13 OCTOBER 2026",
+      "location": "TALTECH, EHITAJATE TEE 5",
+      "buyTicket": "BUY TICKETS",
+      "prizePool": "PRIZE POOL",
+      "award": "TALTECH STUDENT OF THE YEAR 2025"
+    },
+    "teaser": {
+      "heading": "COME TO TIPILAN AND...",
+      "compete": {
+        "title": "COMPETE",
+        "description": "Prove yourself in TipiLAN's CS2 and LoL tournaments: thousands in prize money, players from across Europe, and HLTV-ranked competition that could put you on the map.",
+        "prize": "2500€",
+        "link": "/turniirid"
+      },
+      "play": {
+        "title": "PLAY",
+        "description": "Enjoy the TipiLAN atmosphere — bring your computer, relax, play with friends and experience one of Estonia's largest gaming events.",
+        "prize": null,
+        "link": "/piletid"
+      },
+      "explore": {
+        "title": "EXPLORE",
+        "description": "Explore the TipiLAN expo area where companies, mini-competitions and lots more exciting things await you.",
+        "prize": null,
+        "link": "/messiala"
+      }
+    },
     "sections": {
       "schedule": {
         "description": "TipiLAN is packed with exciting tournaments, mini-competitions and much more."
@@ -51,7 +79,7 @@
       },
       "reserveSpot": "Reserve your spot today!",
       "poweredBy": "TipiLAN is powered by...",
-      "dateAndLocation": "24th-26th Oct. @ TalTech main building"
+      "dateAndLocation": "11th–13th Oct. @ TalTech"
     }
   },
   "tickets": {

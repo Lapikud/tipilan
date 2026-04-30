@@ -35,10 +35,38 @@
     }
   },
   "home": {
-    "title": "TipiLAN 2025",
+    "title": "TipiLAN 2026",
     "subtitle": "Eesti suurim tudengite korraldatud LAN!",
-    "welcome": "Tere tulemast TipiLAN 2025 sündmusele!",
+    "welcome": "Tere tulemast TipiLAN 2026 sündmusele!",
     "description": "Liitu meiega Eesti suurimal tudengite korraldatud LAN-üritusel. Mängud, võistlused ja palju muud ootavad sind!",
+    "hero": {
+      "date": "11.–13. OKTOOBER 2026",
+      "location": "TALTECH, EHITAJATE TEE 5",
+      "buyTicket": "OSTA PILET",
+      "prizePool": "AUHINNAFOND",
+      "award": "TALTECHI AASTA TUDENGITEÜS 2025"
+    },
+    "teaser": {
+      "heading": "TULE TIPILANILE JA...",
+      "compete": {
+        "title": "VÕISTLE",
+        "description": "Tõesta end TipiLANi CS2 ja LoL featurniiridel: tuhanded eurod auhinnarahas, mängijad üle kogu Euroopa ja HLTV-reitinguga võistlus, mis viib sind maailmakaardile.",
+        "prize": "2500€",
+        "link": "/turniirid"
+      },
+      "play": {
+        "title": "MÄNGI",
+        "description": "Naudi TipiLANi atmosfääri – too kaasa arvuti, istutle mugavalt, mängi sõpradega ja koge ühte Eesti suurimat mänguüritust.",
+        "prize": null,
+        "link": "/piletid"
+      },
+      "explore": {
+        "title": "AVASTA",
+        "description": "Avasta TipiLANi messialat, kus ootavad sind erinevad ettevõtted, mini-võistlused ja palju muud põnevat.",
+        "prize": null,
+        "link": "/messiala"
+      }
+    },
     "sections": {
       "schedule": {
         "description": "TipiLAN on pungil põnevatest turniiridest, mini-võistlustest ja paljust muust."
@@ -51,7 +79,7 @@
       },
       "reserveSpot": "Broneeri oma koht juba täna!",
       "poweredBy": "TipiLANi tõmbab käima...",
-      "dateAndLocation": "24.-26. okt. TalTechi peahoones"
+      "dateAndLocation": "11.–13. okt. TalTechis"
     }
   },
   "tickets": {
