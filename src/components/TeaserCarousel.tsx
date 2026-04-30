@@ -48,7 +48,7 @@ export default function TeaserCarousel() {
           <div className="flex flex-col justify-between gap-4 px-8 py-8 md:px-12 md:py-10">
             <div className="flex flex-col gap-3">
               <h2
-                className={`${vipnagorgialla.className} font-bold italic text-[clamp(1.1rem,0.9rem+1vw,1.75rem)] text-[#EEE5E5]/70`}
+                className={`${vipnagorgialla.className} font-bold italic text-[clamp(1.1rem,0.9rem+1vw,1.75rem)] text-[#EEE5E5]`}
               >
                 {t("heading")}
               </h2>
@@ -59,7 +59,7 @@ export default function TeaserCarousel() {
                   {title}
                 </h3>
               </Link>
-              <p className="text-[clamp(0.875rem,0.75rem+0.5vw,1.1rem)] text-[#EEE5E5]/80 max-w-prose">
+              <p className="text-[clamp(0.875rem,0.75rem+0.5vw,1.1rem)] text-[#EEE5E5] max-w-prose">
                 {description}
               </p>
             </div>

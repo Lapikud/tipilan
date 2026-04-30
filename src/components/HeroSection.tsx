@@ -24,7 +24,7 @@ export default function HeroSection() {
         {/* Left: logo + info + CTA */}
         <div className="flex flex-col gap-5">
           <Image
-            src="/tipilan-white.svg"
+            src="/tipilan-dark.svg"
             width={750}
             height={106}
             alt="TipiLAN Logo"
@@ -34,7 +34,7 @@ export default function HeroSection() {
             <p className="text-[clamp(1.1rem,0.9rem+1vw,1.75rem)] text-[#00A3E0] uppercase tracking-wide">
               {t("hero.date")}
             </p>
-            <p className="text-[clamp(0.9rem,0.75rem+0.75vw,1.25rem)] text-[#EEE5E5]/80 uppercase tracking-wide">
+            <p className="text-[clamp(0.9rem,0.75rem+0.75vw,1.25rem)] text-[#EEE5E5] uppercase tracking-wide">
               {t("hero.location")}
             </p>
           </div>
@@ -49,7 +49,7 @@ export default function HeroSection() {
         {/* Right: prize pool + award */}
         <div className="flex flex-col items-start md:items-end gap-3">
           <div className={`${vipnagorgialla.className} font-bold italic text-right`}>
-            <p className="text-[clamp(1rem,0.8rem+1vw,1.5rem)] text-[#EEE5E5]/80 uppercase">
+            <p className="text-[clamp(1rem,0.8rem+1vw,1.5rem)] text-[#EEE5E5] uppercase">
               {t("hero.prizePool")}
             </p>
             <h2 className="text-[clamp(3rem,2rem+4vw,6rem)] leading-none text-[#00A3E0]">
@@ -64,7 +64,7 @@ export default function HeroSection() {
               alt="TalTech student award"
               className="object-contain"
             />
-            <p className={`text-[0.75rem] text-[#EEE5E5]/70 ${vipnagorgialla.className} font-bold italic uppercase text-right`}>
+            <p className={`text-[0.75rem] text-[#EEE5E5] ${vipnagorgialla.className} font-bold italic uppercase text-right`}>
               {t("hero.award")}
             </p>
           </div>
