@@ -18,10 +18,13 @@ interface Sponsor {
 const sponsors: Sponsor[] = [
   { href: "https://taltech.ee", src: "/sponsors/taltech-color.png", alt: "Taltech (Tallinna Tehnikaülikool)", width: 192, height: 192 },
   { href: "https://www.redbull.com/ee-et/", src: "/sponsors/redbull.png", alt: "Redbull", width: 80, height: 80 },
+  { href: "https://www.simracing.ee/", src: "/sponsors/EVAL.png", alt: "EVAL", width: 200, height: 200 },
   { href: "https://www.facebook.com/bfglOfficial", src: "/sponsors/BFGL.png", alt: "BFGL", width: 192, height: 192 },
   { href: "https://www.tomorrow.ee/", src: "/sponsors/nt.png", alt: "Network Tomorrow", width: 300, height: 200 },
   { href: "https://k-space.ee/", src: "/sponsors/k-space_ee-white.png", alt: "K-Space", width: 200, height: 200, className: "not-dark:invert" },
   { href: "https://globalproductions.ee/", src: "/sponsors/Global-productions.png", alt: "Global Productions", width: 200, height: 200 },
+  { href: "https://www.linkedin.com/company/gamedev-guild/", src: "/sponsors/estonian_gamedev_guild.png", alt: "Estonian Gamedev Guild", width: 200, height: 200, className: "not-dark:invert" },
+  { href: "https://alzgamer.ee/", src: "/sponsors/alzgamer.png", alt: "AlzGamer", width: 200, height: 200 },
 ];
 
 // Split sponsors into slides (6 per slide)
