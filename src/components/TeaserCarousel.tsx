@@ -76,11 +76,13 @@ export default function TeaserCarousel() {
 
                 {/* Content */}
                 <div className={`relative grid grid-cols-1 md:grid-cols-2 h-full ${slide.flip ? "md:[direction:rtl]" : ""}`}>
-                  <div className={`flex flex-col justify-between gap-4 px-8 py-8 md:px-12 md:py-10 ${slide.flip ? "md:[direction:ltr]" : ""}`}>
-                    <div className="flex flex-col gap-3">
-                      <h2 className={`${vipnagorgialla.className} font-bold italic text-[64px] leading-none tracking-normal uppercase text-[#EEE5E5]`}>
-                        {highlightLAN(t("heading"))}
-                      </h2>
+                  <div className={`flex flex-col justify-between px-8 py-8 md:px-12 md:py-10 ${slide.flip ? "md:[direction:ltr]" : ""}`}>
+                    {/* Heading at top */}
+                    <h2 className={`${vipnagorgialla.className} font-bold italic text-[64px] leading-none tracking-normal uppercase text-[#EEE5E5]`}>
+                      {highlightLAN(t("heading"))}
+                    </h2>
+                    {/* Title + description at bottom */}
+                    <div className="flex flex-col gap-3 pb-16">
                       <Link href={slide.href}>
                         <h3 className={`${vipnagorgialla.className} font-bold italic text-[clamp(2.5rem,2rem+2.5vw,5rem)] leading-none text-[#EEE5E5] hover:text-[#00A3E0] transition`}>
                           {title}
