@@ -124,6 +124,7 @@
   },
   "tournaments": {
     "title": "Turniirid",
+    "clickButton": "VAJUTA",
     "register": "Registreeru",
     "participants": "Osalejad",
     "prizePool": "Auhinnafond",

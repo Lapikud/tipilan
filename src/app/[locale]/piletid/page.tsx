@@ -117,7 +117,7 @@ export default async function Tickets({
             features={t.raw("tickets.lol.features")}
             buttonText={t("tickets.buyButton")}
             buttonHref="https://fienta.com/et/tipilan"
-            backgroundImage="/images/landing/league_tournament.jpg"
+            backgroundImage="/images/landing/league_ticket.jpg"
           />
 
           {/* CS2 TURNIIRI PILET */}

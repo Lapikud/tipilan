@@ -124,6 +124,7 @@
   },
   "tournaments": {
     "title": "Tournaments",
+    "clickButton": "CLICK",
     "register": "Register",
     "participants": "Participants",
     "prizePool": "Prize pool",
