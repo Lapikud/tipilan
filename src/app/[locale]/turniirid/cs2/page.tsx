@@ -10,7 +10,7 @@ const sectionKeys = [
   { id: "prizes", labelKey: "cs2page.nav.prizes" },
   { id: "format", labelKey: "cs2page.nav.format" },
   { id: "vrs", labelKey: "cs2page.nav.vrs" },
-  { id: "faq", labelKey: "cs2page.nav.faq" },
+  // { id: "faq", labelKey: "cs2page.nav.faq" },
   { id: "rules", labelKey: "cs2page.nav.rules" },
 ];
 
@@ -164,7 +164,7 @@ export default async function CS2Tournament({
               </p>
             </section>
 
-            {/* FAQ */}
+            {/* FAQ - commented out until content is ready
             <section id="faq" className="mb-12">
               <h2
                 className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
@@ -180,6 +180,7 @@ export default async function CS2Tournament({
                 {t("cs2page.faq.a1")}
               </p>
             </section>
+            */}
 
             {/* REEGLID */}
             <section id="rules" className="mb-12">

@@ -8,7 +8,7 @@ const sectionKeys = [
   { id: "info", labelKey: "lolpage.nav.info" },
   { id: "prizes", labelKey: "lolpage.nav.prizes" },
   { id: "format", labelKey: "lolpage.nav.format" },
-  { id: "faq", labelKey: "lolpage.nav.faq" },
+  // { id: "faq", labelKey: "lolpage.nav.faq" },
   { id: "rules", labelKey: "lolpage.nav.rules" },
 ];
 
@@ -127,7 +127,7 @@ export default async function LoLTournament({
               </p>
             </section>
 
-            {/* FAQ */}
+            {/* FAQ - commented out until content is ready
             <section id="faq" className="mb-12">
               <h2
                 className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
@@ -143,6 +143,7 @@ export default async function LoLTournament({
                 {t("lolpage.faq.a1")}
               </p>
             </section>
+            */}
 
             {/* REEGLID */}
             <section id="rules" className="mb-12">
