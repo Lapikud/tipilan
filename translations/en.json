@@ -448,6 +448,7 @@
   },
   "schedule": {
     "title": "Schedule",
+    "comingSoon": "Coming soon",
     "day": "Day",
     "time": "Time",
     "event": "Event",
@@ -517,6 +518,7 @@
   },
   "expo": {
     "title": "Expo Area",
+    "comingSoon": "Coming soon",
     "description": "The TipiLAN expo area hosts companies, additional activities and lectures.",
     "areas": {
       "bar": "Bar",

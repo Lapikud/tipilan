@@ -449,6 +449,7 @@
   },
   "schedule": {
     "title": "Ajakava",
+    "comingSoon": "Tuleb hiljem",
     "day": "Päev",
     "time": "Aeg",
     "event": "Sündmus",
@@ -518,6 +519,7 @@
   },
   "expo": {
     "title": "Messiala",
+    "comingSoon": "Tuleb hiljem",
     "description": "TipiLANi messialal paiknevad ettevõtted, lisategevused ja toimuvad loengud.",
     "areas": {
       "bar": "Baar",
