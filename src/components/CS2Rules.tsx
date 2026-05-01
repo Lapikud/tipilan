@@ -60,27 +60,20 @@ function RuleItem({ rule, index }: { rule: string | { main: string; sub: (string
 }
 
 export default function CS2Rules({ sections }: CS2RulesProps) {
-  let ruleCounter = 0;
-
   return (
     <div>
-      {sections.map((section, sectionIndex) => {
-        const startIndex = ruleCounter;
-        ruleCounter += section.rules.length;
-
-        return (
-          <div key={sectionIndex} className="mb-8">
-            <h3 className={`${vipnagorgialla.className} font-bold italic text-xl text-[#00A3E0] uppercase mb-4`}>
-              {sectionIndex + 1}) {section.title}
-            </h3>
-            <ol className="list-none">
-              {section.rules.map((rule, ruleIndex) => (
-                <RuleItem key={ruleIndex} rule={rule} index={ruleIndex + 1} />
-              ))}
-            </ol>
-          </div>
-        );
-      })}
+      {sections.map((section, sectionIndex) => (
+        <div key={sectionIndex} className="mb-8">
+          <h3 className={`${vipnagorgialla.className} font-bold italic text-xl text-[#00A3E0] uppercase mb-4`}>
+            {sectionIndex + 1}) {section.title}
+          </h3>
+          <ol className="list-none">
+            {section.rules.map((rule, ruleIndex) => (
+              <RuleItem key={ruleIndex} rule={rule} index={ruleIndex + 1} />
+            ))}
+          </ol>
+        </div>
+      ))}
     </div>
   );
 }
