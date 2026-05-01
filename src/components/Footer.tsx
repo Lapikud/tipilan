@@ -8,7 +8,7 @@ const Footer = () => {
   const t = useTranslations();
 
   return (
-    <div className="flex flex-col justify-center sm:justify-between px-6 py-6 md:px-12 md:py-8 gap-4">
+    <div className="flex flex-col justify-center sm:justify-between px-6 py-6 md:px-12 md:py-8 gap-4 border-t-3 border-[#1F5673]">
       <div className="flex flex-col">
         <h2
           className={`text-3xl sm:text-4xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mb-4`}

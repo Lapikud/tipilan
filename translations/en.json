@@ -82,45 +82,45 @@
     }
   },
   "tickets": {
-    "title": "TICKETS AND REGISTRATION",
-    "buyNow": "Buy now",
-    "soldOut": "Sold out",
-    "available": "Available",
-    "price": "Price",
-    "includes": "Includes",
-    "computerParticipant": {
-      "title": "Computer Participant",
-      "earlyPrice": "8€",
-      "latePrice": "10€",
-      "features": [
-        "Personal desk, power and internet connection",
-        "Access to expo area",
-        "Tournament spectating",
-        "Ability to participate in mini-tournaments"
-      ]
-    },
-    "competitor": {
-      "title": "Competitor",
-      "price": "12-15€",
-      "features": [
-        "Ability to participate in the CS2 or LoL tournament",
-        "Personal desk, power and internet connection",
-        "Access to expo area",
-        "Tournament spectating",
-        "Ability to participate in mini-tournaments"
-      ]
-    },
+    "title": "TICKETS",
+    "subtitle": "TICKET",
+    "buyButton": "BUY TICKET FROM FIENTA",
     "visitor": {
-      "title": "Visitor",
-      "earlyPrice": "6€",
-      "latePrice": "8€",
+      "name": "VISITOR",
+      "price": "8€",
       "features": [
-        "Access to expo area",
-        "Tournament spectating",
-        "Ability to participate in mini-tournaments"
+        "Area access throughout the event",
+        "Ability to enter and leave the event area",
+        "Access to all TipiLAN activities, side events, good vibes and engaging atmosphere."
       ]
     },
-    "buyTicket": "BUY TICKETS"
+    "supporter": {
+      "name": "SUPPORTER",
+      "price": "25+€",
+      "features": [
+        "TipiLAN t-shirt to thank you for your support",
+        "Opportunity to contribute to TipiLAN's development and future.",
+        "Everything that comes with the visitor ticket"
+      ]
+    },
+    "lol": {
+      "name": "LOL TOURNAMENT",
+      "price": "15€",
+      "features": [
+        "Right to participate in LoL tournament",
+        "Personal desk, power and internet connection",
+        "Access to all TipiLAN activities, side events, good vibes and engaging atmosphere."
+      ]
+    },
+    "cs2": {
+      "name": "CS2 TOURNAMENT",
+      "price": "20€",
+      "features": [
+        "Right to participate in CS2 tournament",
+        "Personal desk, power and internet connection",
+        "Access to all TipiLAN activities, side events, good vibes and engaging atmosphere."
+      ]
+    }
   },
   "tournaments": {
     "title": "Tournaments",
