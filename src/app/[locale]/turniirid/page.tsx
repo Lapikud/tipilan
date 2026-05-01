@@ -8,6 +8,7 @@ interface TournamentCardProps {
   buttonText: string;
   buttonHref: string;
   backgroundImage: string;
+  objectPosition?: string;
 }
 
 function TournamentCard({
@@ -15,6 +16,7 @@ function TournamentCard({
   buttonText,
   buttonHref,
   backgroundImage,
+  objectPosition = "center",
 }: TournamentCardProps) {
   return (
     <div className="relative bg-[#0E0F19] border-r border-[#1F5673] flex flex-col items-center justify-center h-[818px]">
@@ -22,7 +24,8 @@ function TournamentCard({
         src={backgroundImage}
         alt=""
         fill
-        className="object-cover object-center opacity-50"
+        className="object-cover opacity-50"
+        style={{ objectPosition }}
       />
       <div className="relative z-10 flex flex-col items-center text-center">
         <h2
@@ -59,7 +62,7 @@ export default async function Tourney({
           title="COUNTER-STRIKE 2"
           buttonText={t("tournaments.clickButton")}
           buttonHref="/turniirid/cs2"
-          backgroundImage="/images/landing/compete_teaser.jpg"
+          backgroundImage="/images/landing/cs2_tournament.jpg"
         />
 
         {/* LoL */}
@@ -67,7 +70,8 @@ export default async function Tourney({
           title="LEAGUE OF LEGENDS"
           buttonText={t("tournaments.clickButton")}
           buttonHref="/turniirid/lol"
-          backgroundImage="/images/landing/league_ticket.jpg"
+          backgroundImage="/images/landing/lol_tournament.png"
+          objectPosition="bottom left"
         />
       </div>
     </div>
