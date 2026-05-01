@@ -323,6 +323,50 @@
       ]
     }
   },
+  "lolpage": {
+    "title": "LEAGUE OF LEGENDS TOURNAMENT",
+    "buyTicket": "BUY TICKET",
+    "nav": {
+      "intro": "Introduction",
+      "info": "General info",
+      "prizes": "Prize pool",
+      "format": "Tournament format",
+      "faq": "FAQ",
+      "rules": "Rules"
+    },
+    "intro": {
+      "title": "INTRODUCTION",
+      "description": "TipiLAN organized its first LoL tournament in 2025 at its debut event. Teams from Estonia and Latvia participated.",
+      "previousWinners": "PREVIOUS WINNERS"
+    },
+    "info": {
+      "title": "GENERAL INFO",
+      "description": "TipiLAN 2026 LoL tournament takes place September 11-13 at TalTech, Tallinn, Estonia. This is a BYOC LAN tournament. On-site, each participant is provided with: desk, chair, wired internet connection, power connection (2 outlets)."
+    },
+    "prizes": {
+      "title": "PRIZE POOL",
+      "mainTitle": "MAIN TOURNAMENT - €3000",
+      "place1": "1st place - €1500, €300 per player, 50% or 1/2 of the prize pool.",
+      "place2": "2nd place - €1000, €200 per player, 33.3...% or 1/3 of the prize pool.",
+      "place3": "3rd place - €500, €100 per player, 16.6...% or 1/6 of the prize pool.",
+      "note": "Teams and players outside the prize pool will not receive additional compensation."
+    },
+    "format": {
+      "title": "TOURNAMENT FORMAT",
+      "description": "The entire tournament is BYOC (bring your own computer) LAN, no qualifications take place.",
+      "day1": "Day 1: Round Robin in two groups, 5 games.",
+      "day2": "Day 2: Single Elimination Playoff."
+    },
+    "faq": {
+      "title": "FREQUENTLY ASKED QUESTIONS",
+      "q1": "QUESTION?",
+      "a1": "Answer"
+    },
+    "rules": {
+      "title": "RULES",
+      "comingSoon": "Rules will be added here:)"
+    }
+  },
   "schedule": {
     "title": "Schedule",
     "day": "Day",

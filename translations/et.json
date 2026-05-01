@@ -324,6 +324,50 @@
       ]
     }
   },
+  "lolpage": {
+    "title": "LEAGUE OF LEGENDS TURNIIR",
+    "buyTicket": "OSTA PILET",
+    "nav": {
+      "intro": "Sissejuhatus",
+      "info": "Üldine info",
+      "prizes": "Auhinnafond",
+      "format": "Turniiri formaat",
+      "faq": "Korduma kippuvad küsimused",
+      "rules": "Reeglid"
+    },
+    "intro": {
+      "title": "SISSEJUHATUS",
+      "description": "TipiLAN korraldas esimese LoL turniiri 2025. aastal oma debüütüritusel. Kohal käis tiime nii Eestist kui ka Lätist.",
+      "previousWinners": "VARASEMAD VÕITJAD"
+    },
+    "info": {
+      "title": "ÜLDINE INFO",
+      "description": "TipiLAN 2026 LoL turniir toimub 11.-13. septembril TalTechis, Tallinnas, Eestis. Tegemist on BYOC LAN turniiriga. Kohapeal pakutakse igale osalejale: laud, tool, võrgukaabliga internetiühendus, vooluühendus (2 pesa)."
+    },
+    "prizes": {
+      "title": "AUHINNAFOND",
+      "mainTitle": "PEATURNIIR - 3000€",
+      "place1": "1. koht - 1500€, 300€ inimese kohta, 50% ehk 1/2 auhinnafondist.",
+      "place2": "2. koht - 1000€, 200€ inimese kohta, 33.3...(3)% ehk 1/3 auhinnafondist.",
+      "place3": "3. koht - 500€, 100€ inimese kohta, 16.6...(6)% ehk 1/6 auhinnafondist.",
+      "note": "Auhinnafondist väljaspoole jäävatele meeskondadele ja mängijatele lisahüvitisi ei pakuta."
+    },
+    "format": {
+      "title": "TURNIIRI FORMAAT",
+      "description": "Terve turniir on BYOC (bring your own computer) LAN, kvalifikatsioone ei toimu.",
+      "day1": "Päev 1: Round Robin kahes grupis, 5 mängu.",
+      "day2": "Päev 2: Single Elimination Playoff."
+    },
+    "faq": {
+      "title": "KORDUMA KIPPUVAD KÜSIMUSED",
+      "q1": "KÜSIMUS?",
+      "a1": "Vastus"
+    },
+    "rules": {
+      "title": "REEGLID",
+      "comingSoon": "Siia tulevad reeglid:)"
+    }
+  },
   "schedule": {
     "title": "Ajakava",
     "day": "Päev",
