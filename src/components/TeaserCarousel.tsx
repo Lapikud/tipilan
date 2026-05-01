@@ -16,6 +16,23 @@ type Slide = {
   fullBrightness?: boolean;
 };
 
+// Helper to highlight "LAN" in "TIPILAN" with blue color
+function highlightLAN(text: string) {
+  const parts = text.split(/(TIPILAN\w*)/gi);
+  return parts.map((part, i) => {
+    const upper = part.toUpperCase();
+    if (upper.startsWith("TIPILAN")) {
+      const suffix = part.slice(7); // Everything after "TIPILAN"
+      return (
+        <span key={i}>
+          TIPI<span className="text-[#00A3E0]">LAN</span>{suffix.toUpperCase()}
+        </span>
+      );
+    }
+    return part;
+  });
+}
+
 const slides: Slide[] = [
   { key: "compete", image: "/images/landing/compete_teaser.jpg", imageAlt: "Võistle", hero: "/images/landing/compete_hero.png", href: "/turniirid" },
   { key: "play",    image: "/images/landing/play_teaser.png",    imageAlt: "Mängi",   hero: "/images/landing/play_hero.png",    href: "/piletid",  flip: true,  fullBrightness: true },
@@ -62,7 +79,7 @@ export default function TeaserCarousel() {
                   <div className={`flex flex-col justify-between gap-4 px-8 py-8 md:px-12 md:py-10 ${slide.flip ? "md:[direction:ltr]" : ""}`}>
                     <div className="flex flex-col gap-3">
                       <h2 className={`${vipnagorgialla.className} font-bold italic text-[64px] leading-none tracking-normal uppercase text-[#EEE5E5]`}>
-                        {t("heading")}
+                        {highlightLAN(t("heading"))}
                       </h2>
                       <Link href={slide.href}>
                         <h3 className={`${vipnagorgialla.className} font-bold italic text-[clamp(2.5rem,2rem+2.5vw,5rem)] leading-none text-[#EEE5E5] hover:text-[#00A3E0] transition`}>

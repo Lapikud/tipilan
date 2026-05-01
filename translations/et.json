@@ -44,7 +44,9 @@
       "location": "TALTECH, EHITAJATE TEE 5",
       "buyTicket": "OSTA PILET",
       "prizePool": "AUHINNAFOND",
-      "award": "TALTECHI AASTA TUDENGITEGU 2025"
+      "awardPrefix": "TALTECHI",
+      "awardHighlight": "AASTA TUDENGITEGU",
+      "awardSuffix": "2025"
     },
     "teaser": {
       "heading": "TULE TIPILANILE JA...",

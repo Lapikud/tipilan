@@ -56,16 +56,16 @@ export default function HeroSection() {
               10 000€
             </h2>
           </div>
-          <div className="flex flex-col items-start md:items-end gap-2 mt-2">
+          <div className="flex flex-row items-center md:items-center gap-0 mt-2">
             <Image
-              src="/images/landing/student_award.png"
+              src="/images/landing/student_award.webp"
               width={180}
               height={180}
               alt="TalTech student award"
               className="object-contain"
             />
-            <p className={`text-[32px] leading-none tracking-normal uppercase text-right text-[#EEE5E5] ${vipnagorgialla.className} font-bold italic`}>
-              {t("hero.award")}
+            <p className={`text-[32px] leading-none tracking-normal uppercase text-right align-middle text-[#EEE5E5] ${vipnagorgialla.className} font-bold italic`}>
+              {t("hero.awardPrefix")} <span className="text-[#00A3E0]">{t("hero.awardHighlight")}</span> {t("hero.awardSuffix")}
             </p>
           </div>
         </div>

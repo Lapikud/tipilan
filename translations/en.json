@@ -44,7 +44,9 @@
       "location": "TALTECH, EHITAJATE TEE 5",
       "buyTicket": "BUY TICKETS",
       "prizePool": "PRIZE POOL",
-      "award": "TALTECH STUDENT ACT OF THE YEAR 2025"
+      "awardPrefix": "TALTECH",
+      "awardHighlight": "STUDENT ACT OF THE YEAR",
+      "awardSuffix": "2025"
     },
     "teaser": {
       "heading": "COME TO TIPILAN AND...",

@@ -41,9 +41,6 @@ export default async function Home({
             <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
               confirmation_number
             </span>
-            <p className="text-[clamp(0.875rem,0.75rem+0.5vw,1.25rem)] tracking-[-0.045rem] dark:group-hover:text-[#2A2C3F] group-hover:text-black">
-              {t("home.sections.schedule.description")}
-            </p>
           </div>
         </Link>
 
@@ -65,9 +62,6 @@ export default async function Home({
             <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
               trophy
             </span>
-            <p className="text-[clamp(0.875rem,0.75rem+0.5vw,1.25rem)] tracking-[-0.045rem] dark:group-hover:text-[#2A2C3F] group-hover:text-black">
-              {t("home.sections.tournaments.description")}
-            </p>
           </div>
         </Link>
       </div>
