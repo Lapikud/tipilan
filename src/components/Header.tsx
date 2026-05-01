@@ -1,8 +1,11 @@
 "use client";
 
+import Image from "next/image";
+import { Link } from "@/i18n/routing";
+import { vipnagorgialla } from "@/components/Vipnagorgialla";
+
 // Icons
 import {
-  MdClose,
   MdMenu,
   MdSunny,
   MdModeNight,
@@ -23,32 +26,63 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-// Fonts
-// import { vipnagorgialla } from "@/components/Vipnagorgialla";
+interface NavItem {
+  href:
+    | "/"
+    | "/ajakava"
+    | "/haldus"
+    | "/kodukord"
+    | "/messiala"
+    | "/piletid"
+    | "/striim"
+    | "/turniirid";
+  label: string;
+}
 
 interface HeaderProps {
-  isOpen: boolean;
-  onToggle: () => void;
   themeLabels: {
     light: string;
     dark: string;
     system: string;
   };
+  navItems: NavItem[];
 }
 
-const Header = ({ isOpen, onToggle, themeLabels }: HeaderProps) => {
+const Header = ({ themeLabels, navItems }: HeaderProps) => {
   const { theme, setTheme } = useTheme();
 
+  // Filter nav items for the horizontal bar (exclude kodukord)
+  const mainNavItems = navItems.filter(
+    (item) => item.href !== "/kodukord"
+  );
+
   return (
-    <header className="px-8 py-2 md:px-12 flex items-center bg-[#EEE5E5] dark:bg-[#0E0F19] border-b-3 border-[#1F5673] justify-between text-[#2A2C3F] dark:text-[#EEE5E5]">
-      <button onClick={onToggle}>
-        {isOpen ? (
-          <MdClose className="h-12 w-12 text-[#2A2C3F] dark:text-[#EEE5E5] cursor-pointer" />
-        ) : (
-          <MdMenu className="h-12 w-12 text-[#2A2C3F] dark:text-[#EEE5E5] cursor-pointer" />
-        )}
-      </button>
-      <div className="flex items-center gap-2">
+    <header className="px-4 py-2 md:px-8 flex items-center bg-[#0E0F19] border-b-3 border-[#1F5673] justify-between">
+      {/* Logo */}
+      <Link href="/" className="flex-shrink-0">
+        <Image
+          src="/tipilan-icon-white.svg"
+          alt="TipiLAN"
+          width={49}
+          height={40}
+          className="h-10 w-auto"
+        />
+      </Link>
+
+      {/* Right side - Navigation + controls */}
+      <div className="flex items-center gap-3">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-3">
+          {mainNavItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`${vipnagorgialla.className} font-bold italic text-lg uppercase px-4 py-1.5 border-2 border-[#00A3E0] text-[#EEE5E5] hover:bg-[#00A3E0]/20 transition`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
         <LanguageSwitcher />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -57,8 +91,8 @@ const Header = ({ isOpen, onToggle, themeLabels }: HeaderProps) => {
               size="icon"
               className="size-10 cursor-pointer"
             >
-              <MdSunny className="scale-135 text-[#2A2C3F] dark:hidden" />
-              <MdModeNight className="scale-135 dark:text-[#EEE5E5] not-dark:hidden" />
+              <MdSunny className="scale-135 text-[#EEE5E5] dark:hidden" />
+              <MdModeNight className="scale-135 text-[#EEE5E5] not-dark:hidden" />
               <span className="sr-only">Toggle theme</span>
             </Button>
           </DropdownMenuTrigger>
@@ -91,6 +125,32 @@ const Header = ({ isOpen, onToggle, themeLabels }: HeaderProps) => {
               />
               <span>{themeLabels.system}</span>
             </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+
+        {/* Mobile menu button */}
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden size-10 cursor-pointer"
+            >
+              <MdMenu className="h-8 w-8 text-[#EEE5E5]" />
+              <span className="sr-only">Menu</span>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-48 translate-y-4">
+            {navItems.map((item) => (
+              <DropdownMenuItem key={item.href} asChild>
+                <Link
+                  href={item.href}
+                  className={`${vipnagorgialla.className} font-bold italic uppercase text-lg`}
+                >
+                  {item.label}
+                </Link>
+              </DropdownMenuItem>
+            ))}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
