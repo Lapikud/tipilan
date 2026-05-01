@@ -2,14 +2,6 @@ import { getTranslations } from "next-intl/server";
 import SidebarLayoutClient from "./SidebarLayoutClient";
 
 export default async function SidebarLayoutServer() {
-  const t = await getTranslations("common");
-
-  const themeLabels = {
-    light: t("theme.light"),
-    dark: t("theme.dark"),
-    system: t("theme.system"),
-  };
-
   const navT = await getTranslations("navigation");
 
   const navItems = [
@@ -21,5 +13,5 @@ export default async function SidebarLayoutServer() {
     { href: "/kodukord" as const, label: navT("houserules") },
   ];
 
-  return <SidebarLayoutClient themeLabels={themeLabels} navItems={navItems} />;
+  return <SidebarLayoutClient navItems={navItems} />;
 }

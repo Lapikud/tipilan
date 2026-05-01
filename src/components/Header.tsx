@@ -5,15 +5,7 @@ import { Link } from "@/i18n/routing";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 
 // Icons
-import {
-  MdMenu,
-  MdSunny,
-  MdModeNight,
-  MdComputer,
-} from "react-icons/md";
-
-// Theme Provider
-import { useTheme } from "next-themes";
+import { MdMenu } from "react-icons/md";
 
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -40,17 +32,10 @@ interface NavItem {
 }
 
 interface HeaderProps {
-  themeLabels: {
-    light: string;
-    dark: string;
-    system: string;
-  };
   navItems: NavItem[];
 }
 
-const Header = ({ themeLabels, navItems }: HeaderProps) => {
-  const { theme, setTheme } = useTheme();
-
+const Header = ({ navItems }: HeaderProps) => {
   // Filter nav items for the horizontal bar (exclude kodukord)
   const mainNavItems = navItems.filter(
     (item) => item.href !== "/kodukord"
@@ -84,49 +69,6 @@ const Header = ({ themeLabels, navItems }: HeaderProps) => {
           ))}
         </nav>
         <LanguageSwitcher />
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="size-10 cursor-pointer"
-            >
-              <MdSunny className="scale-135 text-[#EEE5E5] dark:hidden" />
-              <MdModeNight className="scale-135 text-[#EEE5E5] not-dark:hidden" />
-              <span className="sr-only">Toggle theme</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-48 translate-y-4">
-            <DropdownMenuItem
-              className={`text-lg ${theme === "light" ? "bg-accent/50 font-medium" : ""}`}
-              onClick={() => setTheme("light")}
-              disabled={theme === "light"}
-            >
-              <MdSunny className={theme === "light" ? "text-amber-500" : ""} />
-              <span>{themeLabels.light}</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              className={`text-lg ${theme === "dark" ? "bg-accent/50 font-medium" : ""}`}
-              onClick={() => setTheme("dark")}
-              disabled={theme === "dark"}
-            >
-              <MdModeNight
-                className={theme === "dark" ? "text-blue-500" : ""}
-              />
-              <span>{themeLabels.dark}</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              className={`text-lg ${theme === "system" ? "bg-accent/50 font-medium" : ""}`}
-              onClick={() => setTheme("system")}
-              disabled={theme === "system"}
-            >
-              <MdComputer
-                className={theme === "system" ? "text-green-500" : ""}
-              />
-              <span>{themeLabels.system}</span>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
 
         {/* Mobile menu button */}
         <DropdownMenu>
