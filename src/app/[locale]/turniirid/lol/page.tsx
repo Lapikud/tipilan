@@ -1,5 +1,6 @@
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import CS2Sidebar from "@/components/CS2Sidebar";
+import CS2Rules from "@/components/CS2Rules";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
@@ -152,9 +153,27 @@ export default async function LoLTournament({
               >
                 {t("lolpage.rules.title")}
               </h2>
-              <p className="text-[#EEE5E5]/80">
-                {t("lolpage.rules.comingSoon")}
+              <p className="text-[#EEE5E5]/80 mb-6">
+                {t("lolpage.rules.description")}
               </p>
+
+              <CS2Rules sections={t.raw("lolpage.rules.sections")} />
+
+              <div className="mt-8">
+                <p className="text-[#EEE5E5]/80 mb-2">{t("lolpage.rules.contact")}</p>
+                <p className="text-[#00A3E0] font-bold">{t("lolpage.rules.contactName")}</p>
+                <p className="text-[#EEE5E5]/70">{t("lolpage.rules.contactRole")}</p>
+                <p className="text-[#EEE5E5]/70">
+                  Discord:{" "}
+                  <a
+                    href="https://discord.com/users/125585160761638912"
+                    target="_blank"
+                    className="text-[#00A3E0] hover:text-[#EEE5E5] transition"
+                  >
+                    Kukkel
+                  </a>
+                </p>
+              </div>
             </section>
           </div>
 

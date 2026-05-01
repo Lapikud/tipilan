@@ -365,7 +365,86 @@
     },
     "rules": {
       "title": "REEGLID",
-      "comingSoon": "Avaldamisel..."
+      "description": "TipiLAN 2026 League of Legends turniiri ametlikud reeglid.",
+      "contact": "Küsimuste korral võta ühendust:",
+      "contactName": "Nils-Hendrik Nõlvak",
+      "contactRole": "Mänguvana - LoL turniir",
+      "sections": [
+        {
+          "title": "Üldist",
+          "rules": [
+            "League of Legends (edaspidi LoL) turniir toimub kahepäevase üritusena 11.-13. september, 2026 Tallinna Tehnikaülikooli (TalTech) ruumides, Ehitajate tee 5, Tallinn.",
+            {"main": "Turniiri auhinnafondiks on 3000€, mis jaguneb järgnevalt:", "sub": ["Esimese koha saanud võistkond - 300€ võistleja kohta", "Teise koha saanud võistkond - 200€ võistleja kohta", "Kolmanda koha saanud võistkond - 100€ võistleja kohta"]},
+            {"main": "Võidusumma makstakse välja võistleja pangakontole.", "sub": ["Alaealise võistleja puhul makstakse võit vanema/eestkostja pangakontole."]}
+          ]
+        },
+        {
+          "title": "Võistkonnad ja võistlejad",
+          "rules": [
+            {"main": "Võistkonnas peab olema:", "sub": ["Viis liiget (iga liige edaspidi eraldi kui Võistleja)", "Liikmetest üks on võistkonna Kapten, kes on ühtlasi kogu meeskonna eestkõnelejaks", "Kõik liikmed peavad olema võistkonna registreerumise hetkel vähemalt 16 aastat vanad", "Võistleja ei või olla Venemaa Föderatsiooni ega Valgevene Rahvavabariigi kodanik", "Võistkonnal pole lubatud kasutada turniiri jooksul treenerit", "Lubatud välja vahetada üks võistkonna liige, kes peab samuti olema registreeritud ja füüsiliselt kohal"]},
+            "Võistleja peab esitama enda kohta ainult tõest informatsiooni ning valmis Korraldajale tõendama enda isikut.",
+            "Võistkonna nimi ja logo ning Võistleja arvutimängu alias ja avatar peab olema sünnis, sh ei tohi olla kohatu, sisaldada roppusi, vulgaarsusi, poliitilisi või religioosseid sõnumeid ega sümboleid.",
+            "Võistleja esindab terve Turniiri vältel ainult iseennast (st. enda asemel ei või lasta kellelgi teisel võistelda).",
+            "Kõik alla 18-aastased Võistlejad on valmis Korraldajale esitama eestkostja nõusoleku turniiril osalemiseks.",
+            "Võistleja peab olema kogu turniiri vältel viisakas ning austama kaasvõistlejaid, korraldajaid ning külastajaid. TipiLAN ei tolereeri vihakõne, ahistamist, ähvardavat, solvavat või agressiivset käitumist.",
+            "Võistkond peab olema registreeritud nii TipiLAN lehel kui ka challengermode turniirilehel."
+          ]
+        },
+        {
+          "title": "Mängule eelnev",
+          "rules": [
+            {"main": "Turniiril osalemine, matchid ning turniiripuu toimib kõik läbi challengermode.com keskkonna.", "sub": ["Turniirile peab olema registreeritud kogu meeskond, kaasa arvatud varumängija", "Mängijatel peab challengermodes olema linkitud kõige kõrgema rankiga kasutaja", "Turniir toimub EU West serveris", "Mängijad ei tohi kasutada ühtegi teist kasutajat peale challengermodes linkitud kasutajate"]},
+            "Challengermode keskkonnas on matchid automaatsed. Uue matchi puhul on valmisolekuks aega 10 minutit.",
+            {"main": "Draft saab alata kui mõlemad pooled on andnud enda valmisolekust märku.", "sub": ["Placeholderid ei ole lubatud. Kui champion on draftis lukustatud, peab seda ka mängima", "Enne drafti peavad mängijad olema rollidele vastavas järjekorras: Top-Jungle-Mid-Bot-Support", "Sihilikult viivitamine ei ole lubatud"]},
+            "Matchi lobbysse tohivad lisaks mängijatele liituda ainult ametlikud streamerid ja kohtunikud."
+          ]
+        },
+        {
+          "title": "Mängusisesed protseduurid",
+          "rules": [
+            {"main": "Mäng on ametlikult alanud (game of record) kui kõik 10 mängijat on kaardil ning mäng on jõudnud esimese reaalse interaktsioonini. GOR'i tingimused:", "sub": ["Kummalgi tiimil õnnestub rünnak või võime kasutamine", "Vastased näevad teineteist", "Sisenetakse vastase territooriumile", "Mäng on kestnud 2 minutit"]},
+            {"main": "Mängu seiskamine:", "sub": ["Mängu pausile panemise ajal ei ole mängijatel lubatud lahkuda matši alalt", "Korraldajad võivad mängu pausile panna vastavalt vajadusele", "Kummalgi tiimil on õigus matši jooksul võtta kokku kuni 15 minutit pausi mõjuval põhjusel"]},
+            "Mängu võib uuesti käima panna ainult mõlema poole nõusolekul või kohtuniku loal.",
+            "Kui tekib mängu ausal läbiviimisel takistus (gamebreaking bug, netiühendus, etc.), määrab kohtunik uued juhised mängu läbiviimiseks."
+          ]
+        },
+        {
+          "title": "Match'i lõpetamine",
+          "rules": [
+            {"main": "Match'i võitja on tiim, kellel on kõige rohkem mänge võidetud.", "sub": ["Korraldaja esitab tiimide võitude ja kaotuste seisud kõigile osalejatele kättesaadaval viisil", "Peale igat match'i uuendatakse challengermode keskkonnas turniiripuud"]}
+          ]
+        },
+        {
+          "title": "Turniirilt välja langemine",
+          "rules": [
+            "Tiim võib igal ajal otsustada lõpetada turniiril osalemise andes sellest teada kohtunikule ja/või korraldajale.",
+            "Kuni välja kukkumiseni teenitud karistused jäävad kehtima turniiri lõpuni.",
+            "Kui tiim ei ilmu kohale või pole kokku lepitud algusajaks valmis, võib Korraldaja arvata tiimi turniirilt välja.",
+            {"main": "Tiimi registreerunute nimekirja ei saa muuta turniiri vältel.", "sub": ["Kui liikme lahkumise tõttu langeb tiimis osalejate arv alla mängimiseks vajaliku, peab Korraldaja tiimi turniirilt välja arvama"]},
+            "Kui tiim soovib välja langeda match'i toimumise ajal, peab tiim andma loobumisvõidu.",
+            "Kõik välja langemised ja välja arvamised tuleb teha koheselt avalikult teatavaks."
+          ]
+        },
+        {
+          "title": "Karistused",
+          "rules": [
+            "Kohtunikud määravad karistusi järgides selles dokumendis toodud juhiseid.",
+            "Karistusi võivad määrata ainult kohtunikud.",
+            "Kohtunik teavitab nii eksimuse sisu kui ka määratud karistuse nii reeglite vastu eksinud mängijale, tema tiimile kui ka vastasvõistkonnale.",
+            "Kohtunik peab olema erapooletu, tiimi oskuste tase ei tohi olla määravaks eksimuste ja karistuste jälgimisel.",
+            "Karistusi võib määrata nii kogu tiimile kui ka ühele tiimiliikmele.",
+            {"main": "Karistused võivad olla järgnevad:", "sub": ["HOIATUS: märguanne mängijale või tiimile väikese eksimuse eest", "BAN'i KAOTUS: Tiim ei või karistusele järgneval mängul ban'ida kindel arv tegelasi", "MÄNGU KAOTUS: Tiim saab automaatse kaotuse ühel mängul", "MATCH'I KAOTUS: Tiim saab automaatse match'i kaotuse", "DISKVALIFITSEERIMINE: Diskvalifikatsioon kehtib tervele tiimile"]},
+            {"main": "Mittesobilik käitumine jagunevad:", "sub": ["KERGE EKSIMUS: ebameeldiv, ebaeetiline või häiriv käitumine - karistus hoiatus", "KESKMINE EKSIMUS: juhiste eiramine, vihakõne, agressiivsus - karistus mängu kaotus", "RASKE EKSIMUS: selgelt vastuolus reeglite ning heade tavadega - karistus diskvalifikatsioon", "KOKKUMÄNG: kahe tiimi vaheline kokkulepe - karistus mõlema tiimi diskvalifitseerimine", "ALTKÄEMAKS JA PANUSTAMINE: keelatud - karistus diskvalifitseerimine", "AGRESSIIVNE KÄITUMINE: inimeste vastu suunatud agressioon - karistus diskvalifitseerimine", "SOHK: teadlik tegevus eelise saavutamiseks - karistus diskvalifitseerimine"]}
+          ]
+        },
+        {
+          "title": "Turniiri formaat",
+          "rules": [
+            "Turniir toimub Fearless drafti põhimõtetel. See tähendab, et seeria jooksul pickitud champione ei saa pickida järgmistes mängudes kuni seeria lõpuni.",
+            {"main": "Turniir toimub Round Robin + Single Elimination formaadis:", "sub": ["Esimene round on 2 kuueliimelist gruppi, kus kõik tiimid mängivad üksteisega korra läbi", "Sellega selgitatakse 4 parimat, kes lähevad edasi järgmise päeva single elimination bracketisse", "Gruppides tekkinud viigi korral pääseb edasi võistkond, kes viigistunud tiimide vahelise matchi võitis"]}
+          ]
+        }
+      ]
     }
   },
   "schedule": {
