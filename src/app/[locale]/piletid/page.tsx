@@ -11,6 +11,7 @@ interface TicketCardProps {
   buttonText: string;
   buttonHref: string;
   backgroundImage?: string;
+  backgroundOpacity?: number;
 }
 
 function TicketCard({
@@ -21,6 +22,7 @@ function TicketCard({
   buttonText,
   buttonHref,
   backgroundImage,
+  backgroundOpacity = 40,
 }: TicketCardProps) {
   return (
     <div className="relative bg-[#0E0F19] border-r border-[#1F5673] p-8 flex flex-col min-h-[350px]">
@@ -29,7 +31,8 @@ function TicketCard({
           src={backgroundImage}
           alt=""
           fill
-          className="object-cover object-center opacity-40"
+          className="object-cover object-center"
+          style={{ opacity: backgroundOpacity / 100 }}
         />
       )}
       <div className="relative z-10 flex flex-col h-full">
@@ -126,6 +129,7 @@ export default async function Tickets({
             buttonText={t("tickets.buyButton")}
             buttonHref="https://fienta.com/et/tipilan"
             backgroundImage="/images/landing/compete_teaser.jpg"
+            backgroundOpacity={30}
           />
       </div>
     </div>
