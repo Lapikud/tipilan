@@ -158,6 +158,172 @@
       "buyTicket": "OSTA PILET"
     }
   },
+  "cs2page": {
+    "title": "COUNTER-STRIKE 2 TURNIIR",
+    "buyTicket": "OSTA PILET",
+    "viewGithub": "TÄISREEGLID",
+    "nav": {
+      "intro": "Sissejuhatus",
+      "info": "Üldine info",
+      "prizes": "Auhinnafond",
+      "format": "Turniiri formaat",
+      "vrs": "VRS info",
+      "faq": "Korduma kippuvad küsimused",
+      "rules": "Reeglid"
+    },
+    "intro": {
+      "title": "SISSEJUHATUS",
+      "description": "TalTechis on korraldatud CS võistlusi nii CS1.6 kui ka CS:GOs juba ligi 20 aastat. TipiLAN korraldas esimese CS2 turniiri 2025. aastal oma debüütüritusel. TipiLAN 2025 CS turniir sai esimesena Eesti ajaloos jagada välja VRS punkte, saavutades Tier 2 Ranked turniiri staatuse. Kohal käis tiime Eestist, Lätist, Leedust, Soomest, Norrast ja Ukrainast, mis tõestas turniiri rahvusvahelist haaret ja tugevat konkurentsi.",
+      "previousWinners": "VARASEMAD VÕITJAD"
+    },
+    "info": {
+      "title": "ÜLDINE INFO",
+      "description": "TipiLAN 2026 CS2 turniir toimub 11.-13. septembril TalTechis, Tallinnas, Eestis. Tegemist on BYOC LAN turniiriga. Kohapeal pakutakse igale osalejale: laud, tool, võrgukaabliga internetiühendus, vooluühendus (2 pesa)."
+    },
+    "prizes": {
+      "title": "AUHINNAFOND",
+      "mainTitle": "PEATURNIIR - 6000€",
+      "mainNote": "Auhinnafondist väljaspoole jäävatele meeskondadele ja mängijatele lisahüvitisi ei pakuta.",
+      "secondTitle": "TEISE VÕIMALUSE TURNIIR - 750€",
+      "secondNote": "Auhinnafondist väljaspoole jäävatele meeskondadele ja mängijatele lisahüvitisi ei pakuta."
+    },
+    "format": {
+      "title": "TURNIIRI FORMAAT",
+      "description": "Terve turniir on BYOC (bring your own computer) LAN, kvalifikatsioone ei toimu.",
+      "day1": "Päev 1: 5 raundi Swiss stiilis turniiri (Bo1)",
+      "day23": "Päev 2 & 3: Double Elimination playoff'id (Winners' Bracket Bo3, Losers' Bracket Bo1)"
+    },
+    "vrs": {
+      "title": "VRS INFO, KUTSED",
+      "description1": "TipiLANi meeskond esitab HLTV-le avalduse, et turniiri tulemused läheksid VRS arvestusse kirja. HLTV rankingu staatust ei saa enne ametlikku kinnitust garanteerida. HLTV otsustab, millised mängud loevad VRS punktide arvestuses.",
+      "description2": "TipiLANi CS2 turniir jälgib Valve Ranked Tier 2 turniiri nõudeid. TipiLAN ei saada VRS kutseid meeskondadele."
+    },
+    "faq": {
+      "title": "KORDUMA KIPPUVAD KÜSIMUSED",
+      "q1": "KÜSIMUS?",
+      "a1": "Vastus"
+    },
+    "rules": {
+      "title": "REEGLID",
+      "description": "TipiLAN 2026 Counter-Strike 2 turniiri ametlikud reeglid.",
+      "contact": "Küsimuste korral võta ühendust:",
+      "contactName": "Harles Kadanik",
+      "contactRole": "Mänguvana - CS2 turniir",
+      "contactDiscord": "Discord: hrkruger",
+      "sections": [
+        {
+          "title": "Üldist",
+          "rules": [
+            "Counter-Strike 2 (edaspidi CS2) turniir toimub 11.-13. september, 2026 Tallinna Tehnikaülikooli (TalTech) ruumides, Ehitajate tee 5, Tallinn.",
+            {"main": "Turniiri auhinnafondiks on 6750€, mis jaguneb järgnevalt:", "sub": [{"main": "Põhiturniiri TOP 3 auhinnafond on 6000€:", "sub": ["Esimene koht - 600€ võistleja kohta (kokku 3000€)", "Teine koht - 400€ võistleja kohta (kokku 2000€)", "Kolmas koht - 200€ võistleja kohta (kokku 1000€)"]}, {"main": "Second Chance turniiri auhinnafond on 750€:", "sub": ["Esimene koht - 100€ võistleja kohta (kokku 500€)", "Teine koht - 50€ võistleja kohta (kokku 250€)"]}]},
+            {"main": "TipiLAN on Valve Tier 2 (No Invitations) nõuetele vastav võistlus.", "sub": ["Põhiturniiri 1.-3. koha tulemused esitatakse VRS-i arvutamiseks. HLTV.org (pärast meiepoolset taotlust) määrab, millised mängud lähevad VRS-i arvestusse. VRS punktide jagamist ei saa enne ametlikku kinnitust garanteerida."]},
+            {"main": "Võidusumma makstakse välja võistleja pangakontole 30 päeva jooksul.", "sub": ["Alaealise võistleja puhul makstakse võit vanema/eestkostja pangakontole."]},
+            "Terve turniiri vältel tuleb igal osalejal lähtuda Eesti Vabariigi seadusest, TipiLAN kodukorrast ja ürituse reeglistikust.",
+            "Piletiostuga annab iga osaleja loa end pildistada, filmida ja kasutada kogu fotograafilist, audio- ja videomaterjali ürituse jäädvustamiseks ja turundamiseks.",
+            "CS2 põhiturniiri salvestatakse ning kantakse üle voogedastusplatvormidel Twitch ja YouTube.",
+            "Kõik turniiriga seotud suhtlused tiimiliikmete vahel (nt mängusisene chat, häälvestlused, Discordi ja TeamSpeaki vestlused jne) salvestatakse.",
+            "Ise mängu üle kandmise puhul peab otseülekande viivis (delay) olema vähemalt 5 minutit.",
+            "Korraldajatel on õigus kasutada osalejate isiklikku informatsiooni vaid ürituse läbiviimise raames.",
+            "Korraldustiimil on õigus reegleid vajadusel muuta ja redigeerida etteteatamata, eeldusel et muudatused on kooskõlas Valve'i turniiride nõuetega.",
+            "Korraldustiim on kõikide osalejate suhtes erapooletu."
+          ]
+        },
+        {
+          "title": "CS2 põhiturniiri tiim ja tiimi koosseis",
+          "rules": [
+            "CS2 põhiturniiri tiim (edaspidi tiim) põhikoosseisu kuulub viis põhiliiget, kellest üks on tiimikapten.",
+            "Hiljemalt 28. augustiks 2026 (kaks nädalat enne turniiri) peab iga tiim kinnitama oma osaluse, lõpliku tiimi põhikoosseisu ning tiimi nime.",
+            {"main": "Tiimikapten on tiimi esindaja, kes:", "sub": ["On kontaktisikuks korraldustiimile", "Registreerib tiimi turniirile", "Vastutab tiimi käitumise ja tegude eest", "Esindab tiimi hoiatuste, diskvalifikatsioonide, vaidlustuste ja timeout-ide korral"]},
+            {"main": "Igal tiimil võib olla üks varumängija, kes ei kuulu tiimi põhikoosseisu:", "sub": ["Varumängija peab soetama endale eraldi varumängija pileti", "Varumängija võib asendada ükskõik millist tiimi põhikoosseisu liiget turniiri toimumisel ajal", "Varumängijale kehtivad samad õigused ja nõuded, mis tiimi põhikoosseisule"]},
+            {"main": "Igal tiimil võib olla üks treener:", "sub": ["Treener peab ostma eraldi treeneri pileti", "Treener võib oma meeskonnaga suhelda ainult mängude vahel ja taktikaliste pauside ajal"]},
+            {"main": "Tiimi põhikoosseisus on lubatud välja vahetada mängijaid enne tiimide registreerimiskuupäeva lõppemist:", "sub": ["Mängijate väljavahetamine toimub läbi Fienta", "Liikme välja vahetamisel jääb tiimil jätkuvalt õigus varumängijale", "Asendusmängijale kehtivad samad õigused ja nõuded, mis tiimi põhikoosseisule"]},
+            "Tiimikapteni väljavahetamisel otsustab tiim ise, kellele tiimikapteni õigused ja kohustused tiimisiseselt üle kanduvad.",
+            "Kui tiim astub turniiril osalemisest tagasi enne registreerimistähtaega, makstakse osalemistasu tiimile tagasi.",
+            "Kõik tiimiliikmed võivad turniiril kuuluda vaid ühte tiimi korraga ja esindada vaid iseennast.",
+            "Kõik tiimiliikmed peavad päev enne turniiri algust olema vähemalt 16-aastased.",
+            "Mitte ükski tiimiliige ei tohi olla Venemaa Föderatsiooni ega Valgevene Rahvavabariigi kodanik.",
+            {"main": "Tiimidel pole lubatud:", "sub": ["Tiimisponsorite kajastamine turniiril", "Mängida teise tiimi või tiimiliikme huvides"]},
+            {"main": "Tiimi nimi:", "sub": ["Ei tohi olla solvav, vulgaarne, poliitiline või muud moodi maitsetu", "Ei tohi sisaldada emotikone ega muid sümboleid, mis pole tähemärgid", "Tuleb korraldustiimi poolsel nõudel ära muuta"]}
+          ]
+        },
+        {
+          "title": "Varustus",
+          "rules": [
+            "Korraldustiimi poolt on turniiril osalevatele mängijatele tagatud internet, internetikaabel, pikendusjuhtmed ja istekoht lauaga.",
+            "Treeneritele ei tagata eraldi istekohta, lauapinda ega internetiühendust.",
+            "Turniiril osaleja vastutab selle eest, et temal on osalemiseks muu vajalik varustus kaasas ja töötab."
+          ]
+        },
+        {
+          "title": "Ajakava",
+          "rules": [
+            "Kõik tiimiliikmed peavad kohal olema tund aega enne ettenähtud turniiri algust.",
+            "Mänguvoorus võistlevad tiimid peavad 10 minutit enne vooru algust olema valmis oma ettenähtud kohtadel.",
+            "Mänguvoorude algusajad on korraldustiimi välja pandud turniiri alguseks või eelmise mänguvooru lõpuks.",
+            "Kui mängijal esinevad tehnika või mänguga seotud tehnilised probleemid, peab ta sellest koheselt teavitama mänguvana või korraldustiimi.",
+            "Osalejatele tagatakse mängude vahel vähemalt 10-minutiline paus ja Bo3 mängude puhul kaartide vahel vähemalt 8-minutiline paus.",
+            "Korraldustiimil on õigus teha ajakavas muudatusi.",
+            "Korraldustiimil on kohustus hoida kõiki osalejaid kursis tekkinud viivituste ja muudatusega."
+          ]
+        },
+        {
+          "title": "Mängu versioon ja seaded",
+          "rules": [
+            "Terve turniiri jooksul kasutatakse CS2 kõige uuemat versiooni.",
+            {"main": "CS2 turniiril kasutatakse järgnevaid seadeid:", "sub": ["Parim 24st (mp_maxrounds 24)", "Raundi aeg: 1 minut 55 sekundit (mp_roundtime 1.92)", "Alustusraha: $800 (mp_startmoney 800)", "Liikumise keelu aeg raundi alguses: 20 sekundit (mp_freezetime 20)", "Aeg ostmiseks: 20 sekundit (mp_buytime 20)", "Pommi taimer: 40 sekundit (mp_c4timer 40)", "Lisaajal raunde: parim kuuest (mp_overtime_maxrounds 6)", "Lisaaja alustusraha: $12,500 (mp_overtime_startmoney 12500)"]},
+            "Lisaaeg: juhul, kui pärast kõigi 24 raundi mängimist on viik, mängitakse lisaaega parim kuuest. Võistkonnad jätkavad lisaaegu, kuni võitja on leitud.",
+            "Paus: iga tiimil on lubatud kutsuda esile paus (timeout) 30 sekundit kuni 3 korda regulatsiooniraundide ajal. Pausi saavad kutsuda osalejad kirjutades mängusisesesse chatti \"!pause\".",
+            "Tehniline paus: igal tiimil on vajadusel õigus kasutada tehnilist pausi. Pausi alustamiseks tuleb mängusisesesse chatti sisestada käsklus \".tech\". Taktikaline suhtlus on kõigi tehniliste pauside ajal keelatud."
+          ]
+        },
+        {
+          "title": "Kaardivalik & turniiri struktuur",
+          "rules": [
+            {"main": "32 meeskonnaga turniir toimub kahes etapis:", "sub": ["Swiss-süsteem: 5 roundi, algfaasis Bo1, otsustavad mängud Bo3. 3 võitu = playoffid (Top 16). 3 kaotust = Second Chance turniir.", "Playoffid: double elimination. Upper bracket Bo3, lower bracket Bo1, Lower finaal Bo3.", "Second Chance turniir: double elimination. Kõik mängud peale finaali Bo1, finaal Bo3."]},
+            {"main": "Seeding viiakse läbi vastavalt VRS-i järjestusele:", "sub": ["VRS edetabelis kohaga meeskonnad seeditakse kõrgemale kui edetabelikohata meeskonnad", "Ilma VRS edetabelikohata meeskondadele määratakse esmane paigutus juhuslikult", "Pärast esmast roundi jaotatakse tabeliseis vastavalt Buchholz süsteemile"]},
+            "Mängitav kaart valitakse välja hetkel aktiivsete Valve'i kaardigrupi kaartidest.",
+            {"main": "Bo1 kaardivalik:", "sub": ["Võistkond A eemaldab 2 kaarti", "Võistkond B eemaldab 3 kaarti", "Võistkond A eemaldab 1 kaardi", "Järelejäänud kaarti mängitakse"]},
+            {"main": "Bo3 kaardivalik:", "sub": ["Võistkond A eemaldab 1 kaardi", "Võistkond B eemaldab 1 kaardi", "Võistkond A valib 1 kaardi", "Võistkond B valib 1 kaardi", "Võistkond A eemaldab 1 kaardi", "Võistkond B eemaldab 1 kaardi", "Järelejäänud kaart on vajadusel otsustav"]}
+          ]
+        },
+        {
+          "title": "CS2 turniiril keelatud tegevused",
+          "rules": [
+            "Igasugune sohitegemine, sealhulgas meetodid mis siin ei ole mainitud, on keelatud.",
+            "Skriptide kasutamine on keelatud (v.a. relvade/granaatide ostmine, hüppeviskamine).",
+            "Liikumine läbi seinte, põrandate ja katuste, k.a. taevas jalutamine (sky-walking) on keelatud.",
+            "Piksel-jalutamine (Pixel walking) ehk seismine, kükitamine, kõndimine nähtamatutel kaardipiiridel on keelatud.",
+            "Pomme tuleb asetada nii, et neid saaks desarmeerida.",
+            "Mängijatel ei ole lubatud armeeritud pommi asetada kohta, kus seda ei saa desarmeerida.",
+            "Mängijatel ei ole lubatud panna esemetele nimesid (nametags), mis rikuvad TipiLAN kodukorras väljatoodut.",
+            "Kohandatud mängufailid/andmed/draiverid ei ole lubatud.",
+            "Mängukarakteri mudelite (agent skins) kasutamine ei ole lubatud.",
+            "Mängusiseste vigade ära kasutamine on keelatud.",
+            "Igasugune tulemuste kokkuleppimine, mõjutamine, pettus ja manipuleerimine on rangelt keelatud ning tähendab kohest tiimi diskvalifitseerimist."
+          ]
+        },
+        {
+          "title": "Karistused",
+          "rules": [
+            "Karistatav on mängusiseste ja mänguväliste reeglite ning kodukorra rikkumine.",
+            "Meeskonnad on kohustatud säilitama vähemalt 4 viiest algselt registreeritud mängijast kõigi mängude jaoks.",
+            "Reegleid rikkunud tiimiliikmele tehakse esmalt esimene verbaalne hoiatus. Teise rikkumise järel tehakse teine hoiatus. Kolmandal korral saab tiimiliige diskvalifikatsiooni.",
+            "Tiimiliige, kes ei ilmu turniiriks ega mänguvooruks kohale või lahkub turniiri ajal mõjuva põhjuseta, saab turniirilt diskvalifikatsiooni.",
+            "Tiimiliige, kes pole 10 minutit enne oma mänguvooru algust kohal (no-show olukord), saab turniirilt diskvalifikatsiooni.",
+            "Kui korraldustiim tuvastab punktis 7 väljatoodud rikkumise, diskvalifitseeritakse kogu tiim koheselt. Reegleid rikkunud mängijale antakse TipiLAN turniiridelt igavene mängukeeld.",
+            "Tiimil on õigus astuda turniiril osalemisest tagasi.",
+            "Tiimi diskvalifitseerimise korral võidab vastastiim automaatselt käesoleva mänguvooru.",
+            "Diskvalifitseerimise puhul ei tagastata osalustasu.",
+            {"main": "Ainult tiimikapten saab diskvalifitseerimist vaidlustada:", "sub": ["Vaidlustus tuleb esitada 15 minuti jooksul", "Korraldustiimil on aega kuni 25 minutit otsuse tegemiseks"]},
+            {"main": "Tiimidel on õigus esitada protest:", "sub": ["Protest tuleb esitada 5 minuti jooksul probleemi avastamisest", "Korraldustiimil on aega kuni 25 minutit otsuse tegemiseks"]},
+            "Mänguvana teavitab eksimusest, selle sisust ja tagajärjest reegleid rikkunud tiimiliiget, tema tiimi ja vastastiimi.",
+            "Korraldustiimil on õigus panna mänguvoor pausile ja lõpetada paus ükskõik millisel hetkel.",
+            "Korraldustiimil on kohustus kõikidest väljalangemistest ja diskvalifikatsioonidest avalikult teada anda."
+          ]
+        }
+      ]
+    }
+  },
   "schedule": {
     "title": "Ajakava",
     "day": "Päev",
