@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
+import AnimatedTipilanLogo from "@/components/AnimatedTipilanLogo";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import { useTranslations } from "next-intl";
 
@@ -23,14 +24,8 @@ export default function HeroSection() {
       <div className="relative h-full grid grid-cols-1 md:grid-cols-[3fr_2fr] items-center gap-8 px-8 md:px-12">
         {/* Left: logo + info + CTA */}
         <div className="flex flex-col gap-5">
-          <Image
-            src="/tipilan-dark.svg"
-            width={750}
-            height={106}
-            alt="TipiLAN Logo"
-            className="w-[max(260px,min(100%,750px))] h-auto"
-          />
-          <div className={`${vipnagorgialla.className} font-bold italic`}>
+          <AnimatedTipilanLogo />
+          <div className={`${vipnagorgialla.className} relative z-10 font-bold italic`}>
             <p className="text-[clamp(1.1rem,0.9rem+1vw,1.75rem)] text-[#00A3E0] uppercase tracking-wide">
               {t("hero.date")}
             </p>
@@ -40,7 +35,7 @@ export default function HeroSection() {
           </div>
           <Link
             href="/piletid"
-            className={`self-start px-6 py-3 bg-[#007CAB] hover:bg-[#00A3E0] text-[#EEE5E5] ${vipnagorgialla.className} font-bold italic text-[clamp(1rem,0.8rem+0.8vw,1.5rem)] uppercase transition`}
+            className={`relative z-10 self-start px-6 py-3 bg-[#007CAB] hover:bg-[#00A3E0] text-[#EEE5E5] ${vipnagorgialla.className} font-bold italic text-[clamp(1rem,0.8rem+0.8vw,1.5rem)] uppercase transition`}
           >
             {t("hero.buyTicket")}
           </Link>
