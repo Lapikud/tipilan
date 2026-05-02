@@ -12,8 +12,7 @@ export default function middleware(request: NextRequest) {
   if (location) {
     const url = new URL(location);
 
-    // Keep localhost development redirects intact, but drop leaked :3000
-    // on public domains when upstream proxy forwards an internal port.
+    // Keep localhost development redirects intact. If not then DO NOT!
     const isLocalhost =
       url.hostname === "localhost" || url.hostname === "127.0.0.1";
 

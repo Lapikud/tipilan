@@ -74,6 +74,10 @@ const Header = ({ navItems }: HeaderProps) => {
     };
   }, []);
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
   return (
     <header className="px-4 py-2 md:px-8 flex items-center bg-[#0E0F19] border-b-3 border-[#1F5673] justify-between">
       {/* Logo */}
@@ -90,7 +94,7 @@ const Header = ({ navItems }: HeaderProps) => {
       {/* Right side - Navigation + controls */}
       <div className="flex items-center gap-3">
         {/* Desktop Navigation */}
-        <nav className="hidden xl:flex items-center gap-3">
+        <nav className="hidden lg:flex items-center gap-3">
           {mainNavItems.map((item) => {
             const isActive = pathname === item.href;
             const isDisabled = disabledNavHrefs.has(item.href);
@@ -110,20 +114,7 @@ const Header = ({ navItems }: HeaderProps) => {
                       : "hover:bg-[#00A3E0]/20"
                 }`}
               >
-                <span className="flex items-center gap-2">
-                  <span>{item.label}</span>
-                  {navIconByHref[item.href] ? (
-                    <span
-                      className={`material-symbols-outlined text-[1.4rem]! leading-none ${
-                        isActive
-                          ? "text-black"
-                          : "text-[#00A3E0] group-hover:text-[#EEE5E5]"
-                      }`}
-                    >
-                      {navIconByHref[item.href]}
-                    </span>
-                  ) : null}
-                </span>
+                {item.label}
               </Link>
             );
           })}
@@ -139,7 +130,7 @@ const Header = ({ navItems }: HeaderProps) => {
             <Button
               variant="ghost"
               size="icon"
-              className="xl:hidden size-10 cursor-pointer"
+              className="lg:hidden size-10 cursor-pointer"
             >
               <MdMenu className="size-10 text-[#EEE5E5]" />
               <span className="sr-only">Menu</span>
@@ -147,7 +138,7 @@ const Header = ({ navItems }: HeaderProps) => {
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="end"
-            className="xl:hidden w-64 translate-y-4 rounded-none border-3 border-[#1F5673] bg-[#0E0F19] p-0"
+            className="lg:hidden w-64 translate-y-4 rounded-none border-3 border-[#1F5673] bg-[#0E0F19] p-0"
           >
             {mainNavItems.map((item, index) => {
               const isActive = pathname === item.href;
