@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import type { AnimationEvent, CSSProperties } from "react";
-import { useEffect, useState } from "react";
+import type { CSSProperties } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const LOGO_WIDTH = 2092;
 const LOGO_HEIGHT = 300;
@@ -18,24 +18,53 @@ const logoLetters = [
 ] as const;
 
 export default function AnimatedTipilanLogo() {
-  const [isAnimationComplete, setIsAnimationComplete] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+  const loadedLetterIndicesRef = useRef<Set<number>>(new Set());
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setIsAnimationComplete(true);
+      setIsReducedMotion(true);
     }
   }, []);
 
-  if (isAnimationComplete) {
+  useEffect(() => {
+    if (loadedCount >= logoLetters.length) {
+      const rafId = window.requestAnimationFrame(() => {
+        setShouldAnimate(true);
+      });
+
+      return () => window.cancelAnimationFrame(rafId);
+    }
+
+    return undefined;
+  }, [loadedCount]);
+
+  const handleLetterLoad = (index: number) => {
+    if (loadedLetterIndicesRef.current.has(index)) {
+      return;
+    }
+
+    loadedLetterIndicesRef.current.add(index);
+    setLoadedCount(loadedLetterIndicesRef.current.size);
+  };
+
+  if (isReducedMotion) {
     return (
-      <Image
-        src="/tipilan-dark.svg"
-        width={LOGO_WIDTH}
-        height={LOGO_HEIGHT}
-        alt="TipiLAN Logo"
-        priority
-        className="relative z-0 w-[max(260px,min(100%,750px))] h-auto"
-      />
+      <div
+        className="relative z-0 w-[max(260px,min(100%,750px))]"
+        style={{ aspectRatio: `${LOGO_WIDTH} / ${LOGO_HEIGHT}` }}
+      >
+        <Image
+          src="/tipilan-dark.svg"
+          alt="TipiLAN Logo"
+          priority
+          fill
+          sizes="(max-width: 750px) 100vw, 750px"
+          className="object-contain"
+        />
+      </div>
     );
   }
 
@@ -47,8 +76,6 @@ export default function AnimatedTipilanLogo() {
       style={{ aspectRatio: `${LOGO_WIDTH} / ${LOGO_HEIGHT}` }}
     >
       {logoLetters.map((letter, index) => {
-        const isLastLetter = index === logoLetters.length - 1;
-
         return (
           <Image
             key={`${letter.letter}-${letter.x}`}
@@ -58,22 +85,21 @@ export default function AnimatedTipilanLogo() {
             alt=""
             aria-hidden
             priority
-            className="tipilan-logo-letter absolute top-0 h-full object-fill"
-            onAnimationEnd={
-              isLastLetter
-                ? (event: AnimationEvent<HTMLImageElement>) => {
-                    if (event.animationName === "tipilan-logo-letter-in") {
-                      setIsAnimationComplete(true);
-                    }
-                  }
-                : undefined
-            }
+            className={`absolute top-0 h-full object-fill ${shouldAnimate ? "tipilan-logo-letter" : ""}`}
+            onLoad={() => handleLetterLoad(index)}
+            onError={() => handleLetterLoad(index)}
             style={
               {
                 left: `${(letter.x / LOGO_WIDTH) * 100}%`,
                 width: `${(letter.width / LOGO_WIDTH) * 100}%`,
                 zIndex: logoLetters.length - index,
                 "--tipilan-logo-letter-delay": `${index * 90}ms`,
+                ...(shouldAnimate
+                  ? {}
+                  : {
+                      opacity: 0,
+                      transform: "translate3d(0, 100%, 0)",
+                    }),
               } as CSSProperties
             }
           />
