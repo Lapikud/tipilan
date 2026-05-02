@@ -135,3 +135,36 @@ body {
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 24;
 }
+
+.tipilan-logo-letter {
+  animation: tipilan-logo-letter-in 720ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--tipilan-logo-letter-delay, 0ms);
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  will-change: opacity, transform;
+}
+
+@keyframes tipilan-logo-letter-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tipilan-logo-letter {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+  }
+}
