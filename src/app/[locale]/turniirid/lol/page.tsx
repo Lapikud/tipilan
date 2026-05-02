@@ -1,6 +1,6 @@
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
-import CS2Sidebar from "@/components/CS2Sidebar";
-import CS2Rules from "@/components/CS2Rules";
+import RuleNav from "@/components/RuleNav";
+import RulesContent from "@/components/RulesContent";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
@@ -52,7 +52,7 @@ export default async function LoLTournament({
             </div>
 
             {/* SISSEJUHATUS */}
-            <section id="intro" className="mb-12">
+            <section id="intro" className="mb-12 scroll-mt-24 md:scroll-mt-28">
               <h2
                 className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
               >
@@ -76,7 +76,7 @@ export default async function LoLTournament({
             </section>
 
             {/* ÜLDINE INFO */}
-            <section id="info" className="mb-12">
+            <section id="info" className="mb-12 scroll-mt-24 md:scroll-mt-28">
               <h2
                 className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
               >
@@ -88,7 +88,7 @@ export default async function LoLTournament({
             </section>
 
             {/* AUHINNAFOND */}
-            <section id="prizes" className="mb-12">
+            <section id="prizes" className="mb-12 scroll-mt-24 md:scroll-mt-28">
               <h2
                 className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
               >
@@ -111,7 +111,7 @@ export default async function LoLTournament({
             </section>
 
             {/* TURNIIRI FORMAAT */}
-            <section id="format" className="mb-12">
+            <section id="format" className="mb-12 scroll-mt-24 md:scroll-mt-28">
               <h2
                 className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
               >
@@ -120,12 +120,8 @@ export default async function LoLTournament({
               <p className="text-[#EEE5E5]/80 mb-4">
                 {t("lolpage.format.description")}
               </p>
-              <p className="text-[#EEE5E5]/80">
-                {t("lolpage.format.day1")}
-              </p>
-              <p className="text-[#EEE5E5]/80">
-                {t("lolpage.format.day2")}
-              </p>
+              <p className="text-[#EEE5E5]/80">{t("lolpage.format.day1")}</p>
+              <p className="text-[#EEE5E5]/80">{t("lolpage.format.day2")}</p>
             </section>
 
             {/* FAQ - commented out until content is ready
@@ -147,7 +143,7 @@ export default async function LoLTournament({
             */}
 
             {/* REEGLID */}
-            <section id="rules" className="mb-12">
+            <section id="rules" className="mb-12 scroll-mt-24 md:scroll-mt-28">
               <h2
                 className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
               >
@@ -157,12 +153,18 @@ export default async function LoLTournament({
                 {t("lolpage.rules.description")}
               </p>
 
-              <CS2Rules sections={t.raw("lolpage.rules.sections")} />
+              <RulesContent sections={t.raw("lolpage.rules.sections")} />
 
               <div className="mt-8">
-                <p className="text-[#EEE5E5]/80 mb-2">{t("lolpage.rules.contact")}</p>
-                <p className="text-[#00A3E0] font-bold">{t("lolpage.rules.contactName")}</p>
-                <p className="text-[#EEE5E5]/70">{t("lolpage.rules.contactRole")}</p>
+                <p className="text-[#EEE5E5]/80 mb-2">
+                  {t("lolpage.rules.contact")}
+                </p>
+                <p className="text-[#00A3E0] font-bold">
+                  {t("lolpage.rules.contactName")}
+                </p>
+                <p className="text-[#EEE5E5]/70">
+                  {t("lolpage.rules.contactRole")}
+                </p>
                 <p className="text-[#EEE5E5]/70">
                   Discord:{" "}
                   <a
@@ -178,7 +180,7 @@ export default async function LoLTournament({
           </div>
 
           {/* Sidebar navigation */}
-          <CS2Sidebar sections={sections} />
+          <RuleNav sections={sections} />
         </div>
       </div>
     </div>

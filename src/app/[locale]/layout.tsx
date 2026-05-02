@@ -28,9 +28,11 @@ export default async function LocaleLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SidebarParent />
-          {children}
-          <Footer />
+          <div className="min-h-screen flex flex-col">
+            <SidebarParent />
+            <main className="flex-1 flex flex-col">{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </NextIntlClientProvider>
     </div>

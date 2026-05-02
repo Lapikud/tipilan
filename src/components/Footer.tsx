@@ -15,11 +15,9 @@ const Footer = () => {
         >
           {t("footer.contact")}
         </h2>
-        <div className="flex flex-row justify-between gap-8 items-start">
-          <div>
-            <h3 className="text-xl font-bold">
-              MTÜ Lapikud
-            </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-start w-full">
+          <div className="text-center sm:text-left sm:justify-self-start">
+            <h3 className="text-xl font-bold">MTÜ Lapikud</h3>
             <div className="flex flex-col gap-2 mt-2">
               <p>
                 {t("footer.registrationCode")}:{" "}
@@ -30,12 +28,12 @@ const Footer = () => {
               <p className="">Swedbank EE842200221094704780</p>
             </div>
           </div>
-          <div className="flex flex-col gap-2 items-center">
+          <div className="flex flex-col gap-2 items-center text-center sm:justify-self-center">
             <div className="flex flex-row gap-2">
               <span className="material-symbols-outlined !font-bold text-[#007CAB] dark:text-[#00A3E0]">
                 mail
               </span>
-              <a href="mailto:tipilaninfo@gmail.com" className="underline">
+              <a href="mailto:tipilaninfogmail.com" className="underline">
                 tipilaninfo@gmail.com
               </a>
             </div>
@@ -49,7 +47,7 @@ const Footer = () => {
             </div>
           </div>
           {/* Social media */}
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row gap-4 justify-center sm:justify-self-end sm:justify-end">
             <a
               href="https://discord.gg/pPhhatZAfA"
               target="_blank"

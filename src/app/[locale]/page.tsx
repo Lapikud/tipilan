@@ -17,12 +17,12 @@ export default async function Home({
   return (
     <div>
       {/* Hero */}
-      <div className="mt-18">
+      <div className="mt-16">
         <HeroSection />
       </div>
 
       {/* Nav cards: Piletid + Turniirid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 md:h-[260px] border-b-3 border-[#1F5673]">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:h-65 border-b-3 border-[#1F5673]">
         <Link
           href="/piletid"
           className="px-8 md:px-12 py-8 flex flex-col justify-center gap-4 border-b-3 md:border-b-0 md:border-r-3 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
@@ -71,7 +71,6 @@ export default async function Home({
 
       {/* Sponsors */}
       <Sponsors />
-
     </div>
   );
 }

@@ -12,6 +12,7 @@ interface TicketCardProps {
   buttonHref: string;
   backgroundImage?: string;
   backgroundOpacity?: number;
+  className?: string;
 }
 
 function TicketCard({
@@ -23,9 +24,12 @@ function TicketCard({
   buttonHref,
   backgroundImage,
   backgroundOpacity = 40,
+  className = "",
 }: TicketCardProps) {
   return (
-    <div className="relative bg-[#0E0F19] border-r border-[#1F5673] p-8 flex flex-col min-h-[350px]">
+    <div
+      className={`relative bg-[#0E0F19] border-[#1F5673] p-8 flex flex-col min-h-87.5 h-full ${className}`}
+    >
       {backgroundImage && (
         <Image
           src={backgroundImage}
@@ -51,13 +55,13 @@ function TicketCard({
         >
           {price}
         </p>
-        <ul className="flex flex-col gap-1 mb-6 flex-grow">
+        <ul className="flex flex-col gap-1 mb-6 grow">
           {features.map((feature, index) => (
             <li
               key={index}
-              className="flex items-start gap-2 text-[#EEE5E5] text-sm"
+              className="flex items-start gap-2 text-[#EEE5E5] text-base"
             >
-              <span className="w-1 h-full min-h-[1.25rem] bg-[#00A3E0] flex-shrink-0" />
+              <span className="w-1 h-full min-h-5 bg-[#00A3E0] shrink-0" />
               <span>{feature}</span>
             </li>
           ))}
@@ -84,53 +88,59 @@ export default async function Tickets({
   const t = await getTranslations({ locale });
 
   return (
-    <div className="bg-[#0E0F19]">
+    <div className="bg-[#0E0F19] min-h-0 flex flex-col flex-1">
       {/* 2x2 Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 pt-16 md:pt-20">
-          {/* KÜLASTAJA PILET */}
-          <TicketCard
-            title={t("tickets.visitor.name")}
-            subtitle={t("tickets.subtitle")}
-            price={t("tickets.visitor.price")}
-            features={t.raw("tickets.visitor.features")}
-            buttonText={t("tickets.buyButton")}
-            buttonHref="https://fienta.com/et/tipilan"
-            backgroundImage="/images/landing/visitor_tournament.jpg"
-          />
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 auto-rows-fr pt-14 flex-1 min-h-0">
+        {/* KÜLASTAJA PILET */}
+        <TicketCard
+          title={t("tickets.visitor.name")}
+          subtitle={t("tickets.subtitle")}
+          price={t("tickets.visitor.price")}
+          features={t.raw("tickets.visitor.features")}
+          buttonText={t("tickets.buyButton")}
+          buttonHref="https://fienta.com/et/tipilan"
+          backgroundImage="/images/landing/visitor_tournament.jpg"
+          backgroundOpacity={30}
+          className="border-b-[3px] md:border-b-[3px] md:border-r-[3px]"
+        />
 
-          {/* TOETAJA PILET */}
-          <TicketCard
-            title={t("tickets.supporter.name")}
-            subtitle={t("tickets.subtitle")}
-            price={t("tickets.supporter.price")}
-            features={t.raw("tickets.supporter.features")}
-            buttonText={t("tickets.buyButton")}
-            buttonHref="https://fienta.com/et/tipilan"
-            backgroundImage="/images/landing/explore_teaser.png"
-          />
+        {/* TOETAJA PILET */}
+        <TicketCard
+          title={t("tickets.supporter.name")}
+          subtitle={t("tickets.subtitle")}
+          price={t("tickets.supporter.price")}
+          features={t.raw("tickets.supporter.features")}
+          buttonText={t("tickets.buyButton")}
+          buttonHref="https://fienta.com/et/tipilan"
+          backgroundImage="/images/landing/explore_teaser.png"
+          backgroundOpacity={80}
+          className="border-b-[3px]"
+        />
 
-          {/* LOL TURNIIRI PILET */}
-          <TicketCard
-            title={t("tickets.lol.name")}
-            subtitle={t("tickets.subtitle")}
-            price={t("tickets.lol.price")}
-            features={t.raw("tickets.lol.features")}
-            buttonText={t("tickets.buyButton")}
-            buttonHref="https://fienta.com/et/tipilan"
-            backgroundImage="/images/landing/league_ticket.jpg"
-          />
+        {/* LOL TURNIIRI PILET */}
+        <TicketCard
+          title={t("tickets.lol.name")}
+          subtitle={t("tickets.subtitle")}
+          price={t("tickets.lol.price")}
+          features={t.raw("tickets.lol.features")}
+          buttonText={t("tickets.buyButton")}
+          buttonHref="https://fienta.com/et/tipilan"
+          backgroundImage="/images/landing/league_ticket.jpg"
+          className="border-b-[3px] md:border-b-0 md:border-r-[3px]"
+        />
 
-          {/* CS2 TURNIIRI PILET */}
-          <TicketCard
-            title={t("tickets.cs2.name")}
-            subtitle={t("tickets.subtitle")}
-            price={t("tickets.cs2.price")}
-            features={t.raw("tickets.cs2.features")}
-            buttonText={t("tickets.buyButton")}
-            buttonHref="https://fienta.com/et/tipilan"
-            backgroundImage="/images/landing/compete_teaser.jpg"
-            backgroundOpacity={30}
-          />
+        {/* CS2 TURNIIRI PILET */}
+        <TicketCard
+          title={t("tickets.cs2.name")}
+          subtitle={t("tickets.subtitle")}
+          price={t("tickets.cs2.price")}
+          features={t.raw("tickets.cs2.features")}
+          buttonText={t("tickets.buyButton")}
+          buttonHref="https://fienta.com/et/tipilan"
+          backgroundImage="/images/landing/compete_teaser.jpg"
+          backgroundOpacity={30}
+          className="border-b-0"
+        />
       </div>
     </div>
   );
