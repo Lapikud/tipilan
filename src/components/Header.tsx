@@ -6,7 +6,7 @@ import { Link, usePathname } from "@/i18n/routing";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 
 // Icons
-import { MdMenu } from "react-icons/md";
+import { MdClose, MdMenu } from "react-icons/md";
 
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -40,8 +40,12 @@ const Header = ({ navItems }: HeaderProps) => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Filter nav items for the horizontal bar (exclude kodukord)
-  const mainNavItems = navItems.filter((item) => item.href !== "/kodukord");
+  // Filter nav items for the horizontal bar (exclude kodukord and avaleht)
+  const mainNavItems = navItems.filter(
+    (item) => item.href !== "/kodukord" && item.href !== "/",
+  );
+  // Mobile dropdown should match the visual menu, without homepage
+  const dropdownNavItems = mainNavItems.filter((item) => item.href !== "/");
   const disabledNavHrefs = new Set<NavItem["href"]>(["/messiala", "/ajakava"]);
 
   const navIconByHref: Partial<Record<NavItem["href"], string>> = {
@@ -106,12 +110,12 @@ const Header = ({ navItems }: HeaderProps) => {
                 aria-current={isActive ? "page" : undefined}
                 aria-disabled={isActive || isDisabled ? true : undefined}
                 tabIndex={isActive || isDisabled ? -1 : undefined}
-                className={`${vipnagorgialla.className} group font-bold italic text-lg uppercase px-4 py-1.5 border-2 border-[#00A3E0] text-[#EEE5E5] transition ${
+                className={`${vipnagorgialla.className} group font-bold italic text-lg uppercase px-4 py-1.5 border-2 border-[#00A3E0] transition ${
                   isActive
                     ? "bg-[#00A3E0] text-black cursor-default pointer-events-none"
                     : isDisabled
-                      ? "opacity-50 cursor-not-allowed pointer-events-none"
-                      : "hover:bg-[#00A3E0]/20"
+                      ? "bg-[#1F5673] text-[#EEE5E5] opacity-50 cursor-not-allowed pointer-events-none"
+                      : "bg-[#1F5673] text-[#EEE5E5] hover:bg-[#00A3E0] hover:text-black"
                 }`}
               >
                 {item.label}
@@ -132,18 +136,22 @@ const Header = ({ navItems }: HeaderProps) => {
               size="icon"
               className="lg:hidden size-10 cursor-pointer"
             >
-              <MdMenu className="size-10 text-[#EEE5E5]" />
+              {isMobileMenuOpen ? (
+                <MdClose className="size-10 text-[#EEE5E5]" />
+              ) : (
+                <MdMenu className="size-10 text-[#EEE5E5]" />
+              )}
               <span className="sr-only">Menu</span>
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="end"
-            className="lg:hidden w-64 translate-y-4 rounded-none border-3 border-[#1F5673] bg-[#0E0F19] p-0"
+            className="lg:hidden w-72 translate-x-2 translate-y-0 rounded-none border-3 border-[#1F5673] bg-[#0E0F19] p-0"
           >
-            {mainNavItems.map((item, index) => {
+            {dropdownNavItems.map((item, index) => {
               const isActive = pathname === item.href;
               const isDisabled = disabledNavHrefs.has(item.href);
-              const hasBottomBorder = index !== mainNavItems.length - 1;
+              const hasBottomBorder = index !== dropdownNavItems.length - 1;
 
               return (
                 <DropdownMenuItem
@@ -152,7 +160,7 @@ const Header = ({ navItems }: HeaderProps) => {
                 >
                   {isActive ? (
                     <span
-                      className={`${vipnagorgialla.className} block w-full cursor-default bg-[#00A3E0] px-5 py-3 text-xl font-bold italic uppercase text-black ${
+                      className={`${vipnagorgialla.className} block w-full cursor-default bg-[#00A3E0] px-5 py-2.5 text-xl font-bold italic uppercase text-black ${
                         hasBottomBorder ? "border-b-3 border-[#1F5673]" : ""
                       }`}
                     >
@@ -167,7 +175,7 @@ const Header = ({ navItems }: HeaderProps) => {
                     </span>
                   ) : isDisabled ? (
                     <span
-                      className={`${vipnagorgialla.className} block w-full cursor-not-allowed px-5 py-3 text-xl font-bold italic uppercase text-[#EEE5E5] opacity-50 ${
+                      className={`${vipnagorgialla.className} block w-full cursor-not-allowed bg-[#0E0F19] px-5 py-2.5 text-xl font-bold italic uppercase text-[#8A90A0] ${
                         hasBottomBorder ? "border-b-3 border-[#1F5673]" : ""
                       }`}
                     >
@@ -183,7 +191,7 @@ const Header = ({ navItems }: HeaderProps) => {
                   ) : (
                     <Link
                       href={item.href}
-                      className={`${vipnagorgialla.className} group block w-full px-5 py-3 text-xl font-bold italic uppercase text-[#EEE5E5] transition hover:bg-[#00A3E0] hover:text-black ${
+                      className={`${vipnagorgialla.className} group block w-full bg-[#0E0F19] px-5 py-2.5 text-xl font-bold italic uppercase text-[#EEE5E5] transition hover:bg-[#00A3E0] hover:text-black ${
                         hasBottomBorder ? "border-b-3 border-[#1F5673]" : ""
                       }`}
                     >

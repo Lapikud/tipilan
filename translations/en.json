@@ -77,7 +77,7 @@
         "description": "The TipiLAN expo area hosts companies, additional activities and lectures."
       },
       "reserveSpot": "Reserve your spot today!",
-      "poweredBy": "TipiLAN is powered by...",
+      "poweredBy": "Toetajad",
       "dateAndLocation": "11th–13th Oct. @ TalTech"
     }
   },
@@ -214,9 +214,38 @@
           "title": "General Information",
           "rules": [
             "The Counter-Strike 2 (CS2) tournament will take place on September 11-13, 2026 at Tallinn University of Technology (TalTech), Ehitajate tee 5, Tallinn.",
-            {"main": "The prize pool of the tournament is €6750, distributed as follows:", "sub": [{"main": "Main Championship TOP 3 prize pool is €6000:", "sub": ["1st place - €600 per player (total €3000)", "2nd place - €400 per player (total €2000)", "3rd place - €200 per player (total €1000)"]}, {"main": "Second Chance Tournament prize pool is €750:", "sub": ["1st place - €100 per player (total €500)", "2nd place - €50 per player (total €250)"]}]},
-            {"main": "TipiLAN is classified as a Valve Tier 2 (No Invitations) event.", "sub": ["Top 3 results of the Main Championship will be submitted for VRS calculation. HLTV.org will determine which matches count toward VRS. Ranking status cannot be guaranteed prior to official confirmation."]},
-            {"main": "Prize money will be paid to the player's bank account within 30 days.", "sub": ["In the case of a minor, the prize will be paid to the parent's/guardian's bank account."]},
+            {
+              "main": "The prize pool of the tournament is €6750, distributed as follows:",
+              "sub": [
+                {
+                  "main": "Main Championship TOP 3 prize pool is €6000:",
+                  "sub": [
+                    "1st place - €600 per player (total €3000)",
+                    "2nd place - €400 per player (total €2000)",
+                    "3rd place - €200 per player (total €1000)"
+                  ]
+                },
+                {
+                  "main": "Second Chance Tournament prize pool is €750:",
+                  "sub": [
+                    "1st place - €100 per player (total €500)",
+                    "2nd place - €50 per player (total €250)"
+                  ]
+                }
+              ]
+            },
+            {
+              "main": "TipiLAN is classified as a Valve Tier 2 (No Invitations) event.",
+              "sub": [
+                "Top 3 results of the Main Championship will be submitted for VRS calculation. HLTV.org will determine which matches count toward VRS. Ranking status cannot be guaranteed prior to official confirmation."
+              ]
+            },
+            {
+              "main": "Prize money will be paid to the player's bank account within 30 days.",
+              "sub": [
+                "In the case of a minor, the prize will be paid to the parent's/guardian's bank account."
+              ]
+            },
             "Throughout the tournament, every participant must comply with the laws of the Republic of Estonia, the TipiLAN regulations, and the event regulations.",
             "By purchasing a ticket, each participant gives consent to be photographed, filmed, and recorded for documentation and marketing purposes.",
             "The CS2 main tournament will be recorded and broadcasted on streaming platforms Twitch and YouTube.",
@@ -232,17 +261,58 @@
           "rules": [
             "The CS2 main tournament team consists of five core members, one of whom is the team captain.",
             "By August 28th 2026 (two weeks before the tournament), each team must confirm its participation, final core roster and team name.",
-            {"main": "The team captain is the team's representative, who:", "sub": ["Acts as the contact person for the organizing team", "Registers the team for the tournament", "Is responsible for the team's behavior and actions", "Represents the team in matters of warnings, disqualifications, disputes, and timeouts"]},
-            {"main": "Each team may have one substitute player, who is not part of the core roster:", "sub": ["The substitute must purchase a separate substitute ticket", "The substitute may replace any of the team's core members during the tournament", "The substitute is subject to the same rights and requirements as the core roster"]},
-            {"main": "Each team may have one coach:", "sub": ["The coach must purchase a separate coach ticket", "The coach can only communicate with the team between matches and during tactical timeouts"]},
-            {"main": "Changes to the core roster are allowed before the team registration deadline:", "sub": ["Player changes must be made through Fienta", "If a member is replaced, the team still retains the right to have a substitute", "A replacement player is subject to the same rights and requirements as the core roster"]},
+            {
+              "main": "The team captain is the team's representative, who:",
+              "sub": [
+                "Acts as the contact person for the organizing team",
+                "Registers the team for the tournament",
+                "Is responsible for the team's behavior and actions",
+                "Represents the team in matters of warnings, disqualifications, disputes, and timeouts"
+              ]
+            },
+            {
+              "main": "Each team may have one substitute player, who is not part of the core roster:",
+              "sub": [
+                "The substitute must purchase a separate substitute ticket",
+                "The substitute may replace any of the team's core members during the tournament",
+                "The substitute is subject to the same rights and requirements as the core roster"
+              ]
+            },
+            {
+              "main": "Each team may have one coach:",
+              "sub": [
+                "The coach must purchase a separate coach ticket",
+                "The coach can only communicate with the team between matches and during tactical timeouts"
+              ]
+            },
+            {
+              "main": "Changes to the core roster are allowed before the team registration deadline:",
+              "sub": [
+                "Player changes must be made through Fienta",
+                "If a member is replaced, the team still retains the right to have a substitute",
+                "A replacement player is subject to the same rights and requirements as the core roster"
+              ]
+            },
             "If the team captain is replaced, the team itself decides who will assume the captain's rights and responsibilities.",
             "If a team withdraws before the registration deadline, the participation fee will be refunded.",
             "All team members may only belong to one team during the tournament and represent only themselves.",
             "All team members must be at least 16 years old by the day before the tournament starts.",
             "No team member may be a citizen of the Russian Federation or the Republic of Belarus.",
-            {"main": "Teams are not allowed to:", "sub": ["Display team sponsors during the tournament", "Play in the interest of another team or team member"]},
-            {"main": "Team name:", "sub": ["Must not be offensive, vulgar, political, or otherwise inappropriate", "Must not contain emojis or other symbols that are not characters", "Must be changed if requested by the organizing team"]}
+            {
+              "main": "Teams are not allowed to:",
+              "sub": [
+                "Display team sponsors during the tournament",
+                "Play in the interest of another team or team member"
+              ]
+            },
+            {
+              "main": "Team name:",
+              "sub": [
+                "Must not be offensive, vulgar, political, or otherwise inappropriate",
+                "Must not contain emojis or other symbols that are not characters",
+                "Must be changed if requested by the organizing team"
+              ]
+            }
           ]
         },
         {
@@ -269,7 +339,19 @@
           "title": "Game Version and Settings",
           "rules": [
             "The most recent version of CS2 will be used throughout the tournament.",
-            {"main": "The following settings will be used in the CS2 tournament:", "sub": ["Best of 24 rounds (mp_maxrounds 24)", "Round time: 1 minute 55 seconds (mp_roundtime 1.92)", "Starting money: $800 (mp_startmoney 800)", "Freeze time at the start of each round: 20 seconds (mp_freezetime 20)", "Buy time: 20 seconds (mp_buytime 20)", "C4 timer: 40 seconds (mp_c4timer 40)", "Overtime rounds: Best of 6 (mp_overtime_maxrounds 6)", "Overtime starting money: $12,500 (mp_overtime_startmoney 12500)"]},
+            {
+              "main": "The following settings will be used in the CS2 tournament:",
+              "sub": [
+                "Best of 24 rounds (mp_maxrounds 24)",
+                "Round time: 1 minute 55 seconds (mp_roundtime 1.92)",
+                "Starting money: $800 (mp_startmoney 800)",
+                "Freeze time at the start of each round: 20 seconds (mp_freezetime 20)",
+                "Buy time: 20 seconds (mp_buytime 20)",
+                "C4 timer: 40 seconds (mp_c4timer 40)",
+                "Overtime rounds: Best of 6 (mp_overtime_maxrounds 6)",
+                "Overtime starting money: $12,500 (mp_overtime_startmoney 12500)"
+              ]
+            },
             "Overtime: If the match ends in a tie after 24 rounds, overtime will be played as Best of 6. Overtimes continue until a winner is determined.",
             "Timeout: Each team is allowed to call a 30 second timeout up to 3 times during regulation rounds. Use \"!pause\" in the in-game chat.",
             "Technical timeout: Each team has the right to call a technical timeout if needed. Use \".tech\" in the in-game chat. Tactical communication is forbidden during all technical timeouts."
@@ -278,11 +360,44 @@
         {
           "title": "Map Selection & Tournament Structure",
           "rules": [
-            {"main": "The 32-team tournament will take place in two stages:", "sub": ["Swiss stage: 5 rounds, initial phase Bo1, deciding matches Bo3. 3 wins = playoffs (Top 16). 3 losses = Second Chance Tournament.", "Playoffs: Double elimination. Upper bracket Bo3, lower bracket Bo1, Lower Final is Bo3.", "Second Chance Tournament: Double elimination. All matches except Final are Bo1, Final is Bo3."]},
-            {"main": "Seeding will be conducted according to VRS priority:", "sub": ["Teams with Global VRS rank will be seeded higher than unranked teams", "Teams without Global VRS rank will be assigned initial seeds randomly", "After the initial round, standings will be determined by the Buchholz system"]},
+            {
+              "main": "The 32-team tournament will take place in two stages:",
+              "sub": [
+                "Swiss stage: 5 rounds, initial phase Bo1, deciding matches Bo3. 3 wins = playoffs (Top 16). 3 losses = Second Chance Tournament.",
+                "Playoffs: Double elimination. Upper bracket Bo3, lower bracket Bo1, Lower Final is Bo3.",
+                "Second Chance Tournament: Double elimination. All matches except Final are Bo1, Final is Bo3."
+              ]
+            },
+            {
+              "main": "Seeding will be conducted according to VRS priority:",
+              "sub": [
+                "Teams with Global VRS rank will be seeded higher than unranked teams",
+                "Teams without Global VRS rank will be assigned initial seeds randomly",
+                "After the initial round, standings will be determined by the Buchholz system"
+              ]
+            },
             "The map pool will consist of maps from the current Valve Active Duty Map Group.",
-            {"main": "Best of 1 (Bo1) veto:", "sub": ["Team A removes 2 maps", "Team B removes 3 maps", "Team A removes 1 map", "The remaining map will be played"]},
-            {"main": "Best of 3 (Bo3) veto:", "sub": ["Team A removes 1 map", "Team B removes 1 map", "Team A picks 1 map", "Team B picks 1 map", "Team A removes 1 map", "Team B removes 1 map", "The remaining map will be played as the decider if necessary"]}
+            {
+              "main": "Best of 1 (Bo1) veto:",
+              "sub": [
+                "Team A removes 2 maps",
+                "Team B removes 3 maps",
+                "Team A removes 1 map",
+                "The remaining map will be played"
+              ]
+            },
+            {
+              "main": "Best of 3 (Bo3) veto:",
+              "sub": [
+                "Team A removes 1 map",
+                "Team B removes 1 map",
+                "Team A picks 1 map",
+                "Team B picks 1 map",
+                "Team A removes 1 map",
+                "Team B removes 1 map",
+                "The remaining map will be played as the decider if necessary"
+              ]
+            }
           ]
         },
         {
@@ -313,8 +428,20 @@
             "A team has the right to voluntarily withdraw from the tournament.",
             "In case of a team disqualification, the opposing team will automatically win the current match round.",
             "In case of disqualification, the participation fee will not be refunded.",
-            {"main": "Only the team captain may dispute a disqualification:", "sub": ["A dispute must be submitted within 15 minutes", "The organizing team has up to 25 minutes to make a decision"]},
-            {"main": "Teams have the right to file a protest:", "sub": ["A protest must be submitted within 5 minutes of discovering the issue", "The organizing team has up to 25 minutes to make a decision"]},
+            {
+              "main": "Only the team captain may dispute a disqualification:",
+              "sub": [
+                "A dispute must be submitted within 15 minutes",
+                "The organizing team has up to 25 minutes to make a decision"
+              ]
+            },
+            {
+              "main": "Teams have the right to file a protest:",
+              "sub": [
+                "A protest must be submitted within 5 minutes of discovering the issue",
+                "The organizing team has up to 25 minutes to make a decision"
+              ]
+            },
             "The game official will inform the violating player, their team, and the opposing team about the violation and its consequences.",
             "The organizing team has the right to pause and resume a match round at any time if necessary.",
             "The organizing team is obliged to publicly announce all eliminations, disqualifications, and subsequent changes."
@@ -373,14 +500,36 @@
           "title": "General Information",
           "rules": [
             "The League of Legends (LoL) tournament takes place as a two-day event on September 11-13, 2026 at Tallinn University of Technology (TalTech), Ehitajate tee 5, Tallinn.",
-            {"main": "The tournament prize pool is €3000, distributed as follows:", "sub": ["1st place team - €300 per player", "2nd place team - €200 per player", "3rd place team - €100 per player"]},
-            {"main": "Prize money will be paid to the player's bank account.", "sub": ["In the case of a minor, the prize will be paid to the parent's/guardian's bank account."]}
+            {
+              "main": "The tournament prize pool is €3000, distributed as follows:",
+              "sub": [
+                "1st place team - €300 per player",
+                "2nd place team - €200 per player",
+                "3rd place team - €100 per player"
+              ]
+            },
+            {
+              "main": "Prize money will be paid to the player's bank account.",
+              "sub": [
+                "In the case of a minor, the prize will be paid to the parent's/guardian's bank account."
+              ]
+            }
           ]
         },
         {
           "title": "Teams and Participants",
           "rules": [
-            {"main": "A team must have:", "sub": ["Five members (each member referred to as Participant)", "One member is the team Captain, who is the spokesperson for the entire team", "All members must be at least 16 years old at the time of registration", "Participant may not be a citizen of the Russian Federation or Republic of Belarus", "Teams are not allowed to use a coach during the tournament", "One team member may be substituted, who must also be registered and physically present"]},
+            {
+              "main": "A team must have:",
+              "sub": [
+                "Five members (each member referred to as Participant)",
+                "One member is the team Captain, who is the spokesperson for the entire team",
+                "All members must be at least 16 years old at the time of registration",
+                "Participant may not be a citizen of the Russian Federation or Republic of Belarus",
+                "Teams are not allowed to use a coach during the tournament",
+                "One team member may be substituted, who must also be registered and physically present"
+              ]
+            },
             "Participant must provide only truthful information and be ready to verify their identity to the Organizer.",
             "Team name and logo, as well as Participant's in-game alias and avatar must be appropriate, without profanity, vulgarity, political or religious messages or symbols.",
             "Participant represents only themselves throughout the Tournament (i.e., no one else may compete on their behalf).",
@@ -392,17 +541,47 @@
         {
           "title": "Pre-game Procedures",
           "rules": [
-            {"main": "Tournament participation, matches and bracket work through challengermode.com.", "sub": ["The entire team must be registered, including substitute", "Players must have their highest rank account linked in challengermode", "Tournament takes place on EU West server", "Players may not use any account other than those linked in challengermode"]},
+            {
+              "main": "Tournament participation, matches and bracket work through challengermode.com.",
+              "sub": [
+                "The entire team must be registered, including substitute",
+                "Players must have their highest rank account linked in challengermode",
+                "Tournament takes place on EU West server",
+                "Players may not use any account other than those linked in challengermode"
+              ]
+            },
             "Matches in challengermode are automatic. For a new match, there is 10 minutes to confirm readiness.",
-            {"main": "Draft can begin when both sides have confirmed readiness.", "sub": ["Placeholders are not allowed. If a champion is locked in draft, it must be played", "Before draft, players must be in role order: Top-Jungle-Mid-Bot-Support", "Deliberate stalling is not allowed"]},
+            {
+              "main": "Draft can begin when both sides have confirmed readiness.",
+              "sub": [
+                "Placeholders are not allowed. If a champion is locked in draft, it must be played",
+                "Before draft, players must be in role order: Top-Jungle-Mid-Bot-Support",
+                "Deliberate stalling is not allowed"
+              ]
+            },
             "Only official streamers and referees may join the match lobby besides players."
           ]
         },
         {
           "title": "In-game Procedures",
           "rules": [
-            {"main": "A game has officially started (game of record) when all 10 players are on the map and the game has reached the first real interaction. GOR conditions:", "sub": ["Either team successfully uses an attack or ability", "Opponents see each other", "Entering enemy territory", "Game has lasted 2 minutes"]},
-            {"main": "Game pause:", "sub": ["During pause, players are not allowed to leave the match area", "Organizers may pause the game as needed", "Each team has the right to take up to 15 minutes of pause total during the match for valid reasons"]},
+            {
+              "main": "A game has officially started (game of record) when all 10 players are on the map and the game has reached the first real interaction. GOR conditions:",
+              "sub": [
+                "Either team successfully uses an attack or ability",
+                "Opponents see each other",
+                "Entering enemy territory",
+                "Game has lasted 2 minutes"
+              ]
+            },
+            {
+              "main": "Game pause:",
+              "sub": [
+                "During pause, players are not allowed to leave the match area",
+                "Organizers may pause the game as needed",
+                "Each team has the right to take up to 15 minutes of pause total during the match for valid reasons"
+              ]
+            },
             "The game may be resumed only with consent of both parties or referee permission.",
             "If an obstacle occurs in fair gameplay (gamebreaking bug, connection issues, etc.), the referee will determine new instructions."
           ]
@@ -410,7 +589,13 @@
         {
           "title": "Match Conclusion",
           "rules": [
-            {"main": "The match winner is the team with the most games won.", "sub": ["Organizer will display team standings in an accessible manner", "After each match, the bracket is updated in challengermode"]}
+            {
+              "main": "The match winner is the team with the most games won.",
+              "sub": [
+                "Organizer will display team standings in an accessible manner",
+                "After each match, the bracket is updated in challengermode"
+              ]
+            }
           ]
         },
         {
@@ -419,7 +604,12 @@
             "A team may decide to end tournament participation at any time by notifying the referee and/or organizer.",
             "Penalties earned until elimination remain valid until the end of the tournament.",
             "If a team does not show up or is not ready by the agreed start time, the Organizer may eliminate the team.",
-            {"main": "The team roster cannot be changed during the tournament.", "sub": ["If team size falls below the required number due to member departure, the Organizer must eliminate the team"]},
+            {
+              "main": "The team roster cannot be changed during the tournament.",
+              "sub": [
+                "If team size falls below the required number due to member departure, the Organizer must eliminate the team"
+              ]
+            },
             "If a team wishes to withdraw during a match, the team must forfeit.",
             "All eliminations and disqualifications must be announced publicly immediately."
           ]
@@ -432,15 +622,42 @@
             "The referee will inform both the offending player, their team, and the opposing team of the offense and penalty.",
             "The referee must be impartial; team skill level must not influence monitoring of offenses and penalties.",
             "Penalties may be assigned to the entire team or a single team member.",
-            {"main": "Penalties may include:", "sub": ["WARNING: a notice for a minor offense", "BAN LOSS: Team cannot ban a certain number of champions in the following game", "GAME LOSS: Team receives automatic loss for one game", "MATCH LOSS: Team receives automatic match loss", "DISQUALIFICATION: Applies to the entire team"]},
-            {"main": "Inappropriate behavior categories:", "sub": ["MINOR OFFENSE: unpleasant, unethical or disruptive behavior - penalty warning", "MEDIUM OFFENSE: ignoring instructions, hate speech, aggression - penalty game loss", "MAJOR OFFENSE: clearly against rules and good practices - penalty disqualification", "COLLUSION: agreement between two teams - penalty disqualification of both teams", "BRIBERY AND BETTING: prohibited - penalty disqualification", "AGGRESSIVE BEHAVIOR: aggression against people - penalty disqualification", "CHEATING: deliberate action to gain advantage - penalty disqualification"]}
+            {
+              "main": "Penalties may include:",
+              "sub": [
+                "WARNING: a notice for a minor offense",
+                "BAN LOSS: Team cannot ban a certain number of champions in the following game",
+                "GAME LOSS: Team receives automatic loss for one game",
+                "MATCH LOSS: Team receives automatic match loss",
+                "DISQUALIFICATION: Applies to the entire team"
+              ]
+            },
+            {
+              "main": "Inappropriate behavior categories:",
+              "sub": [
+                "MINOR OFFENSE: unpleasant, unethical or disruptive behavior - penalty warning",
+                "MEDIUM OFFENSE: ignoring instructions, hate speech, aggression - penalty game loss",
+                "MAJOR OFFENSE: clearly against rules and good practices - penalty disqualification",
+                "COLLUSION: agreement between two teams - penalty disqualification of both teams",
+                "BRIBERY AND BETTING: prohibited - penalty disqualification",
+                "AGGRESSIVE BEHAVIOR: aggression against people - penalty disqualification",
+                "CHEATING: deliberate action to gain advantage - penalty disqualification"
+              ]
+            }
           ]
         },
         {
           "title": "Tournament Format",
           "rules": [
             "Tournament uses Fearless draft principles. This means champions picked during a series cannot be picked in subsequent games until the series ends.",
-            {"main": "Tournament uses Round Robin + Single Elimination format:", "sub": ["First round has 2 six-team groups where all teams play each other once", "This determines the top 4 who advance to the next day's single elimination bracket", "In case of group ties, the team that won the head-to-head match advances"]}
+            {
+              "main": "Tournament uses Round Robin + Single Elimination format:",
+              "sub": [
+                "First round has 2 six-team groups where all teams play each other once",
+                "This determines the top 4 who advance to the next day's single elimination bracket",
+                "In case of group ties, the team that won the head-to-head match advances"
+              ]
+            }
           ]
         }
       ]

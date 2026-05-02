@@ -38,8 +38,14 @@ export default async function Home({
             </span>
           </div>
           <div className="flex flex-col gap-4">
-            <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
-              confirmation_number
+            <span
+              className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]"
+              style={{
+                fontVariationSettings:
+                  '"FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24',
+              }}
+            >
+              local_activity
             </span>
           </div>
         </Link>
@@ -60,7 +66,7 @@ export default async function Home({
           </div>
           <div className="flex flex-col gap-4">
             <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
-              trophy
+              rewarded_ads
             </span>
           </div>
         </Link>

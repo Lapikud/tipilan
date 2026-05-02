@@ -46,14 +46,14 @@ export default async function CS2Tournament({
               <Link
                 href="https://fienta.com/et/tipilan"
                 target="_blank"
-                className={`${vipnagorgialla.className} font-bold italic px-4 py-2 bg-[#007CAB] hover:bg-[#00A3E0] text-[#EEE5E5] uppercase transition`}
+                className={`${vipnagorgialla.className} font-bold italic px-4 py-3 bg-[#007CAB] hover:bg-[#00A3E0] text-black uppercase transition`}
               >
                 {t("cs2page.buyTicket")}
               </Link>
               <Link
                 href="https://git.edunaut.ee/slunk/TipiLAN_reeglistik_ruleset/src/branch/main/CS2%20tournament"
                 target="_blank"
-                className={`${vipnagorgialla.className} font-bold italic px-4 py-2 bg-[#1F5673] hover:bg-[#007CAB] text-[#EEE5E5] uppercase transition`}
+                className={`${vipnagorgialla.className} font-bold italic text-lg uppercase px-4 py-2 border-2 border-[#00A3E0] bg-[#1F5673] text-[#EEE5E5] hover:bg-[#00A3E0] hover:text-black transition`}
               >
                 {t("cs2page.viewGithub")}
               </Link>

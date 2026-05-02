@@ -100,7 +100,7 @@ export default function Sponsors({
       className={`flex flex-col w-full xl:h-[414px] mx-auto ${vipnagorgialla.className} font-bold italic border-[#1F5673] ${className}`}
     >
       {showTitle && (
-        <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] text-[#2A2C3F] px-12 pt-8 pb-4">
+        <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] text-[#2A2C3F] uppercase text-center px-12 pt-8 pb-4">
           {t("home.sections.poweredBy")}
         </h3>
       )}
@@ -136,10 +136,10 @@ export default function Sponsors({
 
         @keyframes sponsors-ticker {
           from {
-            transform: translateX(-25%);
+            transform: translateX(0%);
           }
           to {
-            transform: translateX(0%);
+            transform: translateX(-25%);
           }
         }
       `}</style>

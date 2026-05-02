@@ -29,7 +29,7 @@ export default async function LoLTournament({
 
   return (
     <div className="bg-[#0E0F19] min-h-screen pt-16 md:pt-20">
-      <div className="max-w-[1920px] mx-auto px-6 md:px-12 py-8 md:py-16">
+      <div className="max-w-480 mx-auto px-6 md:px-12 py-8 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-16">
           {/* Main content */}
           <div>
@@ -45,7 +45,7 @@ export default async function LoLTournament({
               <Link
                 href="https://fienta.com/et/tipilan"
                 target="_blank"
-                className={`${vipnagorgialla.className} font-bold italic px-4 py-2 bg-[#007CAB] hover:bg-[#00A3E0] text-[#EEE5E5] uppercase transition`}
+                className={`${vipnagorgialla.className} font-bold italic px-4 py-2 bg-[#007CAB] hover:bg-[#00A3E0] text-black uppercase transition`}
               >
                 {t("lolpage.buyTicket")}
               </Link>

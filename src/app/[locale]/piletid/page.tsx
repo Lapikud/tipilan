@@ -51,9 +51,20 @@ function TicketCard({
           {subtitle}
         </h3>
         <p
-          className={`${vipnagorgialla.className} font-bold italic text-[clamp(2.5rem,2rem+2vw,4rem)] leading-none text-[#00A3E0] mb-4`}
+          className={`${vipnagorgialla.className} font-bold italic text-[clamp(2.5rem,2rem+2vw,4rem)] leading-none mb-4`}
         >
-          {price}
+          {Array.from(price).map((char, index) => (
+            <span
+              key={`${char}-${index}`}
+              className={
+                char === "€" || char === "+"
+                  ? "text-[#00A3E0]"
+                  : "text-[#EEE5E5]"
+              }
+            >
+              {char}
+            </span>
+          ))}
         </p>
         <ul className="flex flex-col gap-1 mb-6 grow">
           {features.map((feature, index) => (
@@ -68,7 +79,7 @@ function TicketCard({
         </ul>
         <Link href={buttonHref} target="_blank">
           <button
-            className={`px-4 py-2 bg-[#007CAB] hover:bg-[#00A3E0] text-[#EEE5E5] ${vipnagorgialla.className} font-bold italic uppercase transition`}
+            className={`px-4 py-2 bg-[#007CAB] hover:bg-[#00A3E0] text-black cursor-pointer ${vipnagorgialla.className} font-bold italic uppercase transition`}
           >
             {buttonText}
           </button>
