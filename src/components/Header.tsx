@@ -40,19 +40,15 @@ const Header = ({ navItems }: HeaderProps) => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Filter nav items for the horizontal bar (exclude kodukord and avaleht)
-  const mainNavItems = navItems.filter(
-    (item) => item.href !== "/kodukord" && item.href !== "/",
-  );
-  // Mobile dropdown should match the visual menu, without homepage
-  const dropdownNavItems = mainNavItems.filter((item) => item.href !== "/");
-  const disabledNavHrefs = new Set<NavItem["href"]>(["/messiala", "/ajakava"]);
+  // Header navigation should include all options except homepage
+  const mainNavItems = navItems.filter((item) => item.href !== "/");
+  const dropdownNavItems = mainNavItems;
 
   const navIconByHref: Partial<Record<NavItem["href"], string>> = {
     "/messiala": "weekend",
     "/ajakava": "event_note",
-    "/piletid": "confirmation_number",
-    "/turniirid": "trophy",
+    "/piletid": "local_activity",
+    "/turniirid": "rewarded_ads",
   };
 
   useEffect(() => {
@@ -101,21 +97,18 @@ const Header = ({ navItems }: HeaderProps) => {
         <nav className="hidden lg:flex items-center gap-3">
           {mainNavItems.map((item) => {
             const isActive = pathname === item.href;
-            const isDisabled = disabledNavHrefs.has(item.href);
 
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? "page" : undefined}
-                aria-disabled={isActive || isDisabled ? true : undefined}
-                tabIndex={isActive || isDisabled ? -1 : undefined}
+                aria-disabled={isActive ? true : undefined}
+                tabIndex={isActive ? -1 : undefined}
                 className={`${vipnagorgialla.className} group font-bold italic text-lg uppercase px-4 py-1.5 border-2 border-[#00A3E0] transition ${
                   isActive
                     ? "bg-[#00A3E0] text-black cursor-default pointer-events-none"
-                    : isDisabled
-                      ? "bg-[#1F5673] text-[#EEE5E5] opacity-50 cursor-not-allowed pointer-events-none"
-                      : "bg-[#1F5673] text-[#EEE5E5] hover:bg-[#00A3E0] hover:text-black"
+                    : "bg-[#1F5673] text-[#EEE5E5] hover:bg-[#00A3E0] hover:text-black"
                 }`}
               >
                 {item.label}
@@ -150,13 +143,13 @@ const Header = ({ navItems }: HeaderProps) => {
           >
             {dropdownNavItems.map((item, index) => {
               const isActive = pathname === item.href;
-              const isDisabled = disabledNavHrefs.has(item.href);
               const hasBottomBorder = index !== dropdownNavItems.length - 1;
 
               return (
                 <DropdownMenuItem
                   key={item.href}
-                  className="p-0 focus:bg-transparent data-highlighted:bg-transparent"
+                  style={{ animationDelay: `${index * 55}ms` }}
+                  className="p-0 opacity-0 animate-[dropdown-item-in_220ms_cubic-bezier(0.16,1,0.3,1)_forwards] focus:bg-transparent data-highlighted:bg-transparent"
                 >
                   {isActive ? (
                     <span
@@ -167,22 +160,17 @@ const Header = ({ navItems }: HeaderProps) => {
                       <span className="flex items-center justify-between gap-3">
                         <span>{item.label}</span>
                         {navIconByHref[item.href] ? (
-                          <span className="material-symbols-outlined text-[2rem]! leading-none">
-                            {navIconByHref[item.href]}
-                          </span>
-                        ) : null}
-                      </span>
-                    </span>
-                  ) : isDisabled ? (
-                    <span
-                      className={`${vipnagorgialla.className} block w-full cursor-not-allowed bg-[#0E0F19] px-5 py-2.5 text-xl font-bold italic uppercase text-[#8A90A0] ${
-                        hasBottomBorder ? "border-b-3 border-[#1F5673]" : ""
-                      }`}
-                    >
-                      <span className="flex items-center justify-between gap-3">
-                        <span>{item.label}</span>
-                        {navIconByHref[item.href] ? (
-                          <span className="material-symbols-outlined text-[2rem]! leading-none text-[#00A3E0]">
+                          <span
+                            className="material-symbols-outlined text-[2rem]! leading-none"
+                            style={
+                              item.href === "/piletid"
+                                ? {
+                                    fontVariationSettings:
+                                      '"FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24',
+                                  }
+                                : undefined
+                            }
+                          >
                             {navIconByHref[item.href]}
                           </span>
                         ) : null}
@@ -198,7 +186,17 @@ const Header = ({ navItems }: HeaderProps) => {
                       <span className="flex items-center justify-between gap-3">
                         <span>{item.label}</span>
                         {navIconByHref[item.href] ? (
-                          <span className="material-symbols-outlined text-[2rem]! leading-none text-[#00A3E0] group-hover:text-black">
+                          <span
+                            className="material-symbols-outlined text-[2rem]! leading-none text-[#00A3E0] group-hover:text-black"
+                            style={
+                              item.href === "/piletid"
+                                ? {
+                                    fontVariationSettings:
+                                      '"FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24',
+                                  }
+                                : undefined
+                            }
+                          >
                             {navIconByHref[item.href]}
                           </span>
                         ) : null}
