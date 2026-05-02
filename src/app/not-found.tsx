@@ -5,8 +5,9 @@ export default function NotFound() {
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="system"
-      enableSystem
+      defaultTheme="dark"
+      enableSystem={false}
+      forcedTheme="dark"
       disableTransitionOnChange
     >
       <div className="flex flex-col min-h-[90vh] p-12 justify-center items-center">

@@ -113,7 +113,13 @@ const Header = ({ navItems }: HeaderProps) => {
                 <span className="flex items-center gap-2">
                   <span>{item.label}</span>
                   {navIconByHref[item.href] ? (
-                    <span className="material-symbols-outlined text-[1.4rem]! leading-none text-[#00A3E0] group-hover:text-[#EEE5E5]">
+                    <span
+                      className={`material-symbols-outlined text-[1.4rem]! leading-none ${
+                        isActive
+                          ? "text-black"
+                          : "text-[#00A3E0] group-hover:text-[#EEE5E5]"
+                      }`}
+                    >
                       {navIconByHref[item.href]}
                     </span>
                   ) : null}
