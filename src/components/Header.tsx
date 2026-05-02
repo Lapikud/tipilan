@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Link, usePathname } from "@/i18n/routing";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
@@ -37,10 +38,41 @@ interface HeaderProps {
 
 const Header = ({ navItems }: HeaderProps) => {
   const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Filter nav items for the horizontal bar (exclude kodukord)
   const mainNavItems = navItems.filter((item) => item.href !== "/kodukord");
   const disabledNavHrefs = new Set<NavItem["href"]>(["/messiala", "/ajakava"]);
+
+  const navIconByHref: Partial<Record<NavItem["href"], string>> = {
+    "/messiala": "weekend",
+    "/ajakava": "event_note",
+    "/piletid": "confirmation_number",
+    "/turniirid": "trophy",
+  };
+
+  useEffect(() => {
+    const largeScreenQuery = window.matchMedia("(min-width: 1024px)");
+
+    const handleScaleOrViewportChange = (event: MediaQueryListEvent) => {
+      if (event.matches) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (largeScreenQuery.matches) {
+      setIsMobileMenuOpen(false);
+    }
+
+    largeScreenQuery.addEventListener("change", handleScaleOrViewportChange);
+
+    return () => {
+      largeScreenQuery.removeEventListener(
+        "change",
+        handleScaleOrViewportChange,
+      );
+    };
+  }, []);
 
   return (
     <header className="px-4 py-2 md:px-8 flex items-center bg-[#0E0F19] border-b-3 border-[#1F5673] justify-between">
@@ -58,7 +90,7 @@ const Header = ({ navItems }: HeaderProps) => {
       {/* Right side - Navigation + controls */}
       <div className="flex items-center gap-3">
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-3">
+        <nav className="hidden xl:flex items-center gap-3">
           {mainNavItems.map((item) => {
             const isActive = pathname === item.href;
             const isDisabled = disabledNavHrefs.has(item.href);
@@ -70,7 +102,7 @@ const Header = ({ navItems }: HeaderProps) => {
                 aria-current={isActive ? "page" : undefined}
                 aria-disabled={isActive || isDisabled ? true : undefined}
                 tabIndex={isActive || isDisabled ? -1 : undefined}
-                className={`${vipnagorgialla.className} font-bold italic text-lg uppercase px-4 py-1.5 border-2 border-[#00A3E0] text-[#EEE5E5] transition ${
+                className={`${vipnagorgialla.className} group font-bold italic text-lg uppercase px-4 py-1.5 border-2 border-[#00A3E0] text-[#EEE5E5] transition ${
                   isActive
                     ? "bg-[#00A3E0] text-black cursor-default pointer-events-none"
                     : isDisabled
@@ -78,7 +110,14 @@ const Header = ({ navItems }: HeaderProps) => {
                       : "hover:bg-[#00A3E0]/20"
                 }`}
               >
-                {item.label}
+                <span className="flex items-center gap-2">
+                  <span>{item.label}</span>
+                  {navIconByHref[item.href] ? (
+                    <span className="material-symbols-outlined text-[1.4rem]! leading-none text-[#00A3E0] group-hover:text-[#EEE5E5]">
+                      {navIconByHref[item.href]}
+                    </span>
+                  ) : null}
+                </span>
               </Link>
             );
           })}
@@ -86,46 +125,79 @@ const Header = ({ navItems }: HeaderProps) => {
         <LanguageSwitcher />
 
         {/* Mobile menu button */}
-        <DropdownMenu>
+        <DropdownMenu
+          open={isMobileMenuOpen}
+          onOpenChange={setIsMobileMenuOpen}
+        >
           <DropdownMenuTrigger asChild>
             <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden size-10 cursor-pointer"
+              className="xl:hidden size-10 cursor-pointer"
             >
-              <MdMenu className="h-8 w-8 text-[#EEE5E5]" />
+              <MdMenu className="size-10 text-[#EEE5E5]" />
               <span className="sr-only">Menu</span>
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-48 translate-y-4">
-            {navItems.map((item) => {
+          <DropdownMenuContent
+            align="end"
+            className="xl:hidden w-64 translate-y-4 rounded-none border-3 border-[#1F5673] bg-[#0E0F19] p-0"
+          >
+            {mainNavItems.map((item, index) => {
               const isActive = pathname === item.href;
               const isDisabled = disabledNavHrefs.has(item.href);
+              const hasBottomBorder = index !== mainNavItems.length - 1;
 
               return (
                 <DropdownMenuItem
                   key={item.href}
-                  disabled={isActive || isDisabled}
-                  asChild={!isActive && !isDisabled}
+                  className="p-0 focus:bg-transparent data-highlighted:bg-transparent"
                 >
                   {isActive ? (
                     <span
-                      className={`${vipnagorgialla.className} font-bold italic uppercase text-lg text-[#00A3E0] cursor-default`}
+                      className={`${vipnagorgialla.className} block w-full cursor-default bg-[#00A3E0] px-5 py-3 text-xl font-bold italic uppercase text-black ${
+                        hasBottomBorder ? "border-b-3 border-[#1F5673]" : ""
+                      }`}
                     >
-                      {item.label}
+                      <span className="flex items-center justify-between gap-3">
+                        <span>{item.label}</span>
+                        {navIconByHref[item.href] ? (
+                          <span className="material-symbols-outlined text-[2rem]! leading-none">
+                            {navIconByHref[item.href]}
+                          </span>
+                        ) : null}
+                      </span>
                     </span>
                   ) : isDisabled ? (
                     <span
-                      className={`${vipnagorgialla.className} font-bold italic uppercase text-lg opacity-50 cursor-not-allowed`}
+                      className={`${vipnagorgialla.className} block w-full cursor-not-allowed px-5 py-3 text-xl font-bold italic uppercase text-[#EEE5E5] opacity-50 ${
+                        hasBottomBorder ? "border-b-3 border-[#1F5673]" : ""
+                      }`}
                     >
-                      {item.label}
+                      <span className="flex items-center justify-between gap-3">
+                        <span>{item.label}</span>
+                        {navIconByHref[item.href] ? (
+                          <span className="material-symbols-outlined text-[2rem]! leading-none text-[#00A3E0]">
+                            {navIconByHref[item.href]}
+                          </span>
+                        ) : null}
+                      </span>
                     </span>
                   ) : (
                     <Link
                       href={item.href}
-                      className={`${vipnagorgialla.className} font-bold italic uppercase text-lg`}
+                      className={`${vipnagorgialla.className} group block w-full px-5 py-3 text-xl font-bold italic uppercase text-[#EEE5E5] transition hover:bg-[#00A3E0] hover:text-black ${
+                        hasBottomBorder ? "border-b-3 border-[#1F5673]" : ""
+                      }`}
                     >
-                      {item.label}
+                      <span className="flex items-center justify-between gap-3">
+                        <span>{item.label}</span>
+                        {navIconByHref[item.href] ? (
+                          <span className="material-symbols-outlined text-[2rem]! leading-none text-[#00A3E0] group-hover:text-black">
+                            {navIconByHref[item.href]}
+                          </span>
+                        ) : null}
+                      </span>
                     </Link>
                   )}
                 </DropdownMenuItem>
