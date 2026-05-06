@@ -94,7 +94,7 @@ export default function TeaserCarousel() {
   return (
     <div className="border-b-3 border-[#1F5673]">
       {/* Slides (fade transition + hero lift effect) */}
-      <div className="relative h-182.25 overflow-hidden">
+      <div className="relative h-135 sm:h-140 md:h-160 lg:h-175 xl:h-155 2xl:h-165 overflow-hidden">
         {slides.map((slide, i) => {
           const title = t(`${slide.key}.title`);
           const description = t(`${slide.key}.description`);
