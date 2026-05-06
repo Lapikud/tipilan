@@ -61,16 +61,23 @@ export default function RuleNav({ sections }: RuleNavProps) {
 
   return (
     <aside className="hidden lg:block">
-      <nav className="sticky top-24 border-l border-[#1F5673] pl-6">
-        <ul className="flex flex-col gap-2">
+      <nav className="sticky top-24">
+        <ul className="flex flex-col">
           {sections.map((section) => (
-            <li key={section.id}>
+            <li
+              key={section.id}
+              className={`border-l-2 pl-4 py-1 transition ${
+                activeSection === section.id
+                  ? "border-[#00A3E0]"
+                  : "border-white hover:border-[#00A3E0]"
+              }`}
+            >
               <a
                 href={`#${section.id}`}
                 className={`transition ${
                   activeSection === section.id
-                    ? "text-[#EEE5E5] font-bold"
-                    : "text-[#00A3E0] hover:text-[#EEE5E5]"
+                    ? "text-[#00A3E0] font-bold"
+                    : "text-white hover:text-[#00A3E0]"
                 }`}
               >
                 {section.label}

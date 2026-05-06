@@ -40,7 +40,7 @@
     "welcome": "Tere tulemast TipiLAN 2026 sündmusele!",
     "description": "Liitu meiega Eesti suurimal tudengite korraldatud LAN-üritusel. Mängud, võistlused ja palju muud ootavad sind!",
     "hero": {
-      "date": "11.–13. OKTOOBER 2026",
+      "date": "11.–13. SEPTEMBER 2026",
       "location": "TALTECH, EHITAJATE TEE 5",
       "buyTicket": "OSTA PILET",
       "prizePool": "AUHINNAFOND",
@@ -78,7 +78,7 @@
       },
       "reserveSpot": "Broneeri oma koht juba täna!",
       "poweredBy": "Toetajad",
-      "dateAndLocation": "11.–13. okt. TalTechis"
+      "dateAndLocation": "11.–13. sept. 2026 TalTechis"
     }
   },
   "tickets": {
@@ -763,7 +763,9 @@
     "houseRules": "Kodukord",
     "cs2Rules": "CS2 reeglid",
     "lolRules": "LoL reeglid",
-    "miniRules": "Miniturniiride\n reeglid"
+    "miniRules": "Miniturniiride\n reeglid",
+    "reminder": "Osaleja meelespea",
+    "code": "Ürituse kodukord"
   },
   "admin": {
     "title": "Haldus",

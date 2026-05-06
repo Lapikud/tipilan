@@ -94,7 +94,7 @@ export default function TeaserCarousel() {
   return (
     <div className="border-b-3 border-[#1F5673]">
       {/* Slides (fade transition + hero lift effect) */}
-      <div className="relative h-[729px] overflow-hidden">
+      <div className="relative h-182.25 overflow-hidden">
         {slides.map((slide, i) => {
           const title = t(`${slide.key}.title`);
           const description = t(`${slide.key}.description`);
@@ -117,7 +117,7 @@ export default function TeaserCarousel() {
 
               {/* Overlay */}
               <div
-                className={`absolute inset-0 ${slide.fullBrightness ? "" : "bg-gradient-to-r from-[#0E0F19]/90 via-[#0E0F19]/60 to-[#0E0F19]/20"}`}
+                className={`absolute inset-0 ${slide.fullBrightness ? "" : "bg-linear-to-r from-[#0E0F19]/90 via-[#0E0F19]/60 to-[#0E0F19]/20"}`}
               />
 
               {/* Content */}
@@ -174,7 +174,7 @@ export default function TeaserCarousel() {
         {/* Floating heading (mobile) */}
         <div className="absolute top-5 inset-x-0 px-8 z-20 md:hidden pointer-events-none">
           <h2
-            className={`${vipnagorgialla.className} font-bold italic text-[clamp(2rem,1.5rem+4.6vw,3rem)] leading-[0.95] tracking-normal uppercase text-[#EEE5E5] whitespace-normal break-words text-left max-w-[12ch]`}
+            className={`${vipnagorgialla.className} font-bold italic text-[clamp(2rem,1.5rem+4.6vw,3rem)] leading-[0.95] tracking-normal uppercase text-[#EEE5E5] whitespace-normal wrap-break-word text-left max-w-[12ch]`}
           >
             {highlightLAN(t("heading"))}
           </h2>
@@ -187,7 +187,7 @@ export default function TeaserCarousel() {
             style={{ flexGrow: headingOnRight ? 1 : 0 }}
           />
           <h2
-            className={`${vipnagorgialla.className} font-bold italic text-[64px] leading-none tracking-normal uppercase text-[#EEE5E5] whitespace-normal [overflow-wrap:anywhere] text-center shrink`}
+            className={`${vipnagorgialla.className} font-bold italic text-[64px] leading-none tracking-normal uppercase text-[#EEE5E5] whitespace-normal wrap-anywhere text-center shrink`}
           >
             {highlightLAN(t("heading"))}
           </h2>

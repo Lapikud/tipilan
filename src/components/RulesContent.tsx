@@ -25,24 +25,24 @@ function RuleItem({
 }) {
   if (typeof rule === "string") {
     return (
-      <li className="text-[#EEE5E5]/80 mb-2">
-        <span className="text-[#00A3E0] mr-2">{index}.</span>
+      <li className="text-white mb-2">
+        <span className="text-white mr-2">{index}.</span>
         {rule}
       </li>
     );
   }
 
   return (
-    <li className="text-[#EEE5E5]/80 mb-3">
-      <span className="text-[#00A3E0] mr-2">{index}.</span>
+    <li className="text-white mb-3">
+      <span className="text-white mr-2">{index}.</span>
       {rule.main}
       {rule.sub && rule.sub.length > 0 && (
         <ol className="ml-6 mt-2">
           {rule.sub.map((subRule, subIndex) => {
             if (typeof subRule === "string") {
               return (
-                <li key={subIndex} className="text-[#EEE5E5]/70 mb-1">
-                  <span className="text-[#00A3E0]/70 mr-2">
+                <li key={subIndex} className="text-white mb-1">
+                  <span className="text-white mr-2">
                     {index}.{subIndex + 1}.
                   </span>
                   {subRule}
@@ -50,16 +50,16 @@ function RuleItem({
               );
             }
             return (
-              <li key={subIndex} className="text-[#EEE5E5]/70 mb-2">
-                <span className="text-[#00A3E0]/70 mr-2">
+              <li key={subIndex} className="text-white mb-2">
+                <span className="text-white mr-2">
                   {index}.{subIndex + 1}.
                 </span>
                 {subRule.main}
                 {subRule.sub && subRule.sub.length > 0 && (
                   <ol className="ml-6 mt-1">
                     {subRule.sub.map((subSubRule, subSubIndex) => (
-                      <li key={subSubIndex} className="text-[#EEE5E5]/60 mb-1">
-                        <span className="text-[#00A3E0]/50 mr-2">
+                      <li key={subSubIndex} className="text-white/80 mb-1">
+                        <span className="text-white/80 mr-2">
                           {index}.{subIndex + 1}.{subSubIndex + 1}.
                         </span>
                         {subSubRule}
@@ -82,7 +82,7 @@ export default function RulesContent({ sections }: RulesContentProps) {
       {sections.map((section, sectionIndex) => (
         <div key={sectionIndex} className="mb-8">
           <h3
-            className={`${vipnagorgialla.className} font-bold italic text-xl text-[#00A3E0] uppercase mb-4`}
+            className={`${vipnagorgialla.className} font-bold italic text-xl text-white uppercase mb-4`}
           >
             {sectionIndex + 1}) {section.title}
           </h3>

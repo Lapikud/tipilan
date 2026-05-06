@@ -3,8 +3,8 @@
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { vipnagorgialla } from "@/components/Vipnagorgialla";
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
@@ -17,15 +17,15 @@ export default function LanguageSwitcher() {
     return routing.locales[nextIndex] as "et" | "en";
   };
 
-  const getNextLanguageName = () => {
+  const getNextLanguageFlag = () => {
     const nextLocale = getNextLocale();
     switch (nextLocale) {
       case "et":
-        return "EST";
+        return { src: "/flags/est.svg", alt: "Estonian flag" };
       case "en":
-        return "ENG";
+        return { src: "/flags/eng.svg", alt: "English flag" };
       default:
-        return nextLocale;
+        return { src: "/flags/est.svg", alt: nextLocale };
     }
   };
 
@@ -38,10 +38,16 @@ export default function LanguageSwitcher() {
     <Button
       onClick={handleLanguageSwitch}
       variant="ghost"
-      size="lg"
-      className={`${vipnagorgialla.className} text-3xl font-bold italic uppercase cursor-pointer hover:bg-[#007CAB]/10 dark:hover:bg-[#00A3E0]/10 text-[#007CAB] dark:text-[#00A3E0] hover:text-[#2A2C3F] dark:hover:text-[#EEE5E5] transition-colors`}
+      size="icon"
+      className="cursor-pointer hover:bg-[#007CAB]/10 dark:hover:bg-[#00A3E0]/10 transition-colors rounded-md"
     >
-      {getNextLanguageName()}
+      <Image
+        src={getNextLanguageFlag().src}
+        alt={getNextLanguageFlag().alt}
+        width={40}
+        height={40}
+        className="rounded-sm"
+      />
     </Button>
   );
 }

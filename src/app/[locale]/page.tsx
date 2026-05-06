@@ -29,7 +29,7 @@ export default async function Home({
         >
           <div className="flex flex-col gap-4">
             <span
-              className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]"
+              className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]"
               style={{
                 fontVariationSettings:
                   '"FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24',
@@ -44,7 +44,7 @@ export default async function Home({
             >
               {t("navigation.tickets")}
             </h2>
-            <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
+            <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! font-bold! text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
               arrow_right_alt
             </span>
           </div>
@@ -55,7 +55,7 @@ export default async function Home({
           className="px-8 md:px-12 py-8 flex flex-col justify-center gap-4 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
         >
           <div className="flex flex-col gap-4">
-            <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
+            <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
               rewarded_ads
             </span>
           </div>
@@ -65,7 +65,7 @@ export default async function Home({
             >
               {t("navigation.tournaments")}
             </h2>
-            <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
+            <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! font-bold! text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
               arrow_right_alt
             </span>
           </div>

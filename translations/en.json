@@ -40,7 +40,7 @@
     "welcome": "Welcome to TipiLAN 2026!",
     "description": "Join us at Estonia's largest student-organized LAN event. Games, competitions and much more await you!",
     "hero": {
-      "date": "11–13 OCTOBER 2026",
+      "date": "11–13 SEPTEMBER 2026",
       "location": "TALTECH, EHITAJATE TEE 5",
       "buyTicket": "BUY TICKETS",
       "prizePool": "PRIZE POOL",
@@ -78,7 +78,7 @@
       },
       "reserveSpot": "Reserve your spot today!",
       "poweredBy": "Toetajad",
-      "dateAndLocation": "11th–13th Oct. @ TalTech"
+      "dateAndLocation": "11th–13th Sep. 2026 @ TalTech"
     }
   },
   "tickets": {
@@ -762,7 +762,9 @@
     "houseRules": "House Rules",
     "cs2Rules": "CS2 Rules",
     "lolRules": "LoL Rules",
-    "miniRules": "Mini-tournament\n Rules"
+    "miniRules": "Mini-tournament\n Rules",
+    "reminder": "Participant Reminder",
+    "code": "Event Code of Conduct"
   },
   "admin": {
     "title": "Admin",

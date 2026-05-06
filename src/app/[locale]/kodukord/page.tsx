@@ -1,9 +1,14 @@
 // app/kodukord/page.tsx (App Router)
 import ReactMarkdown, { Components } from "react-markdown";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
-import SectionDivider from "@/components/SectionDivider";
+import RuleNav from "@/components/RuleNav";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { loadRulesBun } from "@/lib/loadRules";
+
+const sectionKeys = [
+  { id: "reminder", labelKey: "rules.reminder" },
+  { id: "code", labelKey: "rules.code" },
+];
 
 export default async function Page({
   params,
@@ -15,50 +20,77 @@ export default async function Page({
   const t = await getTranslations({ locale });
   const content = await loadRulesBun("kodukord", locale as "et" | "en");
 
-  return (
-    <div>
-      <div className="flex flex-col min-h-[90vh] m-6 mt-16 md:m-16">
-        {/* Page title (separate from markdown headings) */}
-        <h1
-          className={`text-4xl md:text-5xl lg:text-6xl ${vipnagorgialla.className} font-bold italic text-[#2A2C3F] dark:text-[#EEE5E5] mt-8 md:mt-16 mb-4 uppercase`}
-        >
-          {t("rules.houseRules")}
-        </h1>
+  const sections = sectionKeys.map((section) => ({
+    id: section.id,
+    label: t(section.labelKey),
+  }));
 
-        <div className="prose prose-lg dark:prose-invert max-w-none">
-          <ReactMarkdown
-            components={
-              {
-                h1: (props) => (
-                  <h1 className="text-3xl md:text-4xl font-bold my-4">
-                    {props.children}
-                  </h1>
-                ),
-                h2: (props) => (
-                  <h2 className="text-2xl md:text-3xl font-semibold my-3">
-                    {props.children}
-                  </h2>
-                ),
-                ol: (props) => (
-                  <ol className="list-decimal ml-6 md:text-xl">
-                    {props.children}
-                  </ol>
-                ),
-                ul: (props) => (
-                  <ul className="list-disc ml-6 md:text-xl">
-                    {props.children}
-                  </ul>
-                ),
-                p: (props) => <p className="md:text-xl">{props.children}</p>,
-              } as Components
-            }
-          >
-            {content}
-          </ReactMarkdown>
+  // Track heading count for ID assignment
+  let headingCount = 0;
+
+  return (
+    <div className="bg-[#0E0F19] min-h-screen pt-16 md:pt-20">
+      <div className="max-w-480 mx-auto px-6 md:px-12 py-8 md:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-16">
+          {/* Main content */}
+          <div>
+            {/* Page title */}
+            <h1
+              className={`${vipnagorgialla.className} font-bold italic text-[clamp(2.5rem,2rem+3vw,4rem)] leading-tight text-[#00A3E0] uppercase mb-8`}
+            >
+              {t("rules.houseRules")}
+            </h1>
+
+            <ReactMarkdown
+              components={
+                {
+                  h1: (props) => {
+                    const id =
+                      sections[headingCount]?.id || `section-${headingCount}`;
+                    headingCount++;
+                    return (
+                      <h1
+                        id={id}
+                        className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-white uppercase mb-4 mt-12 first:mt-0 scroll-mt-24 md:scroll-mt-28`}
+                      >
+                        {props.children}
+                      </h1>
+                    );
+                  },
+                  h2: (props) => (
+                    <h2
+                      className={`${vipnagorgialla.className} font-bold italic text-xl text-white uppercase mb-2 mt-6`}
+                    >
+                      {props.children}
+                    </h2>
+                  ),
+                  ol: (props) => (
+                    <ol className="list-decimal list-inside text-white mb-4">
+                      {props.children}
+                    </ol>
+                  ),
+                  ul: (props) => (
+                    <ul className="list-disc list-inside text-white mb-4">
+                      {props.children}
+                    </ul>
+                  ),
+                  p: (props) => (
+                    <p className="text-white mb-4">{props.children}</p>
+                  ),
+                  li: (props) => (
+                    <li className="text-white mb-2">{props.children}</li>
+                  ),
+                } as Components
+              }
+            >
+              {content}
+            </ReactMarkdown>
+          </div>
+
+          {/* Sidebar navigation */}
+          <RuleNav sections={sections} />
         </div>
       </div>
-
-      <SectionDivider />
     </div>
   );
 }

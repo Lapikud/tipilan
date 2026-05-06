@@ -49,10 +49,11 @@ const Header = ({ navItems }: HeaderProps) => {
     "/ajakava": "event_note",
     "/piletid": "local_activity",
     "/turniirid": "rewarded_ads",
+    "/kodukord": "gavel",
   };
 
   useEffect(() => {
-    const largeScreenQuery = window.matchMedia("(min-width: 1024px)");
+    const largeScreenQuery = window.matchMedia("(min-width: 1280px)");
 
     const handleScaleOrViewportChange = (event: MediaQueryListEvent) => {
       if (event.matches) {
@@ -79,7 +80,7 @@ const Header = ({ navItems }: HeaderProps) => {
   }, [pathname]);
 
   return (
-    <header className="px-4 py-2 md:px-8 flex items-center bg-[#0E0F19] border-b-3 border-[#1F5673] justify-between">
+    <header className="px-4 sm:px-8 md:px-12 lg:px-16 py-3 flex items-center bg-[#0E0F19] border-b-3 border-[#1F5673] justify-between">
       {/* Logo */}
       <Link href="/" className="shrink-0">
         <Image
@@ -92,9 +93,9 @@ const Header = ({ navItems }: HeaderProps) => {
       </Link>
 
       {/* Right side - Navigation + controls */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-12">
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-3">
+        <nav className="hidden xl:flex items-center gap-12">
           {mainNavItems.map((item) => {
             const isActive = pathname === item.href;
 
@@ -127,7 +128,7 @@ const Header = ({ navItems }: HeaderProps) => {
             <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden size-10 cursor-pointer"
+              className="xl:hidden size-10 cursor-pointer"
             >
               {isMobileMenuOpen ? (
                 <MdClose className="size-10 text-[#EEE5E5]" />
@@ -139,7 +140,8 @@ const Header = ({ navItems }: HeaderProps) => {
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="end"
-            className="lg:hidden w-72 translate-x-2 translate-y-0 rounded-none border-3 border-[#1F5673] bg-[#0E0F19] p-0"
+            sideOffset={0}
+            className="xl:hidden w-screen sm:w-72 translate-x-0 sm:translate-x-4 translate-y-3 rounded-none border-3 border-[#1F5673] bg-[#0E0F19] p-0"
           >
             {dropdownNavItems.map((item, index) => {
               const isActive = pathname === item.href;

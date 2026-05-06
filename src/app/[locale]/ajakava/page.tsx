@@ -13,12 +13,12 @@ export default async function Timetable({
   return (
     <div className="bg-[#0E0F19] min-h-screen flex flex-col items-center justify-center">
       <h1
-        className={`${vipnagorgialla.className} font-bold italic text-4xl md:text-5xl text-[#EEE5E5] uppercase mb-4`}
+        className={`${vipnagorgialla.className} font-bold italic text-[clamp(1.75rem,5vw,3rem)] text-[#EEE5E5] uppercase mb-4 text-center`}
       >
         {t("schedule.title")}
       </h1>
       <p
-        className={`${vipnagorgialla.className} font-bold italic text-5xl md:text-7xl text-[#EEE5E5] uppercase`}
+        className={`${vipnagorgialla.className} font-bold italic text-[clamp(2rem,8vw,4.5rem)] text-[#EEE5E5] uppercase text-center`}
       >
         {t("schedule.comingSoon")}
       </p>

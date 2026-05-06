@@ -11,7 +11,7 @@ const Footer = () => {
     <div className="flex flex-col justify-center sm:justify-between px-6 py-6 md:px-12 md:py-8 gap-4 border-t-3 border-[#1F5673]">
       <div className="flex flex-col">
         <h2
-          className={`text-3xl sm:text-4xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mb-4`}
+          className={`text-3xl sm:text-4xl ${vipnagorgialla.className} font-bold italic uppercase text-[#2A2C3F] dark:text-[#EEE5E5] mb-4 text-center sm:text-left`}
         >
           {t("footer.contact")}
         </h2>
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-2 items-center text-center sm:justify-self-center">
             <div className="flex flex-row gap-2">
-              <span className="material-symbols-outlined !font-bold text-[#007CAB] dark:text-[#00A3E0]">
+              <span className="material-symbols-outlined font-bold! text-[#007CAB] dark:text-[#00A3E0]">
                 mail
               </span>
               <a href="mailto:tipilaninfogmail.com" className="underline">
@@ -38,7 +38,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex flex-row gap-2">
-              <span className="material-symbols-outlined !font-bold text-[#007CAB] dark:text-[#00A3E0]">
+              <span className="material-symbols-outlined font-bold! text-[#007CAB] dark:text-[#00A3E0]">
                 phone
               </span>
               <a href="tel:+37256931193" className="underline">

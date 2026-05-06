@@ -54,21 +54,21 @@ export default async function LoLTournament({
             {/* SISSEJUHATUS */}
             <section id="intro" className="mb-12 scroll-mt-24 md:scroll-mt-28">
               <h2
-                className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
+                className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-white uppercase mb-4`}
               >
                 {t("lolpage.intro.title")}
               </h2>
-              <p className="text-[#EEE5E5]/80 mb-6">
+              <p className="text-white mb-6">
                 {t("lolpage.intro.description")}
               </p>
 
               <h3
-                className={`${vipnagorgialla.className} font-bold italic text-xl text-[#EEE5E5] uppercase mb-2`}
+                className={`${vipnagorgialla.className} font-bold italic text-xl text-white uppercase mb-2`}
               >
                 {t("lolpage.intro.previousWinners")}
               </h3>
-              <p className="text-[#EEE5E5]/80 font-bold">2025</p>
-              <ol className="text-[#EEE5E5]/80 list-decimal list-inside mb-4">
+              <p className="text-white font-bold">2025</p>
+              <ol className="text-white list-decimal list-inside mb-4">
                 <li>Ükssilm (Eesti)</li>
                 <li>Eesti Rästikud (Eesti)</li>
                 <li>LOMiks (Läti)</li>
@@ -78,34 +78,32 @@ export default async function LoLTournament({
             {/* ÜLDINE INFO */}
             <section id="info" className="mb-12 scroll-mt-24 md:scroll-mt-28">
               <h2
-                className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
+                className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-white uppercase mb-4`}
               >
                 {t("lolpage.info.title")}
               </h2>
-              <p className="text-[#EEE5E5]/80">
-                {t("lolpage.info.description")}
-              </p>
+              <p className="text-white">{t("lolpage.info.description")}</p>
             </section>
 
             {/* AUHINNAFOND */}
             <section id="prizes" className="mb-12 scroll-mt-24 md:scroll-mt-28">
               <h2
-                className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
+                className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-white uppercase mb-4`}
               >
                 {t("lolpage.prizes.title")}
               </h2>
 
               <h3
-                className={`${vipnagorgialla.className} font-bold italic text-xl text-[#00A3E0] uppercase mb-2`}
+                className={`${vipnagorgialla.className} font-bold italic text-xl text-white uppercase mb-2`}
               >
                 {t("lolpage.prizes.mainTitle")}
               </h3>
-              <ul className="text-[#EEE5E5]/80 mb-2">
+              <ul className="text-white mb-2">
                 <li>{t("lolpage.prizes.place1")}</li>
                 <li>{t("lolpage.prizes.place2")}</li>
                 <li>{t("lolpage.prizes.place3")}</li>
               </ul>
-              <p className="text-[#EEE5E5]/60 text-sm">
+              <p className="text-white/80 text-sm">
                 {t("lolpage.prizes.note")}
               </p>
             </section>
@@ -113,30 +111,30 @@ export default async function LoLTournament({
             {/* TURNIIRI FORMAAT */}
             <section id="format" className="mb-12 scroll-mt-24 md:scroll-mt-28">
               <h2
-                className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
+                className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-white uppercase mb-4`}
               >
                 {t("lolpage.format.title")}
               </h2>
-              <p className="text-[#EEE5E5]/80 mb-4">
+              <p className="text-white mb-4">
                 {t("lolpage.format.description")}
               </p>
-              <p className="text-[#EEE5E5]/80">{t("lolpage.format.day1")}</p>
-              <p className="text-[#EEE5E5]/80">{t("lolpage.format.day2")}</p>
+              <p className="text-white">{t("lolpage.format.day1")}</p>
+              <p className="text-white">{t("lolpage.format.day2")}</p>
             </section>
 
             {/* FAQ - commented out until content is ready
             <section id="faq" className="mb-12">
               <h2
-                className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
+                className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-white uppercase mb-4`}
               >
                 {t("lolpage.faq.title")}
               </h2>
               <h3
-                className={`${vipnagorgialla.className} font-bold italic text-lg text-[#EEE5E5] uppercase mb-2`}
+                className={`${vipnagorgialla.className} font-bold italic text-lg text-white uppercase mb-2`}
               >
                 {t("lolpage.faq.q1")}
               </h3>
-              <p className="text-[#EEE5E5]/80 mb-4">
+              <p className="text-white mb-4">
                 {t("lolpage.faq.a1")}
               </p>
             </section>
@@ -145,32 +143,28 @@ export default async function LoLTournament({
             {/* REEGLID */}
             <section id="rules" className="mb-12 scroll-mt-24 md:scroll-mt-28">
               <h2
-                className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-[#EEE5E5] uppercase mb-4`}
+                className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-white uppercase mb-4`}
               >
                 {t("lolpage.rules.title")}
               </h2>
-              <p className="text-[#EEE5E5]/80 mb-6">
+              <p className="text-white mb-6">
                 {t("lolpage.rules.description")}
               </p>
 
               <RulesContent sections={t.raw("lolpage.rules.sections")} />
 
               <div className="mt-8">
-                <p className="text-[#EEE5E5]/80 mb-2">
-                  {t("lolpage.rules.contact")}
-                </p>
+                <p className="text-white mb-2">{t("lolpage.rules.contact")}</p>
                 <p className="text-[#00A3E0] font-bold">
                   {t("lolpage.rules.contactName")}
                 </p>
-                <p className="text-[#EEE5E5]/70">
-                  {t("lolpage.rules.contactRole")}
-                </p>
-                <p className="text-[#EEE5E5]/70">
+                <p className="text-white">{t("lolpage.rules.contactRole")}</p>
+                <p className="text-white">
                   Discord:{" "}
                   <a
                     href="https://discord.com/users/125585160761638912"
                     target="_blank"
-                    className="text-[#00A3E0] hover:text-[#EEE5E5] transition"
+                    className="text-[#00A3E0] hover:text-white transition"
                   >
                     Kukkel
                   </a>

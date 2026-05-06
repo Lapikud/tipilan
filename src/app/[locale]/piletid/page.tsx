@@ -28,7 +28,7 @@ function TicketCard({
 }: TicketCardProps) {
   return (
     <div
-      className={`relative bg-[#0E0F19] border-[#1F5673] p-8 flex flex-col min-h-87.5 h-full ${className}`}
+      className={`relative bg-[#0E0F19] border-[#1F5673] px-12 py-16 flex flex-col min-h-87.5 h-full ${className}`}
     >
       {backgroundImage && (
         <Image
@@ -46,7 +46,7 @@ function TicketCard({
           {title}
         </h2>
         <h3
-          className={`${vipnagorgialla.className} font-bold italic text-xl text-[#EEE5E5] uppercase mb-4`}
+          className={`${vipnagorgialla.className} font-bold italic text-2xl text-[#EEE5E5] uppercase mb-4`}
         >
           {subtitle}
         </h3>
@@ -66,7 +66,7 @@ function TicketCard({
             </span>
           ))}
         </p>
-        <ul className="flex flex-col gap-1 mb-6 grow">
+        <ul className="flex flex-col gap-2 mb-6 grow">
           {features.map((feature, index) => (
             <li
               key={index}
