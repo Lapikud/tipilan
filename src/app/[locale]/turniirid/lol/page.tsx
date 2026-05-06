@@ -45,7 +45,7 @@ export default async function LoLTournament({
               <Link
                 href="https://fienta.com/et/tipilan"
                 target="_blank"
-                className={`${vipnagorgialla.className} font-bold italic px-4 py-2 bg-[#007CAB] hover:bg-[#00A3E0] text-black uppercase transition`}
+                className={`${vipnagorgialla.className} font-bold italic px-4 py-2 bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] uppercase transition`}
               >
                 {t("lolpage.buyTicket")}
               </Link>
