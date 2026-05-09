@@ -94,7 +94,7 @@ export default function TeaserCarousel() {
   return (
     <div className="border-b-3 border-[#1F5673]">
       {/* Slides (fade transition + hero lift effect) */}
-      <div className="relative h-135 sm:h-140 md:h-160 lg:h-175 xl:h-155 2xl:h-165 overflow-hidden">
+      <div className="relative h-135 sm:h-140 md:h-160 lg:h-[720px] xl:h-[780px] 2xl:h-[820px] overflow-hidden">
         {slides.map((slide, i) => {
           const title = t(`${slide.key}.title`);
           const description = t(`${slide.key}.description`);
@@ -172,7 +172,7 @@ export default function TeaserCarousel() {
         })}
 
         {/* Floating heading (mobile) */}
-        <div className="absolute top-5 inset-x-0 px-8 z-20 md:hidden pointer-events-none">
+        <div className="absolute top-8 inset-x-0 px-8 z-20 md:hidden pointer-events-none">
           <h2
             className={`${vipnagorgialla.className} font-bold italic text-[clamp(2rem,1.5rem+4.6vw,3rem)] leading-[0.95] tracking-normal uppercase text-[#EEE5E5] whitespace-normal wrap-break-word text-left max-w-[12ch]`}
           >
@@ -181,7 +181,7 @@ export default function TeaserCarousel() {
         </div>
 
         {/* Floating heading (desktop/tablet) */}
-        <div className="absolute top-8 inset-x-0 px-4 sm:px-6 md:px-12 z-20 hidden md:flex pointer-events-none">
+        <div className="absolute top-12 inset-x-0 px-4 sm:px-6 md:px-12 z-20 hidden md:flex pointer-events-none">
           <div
             className="transition-[flex-grow] duration-700 ease-out"
             style={{ flexGrow: headingOnRight ? 1 : 0 }}

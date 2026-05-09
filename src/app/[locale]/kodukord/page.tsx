@@ -30,7 +30,7 @@ export default async function Page({
 
   return (
     <div className="bg-[#0E0F19] min-h-screen pt-16 md:pt-20">
-      <div className="max-w-480 mx-auto px-6 md:px-12 py-8 md:py-16">
+      <div className="max-w-480 mx-auto px-8 md:px-16 py-10 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-16">
           {/* Main content */}
           <div>
@@ -41,50 +41,56 @@ export default async function Page({
               {t("rules.houseRules")}
             </h1>
 
-            <ReactMarkdown
-              components={
-                {
-                  h1: (props) => {
-                    const id =
-                      sections[headingCount]?.id || `section-${headingCount}`;
-                    headingCount++;
-                    return (
-                      <h1
-                        id={id}
-                        className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-white uppercase mb-4 mt-12 first:mt-0 scroll-mt-24 md:scroll-mt-28`}
+            <div className="rules-markdown">
+              <ReactMarkdown
+                components={
+                  {
+                    h1: (props) => {
+                      const id =
+                        sections[headingCount]?.id || `section-${headingCount}`;
+                      headingCount++;
+                      return (
+                        <h1
+                          id={id}
+                          className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-white uppercase mb-4 mt-12 first:mt-0 scroll-mt-24 md:scroll-mt-28`}
+                        >
+                          {props.children}
+                        </h1>
+                      );
+                    },
+                    h2: (props) => (
+                      <h2
+                        className={`${vipnagorgialla.className} font-bold italic text-xl text-white uppercase mb-2 mt-6`}
                       >
                         {props.children}
-                      </h1>
-                    );
-                  },
-                  h2: (props) => (
-                    <h2
-                      className={`${vipnagorgialla.className} font-bold italic text-xl text-white uppercase mb-2 mt-6`}
-                    >
-                      {props.children}
-                    </h2>
-                  ),
-                  ol: (props) => (
-                    <ol className="list-decimal list-inside text-white mb-4">
-                      {props.children}
-                    </ol>
-                  ),
-                  ul: (props) => (
-                    <ul className="list-disc list-inside text-white mb-4">
-                      {props.children}
-                    </ul>
-                  ),
-                  p: (props) => (
-                    <p className="text-white mb-4">{props.children}</p>
-                  ),
-                  li: (props) => (
-                    <li className="text-white mb-2">{props.children}</li>
-                  ),
-                } as Components
-              }
-            >
-              {content}
-            </ReactMarkdown>
+                      </h2>
+                    ),
+                    ol: (props) => (
+                      <ol className="text-white mb-4 leading-[19px]">
+                        {props.children}
+                      </ol>
+                    ),
+                    ul: (props) => (
+                      <ul className="list-disc list-inside text-white mb-4 leading-[19px]">
+                        {props.children}
+                      </ul>
+                    ),
+                    p: (props) => (
+                      <p className="text-white mb-4 leading-[19px]">
+                        {props.children}
+                      </p>
+                    ),
+                    li: (props) => (
+                      <li className="text-white mb-2 leading-[19px]">
+                        {props.children}
+                      </li>
+                    ),
+                  } as Components
+                }
+              >
+                {content}
+              </ReactMarkdown>
+            </div>
           </div>
 
           {/* Sidebar navigation */}

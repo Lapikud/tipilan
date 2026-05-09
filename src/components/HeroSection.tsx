@@ -35,7 +35,7 @@ export default function HeroSection() {
           </div>
           <Link
             href="/piletid"
-            className={`self-center md:self-start px-6 py-3 bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] ${vipnagorgialla.className} font-bold italic text-[clamp(1rem,0.8rem+0.8vw,1.5rem)] uppercase transition`}
+            className={`self-center md:self-start px-6 py-3 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] ${vipnagorgialla.className} font-bold italic leading-none text-[clamp(1rem,0.8rem+0.8vw,1.5rem)] uppercase transition`}
           >
             {t("hero.buyTicket")}
           </Link>

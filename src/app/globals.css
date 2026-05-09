@@ -132,6 +132,35 @@ body {
     }
 }
 
+.rules-markdown ol {
+    counter-reset: list-item;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.rules-markdown ol > li {
+    counter-increment: list-item;
+    position: relative;
+    padding-left: 2.5rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.rules-markdown ol > li::before {
+    content: counters(list-item, ".") ".";
+    position: absolute;
+    left: 0;
+    width: 2rem;
+    text-align: right;
+    color: #ffffff;
+}
+
+.rules-markdown ol ol {
+    counter-reset: list-item;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
 .material-symbols-outlined {
     font-variation-settings:
         "FILL" 1,

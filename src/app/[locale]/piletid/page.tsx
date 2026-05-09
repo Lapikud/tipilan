@@ -79,7 +79,7 @@ function TicketCard({
         </ul>
         <Link href={buttonHref} target="_blank">
           <button
-            className={`px-4 py-2 bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer ${vipnagorgialla.className} font-bold italic uppercase transition`}
+            className={`px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer ${vipnagorgialla.className} font-bold italic leading-none uppercase transition`}
           >
             {buttonText}
           </button>

@@ -40,8 +40,11 @@ const Header = ({ navItems }: HeaderProps) => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Header navigation should include all options except homepage
-  const mainNavItems = navItems.filter((item) => item.href !== "/");
+  // Header navigation should include all options except homepage and hidden items
+  const hiddenNavHrefs: NavItem["href"][] = ["/messiala", "/ajakava"];
+  const mainNavItems = navItems.filter(
+    (item) => item.href !== "/" && !hiddenNavHrefs.includes(item.href),
+  );
   const dropdownNavItems = mainNavItems;
 
   const navIconByHref: Partial<Record<NavItem["href"], string>> = {
@@ -86,16 +89,16 @@ const Header = ({ navItems }: HeaderProps) => {
         <Image
           src="/tipilan-icon-white.svg"
           alt="TipiLAN"
-          width={49}
+          width={40}
           height={40}
-          className="h-10 w-auto"
+          className="h-auto w-10"
         />
       </Link>
 
       {/* Right side - Navigation + controls */}
       <div className="flex items-center gap-12">
         {/* Desktop Navigation */}
-        <nav className="hidden xl:flex items-center gap-12">
+        <nav className="hidden xl:flex items-center gap-8">
           {mainNavItems.map((item) => {
             const isActive = pathname === item.href;
 
@@ -106,7 +109,7 @@ const Header = ({ navItems }: HeaderProps) => {
                 aria-current={isActive ? "page" : undefined}
                 aria-disabled={isActive ? true : undefined}
                 tabIndex={isActive ? -1 : undefined}
-                className={`${vipnagorgialla.className} group font-bold italic text-lg uppercase px-4 py-1.5 border-2 border-[#00A3E0] transition ${
+                className={`${vipnagorgialla.className} group font-bold italic leading-none text-lg uppercase px-4 py-1.5 border-4 border-[#00A3E0] transition ${
                   isActive
                     ? "bg-[#00A3E0] text-black cursor-default pointer-events-none"
                     : "bg-[#1F5673] text-[#EEE5E5] hover:bg-[#00A3E0] hover:text-black"
@@ -155,7 +158,7 @@ const Header = ({ navItems }: HeaderProps) => {
                 >
                   {isActive ? (
                     <span
-                      className={`${vipnagorgialla.className} block w-full cursor-default bg-[#00A3E0] px-5 py-2.5 text-xl font-bold italic uppercase text-black ${
+                      className={`${vipnagorgialla.className} block w-full cursor-default bg-[#00A3E0] px-5 py-2.5 text-xl font-bold italic leading-none uppercase text-black ${
                         hasBottomBorder ? "border-b-3 border-[#1F5673]" : ""
                       }`}
                     >
@@ -181,7 +184,7 @@ const Header = ({ navItems }: HeaderProps) => {
                   ) : (
                     <Link
                       href={item.href}
-                      className={`${vipnagorgialla.className} group block w-full bg-[#0E0F19] px-5 py-2.5 text-xl font-bold italic uppercase text-[#EEE5E5] transition hover:bg-[#00A3E0] hover:text-black ${
+                      className={`${vipnagorgialla.className} group block w-full bg-[#0E0F19] px-5 py-2.5 text-xl font-bold italic leading-none uppercase text-[#EEE5E5] transition hover:bg-[#00A3E0] hover:text-black ${
                         hasBottomBorder ? "border-b-3 border-[#1F5673]" : ""
                       }`}
                     >

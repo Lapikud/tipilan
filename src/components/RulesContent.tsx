@@ -25,7 +25,7 @@ function RuleItem({
 }) {
   if (typeof rule === "string") {
     return (
-      <li className="text-white mb-2">
+      <li className="text-white mb-2 leading-[19px]">
         <span className="text-white mr-2">{index}.</span>
         {rule}
       </li>
@@ -33,7 +33,7 @@ function RuleItem({
   }
 
   return (
-    <li className="text-white mb-3">
+    <li className="text-white mb-3 leading-[19px]">
       <span className="text-white mr-2">{index}.</span>
       {rule.main}
       {rule.sub && rule.sub.length > 0 && (
@@ -41,7 +41,7 @@ function RuleItem({
           {rule.sub.map((subRule, subIndex) => {
             if (typeof subRule === "string") {
               return (
-                <li key={subIndex} className="text-white mb-1">
+                <li key={subIndex} className="text-white mb-1 leading-[19px]">
                   <span className="text-white mr-2">
                     {index}.{subIndex + 1}.
                   </span>
@@ -50,7 +50,7 @@ function RuleItem({
               );
             }
             return (
-              <li key={subIndex} className="text-white mb-2">
+              <li key={subIndex} className="text-white mb-2 leading-[19px]">
                 <span className="text-white mr-2">
                   {index}.{subIndex + 1}.
                 </span>
@@ -58,7 +58,10 @@ function RuleItem({
                 {subRule.sub && subRule.sub.length > 0 && (
                   <ol className="ml-6 mt-1">
                     {subRule.sub.map((subSubRule, subSubIndex) => (
-                      <li key={subSubIndex} className="text-white/80 mb-1">
+                      <li
+                        key={subSubIndex}
+                        className="text-white/80 mb-1 leading-[19px]"
+                      >
                         <span className="text-white/80 mr-2">
                           {index}.{subIndex + 1}.{subSubIndex + 1}.
                         </span>

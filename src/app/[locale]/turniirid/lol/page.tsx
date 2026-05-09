@@ -29,7 +29,7 @@ export default async function LoLTournament({
 
   return (
     <div className="bg-[#0E0F19] min-h-screen pt-16 md:pt-20">
-      <div className="max-w-480 mx-auto px-6 md:px-12 py-8 md:py-16">
+      <div className="max-w-480 mx-auto px-8 md:px-16 py-10 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-16">
           {/* Main content */}
           <div>
@@ -45,7 +45,7 @@ export default async function LoLTournament({
               <Link
                 href="https://fienta.com/et/tipilan"
                 target="_blank"
-                className={`${vipnagorgialla.className} font-bold italic px-4 py-2 bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] uppercase transition`}
+                className={`${vipnagorgialla.className} font-bold italic leading-none text-lg px-4 py-3 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] uppercase transition`}
               >
                 {t("lolpage.buyTicket")}
               </Link>
@@ -58,7 +58,7 @@ export default async function LoLTournament({
               >
                 {t("lolpage.intro.title")}
               </h2>
-              <p className="text-white mb-6">
+              <p className="text-white mb-6 leading-[19px]">
                 {t("lolpage.intro.description")}
               </p>
 
@@ -67,8 +67,8 @@ export default async function LoLTournament({
               >
                 {t("lolpage.intro.previousWinners")}
               </h3>
-              <p className="text-white font-bold">2025</p>
-              <ol className="text-white list-decimal list-inside mb-4">
+              <p className="text-white font-bold leading-[19px]">2025</p>
+              <ol className="text-white list-decimal list-inside mb-4 leading-[19px]">
                 <li>Ükssilm (Eesti)</li>
                 <li>Eesti Rästikud (Eesti)</li>
                 <li>LOMiks (Läti)</li>
@@ -82,7 +82,9 @@ export default async function LoLTournament({
               >
                 {t("lolpage.info.title")}
               </h2>
-              <p className="text-white">{t("lolpage.info.description")}</p>
+              <p className="text-white leading-[19px]">
+                {t("lolpage.info.description")}
+              </p>
             </section>
 
             {/* AUHINNAFOND */}
@@ -98,12 +100,12 @@ export default async function LoLTournament({
               >
                 {t("lolpage.prizes.mainTitle")}
               </h3>
-              <ul className="text-white mb-2">
+              <ul className="text-white mb-2 leading-[19px]">
                 <li>{t("lolpage.prizes.place1")}</li>
                 <li>{t("lolpage.prizes.place2")}</li>
                 <li>{t("lolpage.prizes.place3")}</li>
               </ul>
-              <p className="text-white/80 text-sm">
+              <p className="text-white/80 text-sm leading-[19px]">
                 {t("lolpage.prizes.note")}
               </p>
             </section>
@@ -115,11 +117,15 @@ export default async function LoLTournament({
               >
                 {t("lolpage.format.title")}
               </h2>
-              <p className="text-white mb-4">
+              <p className="text-white mb-4 leading-[19px]">
                 {t("lolpage.format.description")}
               </p>
-              <p className="text-white">{t("lolpage.format.day1")}</p>
-              <p className="text-white">{t("lolpage.format.day2")}</p>
+              <p className="text-white leading-[19px]">
+                {t("lolpage.format.day1")}
+              </p>
+              <p className="text-white leading-[19px]">
+                {t("lolpage.format.day2")}
+              </p>
             </section>
 
             {/* FAQ - commented out until content is ready
@@ -147,19 +153,23 @@ export default async function LoLTournament({
               >
                 {t("lolpage.rules.title")}
               </h2>
-              <p className="text-white mb-6">
+              <p className="text-white mb-6 leading-[19px]">
                 {t("lolpage.rules.description")}
               </p>
 
               <RulesContent sections={t.raw("lolpage.rules.sections")} />
 
               <div className="mt-8">
-                <p className="text-white mb-2">{t("lolpage.rules.contact")}</p>
+                <p className="text-white mb-2 leading-[19px]">
+                  {t("lolpage.rules.contact")}
+                </p>
                 <p className="text-[#00A3E0] font-bold">
                   {t("lolpage.rules.contactName")}
                 </p>
-                <p className="text-white">{t("lolpage.rules.contactRole")}</p>
-                <p className="text-white">
+                <p className="text-white leading-[19px]">
+                  {t("lolpage.rules.contactRole")}
+                </p>
+                <p className="text-white leading-[19px]">
                   Discord:{" "}
                   <a
                     href="https://discord.com/users/125585160761638912"
