@@ -41,12 +41,12 @@ export default async function Home({
               >
                 {t("navigation.schedule")}
               </h2>
-              <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
+              <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! font-bold! text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
                 arrow_right_alt
               </span>
             </div>
             <div className="flex flex-col gap-4">
-              <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
+              <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
                 event_note
               </span>
               <p className="text-[clamp(0.875rem,0.75rem+0.5vw,1.25rem)] tracking-[-0.045rem] dark:group-hover:text-[#2A2C3F] group-hover:text-black">
@@ -61,7 +61,7 @@ export default async function Home({
             src="https://player.twitch.tv/?channel=tipilan_ee&parent=localhost&parent=tipilan.ee"
             height="100%"
             width="100%"
-            className="w-full h-full min-h-[400px]"
+            className="w-full h-full min-h-100"
             allow="autoplay; encrypted-media"
           ></iframe>
         </div>
@@ -78,13 +78,13 @@ export default async function Home({
             >
               {t("navigation.tournaments")}
             </h2>
-            <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
+            <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! font-bold! text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
               arrow_right_alt
             </span>
           </div>
 
           <div className="flex flex-col gap-4">
-            <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
+            <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
               trophy
             </span>
             <p className="text-[clamp(0.875rem,0.75rem+0.5vw,1.25rem)] tracking-[-0.045rem] dark:group-hover:text-[#2A2C3F] group-hover:text-black">
@@ -102,12 +102,12 @@ export default async function Home({
             >
               {t("navigation.expo")}
             </h2>
-            <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
+            <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! font-bold! text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
               arrow_right_alt
             </span>
           </div>
           <div className="flex flex-col gap-4">
-            <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
+            <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
               weekend
             </span>
             <p className="text-[clamp(0.875rem,0.75rem+0.5vw,1.25rem)] tracking-[-0.045rem] dark:group-hover:text-[#2A2C3F] group-hover:text-black">
@@ -125,7 +125,7 @@ export default async function Home({
           <h3 className="text-4xl md:text-5xl dark:text-[#EEE5E5] dark:group-hover:text-[#2A2C3F] text-[#2A2C3F] group-hover:text-black">
             {t("home.sections.reserveSpot")}
           </h3>
-          <span className="material-symbols-outlined !text-[clamp(2rem,1.5rem+1.5vw,3.5rem)] !font-bold text-[#007CAB] dark:text-[#00A3E0] hidden md:block group-hover:translate-x-2 group-hover:text-[#EEE5E5] dark:group-hover:text-[#EEE5E5] transition">
+          <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! font-bold! text-[#007CAB] dark:text-[#00A3E0] hidden md:block group-hover:translate-x-2 group-hover:text-[#EEE5E5] dark:group-hover:text-[#EEE5E5] transition">
             arrow_right_alt
           </span>
         </div>

@@ -8,8 +8,8 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "TipiLAN 2025",
-  description: "TipiLAN 2025 – Eesti suurim tudengite korraldatud LAN!",
+  title: "TipiLAN 2026",
+  description: "TipiLAN 2026 – Eesti suurim tudengite korraldatud LAN!",
 };
 
 export default function RootLayout({

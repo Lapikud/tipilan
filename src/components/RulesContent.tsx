@@ -1,0 +1,101 @@
+"use client";
+
+import { vipnagorgialla } from "@/components/Vipnagorgialla";
+
+interface RuleSection {
+  title: string;
+  rules: (
+    | string
+    | { main: string; sub: (string | { main: string; sub: string[] })[] }
+  )[];
+}
+
+interface RulesContentProps {
+  sections: RuleSection[];
+}
+
+function RuleItem({
+  rule,
+  index,
+}: {
+  rule:
+    | string
+    | { main: string; sub: (string | { main: string; sub: string[] })[] };
+  index: number;
+}) {
+  if (typeof rule === "string") {
+    return (
+      <li className="text-white mb-2 leading-[19px]">
+        <span className="text-white mr-2">{index}.</span>
+        {rule}
+      </li>
+    );
+  }
+
+  return (
+    <li className="text-white mb-3 leading-[19px]">
+      <span className="text-white mr-2">{index}.</span>
+      {rule.main}
+      {rule.sub && rule.sub.length > 0 && (
+        <ol className="ml-6 mt-2">
+          {rule.sub.map((subRule, subIndex) => {
+            if (typeof subRule === "string") {
+              return (
+                <li key={subIndex} className="text-white mb-1 leading-[19px]">
+                  <span className="text-white mr-2">
+                    {index}.{subIndex + 1}.
+                  </span>
+                  {subRule}
+                </li>
+              );
+            }
+            return (
+              <li key={subIndex} className="text-white mb-2 leading-[19px]">
+                <span className="text-white mr-2">
+                  {index}.{subIndex + 1}.
+                </span>
+                {subRule.main}
+                {subRule.sub && subRule.sub.length > 0 && (
+                  <ol className="ml-6 mt-1">
+                    {subRule.sub.map((subSubRule, subSubIndex) => (
+                      <li
+                        key={subSubIndex}
+                        className="text-white/80 mb-1 leading-[19px]"
+                      >
+                        <span className="text-white/80 mr-2">
+                          {index}.{subIndex + 1}.{subSubIndex + 1}.
+                        </span>
+                        {subSubRule}
+                      </li>
+                    ))}
+                  </ol>
+                )}
+              </li>
+            );
+          })}
+        </ol>
+      )}
+    </li>
+  );
+}
+
+export default function RulesContent({ sections }: RulesContentProps) {
+  return (
+    <div>
+      {sections.map((section, sectionIndex) => (
+        <div key={sectionIndex} className="mb-8">
+          <h3
+            className={`${vipnagorgialla.className} font-bold italic text-xl text-white uppercase mb-4`}
+          >
+            {sectionIndex + 1}) {section.title}
+          </h3>
+          <ol className="list-none">
+            {section.rules.map((rule, ruleIndex) => (
+              <RuleItem key={ruleIndex} rule={rule} index={ruleIndex + 1} />
+            ))}
+          </ol>
+        </div>
+      ))}
+    </div>
+  );
+}
