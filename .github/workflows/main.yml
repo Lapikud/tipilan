@@ -4,19 +4,10 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
-    inputs:
-      ref:
-        description: Branch or tag to build and deploy
-        required: false
-        default: teaser-2026
-        type: string
 
 jobs:
   build:
     uses: ./.github/workflows/build.yml
-    with:
-      ref: ${{ github.event_name == 'workflow_dispatch' && inputs.ref || github.ref_name }}
     secrets:
       USER_AUTH: ${{ secrets.USER_AUTH }}
 
