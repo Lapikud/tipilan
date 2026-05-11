@@ -30,12 +30,6 @@ jobs:
         run: |
           rm -rf $GITHUB_WORKSPACE/data
           ln -s ~/data $GITHUB_WORKSPACE/data
-
-      - name: Generate Drizzle schema
-        run: bun drizzle-kit generate
-
-      - name: Run Drizzle migrations
-        run: bun drizzle-kit migrate
-
+          
       - name: Build project
         run: bun --bun run build
