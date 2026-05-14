@@ -463,7 +463,7 @@
     },
     "intro": {
       "title": "INTRODUCTION",
-      "description": "TipiLAN organized its first LoL tournament in 2025 at its debut event. Teams from Estonia and Latvia participated.",
+      "description": "League of Legends has been an integral part of LANs for over a decade. This was also the case at TipiLAN 2025. Top players from both Estonia and neighboring countries attended. The competition was fierce and created powerful emotions and memories. The League of Legends tournament returns as part of TipiLAN 2026 and offers more excitement and competition than ever before!",
       "previousWinners": "PREVIOUS WINNERS"
     },
     "info": {
@@ -472,10 +472,10 @@
     },
     "prizes": {
       "title": "PRIZE POOL",
-      "mainTitle": "MAIN TOURNAMENT - €3000",
-      "place1": "1st place - €1500, €300 per player, 50% or 1/2 of the prize pool.",
-      "place2": "2nd place - €1000, €200 per player, 33.3...% or 1/3 of the prize pool.",
-      "place3": "3rd place - €500, €100 per player, 16.6...% or 1/6 of the prize pool.",
+      "mainTitle": "MAIN TOURNAMENT - 3000€",
+      "place1": "1st place - 1500€, 300€ per player, 50% or 1/2 of the prize pool.",
+      "place2": "2nd place - 1000€, 200€ per player, 33.3...(3)% or 1/3 of the prize pool.",
+      "place3": "3rd place - 500€, 100€ per player, 16.6...(6)% or 1/6 of the prize pool.",
       "note": "Teams and players outside the prize pool will not receive additional compensation."
     },
     "format": {
@@ -499,101 +499,102 @@
         {
           "title": "General Information",
           "rules": [
-            "The League of Legends (LoL) tournament takes place as a two-day event on September 11-13, 2026 at Tallinn University of Technology (TalTech), Ehitajate tee 5, Tallinn.",
+            "The League of Legends (hereinafter LoL) tournament takes place as a two-day event on September 11-13, 2026 at Tallinn University of Technology (TalTech) premises, Ehitajate tee 5, Tallinn.",
             {
-              "main": "The tournament prize pool is €3000, distributed as follows:",
+              "main": "The tournament prize pool is 3000€, distributed as follows:",
               "sub": [
-                "1st place team - €300 per player",
-                "2nd place team - €200 per player",
-                "3rd place team - €100 per player"
+                "First place team - 300€ per participant",
+                "Second place team - 200€ per participant",
+                "Third place team - 100€ per participant"
               ]
             },
             {
-              "main": "Prize money will be paid to the player's bank account.",
+              "main": "Prize money will be paid to the participant's bank account.",
               "sub": [
-                "In the case of a minor, the prize will be paid to the parent's/guardian's bank account."
+                "For underage participants, the prize will be paid to their parent/guardian's bank account."
               ]
             }
           ]
         },
         {
-          "title": "Teams and Participants",
+          "title": "Teams and Players",
           "rules": [
             {
               "main": "A team must have:",
               "sub": [
-                "Five members (each member referred to as Participant)",
-                "One member is the team Captain, who is the spokesperson for the entire team",
-                "All members must be at least 16 years old at the time of registration",
-                "Participant may not be a citizen of the Russian Federation or Republic of Belarus",
-                "Teams are not allowed to use a coach during the tournament",
-                "One team member may be substituted, who must also be registered and physically present"
+                "Five members (each member hereinafter referred to individually as Player)",
+                "One of the members is the team Captain, who also serves as the spokesperson for the entire team.",
+                "All members must be at least 16 years old at the time of team registration.",
+                "Players cannot be citizens of the Russian Federation or the Republic of Belarus.",
+                "Teams are not allowed to use a coach during the tournament.",
+                "One team member may be substituted, who must also be registered and physically present."
               ]
             },
-            "Participant must provide only truthful information and be ready to verify their identity to the Organizer.",
-            "Team name and logo, as well as Participant's in-game alias and avatar must be appropriate, without profanity, vulgarity, political or religious messages or symbols.",
-            "Participant represents only themselves throughout the Tournament (i.e., no one else may compete on their behalf).",
-            "All Participants under 18 must be ready to provide guardian consent for tournament participation.",
-            "Participant must be polite throughout the tournament and respect fellow participants, organizers and visitors. TipiLAN does not tolerate hate speech, harassment, threatening, insulting or aggressive behavior.",
-            "Team must be registered on both the TipiLAN website and challengermode tournament page."
+            "Players must provide only truthful information about themselves and be prepared to prove their identity to the Organizer.",
+            "Team name and logo as well as player gaming alias and avatar must be appropriate, including not being offensive, containing profanity, vulgarity, political or religious messages or symbols, or references to alcohol, drugs, and other intoxicants.",
+            "A player represents only themselves throughout the tournament (i.e., no one else may compete in their place).",
+            "All players under 18 years of age are prepared to provide parental/guardian consent for tournament participation to the Organizer.",
+            "Players must be polite throughout the tournament and respect fellow competitors, organizers, and visitors. TipiLAN does not tolerate hate speech based on national, racial, gender, sexual, or religious affiliation, disabilities, appearance, or age; harassment, threatening, insulting, or aggressive behavior, incitement or support thereof. It is forbidden to disclose another participant's personal data (doxing) or threaten to do so. It is also forbidden to spam or overwhelm streams (hijacking) and incite such behavior. In such cases, the organizer may remove the player from the tournament.",
+            "Teams must be registered on both the TipiLAN website and the challengermode tournament page (will appear later, we will notify on Discord)."
           ]
         },
         {
-          "title": "Pre-game Procedures",
+          "title": "Pre-Game",
           "rules": [
             {
-              "main": "Tournament participation, matches and bracket work through challengermode.com.",
+              "main": "Tournament participation, matches, and tournament bracket all operate through the challengermode.com environment.",
               "sub": [
-                "The entire team must be registered, including substitute",
-                "Players must have their highest rank account linked in challengermode",
-                "Tournament takes place on EU West server",
-                "Players may not use any account other than those linked in challengermode"
+                "The entire team, including substitute players, must be registered for the tournament.",
+                "Players must have their highest-ranked account (including from other servers) and the account they will participate with in tournament games linked in challengermode (Challengermode allows linking two regions simultaneously).",
+                "The tournament takes place on the EU West server.",
+                "Players may not use any account other than those linked in challengermode."
               ]
             },
-            "Matches in challengermode are automatic. For a new match, there is 10 minutes to confirm readiness.",
+            "Matches in the challengermode environment are automatic. For a new match, there are 10 minutes to be ready. Then there are another 10 minutes to join the generated lobby.",
             {
-              "main": "Draft can begin when both sides have confirmed readiness.",
+              "main": "Draft can begin when both sides have indicated their readiness.",
               "sub": [
-                "Placeholders are not allowed. If a champion is locked in draft, it must be played",
-                "Before draft, players must be in role order: Top-Jungle-Mid-Bot-Support",
-                "Deliberate stalling is not allowed"
+                "Placeholders are not allowed. If a champion is locked in draft, it must be played.",
+                "Before draft, players must be in role-appropriate order: Top-Jungle-Mid-Bot-Support.",
+                "Using Drafter.lol for external drafting is allowed, but only with consent from both sides.",
+                "Intentional delays are not allowed."
               ]
             },
-            "Only official streamers and referees may join the match lobby besides players."
+            "Only players, official streamers, and referees may join the match lobby."
           ]
         },
         {
-          "title": "In-game Procedures",
+          "title": "In-Game Procedures",
           "rules": [
             {
-              "main": "A game has officially started (game of record) when all 10 players are on the map and the game has reached the first real interaction. GOR conditions:",
+              "main": "A game is officially started (game of record (hereinafter GOR)) when all 10 players are on the map and the game has reached the first real interaction (see below). Once the game has reached GOR status, it cannot be restarted. Game score will be officially tracked from this moment. After reaching GOR status, the game can only be restarted in cases where completing the current game is not possible for a valid reason. GOR conditions are as follows:",
               "sub": [
-                "Either team successfully uses an attack or ability",
-                "Opponents see each other",
-                "Entering enemy territory",
-                "Game has lasted 2 minutes"
+                "Either team successfully attacks or uses an ability against minions, jungle creeps, structures, or enemies.",
+                "Enemies see each other (exception - Clairvoyance does not guarantee GOR).",
+                "Entering enemy territory.",
+                "The game has lasted 2 minutes."
               ]
             },
             {
-              "main": "Game pause:",
+              "main": "Game pausing:",
               "sub": [
-                "During pause, players are not allowed to leave the match area",
-                "Organizers may pause the game as needed",
-                "Each team has the right to take up to 15 minutes of pause total during the match for valid reasons"
+                "Players are not allowed to leave the match area during game pause, except when officially authorized.",
+                "Organizers may pause the game as needed.",
+                "Either team has the right to take a total of up to 15 minutes of pause during a match for valid reasons (disconnect, software or hardware problems, something happens to a player)."
               ]
             },
-            "The game may be resumed only with consent of both parties or referee permission.",
-            "If an obstacle occurs in fair gameplay (gamebreaking bug, connection issues, etc.), the referee will determine new instructions."
+            "The game may only be resumed with consent from both sides or with referee permission.",
+            "If an obstacle arises in fair game conduct (gamebreaking bug, network connection, etc.), the referee will determine new instructions for game conduct."
           ]
         },
         {
-          "title": "Match Conclusion",
+          "title": "Match Completion",
           "rules": [
             {
-              "main": "The match winner is the team with the most games won.",
+              "main": "The match winner is the team that has won the most games (in case of multi-game matches)",
               "sub": [
-                "Organizer will display team standings in an accessible manner",
-                "After each match, the bracket is updated in challengermode"
+                "The organizer presents team win and loss standings to all participants in an accessible manner and informs all players where they can be viewed.",
+                "After each match, the tournament bracket is updated in the challengermode environment and new matches are assigned from there at the first opportunity."
               ]
             }
           ]
@@ -601,47 +602,88 @@
         {
           "title": "Tournament Elimination",
           "rules": [
-            "A team may decide to end tournament participation at any time by notifying the referee and/or organizer.",
-            "Penalties earned until elimination remain valid until the end of the tournament.",
-            "If a team does not show up or is not ready by the agreed start time, the Organizer may eliminate the team.",
+            "A team may decide at any time to stop participating in the tournament by notifying the referee and/or organizer.",
+            "Penalties earned until elimination remain in effect until the end of the tournament.",
+            "If a team does not show up or is not ready by the agreed start time, the Organizer may eliminate the team from the tournament to ensure schedule adherence.",
             {
-              "main": "The team roster cannot be changed during the tournament.",
+              "main": "The list of registered team members cannot be changed during the tournament, even if a player has left.",
               "sub": [
-                "If team size falls below the required number due to member departure, the Organizer must eliminate the team"
+                "If a member's departure causes the number of team participants to fall below what is needed to play, the Organizer must eliminate the team from the tournament."
               ]
             },
-            "If a team wishes to withdraw during a match, the team must forfeit.",
-            "All eliminations and disqualifications must be announced publicly immediately."
+            "If a team wishes to drop out or is eliminated from the tournament during a match, the team must give a forfeit victory.",
+            "All eliminations and removals must be made publicly known immediately."
           ]
         },
         {
           "title": "Penalties",
           "rules": [
-            "Referees assign penalties following the guidelines in this document.",
+            "Referees assign penalties following the guidelines provided in this document.",
             "Only referees may assign penalties.",
-            "The referee will inform both the offending player, their team, and the opposing team of the offense and penalty.",
-            "The referee must be impartial; team skill level must not influence monitoring of offenses and penalties.",
-            "Penalties may be assigned to the entire team or a single team member.",
+            "The referee informs both the content of the violation and the assigned penalty to the rule-violating player, their team, and the opposing team. Additional information may be added as needed.",
+            "The referee must first confirm the violation and only then assign the penalty. A penalty cannot have a suitable violation \"invented\" for it.",
+            "The referee must be impartial; team skill level should not be decisive in monitoring violations and penalties.",
+            "Penalties may be assigned to both the entire team and individual team members.",
+            "The content of a penalty may be valid for either one game or the entire tournament participation period.",
+            "A team cannot protest penalties assigned to the opposing team.",
             {
-              "main": "Penalties may include:",
+              "main": "Penalties may be as follows:",
               "sub": [
-                "WARNING: a notice for a minor offense",
-                "BAN LOSS: Team cannot ban a certain number of champions in the following game",
-                "GAME LOSS: Team receives automatic loss for one game",
-                "MATCH LOSS: Team receives automatic match loss",
-                "DISQUALIFICATION: Applies to the entire team"
+                "WARNING: a warning is a recorded notice to a player or team for a minor violation.",
+                "BAN LOSS: The team may not ban a certain number of characters in the game following the penalty. In this case, the referee monitors that the team does not select the penalty-specified number of bans and instead lets the timer run to zero.",
+                "GAME LOSS: The team receives an automatic loss in one game.",
+                "MATCH LOSS: The team receives an automatic match loss.",
+                {
+                  "main": "DISQUALIFICATION: Disqualification applies to the entire team. In this case, the team forfeits all victories. If disqualification results from escalating violations, the team gets the portion of victories they had earned by that point.",
+                  "sub": [
+                    "In some cases, the referee is allowed to disqualify only one player instead of the team. This is the case when the player's violation does not affect the opposing team in any way and was done without involving anyone from their own team. Generally, this is possible when the player's violation falls under the category of Inappropriate Behavior - Serious Violation. In this case, the remaining team may continue in the tournament if a substitute player is available. Otherwise, the entire team must also be eliminated from the tournament."
+                  ]
+                }
+              ]
+            },
+            "Penalty severity levels are as follows: Warning - warning - loss of ban selection right - game loss - match loss - disqualification",
+            {
+              "main": "Tournament violations are divided as follows:",
+              "sub": [
+                "EXTERNAL ASSISTANCE USE: this violation is recorded when a team communicates during the game with anyone other than their own team and, as a result, in the referee's judgment, gains an advantage in the game. For this violation, it is assumed that it was not an intentional attempt to cheat. Intentionally seeking unfair advantage falls under the Inappropriate Behavior - Cheating category. The penalty is a warning.",
+                "IGNORING INSTRUCTIONS: Every player has an obligation to follow Organizer and referee instructions. Ignoring them may result in delays and disputes. The penalty is loss of first selection right."
               ]
             },
             {
-              "main": "Inappropriate behavior categories:",
+              "main": "Inappropriate behavior. Inappropriate behavior disrupts tournament flow and may negatively affect safety, competitive spirit, game enjoyment, or tournament fairness and integrity. Inappropriate behavior is not the same as competitive behavior. Inappropriate behavior violations are divided into:",
               "sub": [
-                "MINOR OFFENSE: unpleasant, unethical or disruptive behavior - penalty warning",
-                "MEDIUM OFFENSE: ignoring instructions, hate speech, aggression - penalty game loss",
-                "MAJOR OFFENSE: clearly against rules and good practices - penalty disqualification",
-                "COLLUSION: agreement between two teams - penalty disqualification of both teams",
-                "BRIBERY AND BETTING: prohibited - penalty disqualification",
-                "AGGRESSIVE BEHAVIOR: aggression against people - penalty disqualification",
-                "CHEATING: deliberate action to gain advantage - penalty disqualification"
+                "MINOR VIOLATION: this includes behavior that is unpleasant, unethical, or disruptive, such as excessive profanity; demanding that the opponent receive a penalty after the referee has made their decision; trash talking; littering, etc. The penalty for minor violations is a warning.",
+                {
+                  "main": "MODERATE VIOLATION: this includes three different types of violations:",
+                  "sub": [
+                    "Ignores referee or Organizer instructions meant specifically for one team or one player.",
+                    "Uses hate speech publicly against someone.",
+                    "Is aggressive or violent, but it is not directed at another person.",
+                    "The penalty for moderate violations is game loss."
+                  ]
+                },
+                "SERIOUS VIOLATION: this includes behavior that is clearly contrary to tournament conduct rules and good practices, such as intentionally breaking tournament equipment or dirtying or damaging the room. The penalty for serious violations is disqualification, removal from tournament premises, or in extreme cases, the Organizer informs the police.",
+                "MATCH FIXING: match fixing is considered an agreement between two teams to play unfairly against other teams and attempt to influence tournament results. The penalty for match fixing is disqualification of both teams.",
+                "BRIBERY AND BETTING: teams are forbidden from withdrawing from the tournament or attempting to change match results for any favor (not necessarily just monetary). It is also forbidden to offer referees incentives to influence game results. Betting on game results is also forbidden. The penalty for bribery and betting is disqualification.",
+                "AGGRESSIVE BEHAVIOR: this includes all manifestations of aggression directed at people, including threats and obviously real violence. The penalty is disqualification and removal from premises, in extreme cases the Organizer informs the police.",
+                "THEFT: although every participant has an obligation to keep an eye on their property, there is still an expectation that participant behavior is consistent with good practices. The penalty for theft is disqualification and removal from premises. If the situation cannot be resolved on-site, the Organizer informs the police.",
+                {
+                  "main": "ALCOHOL AND INTOXICATION: Alcohol consumption within the event is forbidden. In case of excessive intoxication, the Organizer has the right to remove the participant from the premises.",
+                  "sub": [
+                    "If the intoxicated participant is underage, their parents and police will be informed."
+                  ]
+                },
+                {
+                  "main": "CHEATING: this includes intentional player action to gain an advantage in the game. Cheating does not have to be successful to result in penalty. Activities that fall under cheating include, for example:",
+                  "sub": [
+                    "Attempting to view one's own game in spectator mode or receiving information from someone who can watch the game in spectator mode.",
+                    "Any attempt to modify the game itself or use additional software not normally included with the game, including changing in-game zoom, using UI modifications that change attack range or make tower firing range visible, using spawn timers, etc. VOIP program use does not fall under this category.",
+                    "Appearing as another player or under a false name, playing using another player's summoner name, or account sharing.",
+                    "Intentionally breaking or attempting to modify equipment to cause delays, get pauses, or otherwise influence game flow.",
+                    "Intentional exploitation of in-game bugs to gain advantage, i.e., using various glitches to one's benefit.",
+                    "The penalty for cheating is disqualification."
+                  ]
+                }
               ]
             }
           ]
@@ -649,13 +691,13 @@
         {
           "title": "Tournament Format",
           "rules": [
-            "Tournament uses Fearless draft principles. This means champions picked during a series cannot be picked in subsequent games until the series ends.",
+            "The tournament operates on Fearless Draft principles. This means that champions picked during a series cannot be picked in subsequent games until the series ends.",
             {
-              "main": "Tournament uses Round Robin + Single Elimination format:",
+              "main": "The tournament operates in Round Robin + Single Elimination format:",
               "sub": [
-                "First round has 2 six-team groups where all teams play each other once",
-                "This determines the top 4 who advance to the next day's single elimination bracket",
-                "In case of group ties, the team that won the head-to-head match advances"
+                "The first round consists of 2 groups of 6 teams each, where all teams play each other once.",
+                "This determines the 4 best teams, who advance to the next day's single elimination bracket.",
+                "In case of a tie in groups, the team that won the match between the tied teams advances."
               ]
             }
           ]
@@ -760,6 +802,7 @@
   "rules": {
     "title": "Rules",
     "houseRules": "House Rules",
+    "lastChanged": "Last changed:",
     "cs2Rules": "CS2 Rules",
     "lolRules": "LoL Rules",
     "miniRules": "Mini-tournament\n Rules",
