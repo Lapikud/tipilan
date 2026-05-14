@@ -109,7 +109,7 @@ const Header = ({ navItems }: HeaderProps) => {
                 aria-current={isActive ? "page" : undefined}
                 aria-disabled={isActive ? true : undefined}
                 tabIndex={isActive ? -1 : undefined}
-                className={`${vipnagorgialla.className} group font-bold italic leading-none text-lg uppercase px-4 py-1.5 border-4 border-[#00A3E0] transition ${
+                className={`${vipnagorgialla.className} group font-bold italic leading-none text-lg uppercase px-4 py-2 border-4 border-[#00A3E0] transition ${
                   isActive
                     ? "bg-[#00A3E0] text-black cursor-default pointer-events-none"
                     : "bg-[#1F5673] text-[#EEE5E5] hover:bg-[#00A3E0] hover:text-black"

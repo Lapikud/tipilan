@@ -1,6 +1,7 @@
 // app/kodukord/page.tsx (App Router)
 import ReactMarkdown, { Components } from "react-markdown";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
+import RulesLastChanged from "@/components/RulesLastChanged";
 import RuleNav from "@/components/RuleNav";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { loadRulesBun } from "@/lib/loadRules";
@@ -40,6 +41,10 @@ export default async function Page({
             >
               {t("rules.houseRules")}
             </h1>
+            <RulesLastChanged
+              locale={locale as "et" | "en"}
+              ruleType="kodukord"
+            />
 
             <div className="rules-markdown">
               <ReactMarkdown

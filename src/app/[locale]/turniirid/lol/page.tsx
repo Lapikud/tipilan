@@ -1,6 +1,7 @@
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import RuleNav from "@/components/RuleNav";
 import RulesContent from "@/components/RulesContent";
+import RulesLastChanged from "@/components/RulesLastChanged";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
@@ -39,6 +40,7 @@ export default async function LoLTournament({
             >
               {t("lolpage.title")}
             </h1>
+            <RulesLastChanged locale={locale as "et" | "en"} ruleType="lol" />
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 mb-12">
