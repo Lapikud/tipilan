@@ -10,21 +10,26 @@
 
 # Ürituse kodukord
 
-1. Osaleja kohustub käituma viisakalt ning väärikalt ja austama teisi üritusel osalejaid.
-2. TipiLAN ei tolereeri:
-   1. Vihakõnet rahvusliku, rassilise, soolise, seksuaalse või religioosse kuuluvuse, puude, välimuse või vanuse kohta; ahistamist, ähvardavat, solvavat või agressiivset käitumist, sellele õhutamist või selle pooldamist
-   2. See kehtib nii ürituse alal (IRL) kui ka üritusega seotud online-keskkondades.
-3. Osaleja kohustub käituma ürituse hoone, inventari ja sisustuse suhtes heaperemehelikult. Keelatud on lõhkuda, määrida või viia mujale esemeid, mis ei kuulu osalejale.
-   1. Kui osalejal on ette nähtud korraldajapoolne majutus, siis majutusalal on osalejal kohustus olla vaikselt ning lubada kaaslastel puhata.
-   2. Majutusalale ei või kaasa kutsuda isikuid, kellel ei ole seal majutust ette nähtud.
-4. TipiLAN ei vastuta osaleja isikliku vara eest.
-   1. Korraldajapoolne majutusala on lukustatav ning kõrvalisi isikuid sinna ei lubata, kuid sellest sõltumata tasub oma väärisesemetel silma peal hoida.
-   2. Kui on tekkinud kahtlus, et on toimunud vargus, tuleb sellest koheselt teavitada korraldajat.
-   3. Kaotatud asjade leidmisel palume anda need korraldajale või viia need *lost & found’i* (Merchilauda).
-5. Ürituse alal on keelatud suitsetada ning kasutada vape’i. Selleks on õues ette nähtud suitsetamise kohad.
-6. Üritusele ei tohi kaasa võtta illegaalseid aineid või ravimeid, terariistu, tulirelvi, lõhke- või süüteained ning muid esemeid, mis võivad osalejatele või teistele viga teha.
-7. Alaealisel osalejal on keelatud tarbida alkoholi või kasutada nikotiini sisaldavaid tooteid.
-   1. Olles baarist alkoholi ostmas, on osalejal baaritöötaja nõudmisel kohustus näidata isikuttõendavat dokumenti.
-8. Osaleja kohustub käituma alkoholi suhtes vastutustundlikult.
-9. Keelatud on igasugune hasartmäng nii raha kui muude hüvede peale.
-
+1. TipiLAN 2026 toimub 11.–13. septembril Tallinna Tehnikaülikoolis. 
+2. Üritusel osalemine eeldab kõigilt osalejatelt käesoleva kodukorra järgimist.
+3. Ürituse kodukord kehtib nii ürituse toimumisalal kui ka kõigis üritusega seotud veebikeskkondades, sealhulgas sotsiaalmeedia kommentaariumides ja TipiLANi ametlikus Discordi serveris.
+   1. Turniiridel osalemisel kehtivad lisaks eraldi turniirireeglid.
+4. Kodukorra rikkumise korral jätab TipiLAN endale õiguse osaleja ürituselt eemaldada ning vajaduse korral teavitada rikkumisest korrakaitseorganeid.
+   1. Alaealise osaleja puhul teavitame rikkumiste korral lapsevanemaid või eestkostjaid ning vajaduse korral ka korrakaitseorganeid.
+5. Ürituse alal viibimine on lubatud üksnes kehtiva pääsme või korraldaja loal.
+6. Kõik osalejad peavad olema vähemalt 16-aastased. Korraldajal on õigus vanuse kontrollimiseks küsida isikut tõendavat dokumenti ning nõuetele mittevastavad isikud ürituselt eemaldada.
+7. Pileti ostmisega annab osaleja korraldajale nõusoleku enda pildistamiseks ja filmimiseks ning lubab kasutada ürituse käigus loodud foto-, audio- ja videomaterjali ürituse jäädvustamise, kajastamise ja turundamise eesmärgil.
+8. Osaleja on kohustatud käituma viisakalt ja väärikalt, austama teisi osalejaid ning järgima üldtunnustatud käitumisreegleid.
+   1. TipiLAN lähtub vihakõne ja diskrimineerimise osas nulltolerantsi põhimõttest, hõlmates muu hulgas rahvuslikku, rassilist, soolist, seksuaalset või religioosset kuuluvust, puuet, välimust või vanust, ning käsitleb ahistamist, ähvardavat, solvavat või agressiivset käitumist, samuti sellisele käitumisele õhutamist või selle heakskiitmist kodukorra rikkumisena. Eeltoodud loetelu on näitlik ega ole ammendav.
+9. Osaleja on kohustatud suhtuma ürituse toimumiskoha hoonesse, inventari ja sisustusse heaperemehelikult. Osalejal on keelatud vara kahjustada, määrida või omavoliliselt ümber paigutada, samuti eemaldada esemeid, mis ei kuulu talle.
+   1. Osaleja on kohustatud hüvitama enda poolt tekitatud materiaalse kahju täies ulatuses.
+10. Osaleja isikliku vara säilimise eest vastutab iga osaleja ise. TipiLAN, MTÜ Lapikud ega Tallinna Tehnikaülikool ei vastuta osalejate isiklike esemete kadumise, kahjustumise ega hävimise eest.
+   1. Kaotatud asjade leidmisel palume need viia viivitamatult infolauda.
+11. Keelatud on igasugune omavoliline sekkumine ürituse infrastruktuuri (sealhulgas elektrisüsteemidesse ja andmesidevõrku), ohtliku või nõuetele mittevastava tehnika kasutamine ning andmesidevõrgu häirimine või kuritarvitamine, sealhulgas teiste osalejate ühenduse või seadmete tahtlik segamine.
+12. Ürituse alal on suitsetamine, sealhulgas sigarettide ja e-sigarettide kasutamine, keelatud. Suitsetamine on lubatud üksnes selleks ettenähtud välialadel.
+13. Üritusele on rangelt keelatud kaasa võtta ebaseaduslikke aineid, külmrelvi, tulirelvi, lõhke- või süüteaineid ning muid esemeid, mis võivad ohustada osalejate või teiste isikute elu, tervist või vara.
+14. Alaealisel osalejal on keelatud tarbida alkoholi või kasutada nikotiini sisaldavaid tooteid.
+   1. Alkoholi ostmisel on osaleja baaritöötaja nõudmisel kohustatud esitama isikut tõendava dokumendi. Kui osaleja dokumenti ei esita või keeldub selle esitamisest, on teenindajal kohustus keelduda alkoholi müügist.
+15. Osaleja on kohustatud alkoholi tarvitamisel käituma vastutustundlikult. Ülemäärases joobes isikud võidakse ürituselt eemaldada ning vajaduse korral kaasatakse korrakaitseorganid.
+16. Keelatud on igasugune hasartmäng nii raha kui ka muude hüvede peale.
+17. Korraldajal on õigus teha lõplik otsus kõigis kodukorraga seotud vaidlustes.

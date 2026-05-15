@@ -1,6 +1,7 @@
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import RuleNav from "@/components/RuleNav";
 import RulesContent from "@/components/RulesContent";
+import RulesLastChanged from "@/components/RulesLastChanged";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
@@ -40,6 +41,7 @@ export default async function CS2Tournament({
             >
               {t("cs2page.title")}
             </h1>
+            <RulesLastChanged locale={locale as "et" | "en"} ruleType="cs2" />
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 mb-12">

@@ -524,19 +524,19 @@
               "main": "Võistkonnas peab olema:",
               "sub": [
                 "Viis liiget (iga liige edaspidi eraldi kui Võistleja)",
-                "Liikmetest üks on võistkonna Kapten, kes on ühtlasi kogu meeskonna eestkõnelejaks",
-                "Kõik liikmed peavad olema võistkonna registreerumise hetkel vähemalt 16 aastat vanad",
-                "Võistleja ei või olla Venemaa Föderatsiooni ega Valgevene Rahvavabariigi kodanik",
-                "Võistkonnal pole lubatud kasutada turniiri jooksul treenerit",
-                "Lubatud välja vahetada üks võistkonna liige, kes peab samuti olema registreeritud ja füüsiliselt kohal"
+                "Liikmetest üks on võistkonna Kapten, kes on ühtlasi kogu meeskonna eestkõnelejaks.",
+                "Kõik liikmed peavad olema võistkonna registreerumise hetkel vähemalt 16 aastat vanad.",
+                "Võistleja ei või olla Venemaa Föderatsiooni ega Valgevene Rahvavabariigi kodanik.",
+                "Võistkonnal pole lubatud kasutada turniiri jooksul treenerit.",
+                "Lubatud välja vahetada üks võistkonna liige, kes peab samuti olema registreeritud ja füüsiliselt kohal."
               ]
             },
             "Võistleja peab esitama enda kohta ainult tõest informatsiooni ning valmis Korraldajale tõendama enda isikut.",
-            "Võistkonna nimi ja logo ning Võistleja arvutimängu alias ja avatar peab olema sünnis, sh ei tohi olla kohatu, sisaldada roppusi, vulgaarsusi, poliitilisi või religioosseid sõnumeid ega sümboleid.",
+            "Võistkonna nimi ja logo ning Võistleja arvutimängu alias ja avatar peab olema sünnis, sh ei tohi olla kohatud, sisaldada roppusi, vulgaarsusi, poliitilisi või religioosseid sõnumeid ega sümboleid või viiteid alkoholile, narkootikumidele ning muudele mõnuainetele.",
             "Võistleja esindab terve Turniiri vältel ainult iseennast (st. enda asemel ei või lasta kellelgi teisel võistelda).",
             "Kõik alla 18-aastased Võistlejad on valmis Korraldajale esitama eestkostja nõusoleku turniiril osalemiseks.",
-            "Võistleja peab olema kogu turniiri vältel viisakas ning austama kaasvõistlejaid, korraldajaid ning külastajaid. TipiLAN ei tolereeri vihakõne, ahistamist, ähvardavat, solvavat või agressiivset käitumist.",
-            "Võistkond peab olema registreeritud nii TipiLAN lehel kui ka challengermode turniirilehel."
+            "Võistleja peab olema kogu turniiri vältel viisakas ning austama kaasvõistlejaid, korraldajaid ning külastajaid, TipiLAN ei tolereeri vihakõne rahvusliku, rassilise, soolise, seksuaalse või religioosse kuuluvuse, puude, välimuse või vanuse kohta; ahistamist, ähvardavat, solvavat või agressiivset käitumist, sellele õhutamist või selle pooldamist. Keelatud on avalikustada teise osaleja isikuandmeid (doxing) või selle tegemisega ähvardada. Samuti on keelatud striimi spämmimine või ülekoormamine (hijacking) ja sellele õhutamine. Sel juhul võib korraldaja eemaldada võistleja turniirilt.",
+            "Võistkond peab olema registreeritud nii TipiLAN lehel kui ka challengermode turniirilehel (ilmub hiljem, teavitame discordis)."
           ]
         },
         {
@@ -545,19 +545,20 @@
             {
               "main": "Turniiril osalemine, matchid ning turniiripuu toimib kõik läbi challengermode.com keskkonna.",
               "sub": [
-                "Turniirile peab olema registreeritud kogu meeskond, kaasa arvatud varumängija",
-                "Mängijatel peab challengermodes olema linkitud kõige kõrgema rankiga kasutaja",
-                "Turniir toimub EU West serveris",
-                "Mängijad ei tohi kasutada ühtegi teist kasutajat peale challengermodes linkitud kasutajate"
+                "Turniirile peab olema registreeritud kogu meeskond, kaasa arvatud varumängija.",
+                "Mängijatel peab challengermodes olema linkitud kõige kõrgema rankiga kasutaja (ka teistest serveritest) ja kasutaja, millega osaletakse turniirimängudes (Challengermode lubab kahte regiooni korraga linkida).",
+                "Turniir toimub EU West serveris.",
+                "Mängijad ei tohi kasutada ühtegi teist kasutajat peale challengermodes linkitud kasutajate."
               ]
             },
-            "Challengermode keskkonnas on matchid automaatsed. Uue matchi puhul on valmisolekuks aega 10 minutit.",
+            "Challengermode keskkonnas on matchid automaatsed. Uue matchi puhul on valmisolekuks aega 10 minutit. Seejärel genereeritud lobby'sse jõudmiseks on uuesti aega 10 minutit.",
             {
               "main": "Draft saab alata kui mõlemad pooled on andnud enda valmisolekust märku.",
               "sub": [
-                "Placeholderid ei ole lubatud. Kui champion on draftis lukustatud, peab seda ka mängima",
-                "Enne drafti peavad mängijad olema rollidele vastavas järjekorras: Top-Jungle-Mid-Bot-Support",
-                "Sihilikult viivitamine ei ole lubatud"
+                "Placeholderid ei ole lubatud. Kui champion on draftis lukustatud, peab seda ka mängima.",
+                "Enne drafti peavad mängijad olema rollidele vastavas järjekorras: Top-Jungle-Mid-Bot-Support.",
+                "Lubatud on Drafter.lol kasutamine väliseks draftimiseks, kuid seda ainult mõlema poole nõusolekul.",
+                "Sihilikult viivitamine ei ole lubatud."
               ]
             },
             "Matchi lobbysse tohivad lisaks mängijatele liituda ainult ametlikud streamerid ja kohtunikud."
@@ -567,20 +568,20 @@
           "title": "Mängusisesed protseduurid",
           "rules": [
             {
-              "main": "Mäng on ametlikult alanud (game of record) kui kõik 10 mängijat on kaardil ning mäng on jõudnud esimese reaalse interaktsioonini. GOR'i tingimused:",
+              "main": "Mäng on ametlikult alanud (game of record (edaspidi GOR)) kui kõik 10 mängijat on kaardil ning mäng on jõudnud esimese reaalse interaktsioonini (vt. allpool). Hetkel kui mäng on jõudnud GOR staatuseni, ei või seda uuesti alustada. Mängu skoori hakatakse sellest hetkest ametlikult jälgima. Peale GOR staatuseni jõudmist on võimalik mängu restartida vaid juhtudel, kui käesoleva mängu lõpuni viimine ei osutu mõjuval põhjusel võimalikuks. GOR'i tingimused on järgnevad:",
               "sub": [
-                "Kummalgi tiimil õnnestub rünnak või võime kasutamine",
-                "Vastased näevad teineteist",
-                "Sisenetakse vastase territooriumile",
-                "Mäng on kestnud 2 minutit"
+                "Kummalgi tiimil õnnestub rünnak või võime (ability) kasutamine käsilaste, jungle creep'ide, ehitiste või vastaste vastu.",
+                "Vastased näevad teineteist (erandina - Clairvoyance ei taga GOR'i).",
+                "Sisenetakse vastase territooriumile.",
+                "Mäng on kestnud 2 minutit."
               ]
             },
             {
               "main": "Mängu seiskamine:",
               "sub": [
-                "Mängu pausile panemise ajal ei ole mängijatel lubatud lahkuda matši alalt",
-                "Korraldajad võivad mängu pausile panna vastavalt vajadusele",
-                "Kummalgi tiimil on õigus matši jooksul võtta kokku kuni 15 minutit pausi mõjuval põhjusel"
+                "Mängu pausile panemise ajal ei ole mängijatel lubatud lahkuda matši alalt, v.a juhul kui see on ametlikult autoriseeritud.",
+                "Korraldajad võivad mängu pausile panna vastavalt vajadusele.",
+                "Kummalgi tiimil on õigus matši jooksul võtta kokku kuni 15 minutit pausi mõjuval põhjusel (disconnect, tark- või riistvara probleemid, mängija endaga juhtub midagi)."
               ]
             },
             "Mängu võib uuesti käima panna ainult mõlema poole nõusolekul või kohtuniku loal.",
@@ -591,10 +592,10 @@
           "title": "Match'i lõpetamine",
           "rules": [
             {
-              "main": "Match'i võitja on tiim, kellel on kõige rohkem mänge võidetud.",
+              "main": "Match'i võitja on tiim, kellel on kõige rohkem mänge võidetud (mitmemängulise match'i puhul)",
               "sub": [
-                "Korraldaja esitab tiimide võitude ja kaotuste seisud kõigile osalejatele kättesaadaval viisil",
-                "Peale igat match'i uuendatakse challengermode keskkonnas turniiripuud"
+                "Korraldaja esitab tiimide võitude ja kaotuste seisud kõigile osalejatele kättesaadaval viisil ning teavitab kõiki mängijaid sellest, kus on neid võimalik näha.",
+                "Peale igat match'i uuendatakse challengermode keskkonnas turniiripuud ning esimesel võimalusel määratakse sealtkaudu uued match'id."
               ]
             }
           ]
@@ -604,14 +605,14 @@
           "rules": [
             "Tiim võib igal ajal otsustada lõpetada turniiril osalemise andes sellest teada kohtunikule ja/või korraldajale.",
             "Kuni välja kukkumiseni teenitud karistused jäävad kehtima turniiri lõpuni.",
-            "Kui tiim ei ilmu kohale või pole kokku lepitud algusajaks valmis, võib Korraldaja arvata tiimi turniirilt välja.",
+            "Kui tiim ei ilmu kohale või pole kokku lepitud algusajaks valmis, võib Korraldaja arvata tiimi turniirilt välja, et tagada graafikust kinni pidamine.",
             {
-              "main": "Tiimi registreerunute nimekirja ei saa muuta turniiri vältel.",
+              "main": "Tiimi registreerunute nimekirja ei saa muuta turniiri vältel, isegi kui mängija on lahkunud.",
               "sub": [
-                "Kui liikme lahkumise tõttu langeb tiimis osalejate arv alla mängimiseks vajaliku, peab Korraldaja tiimi turniirilt välja arvama"
+                "Kui liikme lahkumise tõttu langeb tiimis osalejate arv alla mängimiseks vajaliku, peab Korraldaja tiimi turniirilt välja arvama."
               ]
             },
-            "Kui tiim soovib välja langeda match'i toimumise ajal, peab tiim andma loobumisvõidu.",
+            "Kui tiim soovib välja langeda või tiim arvatakse turniirilt välja match'i toimumise ajal, peab tiim andma loobumisvõidu.",
             "Kõik välja langemised ja välja arvamised tuleb teha koheselt avalikult teatavaks."
           ]
         },
@@ -620,29 +621,70 @@
           "rules": [
             "Kohtunikud määravad karistusi järgides selles dokumendis toodud juhiseid.",
             "Karistusi võivad määrata ainult kohtunikud.",
-            "Kohtunik teavitab nii eksimuse sisu kui ka määratud karistuse nii reeglite vastu eksinud mängijale, tema tiimile kui ka vastasvõistkonnale.",
+            "Kohtunik teavitab nii eksimuse sisu kui ka määratud karistuse nii reeglite vastu eksinud mängijale, tema tiimile kui ka vastasvõistkonnale. Vajaduse korral võib lisada ka muud infot.",
+            "Kohtunik peab enne kinnitama eksimuse ning alles siis määrama karistuse. Karistusele ei tohi \"välja mõelda\" sobivat eksimust.",
             "Kohtunik peab olema erapooletu, tiimi oskuste tase ei tohi olla määravaks eksimuste ja karistuste jälgimisel.",
             "Karistusi võib määrata nii kogu tiimile kui ka ühele tiimiliikmele.",
+            "Karistuse sisu võib olla kehtiv nii ühele mängule kui ka tervele turniiril osalemise ajale.",
+            "Tiim ei saa protesteerida vastastiimile määratud karistuse vastu.",
             {
               "main": "Karistused võivad olla järgnevad:",
               "sub": [
-                "HOIATUS: märguanne mängijale või tiimile väikese eksimuse eest",
-                "BAN'i KAOTUS: Tiim ei või karistusele järgneval mängul ban'ida kindel arv tegelasi",
-                "MÄNGU KAOTUS: Tiim saab automaatse kaotuse ühel mängul",
-                "MATCH'I KAOTUS: Tiim saab automaatse match'i kaotuse",
-                "DISKVALIFITSEERIMINE: Diskvalifikatsioon kehtib tervele tiimile"
+                "HOIATUS: hoiatus on kirja pandud märguanne mängijale või tiimile väikese eksimuse eest.",
+                "BAN'i KAOTUS: Tiim ei või karistusele järgneval mängul ban'ida kindel arv tegelasi. Sel juhul kohtunik jälgib, et tiim ei valiks karistusena määratud arvu ban'e ning laseks selle asemel taimeril nulli joosta.",
+                "MÄNGU KAOTUS: Tiim saab automaatse kaotuse ühel mängul.",
+                "MATCH'I KAOTUS: Tiim saab automaatse match'i kaotuse.",
+                {
+                  "main": "DISKVALIFITSEERIMINE: Diskvalifikatsioon kehtib tervele tiimile. Sellel juhul loobub tiim kõigist võitudest. Kui disvalifikatsioon on saadud eskaleeruvate eksimuste tulemusel, saab tiim selle osa võitudest, mis neil oli selleks hetkeks välja teenitud.",
+                  "sub": [
+                    "Mõningatel juhtudel on kohtunikul lubatud diskvalifitseerida ainult üks mängija tiimi asemel. See on sel juhul, kui mängija eksimus ei mõjuta mingil viisil vastasmeeskonda ning on tehtud kaasamata kedagi ka oma tiimist. Üldiselt on see võimalik juhul kui mängija eksimus kuulub kategooriasse Mittesobilik käitumine - Raske eksimus. Sel juhul võib ülejäänud tiim turniiril jätkata varumängija olemasolul. Vastasel korral peab ka kogu tiim turniirilt välja langema."
+                  ]
+                }
+              ]
+            },
+            "Karistuse raskusastmed on järgnevad: Hoiatus - hoiatus - ban'i valimise õiguse kaotus - mängu kaotus - match'i kaotus - diskvalifikatsioon",
+            {
+              "main": "Turniiri eksimused jagunevad järgmiselt:",
+              "sub": [
+                "VÄLISE ABI KASUTAMINE: see eksimus läheb kirja, kui tiim suhtleb mängu ajal ükskõik kelle muuga peale omaenda tiimi ning selle tagajärjel, kohtuniku otsustusel, saab mängus eelise. Eksimuse puhul eeldatakse, et tegu ei olnud tahtliku kavatsusega sohki teha. Tahtlikult ebaõiglase eelise otsimine läheb punkti Mittesobilik käitumine - Sohk alla. Karistuseks on hoiatus.",
+                "JUHISTE EIRAMINE: Igal mängijal on kohustus järgida Korraldaja ja kohtunike juhiseid. Nende eiramine võib endaga kaasa tuua viivitusi ning vaidlusi. Karistuseks on esimese valiku tegemise kaotus."
               ]
             },
             {
-              "main": "Mittesobilik käitumine jagunevad:",
+              "main": "Mittesobilik käitumine. Mittesobilik käitumine on turniiri käiku häiriv ning võib olla negatiivselt mõjutada turvalisust, võistlushimu, mängurõõmu või turniiri ausameelsust ning terviklikkust. Mittesobilik käitumine ei ole sama, mis konkurentsihimuline käitumine. Mittesobiliku käitumise eksimused jagunevad:",
               "sub": [
-                "KERGE EKSIMUS: ebameeldiv, ebaeetiline või häiriv käitumine - karistus hoiatus",
-                "KESKMINE EKSIMUS: juhiste eiramine, vihakõne, agressiivsus - karistus mängu kaotus",
-                "RASKE EKSIMUS: selgelt vastuolus reeglite ning heade tavadega - karistus diskvalifikatsioon",
-                "KOKKUMÄNG: kahe tiimi vaheline kokkulepe - karistus mõlema tiimi diskvalifitseerimine",
-                "ALTKÄEMAKS JA PANUSTAMINE: keelatud - karistus diskvalifitseerimine",
-                "AGRESSIIVNE KÄITUMINE: inimeste vastu suunatud agressioon - karistus diskvalifitseerimine",
-                "SOHK: teadlik tegevus eelise saavutamiseks - karistus diskvalifitseerimine"
+                "KERGE EKSIMUS: siia kuulub käitumine, mis on ebameeldiv, ebaeetiline või häiriv, näiteks liigne ropendamine; nõudmine, et vastane saaks karistuse peale seda, kui kohtunik on teinud oma otsuse; lõugamine; prügi maha loopimine jne. Kerge eksimuse karistuseks on hoiatus.",
+                {
+                  "main": "KESKMINE EKSIMUS: selle alla kuulub kolme erinevat tüüpi eksimusi:",
+                  "sub": [
+                    "Eirab kohtuniku või Korraldaja juhiseid, mis on mõeldud spetsiaalselt ühele tiimile või ühele mängijale.",
+                    "Kasutab avalikult vihakõne kellegi suunas.",
+                    "On agressiivne või vägivaldne, kuid see ei ole suunatud teise inimese vastu.",
+                    "Keskmise eksimuse karistuseks on mängu kaotus."
+                  ]
+                },
+                "RASKE EKSIMUS: siia alla kuulub käitumine, mis on selgelt vastuolus turniiril käitumise reeglite ning heade tavadega, näiteks tahtlikult turniiri vahendite lõhkumine või ruumi määrimine või lõhkumine. Raske eksimuse karistuseks on diskvalifikatsioon, turniiri toimumiskohast eemaldamine või ekstreemsematel juhtudel informeerib Korraldaja politseid.",
+                "KOKKUMÄNG: kokkumänguks loetakse kahe tiimi vahelist kokkulepet, et ebaausal teel teiste tiimide vastu mängida ning püüda mõjutada turniiri tulemusi. Kokkumängu karistuseks on mõlema tiimi diskvalifitseerimine.",
+                "ALTKÄEMAKS JA PANUSTAMINE: tiimidel on keelatud mingi meelehea (ei pea olema ainult rahaline) nimel loobuda turniirist või püüda muuta match'ide tulemusi. Samuti on keelatud pakkuda kohtunikule stiimulit mängu tulemuse mõjutamiseks. Keelatud on ka mängude tulemuste peale panuseid teha. Altkäemaksu ja panustamise karistuseks on diskvalifitseerimine.",
+                "AGRESSIIVNE KÄITUMINE: siia hulka kuuluvad kõik inimeste vastu suunatud agressiooni ilmingud, kaasa arvatud ähvardamine ning ilmselgelt reaalne vägivald. Karistuseks on diskvalifitseerimine ja toimumiskohast eemaldamine, ekstreemsematel juhtudel informeerib Korraldaja politseid.",
+                "VARGUS: kuigi igal osalejal on kohustus oma varal silma peal hoida, on siiski eeldus, et osalejate käitumine on kooskõlas heade tavadega. Varguse eest on karistuseks diskvalifitseerimine ja toimumiskohast eemaldamine. Kui situatsioon ei leia lahendust koha peal, informeerib Korraldaja politseid.",
+                {
+                  "main": "ALKOHOL JA JOOVE: Alkoholi tarbimine ürituse raames on keelatud. Liigse joobe korral on Korraldajal õigus osaleja toimumiskohast eemaldada.",
+                  "sub": [
+                    "Kui joobes osaleja on alaealine, informeeritakse sellest tema vanemaid ning politseid."
+                  ]
+                },
+                {
+                  "main": "SOHK: selle alla kuulub mängijapoolne teadlik tegevus, et saavutada mängus eelis. Sohitegemine ei pea olema edukas selleks, et kaasa tuua karistust. Sohi alla kuuluvad tegevused on näiteks:",
+                  "sub": [
+                    "Üritamine ise enda mängu spectator mode's näha või info saamine kelleltki, kes saab vaadata mängu spectator mode's.",
+                    "Igasugune mängu enda modifitseerimise üritamine või lisatarkvara kasutamine, mis ei ole tavapäraselt mänguga kaasas, sh. mängusisese zoomi muutmine, UI modifikatsioonide kasutamine, mis muudab löögiraadiust või muudab torni laskeraadiuse nähtavaks, spawn taimerite kasutamine jne. Siia alla ei kuulu VOIP programmide kasutamine.",
+                    "Teise mängijana või vale nime all esinemine, mängimine kasutades teise mängija summoner nime või konto jagamine.",
+                    "Tahtlikult varustuse rikkumine või moonutada üritamine, et tekitada viivitusi, saada pause või mõnel muul moel mõjutada mängu käiku.",
+                    "Mängusiseste vigade tahtlik ära kasutamine, et saada eelist, st erinevate glitch'ide enda kasuks kasutamine.",
+                    "Sohki tegemise eest on karistuseks diskvalifikatsioon."
+                  ]
+                }
               ]
             }
           ]
@@ -654,9 +696,9 @@
             {
               "main": "Turniir toimub Round Robin + Single Elimination formaadis:",
               "sub": [
-                "Esimene round on 2 kuueliimelist gruppi, kus kõik tiimid mängivad üksteisega korra läbi",
-                "Sellega selgitatakse 4 parimat, kes lähevad edasi järgmise päeva single elimination bracketisse",
-                "Gruppides tekkinud viigi korral pääseb edasi võistkond, kes viigistunud tiimide vahelise matchi võitis"
+                "Esimene round on 2 6-liimelist gruppi, kus kõik tiimid mängivad üksteisega korra läbi.",
+                "Sellega selgitatakse 4 parimat, kes lähevad edasi järgmise päeva single elimination bracketisse.",
+                "Gruppides tekkinud viigi korral pääseb edasi võistkond, kes viigistunud tiimide vahelise matchi võitis."
               ]
             }
           ]
@@ -761,6 +803,7 @@
   "rules": {
     "title": "Reeglid",
     "houseRules": "Kodukord",
+    "lastChanged": "Viimati muudetud:",
     "cs2Rules": "CS2 reeglid",
     "lolRules": "LoL reeglid",
     "miniRules": "Miniturniiride\n reeglid",
