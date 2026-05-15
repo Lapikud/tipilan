@@ -1,6 +1,6 @@
 ## 1. Üldist
 
-1. **1.1** League of Legends (edaspidi LoL) turniir toimub kahepäevase üritusena **11.-13. september, 2026** Tallinna Tehnikaülikooli (TalTech) ruumides, Ehitajate tee 5, Tallinn.
+1. **1.1** League of Legends (edaspidi LoL) turniir toimub kahepäevase üritusena **11.-12. september, 2026** Tallinna Tehnikaülikooli (TalTech) ruumides, Ehitajate tee 5, Tallinn.
 2. **1.2** Turniiri auhinnafondiks on **3000€**, mis jaguneb järgnevalt:
    1. **1.2.1** Esimese koha saanud võistkond - **300€** võistleja kohta
    2. **1.2.2** Teise koha saanud võistkond - **200€** võistleja kohta
