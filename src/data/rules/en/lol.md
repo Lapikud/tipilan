@@ -1,6 +1,6 @@
 ## 1. General Information
 
-1. **1.1** The League of Legends (hereinafter LoL) tournament takes place as a two-day event on **September 11-13, 2026** at Tallinn University of Technology (TalTech) premises, Ehitajate tee 5, Tallinn.
+1. **1.1** The League of Legends (hereinafter LoL) tournament takes place as a two-day event on **September 11-12, 2026** at Tallinn University of Technology (TalTech) premises, Ehitajate tee 5, Tallinn.
 2. **1.2** The tournament prize pool is **3000€**, distributed as follows:
    1. **1.2.1** First place team - **300€** per participant
    2. **1.2.2** Second place team - **200€** per participant
