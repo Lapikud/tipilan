@@ -111,18 +111,9 @@ export default async function CS2Tournament({
                 {t("cs2page.prizes.mainTitle")}
               </h3>
               <ul className="text-white mb-2 leading-[19px]">
-                <li>
-                  1. koht - 3000€, 600€ inimese kohta, 50% ehk 1/2
-                  auhinnafondist.
-                </li>
-                <li>
-                  2. koht - 2000€, 400€ inimese kohta, 33.3...(3)% ehk 1/3
-                  auhinnafondist.
-                </li>
-                <li>
-                  3. koht - 1000€, 200€ inimese kohta, 16.6...(6)% ehk 1/6
-                  auhinnafondist.
-                </li>
+                <li>{t("cs2page.prizes.mainPlace1")}</li>
+                <li>{t("cs2page.prizes.mainPlace2")}</li>
+                <li>{t("cs2page.prizes.mainPlace3")}</li>
               </ul>
               <p className="text-white/80 text-sm mb-6 leading-[19px]">
                 {t("cs2page.prizes.mainNote")}
@@ -134,14 +125,8 @@ export default async function CS2Tournament({
                 {t("cs2page.prizes.secondTitle")}
               </h3>
               <ul className="text-white mb-2 leading-[19px]">
-                <li>
-                  1. koht - 500€, 100€ inimese kohta, 66.6...(6)% ehk 2/3
-                  auhinnafondist.
-                </li>
-                <li>
-                  2. koht - 250€, 50€ inimese kohta, 33.3...(3)% ehk 1/3
-                  auhinnafondist.
-                </li>
+                <li>{t("cs2page.prizes.secondPlace1")}</li>
+                <li>{t("cs2page.prizes.secondPlace2")}</li>
               </ul>
               <p className="text-white/80 text-sm leading-[19px]">
                 {t("cs2page.prizes.secondNote")}

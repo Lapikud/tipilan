@@ -22,6 +22,10 @@
         "name": "next"
       }
     ],
+    "types": [
+      "node",
+      "bun-types"
+    ],
     "paths": {
       "@/*": [
         "./src/*"
