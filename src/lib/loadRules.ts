@@ -10,6 +10,8 @@ export type RuleType = "cs2" | "lol" | "kodukord";
  * @param locale - The locale to load rules for (et, en)
  * @returns Promise<string> The markdown content of the rules file
  */
+
+// TODO review unused method
 export async function loadRules(
   ruleType: RuleType,
   locale: Locale,
@@ -102,6 +104,7 @@ export async function loadRulesBun(
   }
 }
 
+// TODO review unused method
 /**
  * Gets all available rule types for a given locale
  * @param locale - The locale to check for available rules
@@ -148,6 +151,8 @@ export function ruleExists(ruleType: RuleType, locale: Locale): boolean {
  * @param preferredLocale - The preferred locale
  * @returns Locale The best available locale for the rule type
  */
+
+// TODO review unused method
 export function getBestAvailableLocale(
   ruleType: RuleType,
   preferredLocale: Locale,

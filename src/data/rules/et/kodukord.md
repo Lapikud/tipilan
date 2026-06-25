@@ -16,6 +16,7 @@
    1. Turniiridel osalemisel kehtivad lisaks eraldi turniirireeglid.
 4. Kodukorra rikkumise korral jätab TipiLAN endale õiguse osaleja ürituselt eemaldada ning vajaduse korral teavitada rikkumisest korrakaitseorganeid.
    1. Alaealise osaleja puhul teavitame rikkumiste korral lapsevanemaid või eestkostjaid ning vajaduse korral ka korrakaitseorganeid.
+   2. Kui märkate kodukorra rikkumist või tunnete end üritusel ebaturvaliselt, pöörduge palun lähima korraldusmeeskonna liikme poole, kes kannab „TipiLAN Crew” riietust.
 5. Ürituse alal viibimine on lubatud üksnes kehtiva pääsme või korraldaja loal.
 6. Kõik osalejad peavad olema vähemalt 16-aastased. Korraldajal on õigus vanuse kontrollimiseks küsida isikut tõendavat dokumenti ning nõuetele mittevastavad isikud ürituselt eemaldada.
 7. Pileti ostmisega annab osaleja korraldajale nõusoleku enda pildistamiseks ja filmimiseks ning lubab kasutada ürituse käigus loodud foto-, audio- ja videomaterjali ürituse jäädvustamise, kajastamise ja turundamise eesmärgil.
