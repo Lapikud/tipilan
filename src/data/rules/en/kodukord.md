@@ -16,6 +16,7 @@ Event participation house rules apply to everyone, both visitors and competitors
    1. Separate tournament rules apply when participating in tournaments.
 4. In the case of a violation of the event rules, TipiLAN reserves the right to remove the participant from the event and, if necessary, notify law enforcement agencies of the violation.
    1. In the case of a minor participant, we will notify the parents or guardians of any violations and, if necessary, also notify law enforcement agencies.
+   2. If you witness a violation of the event rules or feel unsafe at any point during the event, please contact the nearest event staff member wearing “TipiLAN Crew” clothing.
 5. Entry into the event area is only permitted with a valid pass or permission from the organizer.
 6. All participants must be at least 16 years old. The organizer reserves the right to request identification to verify age and to remove persons who do not meet the requirements from the event.
 7. By purchasing a ticket, the participant grants the organizer the right to photograph and film them and allows the use of photo, audio and video materials created during the event for the purpose of recording, reporting and marketing the event.
