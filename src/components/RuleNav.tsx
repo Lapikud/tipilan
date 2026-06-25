@@ -62,7 +62,7 @@ export default function RuleNav({ sections }: RuleNavProps) {
   return (
     <aside className="hidden lg:block">
       <nav className="sticky top-24">
-        <ul className="flex flex-col">
+        <ul className="flex flex-col text-center">
           {sections.map((section) => (
             <li
               key={section.id}
