@@ -38,7 +38,9 @@
 ## 🧪 Scripts
 
 ```bash
-bun dev        # Run development server
+bun run dev        # Run development server
+bun --bun run dev   # Run dev without runtimes
+
 bun run build  # Build for production
 bun start      # Start production server
 
