@@ -32,7 +32,7 @@ export default async function Page({
   return (
     <div className="bg-[#0E0F19] min-h-screen pt-16 md:pt-20">
       <div className="max-w-480 mx-auto px-4 sm:px-6 md:px-12 lg:px-64 py-10 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] lg:gap-30">
           {/* Main content */}
           <div>
             {/* Page title */}
@@ -46,7 +46,7 @@ export default async function Page({
               ruleType="kodukord"
             />
 
-            <div className="rules-markdown">
+            <div className="rules-markdown text-justify">
               <ReactMarkdown
                 components={
                   {
@@ -65,28 +65,28 @@ export default async function Page({
                     },
                     h2: (props) => (
                       <h2
-                        className={`${vipnagorgialla.className} font-bold italic text-xl text-white uppercase mb-2 mt-6`}
+                        className={`${vipnagorgialla.className} font-bold italic text-white uppercase`}
                       >
                         {props.children}
                       </h2>
                     ),
                     ol: (props) => (
-                      <ol className="text-white mb-4 leading-[19px]">
+                      <ol className="text-white mb-6">
                         {props.children}
                       </ol>
                     ),
                     ul: (props) => (
-                      <ul className="list-disc list-inside text-white mb-4 leading-[19px]">
+                      <ul className="list-disc list-inside text-white">
                         {props.children}
                       </ul>
                     ),
                     p: (props) => (
-                      <p className="text-white mb-4 leading-[19px]">
+                      <p className="text-white text-xl">
                         {props.children}
                       </p>
                     ),
                     li: (props) => (
-                      <li className="text-white mb-2 leading-[19px]">
+                      <li className="text-white text-xl mb-3">
                         {props.children}
                       </li>
                     ),
