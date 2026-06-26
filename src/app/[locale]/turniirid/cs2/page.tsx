@@ -4,6 +4,7 @@ import RulesContent from "@/components/RulesContent";
 import RulesLastChanged from "@/components/RulesLastChanged";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import '../style.css'
 
 const sectionKeys = [
   { id: "intro", labelKey: "cs2page.nav.intro" },
