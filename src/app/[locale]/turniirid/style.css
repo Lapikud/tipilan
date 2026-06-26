@@ -1,0 +1,21 @@
+p, li {
+    color: #ffffff;
+    text-align: justify;
+}
+
+@media (min-width: 640px) {
+p, li {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 1024px) {
+p, li {
+        font-size: 1.25rem;
+    }
+}
+
+ol {
+    color: #ffffff;
+    list-style-position: inside;
+}

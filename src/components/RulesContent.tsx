@@ -15,67 +15,72 @@ interface RulesContentProps {
 }
 
 function RuleItem({
-  rule,
-  index,
-}: {
+                    rule,
+                    index,
+                  }: {
   rule:
-    | string
-    | { main: string; sub: (string | { main: string; sub: string[] })[] };
+      | string
+      | { main: string; sub: (string | { main: string; sub: string[] })[] };
   index: number;
 }) {
   if (typeof rule === "string") {
     return (
-      <li className="text-white mb-2 leading-[19px]">
-        <span className="text-white mr-2">{index}.</span>
-        {rule}
-      </li>
+        <li className="flex items-start text-white mb-2">
+          {/* Fixed min-width prevents numbers from shifting text as digits grow (e.g., 9. vs 10.) */}
+          <span className="text-white font-mono min-w-[2rem] shrink-0 select-none">{index}.</span>
+          <div>{rule}</div>
+        </li>
     );
   }
 
   return (
-    <li className="text-white mb-3 leading-[19px]">
-      <span className="text-white mr-2">{index}.</span>
-      {rule.main}
-      {rule.sub && rule.sub.length > 0 && (
-        <ol className="ml-6 mt-2">
-          {rule.sub.map((subRule, subIndex) => {
-            if (typeof subRule === "string") {
-              return (
-                <li key={subIndex} className="text-white mb-1 leading-[19px]">
-                  <span className="text-white mr-2">
+      <li className="text-white mb-4">
+        {/* Main rule row */}
+        <div className="flex items-start">
+          <span className="text-white font-mono min-w-[2rem] shrink-0 select-none">{index}.</span>
+          <div>{rule.main}</div>
+        </div>
+
+        {rule.sub && rule.sub.length > 0 && (
+            <ol className="ml-8 mt-2 space-y-2">
+              {rule.sub.map((subRule, subIndex) => {
+                if (typeof subRule === "string") {
+                  return (
+                      <li key={subIndex} className="flex items-start text-white">
+                  <span className="text-white font-mono min-w-[3rem] shrink-0 select-none">
                     {index}.{subIndex + 1}.
                   </span>
-                  {subRule}
-                </li>
-              );
-            }
-            return (
-              <li key={subIndex} className="text-white mb-2 leading-[19px]">
-                <span className="text-white mr-2">
-                  {index}.{subIndex + 1}.
-                </span>
-                {subRule.main}
-                {subRule.sub && subRule.sub.length > 0 && (
-                  <ol className="ml-6 mt-1">
-                    {subRule.sub.map((subSubRule, subSubIndex) => (
-                      <li
-                        key={subSubIndex}
-                        className="text-white/80 mb-1 leading-[19px]"
-                      >
-                        <span className="text-white/80 mr-2">
+                        <div>{subRule}</div>
+                      </li>
+                  );
+                }
+                return (
+                    <li key={subIndex} className="text-white">
+                      <div className="flex items-start">
+                  <span className="text-white font-mono min-w-[3rem] shrink-0 select-none">
+                    {index}.{subIndex + 1}.
+                  </span>
+                        <div>{subRule.main}</div>
+                      </div>
+
+                      {subRule.sub && subRule.sub.length > 0 && (
+                          <ol className="ml-12 mt-2 space-y-2">
+                            {subRule.sub.map((subSubRule, subSubIndex) => (
+                                <li key={subSubIndex} className="flex items-start text-white/80">
+                        <span className="text-white/80 font-mono min-w-[4rem] shrink-0 select-none">
                           {index}.{subIndex + 1}.{subSubIndex + 1}.
                         </span>
-                        {subSubRule}
-                      </li>
-                    ))}
-                  </ol>
-                )}
-              </li>
-            );
-          })}
-        </ol>
-      )}
-    </li>
+                                  <div>{subSubRule}</div>
+                                </li>
+                            ))}
+                          </ol>
+                      )}
+                    </li>
+                );
+              })}
+            </ol>
+        )}
+      </li>
   );
 }
 
@@ -89,7 +94,7 @@ export default function RulesContent({ sections }: RulesContentProps) {
           >
             {sectionIndex + 1}) {section.title}
           </h3>
-          <ol className="list-none">
+          <ol>
             {section.rules.map((rule, ruleIndex) => (
               <RuleItem key={ruleIndex} rule={rule} index={ruleIndex + 1} />
             ))}
