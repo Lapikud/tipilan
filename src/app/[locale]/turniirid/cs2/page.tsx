@@ -4,7 +4,6 @@ import RulesContent from "@/components/RulesContent";
 import RulesLastChanged from "@/components/RulesLastChanged";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import '../style.css'
 
 const sectionKeys = [
   { id: "intro", labelKey: "cs2page.nav.intro" },
@@ -33,7 +32,7 @@ export default async function CS2Tournament({
   return (
     <div className="bg-[#0E0F19] min-h-screen pt-16 md:pt-20">
       <div className="max-w-480 mx-auto px-4 sm:px-6 md:px-12 lg:px-64 py-10 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-16">
+        <div className="tournament-page-scope grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-16">
           {/* Main content */}
           <div>
             {/* Header */}
