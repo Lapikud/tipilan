@@ -57,7 +57,8 @@ export default async function Page({
                       return (
                         <h1
                           id={id}
-                          className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-white uppercase mb-4 mt-12 first:mt-0 scroll-mt-24 md:scroll-mt-28`}
+                          className={`${vipnagorgialla.className} font-bold italic text-2xl md:text-3xl text-white 
+                            uppercase mb-4 mt-12 first:mt-0 scroll-mt-24 md:scroll-mt-28`}
                         >
                           {props.children}
                         </h1>
@@ -81,12 +82,12 @@ export default async function Page({
                       </ul>
                     ),
                     p: (props) => (
-                      <p className="text-white text-xl">
+                      <p className="text-white lg:text-xl sm:text-sm">
                         {props.children}
                       </p>
                     ),
                     li: (props) => (
-                      <li className="text-white text-xl mb-3">
+                      <li className="text-white lg:text-xl sm:text-sm mb-3">
                         {props.children}
                       </li>
                     ),

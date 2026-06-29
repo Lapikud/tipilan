@@ -32,7 +32,7 @@ export default async function CS2Tournament({
   return (
     <div className="bg-[#0E0F19] min-h-screen pt-16 md:pt-20">
       <div className="max-w-480 mx-auto px-4 sm:px-6 md:px-12 lg:px-64 py-10 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-16">
+        <div className="tournament-page-scope grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-16">
           {/* Main content */}
           <div>
             {/* Header */}
@@ -68,7 +68,7 @@ export default async function CS2Tournament({
               >
                 {t("cs2page.intro.title")}
               </h2>
-              <p className="text-white mb-6 leading-[19px]">
+              <p className="text-white mb-6">
                 {t("cs2page.intro.description")}
               </p>
 
@@ -77,8 +77,8 @@ export default async function CS2Tournament({
               >
                 {t("cs2page.intro.previousWinners")}
               </h3>
-              <p className="text-white font-bold leading-[19px]">2025</p>
-              <ol className="text-white list-decimal list-inside mb-4 leading-[19px]">
+              <p className="text-white font-bold">2025</p>
+              <ol className="text-white list-decimal list-inside mb-4">
                 <li>RAID (Eesti)</li>
                 <li>hypewrld (Läti)</li>
                 <li>CSDIILIT (Soome/Eesti)</li>
@@ -92,7 +92,7 @@ export default async function CS2Tournament({
               >
                 {t("cs2page.info.title")}
               </h2>
-              <p className="text-white leading-[19px]">
+              <p className="text-white ">
                 {t("cs2page.info.description")}
               </p>
             </section>
@@ -110,7 +110,7 @@ export default async function CS2Tournament({
               >
                 {t("cs2page.prizes.mainTitle")}
               </h3>
-              <ul className="text-white mb-2 leading-[19px]">
+              <ul className="text-white mb-2">
                 <li>{t("cs2page.prizes.mainPlace1")}</li>
                 <li>{t("cs2page.prizes.mainPlace2")}</li>
                 <li>{t("cs2page.prizes.mainPlace3")}</li>
@@ -124,11 +124,11 @@ export default async function CS2Tournament({
               >
                 {t("cs2page.prizes.secondTitle")}
               </h3>
-              <ul className="text-white mb-2 leading-[19px]">
+              <ul className="text-white mb-2">
                 <li>{t("cs2page.prizes.secondPlace1")}</li>
                 <li>{t("cs2page.prizes.secondPlace2")}</li>
               </ul>
-              <p className="text-white/80 text-sm leading-[19px]">
+              <p className="text-white/80 text-sm">
                 {t("cs2page.prizes.secondNote")}
               </p>
             </section>
@@ -140,13 +140,13 @@ export default async function CS2Tournament({
               >
                 {t("cs2page.format.title")}
               </h2>
-              <p className="text-white mb-4 leading-[19px]">
+              <p className="text-white mb-4">
                 {t("cs2page.format.description")}
               </p>
-              <p className="text-white leading-[19px]">
+              <p className="text-white">
                 {t("cs2page.format.day1")}
               </p>
-              <p className="text-white leading-[19px]">
+              <p className="text-white">
                 {t("cs2page.format.day23")}
               </p>
             </section>
@@ -158,10 +158,10 @@ export default async function CS2Tournament({
               >
                 {t("cs2page.vrs.title")}
               </h2>
-              <p className="text-white mb-4 leading-[19px]">
+              <p className="text-white mb-4">
                 {t("cs2page.vrs.description1")}
               </p>
-              <p className="text-white leading-[19px]">
+              <p className="text-white">
                 {t("cs2page.vrs.description2")}
               </p>
             </section>
@@ -191,23 +191,24 @@ export default async function CS2Tournament({
               >
                 {t("cs2page.rules.title")}
               </h2>
-              <p className="text-white mb-6 leading-[19px]">
+              <p className="text-white mb-6">
                 {t("cs2page.rules.description")}
               </p>
 
               <RulesContent sections={t.raw("cs2page.rules.sections")} />
 
+              {/* Contact info */}
               <div className="mt-8">
-                <p className="text-white mb-2 leading-[19px]">
+                <p className="text-white mb-2">
                   {t("cs2page.rules.contact")}
                 </p>
                 <p className="text-[#00A3E0] font-bold">
                   {t("cs2page.rules.contactName")}
                 </p>
-                <p className="text-white leading-[19px]">
+                <p className="text-white">
                   {t("cs2page.rules.contactRole")}
                 </p>
-                <p className="text-white leading-[19px]">
+                <p className="text-white">
                   Discord:{" "}
                   <a
                     href="https://discord.com/users/292372329747710013"

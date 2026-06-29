@@ -213,3 +213,28 @@ body {
         will-change: auto;
     }
 }
+
+.tournament-page-scope p,
+.tournament-page-scope li {
+    color: #ffffff;
+    text-align: justify;
+}
+
+@media (min-width: 640px) {
+    .tournament-page-scope p,
+    .tournament-page-scope li {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .tournament-page-scope p,
+    .tournament-page-scope li {
+        font-size: 1.25rem;
+    }
+}
+
+.tournament-page-scope ol {
+    color: #ffffff;
+    list-style-position: inside;
+}
