@@ -80,6 +80,13 @@ const sponsors: Sponsor[] = [
     width: 200,
     height: 200,
   },
+  {
+    href: "https://ingame.ee/",
+    src: "/sponsors/ingame.png",
+    alt: "iNGAME",
+    width: 200,
+    height: 200,
+  }
 ];
 
 interface SponsorsProps {
