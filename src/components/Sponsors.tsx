@@ -37,7 +37,7 @@ const sponsors: Sponsor[] = [
     height: 200,
   },
   {
-    href: "https://www.facebook.com/bfglOfficial",
+    href: "https://www.instagram.com/baltic_fighting_game_league/",
     src: "/sponsors/BFGL.png",
     alt: "BFGL",
     width: 192,
@@ -80,6 +80,13 @@ const sponsors: Sponsor[] = [
     width: 200,
     height: 200,
   },
+  {
+    href: "https://ingame.ee/",
+    src: "/sponsors/ingame.png",
+    alt: "iNGAME",
+    width: 200,
+    height: 200,
+  }
 ];
 
 interface SponsorsProps {
