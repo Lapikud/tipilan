@@ -94,13 +94,14 @@
         "Juurdepääs kogu TipiLAN melule, tegevustele, kõrvalsündmustele, headele vibe'dele ja kaasahaaravale atmosfäärile."
       ]
     },
-    "supporter": {
-      "name": "TOETAJA",
-      "price": "25+€",
+    "lan": {
+      "name": "LAN",
+      "subtitle": "PILET",
+      "price": "10€",
       "features": [
-        "TipiLANi t-särk, et tänada sind meie toetamise eest",
-        "Võimalust anda oma panus TipiLANi arengusse ja tulevikku.",
-        "Kõik, mis kaasneb külastaja piletiga"
+        "Koht TipiLANi vabamängualal",
+        "Isiklik laud, voolu- ja internetiühendus",
+        "Osalemine LAN-ala tegevustes ja miniturniiridel"
       ]
     },
     "lol": {

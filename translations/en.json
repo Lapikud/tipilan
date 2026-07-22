@@ -94,13 +94,14 @@
         "Access to all TipiLAN activities, side events, good vibes and engaging atmosphere."
       ]
     },
-    "supporter": {
-      "name": "SUPPORTER",
-      "price": "25+€",
+    "lan": {
+      "name": "LAN",
+      "subtitle": "TICKET",
+      "price": "10€",
       "features": [
-        "TipiLAN t-shirt to thank you for your support",
-        "Opportunity to contribute to TipiLAN's development and future.",
-        "Everything that comes with the visitor ticket"
+        "A spot in the TipiLAN free-play area",
+        "Personal desk, power and internet connection",
+        "Participation in LAN-area activities and mini-tournaments"
       ]
     },
     "lol": {

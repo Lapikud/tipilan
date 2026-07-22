@@ -115,12 +115,12 @@ export default async function Tickets({
           className="border-b-[3px] md:border-b-[3px] md:border-r-[3px]"
         />
 
-        {/* TOETAJA PILET */}
+        {/* LAN PILET */}
         <TicketCard
-          title={t("tickets.supporter.name")}
-          subtitle={t("tickets.subtitle")}
-          price={t("tickets.supporter.price")}
-          features={t.raw("tickets.supporter.features")}
+          title={t("tickets.lan.name")}
+          subtitle={t("tickets.lan.subtitle")}
+          price={t("tickets.lan.price")}
+          features={t.raw("tickets.lan.features")}
           buttonText={t("tickets.buyButton")}
           buttonHref="https://fienta.com/et/tipilan"
           backgroundImage="/images/landing/explore_teaser.png"
