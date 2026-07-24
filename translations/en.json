@@ -104,6 +104,15 @@
         "Participation in LAN-area activities and mini-tournaments"
       ]
     },
+    "supporter": {
+      "name": "SUPPORTER",
+      "price": "25+€",
+      "features": [
+        "A spot in the TipiLAN free-play area",
+        "Personal desk, power and internet connection",
+        "Participation in LAN-area activities and mini-tournaments"
+      ]
+    },
     "lol": {
       "name": "LOL TOURNAMENT",
       "price": "15€",
