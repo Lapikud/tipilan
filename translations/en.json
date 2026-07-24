@@ -94,6 +94,16 @@
         "Access to all TipiLAN activities, side events, good vibes and engaging atmosphere."
       ]
     },
+    "lan": {
+      "name": "LAN",
+      "subtitle": "TICKET",
+      "price": "10€",
+      "features": [
+        "A spot in the TipiLAN free-play area",
+        "Personal desk, power and internet connection",
+        "Participation in LAN-area activities and mini-tournaments"
+      ]
+    },
     "supporter": {
       "name": "SUPPORTER",
       "price": "25+€",
