@@ -78,7 +78,7 @@ function TicketCard({
               key={index}
               className="flex items-start gap-2 text-[#EEE5E5] text-base"
             >
-              <span className="w-1 h-full min-h-5 bg-[#00A3E0] shrink-0" />
+              <span className="w-1 self-stretch min-h-5 bg-[#00A3E0] shrink-0" />
               <span>{feature}</span>
             </li>
           ))}

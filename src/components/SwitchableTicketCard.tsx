@@ -72,9 +72,25 @@ export default function SwitchableTicketCard({
     );
   }
 
+  function renderMobileFeatures(features: string[]) {
+    return (
+      <ul className="flex flex-col gap-2 grow mb-6">
+        {features.map((feature, index) => (
+          <li
+            key={index}
+            className="flex items-start gap-2 text-[#EEE5E5] text-base"
+          >
+            <span className="w-1 self-stretch min-h-5 bg-[#00A3E0] shrink-0" />
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   return (
     <div
-      className={`relative bg-[#0E0F19] border-[#1F5673] px-12 py-16 flex flex-col min-h-87.5 h-full overflow-hidden ${className}`}
+      className={`relative bg-[#0E0F19] border-[#1F5673] px-12 sm:py-16 py-0 flex flex-col min-h-87.5 h-full overflow-hidden ${className}`}
     >
       {backgroundImage && (
         <Image
@@ -96,132 +112,196 @@ export default function SwitchableTicketCard({
       )}
 
       <div className="relative z-10 flex flex-col h-full">
-        {/* Title + subtitle + price with position shift */}
-        <div className="flex items-start mb-2 ">
-          <div
-            className="transition-[flex-grow] duration-700 ease-out "
-            style={{ flexGrow: titleOnRight ? 1 : 0 }}
-          />
-          <div className={`grid ${titleOnRight ? "text-end" : ""}`}>
+        {/* Mobile: Simple slide transition at sm: breakpoint (640px) */}
+        <div className="sm:hidden relative w-full flex flex-col h-full">
+          <div className="relative flex-grow overflow-hidden">
             <div
-              className="col-start-1 row-start-1 transition-opacity duration-500 ease-out"
-              style={{ opacity: isA ? 1 : 0 }}
+              className={`absolute inset-0 flex flex-col transition-transform duration-700 ease-out`}
+              style={{ transform: isA ? "translateX(0)" : "translateX(-100%)" }}
             >
-              <h2
-                className={`${vipnagorgialla.className} font-bold italic text-[clamp(2rem,1.5rem+2vw,3rem)] leading-none text-[#00A3E0] uppercase`}
-              >
-                {optionA.title}
-              </h2>
-              <h3
-                className={`${vipnagorgialla.className} font-bold italic text-2xl text-[#EEE5E5] uppercase`}
-              >
-                {optionA.subtitle}
-              </h3>
-              <p
-                className={`${vipnagorgialla.className} font-bold italic text-[clamp(2.5rem,2rem+2vw,4rem)] leading-none mt-2`}
-              >
-                {renderPrice(optionA.price)}
-              </p>
+              <div className="pt-16 pb-8">
+                <h2
+                  className={`${vipnagorgialla.className} font-bold italic text-[clamp(2rem,1.5rem+2vw,3rem)] leading-none text-[#00A3E0] uppercase`}
+                >
+                  {optionA.title}
+                </h2>
+                <h3
+                  className={`${vipnagorgialla.className} font-bold italic text-2xl text-[#EEE5E5] uppercase mb-4`}
+                >
+                  {optionA.subtitle}
+                </h3>
+                <p
+                  className={`${vipnagorgialla.className} font-bold italic text-[clamp(2.5rem,2rem+2vw,4rem)] leading-none mb-4`}
+                >
+                  {renderPrice(optionA.price)}
+                </p>
+                {renderMobileFeatures(optionA.features)}
+              </div>
             </div>
             <div
-              className="col-start-1 row-start-1 transition-opacity duration-500 ease-out pointer-events-none"
-              style={{ opacity: isA ? 0 : 1 }}
+              className={`absolute inset-0 flex flex-col transition-transform duration-700 ease-out`}
+              style={{ transform: !isA ? "translateX(0)" : "translateX(100%)" }}
             >
-              <h2
-                className={`${vipnagorgialla.className} font-bold italic text-[clamp(2rem,1.5rem+2vw,3rem)] leading-none text-[#00A3E0] uppercase`}
-              >
-                {optionB.title}
-              </h2>
-              <h3
-                className={`${vipnagorgialla.className} font-bold italic text-2xl text-[#EEE5E5] uppercase`}
-              >
-                {optionB.subtitle}
-              </h3>
-              <p
-                className={`${vipnagorgialla.className} font-bold italic text-[clamp(2.5rem,2rem+2vw,4rem)] leading-none mt-2`}
-              >
-                {renderPrice(optionB.price)}
-              </p>
+              <div className="pt-16 pb-8">
+                <h2
+                  className={`${vipnagorgialla.className} font-bold italic text-[clamp(2rem,1.5rem+2vw,3rem)] leading-none text-[#00A3E0] uppercase`}
+                >
+                  {optionB.title}
+                </h2>
+                <h3
+                  className={`${vipnagorgialla.className} font-bold italic text-2xl text-[#EEE5E5] uppercase mb-4`}
+                >
+                  {optionB.subtitle}
+                </h3>
+                <p
+                  className={`${vipnagorgialla.className} font-bold italic text-[clamp(2.5rem,2rem+2vw,4rem)] leading-none mb-4`}
+                >
+                  {renderPrice(optionB.price)}
+                </p>
+                {renderMobileFeatures(optionB.features)}
+              </div>
             </div>
           </div>
-          <div
-            className="transition-[flex-grow] duration-700 ease-out "
-            style={{ flexGrow: titleOnRight ? 0 : 1 }}
-          />
-        </div>
-
-        <div className="relative grow">
-          <div
-            className={`absolute inset-0 flex flex-col transition-all duration-700 ease-out ${
-              isA
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 -translate-x-full"
-            }`}
-          >
-            <div className="flex ">
-              <div
-                className="transition-[flex-grow] duration-700 ease-out "
-                style={{ flexGrow: titleOnRight ? 1 : 0 }}
-              />
-              <div>
-                {renderFeatures(optionA.features)}
-              </div>
-              <div
-                className="transition-[flex-grow] duration-700 ease-out "
-                style={{ flexGrow: titleOnRight ? 0 : 1 }}
-              />
-            </div>
-          </div>
-
-          <div
-            className={`absolute inset-0 flex flex-col transition-all duration-700 ease-out ${
-              !isA
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-full"
-            }`}
-          >
-            <div className="flex ">
-              <div
-                className="transition-[flex-grow] duration-700 ease-out "
-                style={{ flexGrow: titleOnRight ? 1 : 0 }}
-              />
-              <div>
-                {renderFeatures(optionB.features)}
-              </div>
-              <div
-                className="transition-[flex-grow] duration-700 ease-out "
-                style={{ flexGrow: titleOnRight ? 0 : 1 }}
-              />
-            </div>
+          <div className="pb-16 flex-shrink-0">
+            <Link href={buttonHref} target="_blank" className="w-fit">
+              <button
+                className={`px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer ${vipnagorgialla.className} font-bold italic leading-none uppercase transition`}
+              >
+                {buttonText}
+              </button>
+            </Link>
           </div>
         </div>
 
-        <Link href={buttonHref} target="_blank" className="w-fit">
-          <button
-            className={`px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer ${vipnagorgialla.className} font-bold italic leading-none uppercase transition`}
-          >
-            {buttonText}
-          </button>
-        </Link>
+        {/* Desktop: Original transition behavior */}
+        <div className="hidden sm:flex flex-col h-full">
+          {/* Title + subtitle + price with position shift */}
+          <div className="flex items-start mb-2 ">
+            <div
+              className="transition-[flex-grow] duration-700 ease-out "
+              style={{ flexGrow: titleOnRight ? 1 : 0 }}
+            />
+            <div className={`grid ${titleOnRight ? "text-end" : ""}`}>
+              <div
+                className="col-start-1 row-start-1 transition-opacity duration-500 ease-out"
+                style={{ opacity: isA ? 1 : 0 }}
+              >
+                <h2
+                  className={`${vipnagorgialla.className} font-bold italic text-[clamp(2rem,1.5rem+2vw,3rem)] leading-none text-[#00A3E0] uppercase`}
+                >
+                  {optionA.title}
+                </h2>
+                <h3
+                  className={`${vipnagorgialla.className} font-bold italic text-2xl text-[#EEE5E5] uppercase`}
+                >
+                  {optionA.subtitle}
+                </h3>
+                <p
+                  className={`${vipnagorgialla.className} font-bold italic text-[clamp(2.5rem,2rem+2vw,4rem)] leading-none mt-2`}
+                >
+                  {renderPrice(optionA.price)}
+                </p>
+              </div>
+              <div
+                className="col-start-1 row-start-1 transition-opacity duration-500 ease-out pointer-events-none"
+                style={{ opacity: isA ? 0 : 1 }}
+              >
+                <h2
+                  className={`${vipnagorgialla.className} font-bold italic text-[clamp(2rem,1.5rem+2vw,3rem)] leading-none text-[#00A3E0] uppercase`}
+                >
+                  {optionB.title}
+                </h2>
+                <h3
+                  className={`${vipnagorgialla.className} font-bold italic text-2xl text-[#EEE5E5] uppercase`}
+                >
+                  {optionB.subtitle}
+                </h3>
+                <p
+                  className={`${vipnagorgialla.className} font-bold italic text-[clamp(2.5rem,2rem+2vw,4rem)] leading-none mt-2`}
+                >
+                  {renderPrice(optionB.price)}
+                </p>
+              </div>
+            </div>
+            <div
+              className="transition-[flex-grow] duration-700 ease-out "
+              style={{ flexGrow: titleOnRight ? 0 : 1 }}
+            />
+          </div>
+
+          <div className="relative grow">
+            <div
+              className={`absolute inset-0 flex flex-col transition-all duration-700 ease-out ${
+                isA
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-full"
+              }`}
+            >
+              <div className="flex ">
+                <div
+                  className="transition-[flex-grow] duration-700 ease-out "
+                  style={{ flexGrow: titleOnRight ? 1 : 0 }}
+                />
+                <div>
+                  {renderFeatures(optionA.features)}
+                </div>
+                <div
+                  className="transition-[flex-grow] duration-700 ease-out "
+                  style={{ flexGrow: titleOnRight ? 0 : 1 }}
+                />
+              </div>
+            </div>
+
+            <div
+              className={`absolute inset-0 flex flex-col transition-all duration-700 ease-out ${
+                !isA
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-full"
+              }`}
+            >
+              <div className="flex ">
+                <div
+                  className="transition-[flex-grow] duration-700 ease-out "
+                  style={{ flexGrow: titleOnRight ? 1 : 0 }}
+                />
+                <div>
+                  {renderFeatures(optionB.features)}
+                </div>
+                <div
+                  className="transition-[flex-grow] duration-700 ease-out "
+                  style={{ flexGrow: titleOnRight ? 0 : 1 }}
+                />
+              </div>
+            </div>
+          </div>
+
+          <Link href={buttonHref} target="_blank" className="w-fit">
+            <button
+              className={`px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer ${vipnagorgialla.className} font-bold italic leading-none uppercase transition`}
+            >
+              {buttonText}
+            </button>
+          </Link>
+        </div>
       </div>
 
-      {/* Chevron buttons on left/right sides — hidden on mobile */}
+      {/* Chevron buttons on left/right sides */}
       <button
         onClick={() => setIsA(false)}
-        className={`${isA ? "lg:flex" : "hidden"} absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center bg-[#0E0F19]/50 hover:bg-[#007CAB] text-[#EEE5E5] transition-all duration-300 z-20`}
+        className={`${isA ? "flex" : "hidden"} absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center bg-[#0E0F19]/50 hover:bg-[#007CAB] text-[#EEE5E5] transition-all duration-300 z-20`}
         aria-label={optionB.title}
       >
         <span className="material-symbols-outlined">chevron_right</span>
       </button>
       <button
         onClick={() => setIsA(true)}
-        className={`${!isA ? "lg:flex" : "hidden"} absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center bg-[#0E0F19]/50 hover:bg-[#007CAB] text-[#EEE5E5] transition-all duration-300 z-20`}
+        className={`${!isA ? "flex" : "hidden"} absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center bg-[#0E0F19]/50 hover:bg-[#007CAB] text-[#EEE5E5] transition-all duration-300 z-20`}
         aria-label={optionA.title}
       >
         <span className="material-symbols-outlined">chevron_left</span>
       </button>
 
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex justify-center gap-2 pb-2">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex justify-center gap-2 pb-2 z-20">
         <button
           onClick={() => setIsA(true)}
           className={`w-3 h-3 rounded-full transition ${
