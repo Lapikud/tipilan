@@ -2,6 +2,7 @@ import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import Link from "next/link";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import SwitchableTicketCard from "@/components/SwitchableTicketCard";
 
 interface TicketCardProps {
   title: string;
@@ -12,6 +13,7 @@ interface TicketCardProps {
   buttonHref: string;
   backgroundImage?: string;
   backgroundOpacity?: number;
+  blueTinge?: boolean;
   className?: string;
 }
 
@@ -24,6 +26,7 @@ function TicketCard({
   buttonHref,
   backgroundImage,
   backgroundOpacity = 40,
+  blueTinge = false,
   className = "",
 }: TicketCardProps) {
   return (
@@ -38,6 +41,9 @@ function TicketCard({
           className="object-cover object-center"
           style={{ opacity: backgroundOpacity / 100 }}
         />
+      )}
+      {blueTinge && (
+        <div className="absolute inset-0 bg-[#005A8C]/30" />
       )}
       <div className="relative z-10 flex flex-col h-full">
         <h2
@@ -72,12 +78,12 @@ function TicketCard({
               key={index}
               className="flex items-start gap-2 text-[#EEE5E5] text-base"
             >
-              <span className="w-1 h-full min-h-5 bg-[#00A3E0] shrink-0" />
+              <span className="w-1 self-stretch min-h-5 bg-[#00A3E0] shrink-0" />
               <span>{feature}</span>
             </li>
           ))}
         </ul>
-        <Link href={buttonHref} target="_blank">
+        <Link href={buttonHref} target="_blank" className="w-fit">
           <button
             className={`px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer ${vipnagorgialla.className} font-bold italic leading-none uppercase transition`}
           >
@@ -101,30 +107,41 @@ export default async function Tickets({
   return (
     <div className="bg-[#0E0F19] min-h-0 flex flex-col flex-1">
       {/* 2x2 Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 auto-rows-fr pt-14 flex-1 min-h-0">
-        {/* KÜLASTAJA PILET */}
-        <TicketCard
-          title={t("tickets.visitor.name")}
-          subtitle={t("tickets.subtitle")}
-          price={t("tickets.visitor.price")}
-          features={t.raw("tickets.visitor.features")}
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 auto-rows-fr pt-14 flex-1 min-h-0">
+
+        {/* KÜLASTAJA / TOETAJA — switchable */}
+        <SwitchableTicketCard
+          optionA={{
+            title: t("tickets.visitor.name"),
+            subtitle: t("tickets.subtitle"),
+            price: t("tickets.visitor.price"),
+            features: t.raw("tickets.visitor.features"),
+          }}
+          optionB={{
+            title: t("tickets.supporter.name"),
+            subtitle: t("tickets.subtitle"),
+            price: t("tickets.supporter.price"),
+            features: t.raw("tickets.supporter.features"),
+          }}
           buttonText={t("tickets.buyButton")}
           buttonHref="https://fienta.com/et/tipilan"
           backgroundImage="/images/landing/visitor_tournament.jpg"
-          backgroundOpacity={30}
-          className="border-b-[3px] md:border-b-[3px] md:border-r-[3px]"
+          backgroundImageB="/images/landing/main_supporter.jpg"
+          backgroundOpacityA={30}
+          backgroundOpacityB={40}
+          className="border-b-[3px] lg:border-r-[3px]"
         />
 
-        {/* TOETAJA PILET */}
+        {/* LAN PILET */}
         <TicketCard
-          title={t("tickets.supporter.name")}
-          subtitle={t("tickets.subtitle")}
-          price={t("tickets.supporter.price")}
-          features={t.raw("tickets.supporter.features")}
+          title={t("tickets.lan.name")}
+          subtitle={t("tickets.lan.subtitle")}
+          price={t("tickets.lan.price")}
+          features={t.raw("tickets.lan.features")}
           buttonText={t("tickets.buyButton")}
           buttonHref="https://fienta.com/et/tipilan"
           backgroundImage="/images/landing/explore_teaser.png"
-          backgroundOpacity={80}
+          backgroundOpacity={100}
           className="border-b-[3px]"
         />
 
@@ -137,7 +154,7 @@ export default async function Tickets({
           buttonText={t("tickets.buyButton")}
           buttonHref="https://fienta.com/et/tipilan"
           backgroundImage="/images/landing/league_ticket.jpg"
-          className="border-b-[3px] md:border-b-0 md:border-r-[3px]"
+          className="border-b-[3px] lg:border-b-0 lg:border-r-[3px]"
         />
 
         {/* CS2 TURNIIRI PILET */}

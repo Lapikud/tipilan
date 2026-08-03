@@ -94,6 +94,16 @@
         "Juurdepääs kogu TipiLAN melule, tegevustele, kõrvalsündmustele, headele vibe'dele ja kaasahaaravale atmosfäärile."
       ]
     },
+    "lan": {
+      "name": "LAN",
+      "subtitle": "PILET",
+      "price": "10€",
+      "features": [
+        "Koht TipiLANi vabamängualal",
+        "Isiklik laud, voolu- ja internetiühendus",
+        "Osalemine LAN-ala tegevustes ja miniturniiridel"
+      ]
+    },
     "supporter": {
       "name": "TOETAJA",
       "price": "25+€",
