@@ -86,6 +86,41 @@ const sponsors: Sponsor[] = [
     alt: "iNGAME",
     width: 200,
     height: 200,
+  },
+  {
+    href: "https://www.tallinn.ee/et/haridusamet",
+    src: "/sponsors/Tallinna_Haridusamet_logo_RGB.svg",
+    alt: "Tallinna Haridusamet",
+    width: 200,
+    height: 200,
+  },
+  {
+    href: "https://parkminigolf.ee/",
+    src: "/sponsors/park_minigolf.png",
+    alt: "Park Minigolf",
+    width: 200,
+    height: 200,
+  },
+  {
+    href: "https://www.lemongym.ee/",
+    src: "/sponsors/lemongym.png",
+    alt: "Lemongym",
+    width: 200,
+    height: 200,
+  },
+  {
+    href: "https://www.elamusgolf.eu/",
+    src: "/sponsors/elamusgolf.png",
+    alt: "Elamusgolf",
+    width: 200,
+    height: 200,  
+  },
+  {
+    href: "https://www.egda.ee/",
+    src: "/sponsors/EGDA.png",
+    alt: "Estonian Game Developers Association",
+    width: 344,
+    height: 344,  
   }
 ];
 

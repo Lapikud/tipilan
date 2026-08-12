@@ -87,7 +87,7 @@
     "buyButton": "BUY TICKET FROM FIENTA",
     "visitor": {
       "name": "VISITOR",
-      "price": "8€",
+      "price": "10€",
       "features": [
         "Area access throughout the event",
         "Ability to enter and leave the event area",
@@ -97,7 +97,7 @@
     "lan": {
       "name": "LAN",
       "subtitle": "TICKET",
-      "price": "10€",
+      "price": "12€",
       "features": [
         "A spot in the TipiLAN free-play area",
         "Personal desk, power and internet connection",
