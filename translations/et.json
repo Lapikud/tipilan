@@ -87,7 +87,7 @@
     "buyButton": "OSTA PILET FIENTAST",
     "visitor": {
       "name": "KÜLASTAJA",
-      "price": "8€",
+      "price": "10€",
       "features": [
         "Alade ligipääs kogu ürituse vältel",
         "Võimalus ürituse alalt sisse ja välja liikuda",
@@ -97,7 +97,7 @@
     "lan": {
       "name": "LAN",
       "subtitle": "PILET",
-      "price": "10€",
+      "price": "12€",
       "features": [
         "Koht TipiLANi vabamängualal",
         "Isiklik laud, voolu- ja internetiühendus",
