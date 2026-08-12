@@ -1,11 +1,14 @@
-import { drizzle } from "drizzle-orm/bun-sqlite";
-import { Database } from "bun:sqlite";
+import { createRequire } from "module";
 import * as schema from "./schema/schema";
 
 let database: any = null;
 
+const require = createRequire(import.meta.url);
+
 function getDatabase() {
 	if (!database) {
+		const { drizzle } = require("drizzle-orm/bun-sqlite") as typeof import("drizzle-orm/bun-sqlite");
+		const { Database } = require("bun:sqlite") as typeof import("bun:sqlite");
 		const sqlite = new Database("data/tipilan.db");
 		database = drizzle(sqlite, { schema });
 	}
