@@ -40,6 +40,8 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { DataTable } from "@/components/haldus/data-table";
 import { columns } from "@/components/haldus/columns";
 
+export const dynamic = "force-dynamic";
+
 async function syncAction() {
   "use server";
   await syncFientaEvent(process.env.EVENT_ID!, process.env.FIENTA_API_KEY!);
