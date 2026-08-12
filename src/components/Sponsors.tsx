@@ -114,6 +114,13 @@ const sponsors: Sponsor[] = [
     alt: "Elamusgolf",
     width: 200,
     height: 200,  
+  },
+  {
+    href: "https://www.egda.ee/",
+    src: "/sponsors/EGDA.png",
+    alt: "Estonian Game Developers Association",
+    width: 344,
+    height: 344,  
   }
 ];
 
