@@ -20,6 +20,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
+export const dynamic = "force-dynamic";
+
 // Function to translate roles using i18n
 function translateRole(role: string, t: (key: string) => string): string {
   switch (role) {
