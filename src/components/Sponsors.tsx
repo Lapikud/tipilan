@@ -60,7 +60,7 @@ const sponsors: Sponsor[] = [
   },
   {
     href: "https://globalproductions.ee/",
-    src: "/sponsors/Global-productions.png",
+    src: "/sponsors/Global-productions.svg",
     alt: "Global Productions",
     width: 200,
     height: 200,

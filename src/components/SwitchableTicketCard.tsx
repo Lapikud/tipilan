@@ -288,14 +288,14 @@ export default function SwitchableTicketCard({
       {/* Chevron buttons on left/right sides */}
       <button
         onClick={() => setIsA(false)}
-        className={`${isA ? "flex" : "hidden"} absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center bg-[#0E0F19]/50 hover:bg-[#007CAB] text-[#EEE5E5] transition-all duration-300 z-20`}
+        className={`${isA ? "flex" : "hidden"} absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center cursor-pointer bg-[#0E0F19]/50 hover:bg-[#007CAB] text-[#EEE5E5] transition-all duration-300 z-20`}
         aria-label={optionB.title}
       >
         <span className="material-symbols-outlined">chevron_right</span>
       </button>
       <button
         onClick={() => setIsA(true)}
-        className={`${!isA ? "flex" : "hidden"} absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center bg-[#0E0F19]/50 hover:bg-[#007CAB] text-[#EEE5E5] transition-all duration-300 z-20`}
+        className={`${!isA ? "flex" : "hidden"} absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center cursor-pointer bg-[#0E0F19]/50 hover:bg-[#007CAB] text-[#EEE5E5] transition-all duration-300 z-20`}
         aria-label={optionA.title}
       >
         <span className="material-symbols-outlined">chevron_left</span>
