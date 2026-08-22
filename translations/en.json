@@ -78,7 +78,7 @@
         "description": "The TipiLAN expo area hosts companies, additional activities and lectures."
       },
       "reserveSpot": "Reserve your spot today!",
-      "poweredBy": "Toetajad",
+      "poweredBy": "TipiLAN is powered by...",
       "dateAndLocation": "11th–13th Sep. 2026 @ TalTech"
     }
   },
@@ -834,7 +834,7 @@
       "foyerAndLanArea": "Fuajee/LAN Area",
       "lobbyAndLanArea": "Lobby/LAN area"
     },
-    "transportInfo": "Come to TipiLAN by public transport if possible! Buses 10, 11, 23, 24, 27, 33, 36, 37, 45, 67 and trolleybus 83 will take you to TalTech. If you come by car, don't come alone - bring your friends!"
+    "transportInfo": "Come to TipiLAN by public transport if possible! Buses 10, 11, 19, 23, 24A, 27, 33, 36, 37, 45, 67 and trolleybuses 72 and 83 will take you to TalTech. If you come by car, don't come alone - bring your friends!"
   },
   "stream": {
     "title": "Stream",
