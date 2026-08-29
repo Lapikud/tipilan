@@ -379,7 +379,7 @@
             {
               "main": "The 32-team tournament will take place in two stages:",
               "sub": [
-                "Swiss stage: 5 rounds, initial phase Bo1, deciding matches Bo3. 3 wins = playoffs (Top 16). 3 losses = Second Chance Tournament.",
+                "Swiss stage: 5 rounds, initial phase Bo1. 3 wins = playoffs (Top 16). 3 losses = Second Chance Tournament.",
                 "Playoffs: Double elimination. Upper bracket Bo3, lower bracket Bo1, Lower Final is Bo3.",
                 "Second Chance Tournament: Double elimination. All matches except Final are Bo1, Final is Bo3."
               ]
