@@ -145,11 +145,11 @@ export default function Timetable() {
           <button
             onClick={() => {
               const url = new URL(window.location.href);
-              url.searchParams.set('filter', 'lobby');
+              url.searchParams.set('filter', 'fuajee');
               window.history.pushState({}, '', url.toString());
             }}
             className={`${vipnagorgialla.className} font-bold italic leading-none text-lg uppercase px-4 py-2 border-4 border-[#00A3E0] transition cursor-pointer ${
-              filter === 'lobby'
+              filter === 'fuajee'
                 ? "bg-[#00A3E0] text-black cursor-default pointer-events-none"
                 : "bg-[#1F5673] text-[#EEE5E5] hover:bg-[#00A3E0] hover:text-black"
             }`}
