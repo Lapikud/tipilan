@@ -24,6 +24,7 @@
     "search": "Search",
     "filter": "Filter",
     "reset": "Reset",
+    "all": "ALL",
     "theme": {
       "light": "Light",
       "dark": "Dark",
@@ -77,7 +78,7 @@
         "description": "The TipiLAN expo area hosts companies, additional activities and lectures."
       },
       "reserveSpot": "Reserve your spot today!",
-      "poweredBy": "Toetajad",
+      "poweredBy": "TipiLAN is powered by...",
       "dateAndLocation": "11th–13th Sep. 2026 @ TalTech"
     }
   },
@@ -378,7 +379,7 @@
             {
               "main": "The 32-team tournament will take place in two stages:",
               "sub": [
-                "Swiss stage: 5 rounds, initial phase Bo1, deciding matches Bo3. 3 wins = playoffs (Top 16). 3 losses = Second Chance Tournament.",
+                "Swiss stage: 5 rounds, initial phase Bo1. 3 wins = playoffs (Top 16). 3 losses = Second Chance Tournament.",
                 "Playoffs: Double elimination. Upper bracket Bo3, lower bracket Bo1, Lower Final is Bo3.",
                 "Second Chance Tournament: Double elimination. All matches except Final are Bo1, Final is Bo3."
               ]
@@ -483,7 +484,7 @@
     },
     "info": {
       "title": "GENERAL INFO",
-      "description": "TipiLAN 2026 LoL tournament takes place September 11-13 at TalTech, Tallinn, Estonia. This is a BYOC (bring your own computer) LAN tournament. On-site, each participant is provided with: desk, chair, wired internet connection, power connection (2 outlets)."
+      "description": "TipiLAN 2026 LoL tournament takes place September 11-12 at TalTech, Tallinn, Estonia. This is a BYOC (bring your own computer) LAN tournament. On-site, each participant is provided with: desk, chair, wired internet connection, power connection (2 outlets)."
     },
     "prizes": {
       "title": "PRIZE POOL",
@@ -514,7 +515,7 @@
         {
           "title": "General Information",
           "rules": [
-            "The League of Legends (hereinafter LoL) tournament takes place as a two-day event on September 11-13, 2026 at Tallinn University of Technology (TalTech) premises, Ehitajate tee 5, Tallinn.",
+            "The League of Legends (hereinafter LoL) tournament takes place as a two-day event on September 11-12, 2026 at Tallinn University of Technology (TalTech) premises, Ehitajate tee 5, Tallinn.",
             {
               "main": "The tournament prize pool is 3000€, distributed as follows:",
               "sub": [
@@ -727,9 +728,9 @@
     "time": "Time",
     "event": "Event",
     "location": "Location",
-    "oct24": "October 24th",
-    "oct25": "October 25th",
-    "oct26": "October 26th",
+    "sep11": "September 11th",
+    "sep12": "September 12th",
+    "sep13": "September 13th",
     "events": {
       "doorsOpen": "Doors open, expo area available",
       "doorsOpenSimple": "Doors open",
@@ -755,19 +756,85 @@
       "cs2semifinals": "CS2 upper bracket semifinals",
       "Cs2finals": "CS2 finals",
       "AwardsCeremony": "Awards ceremony",
+      "awardCeremony": "Award ceremony",
       "granTurismoFinale": "Gran Turismo finale",
       "lolTournamentSemifinals": "LoL tournament semifinals",
       "cs2Finale": "CS2 finale",
       "cs2FinalMatch": "CS2 final match",
-      "cs2TournamentFinale": "CS2 tournament finale"
+      "cs2TournamentFinale": "CS2 tournament finale",
+      "gamersSetup": "Gamers Setup",
+      "staffSetup": "Staff Setup",
+      "exploring": "Exploring",
+      "gameDevShowcasing": "GameDev Showcasing",
+      "lanAreaTournaments": "LAN Area Tournaments",
+      "minigamesAndTournaments": "Minigames and Tournaments",
+      "blueCarpet": "Blue Carpet",
+      "day1Begins": "Day 1 Begins",
+      "cs2SwissR1": "CS2 Swiss Round 1",
+      "cs2SwissR2": "CS2 Swiss Round 2",
+      "cs2SwissR3": "CS2 Swiss Round 3",
+      "cs2SwissR4": "CS2 Swiss Round 4",
+      "cs2SwissR5": "CS2 Swiss Round 5",
+      "lolGame1": "LoL Game 1",
+      "lolGame2": "LoL Game 2",
+      "lolGame3": "LoL Game 3",
+      "lolGame4": "LoL Game 4",
+      "lolGame5": "LoL Game 5",
+      "gamedevExpo": "Gamedev Expo",
+      "gamedevAwardCeremony": "Gamedev Award Ceremony",
+      "break": "CS2 Break",
+      "avatarLegendsFinal": "Avatar Legends final",
+      "tekken8Final": "Tekken 8 final",
+      "streetFighter6Final": "Street Fighter 6 final",
+      "twoXkoFinal": "2XKO final",
+      "ssbuFinal": "SSBU final",
+      "invincibleVsFinal": "Invincible VS final",
+      "finalsAndThirdPlace": "Finals + 3rd place",
+      "miniTournamentsAwardCeremony": "Mini Tournaments Award Ceremony",
+      "justFunTime": "Just fun time?",
+      "estimatedEndOfDay2": "Estimated End of Day 2",
+      "estimatedEndOfFinals": "Estimated End of Finals",
+      "timeToLeave": "TIME TO LEAVE",
+      "cs2WbR4": "CS2 Winner Bracket Round 4 (Upper Finals)",
+      "cs2LbR5": "CS2 Loser Bracket Round 5",
+      "cs2LbR6": "CS2 Loser Bracket Round 6 (Lower Finals)",
+      "cs2GrandFinal": "CS2 Grand Final",
+      "cs2WbR1": "CS2 Winner Bracket Round 1",
+      "cs2WbR2": "CS2 Winner Bracket Round 2",
+      "cs2WbR3": "CS2 Winner Bracket Round 3",
+      "cs2LbR1": "CS2 Loser Bracket Round 1",
+      "cs2LbR2": "CS2 Loser Bracket Round 2",
+      "cs2LbR3": "CS2 Loser Bracket Round 3",
+      "cs2LbR4": "CS2 Loser Bracket Round 4",
+      "lolTournamentQuarters": "LoL Tournament Day 2 Start (Quarter finals)",
+      "cs2ScWbR1": "CS2 Second Chance WB Round 1",
+      "cs2ScLbR1": "CS2 Second Chance LB Round 1",
+      "cs2ScWbR2": "CS2 Second Chance WB Round 2",
+      "cs2ScLbR2": "CS2 Second Chance LB Round 2",
+      "cs2ScWbR3": "CS2 Second Chance WB Round 3",
+      "cs2ScLbR3": "CS2 Second Chance LB Round 3",
+      "cs2ScLbR4": "CS2 Second Chance LB Round 4",
+      "cs2ScSemiFinal": "CS2 Second Chance Semi Final",
+      "cs2ScLbR5": "CS2 Second Chance LB Round 5",
+      "cs2ScTournamentFinal": "CS2 Second Chance Tournament Final",
+      "lolBreak": "LoL Break",
+      "lolSemiFinals": "LoL Semi Finals",
+      "lolFinalsAndThirdPlace": "LoL Finals + 3rd place",
+      "closingCeremony": "Closing of TipiLAN 2026",
+      "noEventsScheduled": "No events scheduled for these areas"
     },
     "locations": {
       "registrationSetup": "Registration and setup in auditorium",
       "auditorium": "Auditorium",
       "studentHouse": "Student House (Tudengimaja)",
       "auditoriumAndStudentHouse": "Auditorium and Student House",
-      "entranceHall": "Lobby"
-    }
+      "auditoriumAndStudentHouseAndFuajee": "Auditorium, Student House, and Fuajee/LAN Area",
+      "entranceHall": "Lobby",
+      "fuajeeLanAla": "Fuajee/LAN Area",
+      "foyerAndLanArea": "Fuajee/LAN Area",
+      "lobbyAndLanArea": "Lobby/LAN area"
+    },
+    "transportInfo": "Come to TipiLAN by public transport if possible! Buses 10, 11, 19, 23, 24A, 27, 33, 36, 37, 45, 67 and trolleybuses 72 and 83 will take you to TalTech. If you come by car, don't come alone - bring your friends!"
   },
   "stream": {
     "title": "Stream",

@@ -24,6 +24,7 @@
     "search": "Otsi",
     "filter": "Filtreeri",
     "reset": "Lähtesta",
+    "all": "KÕIK",
     "theme": {
       "light": "Hele",
       "dark": "Tume",
@@ -379,7 +380,7 @@
             {
               "main": "32 meeskonnaga turniir toimub kahes etapis:",
               "sub": [
-                "Swiss-süsteem: 5 roundi, algfaasis Bo1, otsustavad mängud Bo3. 3 võitu = playoffid (Top 16). 3 kaotust = Second Chance turniir.",
+                "Swiss-süsteem: 5 roundi, algfaasis Bo1. 3 võitu = playoffid (Top 16). 3 kaotust = Second Chance turniir.",
                 "Playoffid: double elimination. Upper bracket Bo3, lower bracket Bo1, Lower finaal Bo3.",
                 "Second Chance turniir: double elimination. Kõik mängud peale finaali Bo1, finaal Bo3."
               ]
@@ -484,7 +485,7 @@
     },
     "info": {
       "title": "ÜLDINE INFO",
-      "description": "TipiLAN 2026 LoL turniir toimub 11.-13. septembril TalTechis, Tallinnas, Eestis. Tegemist on BYOC (bring your own computer) LAN turniiriga. Kohapeal pakutakse igale osalejale: laud, tool, võrgukaabliga internetiühendus, vooluühendus (2 pesa)."
+      "description": "TipiLAN 2026 LoL turniir toimub 11.-12. septembril TalTechis, Tallinnas, Eestis. Tegemist on BYOC (bring your own computer) LAN turniiriga. Kohapeal pakutakse igale osalejale: laud, tool, võrgukaabliga internetiühendus, vooluühendus (2 pesa)."
     },
     "prizes": {
       "title": "AUHINNAFOND",
@@ -515,7 +516,7 @@
         {
           "title": "Üldist",
           "rules": [
-            "League of Legends (edaspidi LoL) turniir toimub kahepäevase üritusena 11.-13. september, 2026 Tallinna Tehnikaülikooli (TalTech) ruumides, Ehitajate tee 5, Tallinn.",
+            "League of Legends (edaspidi LoL) turniir toimub kahepäevase üritusena 11.-12. september, 2026 Tallinna Tehnikaülikooli (TalTech) ruumides, Ehitajate tee 5, Tallinn.",
             {
               "main": "Turniiri auhinnafondiks on 3000€, mis jaguneb järgnevalt:",
               "sub": [
@@ -728,9 +729,9 @@
     "time": "Aeg",
     "event": "Sündmus",
     "location": "Asukoht",
-    "oct24": "24. oktoober",
-    "oct25": "25. oktoober",
-    "oct26": "26. oktoober",
+    "sep11": "11. september",
+    "sep12": "12. september",
+    "sep13": "13. september",
     "events": {
       "doorsOpen": "Uksed avatakse, messiala avatud",
       "doorsOpenSimple": "Uksed avatakse",
@@ -756,19 +757,85 @@
       "cs2semifinals": "CS2 ülemliiga poolfinaalid",
       "Cs2finals": "CS2 finaalid",
       "AwardsCeremony": "Autasustamine",
+      "awardCeremony": "Autasustamine",
       "granTurismoFinale": "Gran Turismo finaal",
       "lolTournamentSemifinals": "LoL turniiri poolfinaalid",
       "cs2Finale": "CS2 finaal",
       "cs2FinalMatch": "CS2 finaalimäng",
-      "cs2TournamentFinale": "CS2 turniiri finaal"
+      "cs2TournamentFinale": "CS2 turniiri finaal",
+      "gamersSetup": "Mängijate seadistamine",
+      "staffSetup": "Personal seadistamine",
+      "exploring": "Avastamine",
+      "gameDevShowcasing": "Mänguarenduse tutvustamine",
+      "lanAreaTournaments": "LAN-ala turniirid",
+      "minigamesAndTournaments": "Minimängud ja turniirid",
+      "blueCarpet": "Sinine vaip",
+      "day1Begins": "Päev 1 algab",
+      "cs2SwissR1": "CS2 Šveitsi ring 1",
+      "cs2SwissR2": "CS2 Šveitsi ring 2",
+      "cs2SwissR3": "CS2 Šveitsi ring 3",
+      "cs2SwissR4": "CS2 Šveitsi ring 4",
+      "cs2SwissR5": "CS2 Šveitsi ring 5",
+      "lolGame1": "LoL Mäng 1",
+      "lolGame2": "LoL Mäng 2",
+      "lolGame3": "LoL Mäng 3",
+      "lolGame4": "LoL Mäng 4",
+      "lolGame5": "LoL Mäng 5",
+      "gamedevExpo": "Mänguarenduse Expo",
+      "gamedevAwardCeremony": "Mänguarenduse autasustamine",
+      "break": "CS2 paus",
+      "avatarLegendsFinal": "Avatar Legends finaal",
+      "tekken8Final": "Tekken 8 finaal",
+      "streetFighter6Final": "Street Fighter 6 finaal",
+      "twoXkoFinal": "2XKO finaal",
+      "ssbuFinal": "SSBU finaal",
+      "invincibleVsFinal": "Invincible VS finaal",
+      "finalsAndThirdPlace": "Finaalid + 3. koht",
+      "miniTournamentsAwardCeremony": "Miniturniiride autasustamine",
+      "justFunTime": "Lihtsalt lõbus aeg?",
+      "estimatedEndOfDay2": "Päeva 2 eeldatav lõpp",
+      "estimatedEndOfFinals": "Finaalide eeldatav lõpp",
+      "timeToLeave": "AEG LÄHEDA",
+      "cs2WbR4": "CS2 võitjate veergu 4. ring (ülempoolfinaalid)",
+      "cs2LbR5": "CS2 kaotajate veergu 5. ring",
+      "cs2LbR6": "CS2 kaotajate veergu 6. ring (alampoolfinaalid)",
+      "cs2GrandFinal": "CS2 suurfinaal",
+      "cs2WbR1": "CS2 võitjate veergu 1. ring",
+      "cs2WbR2": "CS2 võitjate veergu 2. ring",
+      "cs2WbR3": "CS2 võitjate veergu 3. ring",
+      "cs2LbR1": "CS2 kaotajate veergu 1. ring",
+      "cs2LbR2": "CS2 kaotajate veergu 2. ring",
+      "cs2LbR3": "CS2 kaotajate veergu 3. ring",
+      "cs2LbR4": "CS2 kaotajate veergu 4. ring",
+      "lolTournamentQuarters": "LoL turniiri teine päev (veerandfinaalid)",
+      "cs2ScWbR1": "CS2 teise šansi võitjate veergu 1. ring",
+      "cs2ScLbR1": "CS2 teise šansi kaotajate veergu 1. ring",
+      "cs2ScWbR2": "CS2 teise šansi võitjate veergu 2. ring",
+      "cs2ScLbR2": "CS2 teise šansi kaotajate veergu 2. ring",
+      "cs2ScWbR3": "CS2 teise šansi võitjate veergu 3. ring",
+      "cs2ScLbR3": "CS2 teise šansi kaotajate veergu 3. ring",
+      "cs2ScLbR4": "CS2 teise šansi kaotajate veergu 4. ring",
+      "cs2ScSemiFinal": "CS2 teise šansi poolfinaal",
+      "cs2ScLbR5": "CS2 teise šansi kaotajate veergu 5. ring",
+      "cs2ScTournamentFinal": "CS2 teise šansi turniiri finaal",
+      "lolBreak": "LoL vaheajad",
+      "lolSemiFinals": "LoL poolfinaalid",
+      "lolFinalsAndThirdPlace": "LoL finaalid + 3. koht",
+      "closingCeremony": "TipiLAN 2026 sulgemine",
+      "noEventsScheduled": "Nendel aladel pole üritusi"
     },
     "locations": {
       "registrationSetup": "Registreerimine ja setup aulas",
       "auditorium": "Aula",
       "studentHouse": "Tudengimaja",
       "auditoriumAndStudentHouse": "Aula ja Tudengimaja",
-      "entranceHall": "Fuajee"
-    }
+      "auditoriumAndStudentHouseAndFuajee": "Aula, Tudengimaja ja Fuajee/LAN-ala",
+      "entranceHall": "Fuajee",
+      "fuajeeLanAla": "Fuajee/LAN-ala",
+      "foyerAndLanArea": "Fuajee/LAN-ala",
+      "lobbyAndLanArea": "Fuajee/LAN-ala"
+    },
+    "transportInfo": "Tule võimaluse korral TipiLANile ühistranspordiga! TalTechi toovad sind bussid 10, 11, 19, 23, 24A, 27, 33, 36, 37, 45, 67 ning trollid 72 ja 83. Kui tuled autoga, siis ära tule üksi, võta sõbrad kaasa!"
   },
   "stream": {
     "title": "Striim",

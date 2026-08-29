@@ -41,7 +41,7 @@ const Header = ({ navItems }: HeaderProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Header navigation should include all options except homepage and hidden items
-  const hiddenNavHrefs: NavItem["href"][] = ["/messiala", "/ajakava"];
+  const hiddenNavHrefs: NavItem["href"][] = ["/messiala"];
   const mainNavItems = navItems.filter(
     (item) => item.href !== "/" && !hiddenNavHrefs.includes(item.href),
   );
