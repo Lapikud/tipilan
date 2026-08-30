@@ -861,6 +861,20 @@
     "title": "Expo Area",
     "comingSoon": "Coming soon",
     "description": "The TipiLAN expo area hosts companies, additional activities and lectures.",
+    "mapFoyer": "Foyer map",
+    "mapStudentHouse": "Student house map",
+    "miniTournaments": {
+      "title": "Mini-tournaments",
+      "description": "TipiLAN hosts a variety of fun and competitive mini-tournaments. Regular visitors can take part too! The total prize pool across all tournaments is 1250€.",
+      "cta": "More about mini-tournaments"
+    },
+    "photos": {
+      "chill": "Chill area with live tournament broadcasts",
+      "console": "Lots of different video games and consoles",
+      "bar": "Bar area with drinks and snacks"
+    },
+    "developers": "Estonian game developers",
+    "universities": "Universities",
     "areas": {
       "bar": "Bar",
       "boardGames": "Board Games Area",

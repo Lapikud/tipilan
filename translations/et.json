@@ -862,6 +862,20 @@
     "title": "Messiala",
     "comingSoon": "Tuleb hiljem",
     "description": "TipiLANi messialal paiknevad ettevõtted, lisategevused ja toimuvad loengud.",
+    "mapFoyer": "Fuajee kaart",
+    "mapStudentHouse": "Tudengimaja kaart",
+    "miniTournaments": {
+      "title": "Miniturniirid",
+      "description": "TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Osaleda saavad ka niisama külastajad! Auhinnafond on kõigi turniiride peale 1250€.",
+      "cta": "Miniturniiridest lähemalt"
+    },
+    "photos": {
+      "chill": "Chill-ala koos turniiride otseülekandega",
+      "console": "Palju erinevaid videomänge ja konsoole",
+      "bar": "Baariala jookide ja snäkkidega"
+    },
+    "developers": "Eesti mänguarendajad",
+    "universities": "Ülikoolid",
     "areas": {
       "bar": "Baar",
       "boardGames": "Lauamängude ala",
