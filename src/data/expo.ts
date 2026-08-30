@@ -38,10 +38,6 @@ export interface UniversityCard {
 // Studio / commercial teams (order follows the signup sheet).
 export const developers: DeveloperCard[] = [
   {
-    title: "White Phosphorus: An Explosive Escape",
-    studio: "Fire!",
-  },
-  {
     title: "ORMS",
     studio: "Rhea Games",
     url: "https://store.steampowered.com/app/3743150/ORMS/",
@@ -137,6 +133,7 @@ export const developers: DeveloperCard[] = [
   {
     title: "Estonian Language Learning Games",
     studio: "Estonian Language Self Study Club",
+    url: "https://www.instagram.com/estonian_studyclub/",
     logo: "/images/EXPO/gamedev/estonian_language.png",
   },
 ];
