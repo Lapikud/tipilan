@@ -104,17 +104,12 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       time: "23:00-00:00",
     },
     {
-      titleKey: "schedule.events.lolGame4",
+      titleKey: "schedule.events.lolTournamentQuarters",
       locationKey: "schedule.locations.auditorium",
       time: "23:00-00:00",
     },
     {
       titleKey: "schedule.events.cs2SwissR5",
-      locationKey: "schedule.locations.auditorium",
-      time: "00:00-01:00",
-    },
-    {
-      titleKey: "schedule.events.lolGame5",
       locationKey: "schedule.locations.auditorium",
       time: "00:00-01:00",
     },
@@ -164,9 +159,9 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       time: "11:30-12:30",
     },
     {
-      titleKey: "schedule.events.lolTournamentQuarters",
+      titleKey: "schedule.events.lolSemiFinals",
       locationKey: "schedule.locations.auditorium",
-      time: "11:30-14:30",
+      time: "12:30-17:30",
     },
     {
       titleKey: "schedule.events.expoOpens",
@@ -207,16 +202,6 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       titleKey: "schedule.events.cs2ScWbR3",
       locationKey: "schedule.locations.auditorium",
       time: "14:30-15:30",
-    },
-    {
-      titleKey: "schedule.events.lolBreak",
-      locationKey: "schedule.locations.auditorium",
-      time: "14:30-15:00",
-    },
-    {
-      titleKey: "schedule.events.lolSemiFinals",
-      locationKey: "schedule.locations.auditorium",
-      time: "15:00-18:00",
     },
     {
       titleKey: "schedule.events.cs2ScLbR3",
