@@ -77,20 +77,39 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
   );
 }
 
-/** One game card: bordered thumbnail, a linked title, and a subtitle line. */
+/**
+ * One showcase card: a cyan-bordered logo box above a linked title and a
+ * studio/team line. Logos render object-contain; screenshots (`cover`) fill the
+ * box. Teams without a logo yet fall back to their name set inside the box.
+ */
 function GameCard({
   image,
   title,
   subtitle,
   url,
-  cover,
+  cover = false,
 }: {
-  image: string;
+  image?: string;
   title: string;
   subtitle: string;
-  url: string;
-  cover: boolean;
+  url?: string;
+  cover?: boolean;
 }) {
+  const titleEl = url ? (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-fit font-bold underline text-white leading-tight text-[clamp(1rem,0.85rem+0.8vw,1.5rem)] hover:text-[#00A3E0] transition"
+    >
+      {title}
+    </a>
+  ) : (
+    <span className="font-bold text-white leading-tight text-[clamp(1rem,0.85rem+0.8vw,1.5rem)]">
+      {title}
+    </span>
+  );
+
   return (
     <div className="flex flex-col gap-3">
       <div
@@ -98,25 +117,29 @@ function GameCard({
           cover ? "bg-black" : "bg-[#0E0F19]"
         }`}
       >
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className={cover ? "object-cover" : "object-contain p-5 md:p-7"}
-          sizes="(max-width: 768px) 50vw, 25vw"
-        />
+        {image ? (
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className={cover ? "object-cover" : "object-contain p-5 md:p-7"}
+            sizes="(max-width: 768px) 50vw, 25vw"
+            // next/image's optimizer rejects SVG (400) unless dangerouslyAllowSVG
+            // is enabled globally; serve SVG logos as-is instead.
+            unoptimized={image.endsWith(".svg")}
+          />
+        ) : (
+          <span
+            className={`${vipnagorgialla.className} absolute inset-0 flex items-center justify-center p-4 text-center font-bold italic uppercase text-white/85 leading-tight text-[clamp(1rem,0.8rem+1vw,1.5rem)]`}
+          >
+            {title}
+          </span>
+        )}
       </div>
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-fit font-bold underline text-white leading-tight text-[clamp(1rem,0.85rem+0.8vw,1.5rem)] hover:text-[#00A3E0] transition"
-      >
-        {title}
-      </a>
-      <p className="text-white/70 leading-tight text-[clamp(0.9rem,0.8rem+0.5vw,1.25rem)]">
+      {titleEl}
+      <span className="text-white/70 leading-tight text-[clamp(0.9rem,0.8rem+0.5vw,1.25rem)]">
         {subtitle}
-      </p>
+      </span>
     </div>
   );
 }
@@ -217,7 +240,6 @@ export default async function Expo({
                 title={dev.title}
                 subtitle={dev.studio}
                 url={dev.url}
-                cover={false}
               />
             ))}
           </div>
@@ -234,7 +256,7 @@ export default async function Expo({
                 title={uni.title}
                 subtitle={uni.team}
                 url={uni.url}
-                cover={true}
+                cover={!uni.contain}
               />
             ))}
           </div>
