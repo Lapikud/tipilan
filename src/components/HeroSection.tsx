@@ -14,6 +14,7 @@ export default function HeroSection() {
         src="/images/landing/main_teaser.jpg"
         alt=""
         fill
+        sizes="100vw"
         className="object-cover object-center"
         priority
       />
@@ -56,10 +57,10 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-end gap-3 sm:gap-0 mt-2">
             <Image
               src="/images/landing/student_award.webp"
-              width={180}
-              height={180}
+              width={512}
+              height={439}
               alt="TalTech student award"
-              className="object-contain"
+              className="h-auto w-45 shrink-0 object-contain"
             />
             <p
               className={`text-[clamp(1.25rem,1rem+1.5vw,2rem)] leading-none tracking-normal uppercase text-center md:text-right align-middle text-[#EEE5E5] ${vipnagorgialla.className} font-bold italic px-2 sm:px-0`}

@@ -46,13 +46,6 @@ export default async function CS2Tournament({
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 mb-12">
               <Link
-                href="https://fienta.com/et/tipilan"
-                target="_blank"
-                className={`${vipnagorgialla.className} font-bold italic leading-none text-lg px-4 py-3 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] uppercase transition`}
-              >
-                {t("cs2page.buyTicket")}
-              </Link>
-              <Link
                 href="https://git.edunaut.ee/slunk/TipiLAN_reeglistik_ruleset/src/branch/main/CS2%20tournament"
                 target="_blank"
                 className={`${vipnagorgialla.className} font-bold italic leading-none text-lg uppercase px-4 py-3 border-4 border-[#00A3E0] bg-[#1F5673] text-[#EEE5E5] hover:bg-[#00A3E0] hover:text-black transition`}

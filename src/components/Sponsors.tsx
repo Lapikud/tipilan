@@ -310,7 +310,7 @@ export default function Sponsors({
 
   return (
     <section
-      className={`mx-auto flex w-full flex-col items-center gap-10 border-t-4 border-[#00A3E0]/50 px-4 pb-10 pt-11 sm:gap-12 sm:px-8 sm:pb-12 sm:pt-14 lg:gap-16 lg:px-12 lg:pb-16 lg:pt-[68px] ${vipnagorgialla.className} font-bold italic ${className}`}
+      className={`mx-auto flex w-full flex-col items-center gap-10 px-4 pb-10 pt-11 sm:gap-12 sm:px-8 sm:pb-12 sm:pt-14 lg:gap-16 lg:px-12 lg:pb-16 lg:pt-[68px] ${vipnagorgialla.className} font-bold italic ${className}`}
     >
       {showTitle && (
         <h2 className="text-center text-2xl leading-none text-white uppercase sm:text-3xl lg:text-[40px]">
