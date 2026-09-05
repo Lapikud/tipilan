@@ -4,7 +4,7 @@ import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import NextLink from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 interface Sponsor {
   href: string;
@@ -25,14 +25,14 @@ const highlightedSponsors: Sponsor[] = [
   },
   {
     href: "https://www.redbull.com/ee-et/",
-    src: "/sponsors/redbull-wordmark.png",
+    src: "/sponsors/redbull-wordmark-trimmed.png",
     alt: "Red Bull",
     width: 3509,
     height: 2480,
   },
   {
     href: "https://www.stillframe.ee/",
-    src: "/sponsors/Still_Frame_logo_2020_Gold_2.png",
+    src: "/sponsors/still-frame-trimmed.png",
     alt: "Still Frame",
     width: 1335,
     height: 1617,
@@ -114,7 +114,7 @@ const sponsors: Sponsor[] = [
   },
   {
     href: "https://www.linkedin.com/company/gamedev-guild/",
-    src: "/sponsors/estonian_gamedev_guild.png",
+    src: "/sponsors/estonian-gamedev-guild-trimmed.png",
     alt: "Estonian Gamedev Guild",
     width: 244,
     height: 244,
@@ -150,7 +150,7 @@ const sponsors: Sponsor[] = [
   },
   {
     href: "https://2fast.ee/",
-    src: "/sponsors/2fast.png",
+    src: "/sponsors/2fast-trimmed.png",
     alt: "2FAST",
     width: 244,
     height: 244,
@@ -187,7 +187,7 @@ const sponsors: Sponsor[] = [
   },
   {
     href: "https://www.tallinn.ee/et/mank",
-    src: "/sponsors/MANK.png",
+    src: "/sponsors/mank-trimmed.png",
     alt: "Mustamäe Avatud Noortekeskus",
     width: 200,
     height: 244,
@@ -232,6 +232,7 @@ interface SponsorsProps {
 }
 
 const tickerSponsors = [...sponsors, ...sponsors, ...sponsors, ...sponsors];
+const tickerEaseDuration = 100;
 
 interface FeaturedSponsorProps {
   sponsor: Sponsor;
@@ -260,33 +261,49 @@ export default function Sponsors({
   className = "",
 }: SponsorsProps) {
   const t = useTranslations();
-  const [isTickerPaused, setIsTickerPaused] = useState(false);
-  const pauseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const tickerTrackRef = useRef<HTMLDivElement>(null);
+  const tickerEaseFrameRef = useRef<number | null>(null);
 
-  const clearPauseTimer = () => {
-    if (pauseTimerRef.current) {
-      clearTimeout(pauseTimerRef.current);
-      pauseTimerRef.current = null;
+  const easeTickerTo = (targetPlaybackRate: number) => {
+    if (tickerEaseFrameRef.current !== null) {
+      cancelAnimationFrame(tickerEaseFrameRef.current);
     }
+
+    const animation = tickerTrackRef.current?.getAnimations()[0];
+    if (!animation) return;
+
+    const initialPlaybackRate = animation.playbackRate;
+    const startTime = performance.now();
+
+    const updatePlaybackRate = (currentTime: number) => {
+      const progress = Math.min(
+        (currentTime - startTime) / tickerEaseDuration,
+        1,
+      );
+      const easedProgress = (1 - Math.cos(Math.PI * progress)) / 2;
+      const playbackRate =
+        initialPlaybackRate +
+        (targetPlaybackRate - initialPlaybackRate) * easedProgress;
+
+      animation.updatePlaybackRate(playbackRate);
+
+      if (progress < 1) {
+        tickerEaseFrameRef.current = requestAnimationFrame(updatePlaybackRate);
+      } else {
+        tickerEaseFrameRef.current = null;
+      }
+    };
+
+    tickerEaseFrameRef.current = requestAnimationFrame(updatePlaybackRate);
   };
 
-  const handleTickerMouseEnter = () => {
-    clearPauseTimer();
-    pauseTimerRef.current = setTimeout(() => {
-      setIsTickerPaused(true);
-      pauseTimerRef.current = null;
-    }, 100);
-  };
-
-  const handleTickerMouseLeave = () => {
-    clearPauseTimer();
-    setIsTickerPaused(false);
-  };
+  const handleTickerMouseEnter = () => easeTickerTo(0);
+  const handleTickerMouseLeave = () => easeTickerTo(1);
 
   useEffect(() => {
     return () => {
-      if (pauseTimerRef.current) {
-        clearTimeout(pauseTimerRef.current);
+      if (tickerEaseFrameRef.current !== null) {
+        cancelAnimationFrame(tickerEaseFrameRef.current);
       }
     };
   }, []);
@@ -318,22 +335,25 @@ export default function Sponsors({
         onMouseEnter={handleTickerMouseEnter}
         onMouseLeave={handleTickerMouseLeave}
       >
-        <div className={`ticker-track flex items-center w-max gap-8 sm:gap-10 md:gap-12 xl:gap-16 2xl:gap-20 px-8 sm:px-10 xl:px-14 2xl:px-20 ${isTickerPaused ? "ticker-track-paused" : ""}`}>
+        <div
+          ref={tickerTrackRef}
+          className="ticker-track flex w-max items-center gap-8 px-8 sm:gap-10 sm:px-10 md:gap-12 xl:gap-16 xl:px-14 2xl:gap-20 2xl:px-20"
+        >
           {tickerSponsors.map((sponsor, index) => (
             <NextLink
               key={`${sponsor.alt}-${index}`}
               href={sponsor.href}
               target="_blank"
-              className="flex items-center justify-center shrink-0"
+              className="relative flex size-[120px] shrink-0 items-center justify-center sm:size-[150px] md:size-[180px] lg:size-48"
               aria-hidden={index >= sponsors.length}
               tabIndex={index >= sponsors.length ? -1 : undefined}
             >
               <Image
                 src={sponsor.src}
                 alt={sponsor.alt}
-                width={sponsor.width}
-                height={sponsor.height}
-                className={`object-contain max-h-[80px] max-w-[120px] sm:max-h-[110px] sm:max-w-[150px] md:max-h-[130px] md:max-w-[180px] lg:max-h-[140px] lg:max-w-[200px] xl:max-h-[180px] xl:max-w-[240px] 2xl:max-h-[210px] 2xl:max-w-[280px] ${sponsor.className || ""}`}
+                fill
+                sizes="(min-width: 768px) 192px, (min-width: 640px) 150px, 120px"
+                className={`object-contain ${sponsor.className || ""}`}
               />
             </NextLink>
           ))}
@@ -361,10 +381,6 @@ export default function Sponsors({
         .ticker-track {
           animation: sponsors-ticker 31s linear infinite;
           will-change: transform;
-        }
-
-        .ticker-track-paused {
-          animation-play-state: paused;
         }
 
         @keyframes sponsors-ticker {
