@@ -112,6 +112,7 @@ export default function TeaserCarousel() {
                 src={slide.image}
                 alt={slide.imageAlt}
                 fill
+                sizes="100vw"
                 className="object-cover object-center"
               />
 
@@ -162,6 +163,7 @@ export default function TeaserCarousel() {
                       src={slide.hero}
                       alt={slide.imageAlt}
                       fill
+                      sizes="50vw"
                       className="object-contain object-bottom"
                     />
                   </div>

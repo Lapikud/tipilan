@@ -28,6 +28,7 @@ function TournamentCard({
         src={backgroundImage}
         alt=""
         fill
+        sizes="(min-width: 768px) 50vw, 100vw"
         className="object-cover opacity-50 transition-opacity duration-200 group-hover:opacity-40 group-focus-visible:opacity-40"
         style={{ objectPosition }}
       />

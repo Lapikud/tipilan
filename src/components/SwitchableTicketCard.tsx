@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import SoldOutOverlay from "@/components/SoldOutOverlay";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 
 interface TicketData {
@@ -22,6 +23,9 @@ interface SwitchableTicketCardProps {
   backgroundOpacity?: number;
   backgroundOpacityA?: number;
   backgroundOpacityB?: number;
+  soldOutA?: boolean;
+  soldOutB?: boolean;
+  soldOutText: string;
   className?: string;
 }
 
@@ -35,11 +39,15 @@ export default function SwitchableTicketCard({
   backgroundOpacity = 40,
   backgroundOpacityA,
   backgroundOpacityB,
+  soldOutA = false,
+  soldOutB = false,
+  soldOutText,
   className = "",
 }: SwitchableTicketCardProps) {
   const [isA, setIsA] = useState(true);
 
   const titleOnRight = !isA;
+  const soldOut = isA ? soldOutA : soldOutB;
 
   function renderPrice(price: string) {
     return Array.from(price).map((char, index) => (
@@ -97,6 +105,7 @@ export default function SwitchableTicketCard({
           src={backgroundImage}
           alt=""
           fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
           className="object-cover object-center transition-opacity duration-700 ease-out"
           style={{ opacity: isA ? (backgroundOpacityA ?? backgroundOpacity) / 100 : 0 }}
         />
@@ -106,6 +115,7 @@ export default function SwitchableTicketCard({
           src={backgroundImageB}
           alt=""
           fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
           className="object-cover object-center transition-opacity duration-700 ease-out"
           style={{ opacity: isA ? 0 : (backgroundOpacityB ?? backgroundOpacity) / 100 }}
         />
@@ -163,13 +173,16 @@ export default function SwitchableTicketCard({
             </div>
           </div>
           <div className="pb-16 flex-shrink-0">
-            <Link href={buttonHref} target="_blank" className="w-fit">
-              <button
-                className={`px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer ${vipnagorgialla.className} font-bold italic leading-none uppercase transition`}
+            {!soldOut && (
+              <Link
+                href={buttonHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`w-fit px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer ${vipnagorgialla.className} font-bold italic leading-none uppercase transition`}
               >
                 {buttonText}
-              </button>
-            </Link>
+              </Link>
+            )}
           </div>
         </div>
 
@@ -275,33 +288,38 @@ export default function SwitchableTicketCard({
             </div>
           </div>
 
-          <Link href={buttonHref} target="_blank" className="w-fit">
-            <button
-              className={`px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer ${vipnagorgialla.className} font-bold italic leading-none uppercase transition`}
+          {!soldOut && (
+            <Link
+              href={buttonHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`w-fit px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer ${vipnagorgialla.className} font-bold italic leading-none uppercase transition`}
             >
               {buttonText}
-            </button>
-          </Link>
+            </Link>
+          )}
         </div>
       </div>
+
+      {soldOut && <SoldOutOverlay text={soldOutText} />}
 
       {/* Chevron buttons on left/right sides */}
       <button
         onClick={() => setIsA(false)}
-        className={`${isA ? "flex" : "hidden"} absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center cursor-pointer bg-[#0E0F19]/50 hover:bg-[#007CAB] text-[#EEE5E5] transition-all duration-300 z-20`}
+        className={`${isA ? "flex" : "hidden"} absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center cursor-pointer bg-[#0E0F19]/50 hover:bg-[#007CAB] text-[#EEE5E5] transition-all duration-300 z-30`}
         aria-label={optionB.title}
       >
         <span className="material-symbols-outlined">chevron_right</span>
       </button>
       <button
         onClick={() => setIsA(true)}
-        className={`${!isA ? "flex" : "hidden"} absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center cursor-pointer bg-[#0E0F19]/50 hover:bg-[#007CAB] text-[#EEE5E5] transition-all duration-300 z-20`}
+        className={`${!isA ? "flex" : "hidden"} absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 items-center justify-center cursor-pointer bg-[#0E0F19]/50 hover:bg-[#007CAB] text-[#EEE5E5] transition-all duration-300 z-30`}
         aria-label={optionA.title}
       >
         <span className="material-symbols-outlined">chevron_left</span>
       </button>
 
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex justify-center gap-2 pb-2 z-20">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex justify-center gap-2 pb-2 z-30">
         <button
           onClick={() => setIsA(true)}
           className={`w-3 h-3 rounded-full transition ${

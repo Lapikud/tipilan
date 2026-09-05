@@ -2,7 +2,16 @@ import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import Link from "next/link";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import SoldOutOverlay from "@/components/SoldOutOverlay";
 import SwitchableTicketCard from "@/components/SwitchableTicketCard";
+
+const ticketSoldOut = {
+  visitor: false,
+  supporter: false,
+  lan: false,
+  lol: true,
+  cs2: true,
+} as const;
 
 interface TicketCardProps {
   title: string;
@@ -14,6 +23,8 @@ interface TicketCardProps {
   backgroundImage?: string;
   backgroundOpacity?: number;
   blueTinge?: boolean;
+  soldOut?: boolean;
+  soldOutText?: string;
   className?: string;
 }
 
@@ -27,17 +38,21 @@ function TicketCard({
   backgroundImage,
   backgroundOpacity = 40,
   blueTinge = false,
+  soldOut = false,
+  soldOutText = "",
   className = "",
 }: TicketCardProps) {
   return (
     <div
-      className={`relative bg-[#0E0F19] border-[#1F5673] px-12 py-16 flex flex-col min-h-87.5 h-full ${className}`}
+      className={`relative bg-[#0E0F19] border-[#1F5673] px-12 py-16 flex flex-col min-h-87.5 h-full overflow-hidden ${className}`}
+      aria-disabled={soldOut || undefined}
     >
       {backgroundImage && (
         <Image
           src={backgroundImage}
           alt=""
           fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
           className="object-cover object-center"
           style={{ opacity: backgroundOpacity / 100 }}
         />
@@ -83,14 +98,19 @@ function TicketCard({
             </li>
           ))}
         </ul>
-        <Link href={buttonHref} target="_blank" className="w-fit">
-          <button
-            className={`px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer ${vipnagorgialla.className} font-bold italic leading-none uppercase transition`}
+        {!soldOut && (
+          <Link
+            href={buttonHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`w-fit px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer ${vipnagorgialla.className} font-bold italic leading-none uppercase transition`}
           >
             {buttonText}
-          </button>
-        </Link>
+          </Link>
+        )}
       </div>
+
+      {soldOut && <SoldOutOverlay text={soldOutText} />}
     </div>
   );
 }
@@ -129,6 +149,9 @@ export default async function Tickets({
           backgroundImageB="/images/landing/main_supporter.jpg"
           backgroundOpacityA={30}
           backgroundOpacityB={40}
+          soldOutA={ticketSoldOut.visitor}
+          soldOutB={ticketSoldOut.supporter}
+          soldOutText={t("tickets.soldOut")}
           className="border-b-[3px] lg:border-r-[3px]"
         />
 
@@ -142,6 +165,8 @@ export default async function Tickets({
           buttonHref="https://fienta.com/et/tipilan"
           backgroundImage="/images/landing/explore_teaser.png"
           backgroundOpacity={100}
+          soldOut={ticketSoldOut.lan}
+          soldOutText={t("tickets.soldOut")}
           className="border-b-[3px]"
         />
 
@@ -154,6 +179,8 @@ export default async function Tickets({
           buttonText={t("tickets.buyButton")}
           buttonHref="https://fienta.com/et/tipilan"
           backgroundImage="/images/landing/league_ticket.jpg"
+          soldOut={ticketSoldOut.lol}
+          soldOutText={t("tickets.soldOut")}
           className="border-b-[3px] lg:border-b-0 lg:border-r-[3px]"
         />
 
@@ -167,6 +194,8 @@ export default async function Tickets({
           buttonHref="https://fienta.com/et/tipilan"
           backgroundImage="/images/landing/compete_teaser.jpg"
           backgroundOpacity={30}
+          soldOut={ticketSoldOut.cs2}
+          soldOutText={t("tickets.soldOut")}
           className="border-b-0"
         />
       </div>
