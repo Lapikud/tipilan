@@ -78,7 +78,8 @@
         "description": "The TipiLAN expo area hosts companies, additional activities and lectures."
       },
       "reserveSpot": "Reserve your spot today!",
-      "poweredBy": "TipiLAN is powered by...",
+      "poweredBy": "TipiLAN is powered by",
+      "ourSponsors": "Our sponsors",
       "dateAndLocation": "11th–13th Sep. 2026 @ TalTech"
     }
   },
