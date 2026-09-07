@@ -175,6 +175,13 @@
       "buyTicket": "BUY TICKETS"
     }
   },
+  "minipage": {
+    "title": "Mini-tournaments",
+    "date": "11 & 12 September",
+    "description": "TipiLAN hosts a variety of fun and competitive mini-tournaments. The full prize pool for each tournament is shown next to it.",
+    "readRules": "READ RULES",
+    "buyTicket": "BUY TICKETS"
+  },
   "cs2page": {
     "title": "COUNTER-STRIKE 2 TOURNAMENT",
     "buyTicket": "BUY TICKET",

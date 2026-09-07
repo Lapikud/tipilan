@@ -176,6 +176,13 @@
       "buyTicket": "OSTA PILET"
     }
   },
+  "minipage": {
+    "title": "Miniturniirid",
+    "date": "11. ja 12. september",
+    "description": "TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Iga turniiri juures on välja toodud terve turniiri auhinnafond.",
+    "readRules": "LOE REEGLEID",
+    "buyTicket": "OSTA PILET"
+  },
   "cs2page": {
     "title": "COUNTER-STRIKE 2 TURNIIR",
     "buyTicket": "OSTA PILET",
