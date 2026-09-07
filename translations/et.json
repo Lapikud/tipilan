@@ -67,6 +67,11 @@
         "link": "/messiala"
       }
     },
+    "livestreams": {
+      "title": "TipiLANi otseülekanded",
+      "cs2": "Counter-Strike 2",
+      "lol": "League of Legends"
+    },
     "sections": {
       "schedule": {
         "description": "TipiLAN on pungil põnevatest turniiridest, mini-võistlustest ja paljust muust."
@@ -87,6 +92,7 @@
     "title": "PILETID",
     "subtitle": "PILET",
     "buyButton": "OSTA PILET FIENTAST",
+    "soldOut": "VÄLJA MÜÜDUD",
     "visitor": {
       "name": "KÜLASTAJA",
       "price": "10€",

@@ -4,7 +4,7 @@ import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import RulesLastChanged from "@/components/RulesLastChanged";
 import RuleNav from "@/components/RuleNav";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { loadRulesBun } from "@/lib/loadRules";
+import { loadRules } from "@/lib/loadRules";
 
 const sectionKeys = [
   { id: "reminder", labelKey: "rules.reminder" },
@@ -19,7 +19,7 @@ export default async function Page({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale });
-  const content = await loadRulesBun("kodukord", locale as "et" | "en");
+  const content = await loadRules("kodukord", locale as "et" | "en");
 
   const sections = sectionKeys.map((section) => ({
     id: section.id,

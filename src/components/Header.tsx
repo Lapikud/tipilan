@@ -89,8 +89,8 @@ const Header = ({ navItems }: HeaderProps) => {
         <Image
           src="/tipilan-icon-white.svg"
           alt="TipiLAN"
-          width={40}
-          height={40}
+          width={350}
+          height={300}
           className="h-auto w-10"
         />
       </Link>

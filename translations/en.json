@@ -67,6 +67,11 @@
         "link": "/messiala"
       }
     },
+    "livestreams": {
+      "title": "TipiLAN livestreams",
+      "cs2": "Counter-Strike 2",
+      "lol": "League of Legends"
+    },
     "sections": {
       "schedule": {
         "description": "TipiLAN is packed with exciting tournaments, mini-competitions and much more."
@@ -87,6 +92,7 @@
     "title": "TICKETS",
     "subtitle": "TICKET",
     "buyButton": "BUY TICKET FROM FIENTA",
+    "soldOut": "SOLD OUT",
     "visitor": {
       "name": "VISITOR",
       "price": "10€",

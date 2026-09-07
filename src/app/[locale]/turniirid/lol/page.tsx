@@ -2,7 +2,6 @@ import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import RuleNav from "@/components/RuleNav";
 import RulesContent from "@/components/RulesContent";
 import RulesLastChanged from "@/components/RulesLastChanged";
-import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 const sectionKeys = [
@@ -41,17 +40,6 @@ export default async function LoLTournament({
               {t("lolpage.title")}
             </h1>
             <RulesLastChanged locale={locale as "et" | "en"} ruleType="lol" />
-
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-4 mb-12">
-              <Link
-                href="https://fienta.com/et/tipilan"
-                target="_blank"
-                className={`${vipnagorgialla.className} font-bold italic leading-none text-lg px-4 py-3 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] uppercase transition`}
-              >
-                {t("lolpage.buyTicket")}
-              </Link>
-            </div>
 
             {/* SISSEJUHATUS */}
             <section id="intro" className="mb-12 scroll-mt-24 md:scroll-mt-28 text-justify">

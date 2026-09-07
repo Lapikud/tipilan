@@ -68,40 +68,15 @@ export async function loadRules(
 }
 
 /**
- * Loads rules using Bun.file (for Bun runtime environments)
- * @param ruleType - The type of rules to load
- * @param locale - The locale to load rules for
- * @returns Promise<string> The markdown content
+ * Backwards-compatible alias for callers that still use the old Bun-specific
+ * function name. Rule files are loaded through Node so this also works in the
+ * Next.js runtime.
  */
 export async function loadRulesBun(
   ruleType: RuleType,
   locale: Locale,
 ): Promise<string> {
-  // Try to load the file for the current locale first
-  let filePath = `src/data/rules/${locale}/${ruleType}.md`;
-  let file = Bun.file(filePath);
-
-  // Check if file exists, if not fallback to Estonian
-  if (!(await file.exists()) && locale !== "et") {
-    console.warn(
-      `Rules file not found for ${ruleType} in ${locale}, falling back to Estonian`,
-    );
-    filePath = `src/data/rules/et/${ruleType}.md`;
-    file = Bun.file(filePath);
-  }
-
-  try {
-    const content = await file.text();
-    return content;
-  } catch (error) {
-    console.error(
-      `Error loading rules for ${ruleType} in locale ${locale}:`,
-      error,
-    );
-    throw new Error(
-      `Failed to load rules for ${ruleType}: ${error instanceof Error ? error.message : "Unknown error"}`,
-    );
-  }
+  return loadRules(ruleType, locale);
 }
 
 // TODO review unused method
