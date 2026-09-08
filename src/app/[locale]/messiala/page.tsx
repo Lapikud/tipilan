@@ -1,13 +1,95 @@
+"use client";
+
+import React from "react";
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import Image from "next/image";
 import Link from "next/link";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 import { developers, universities } from "@/data/expo";
 
 /** Thick semi-transparent cyan rule that separates the full-bleed sections. */
 const DIVIDER = "border-t-4 border-[rgba(0,163,224,0.5)]";
 /** Horizontal padding used by the padded sections (64px at the design width). */
-const GUTTER = "px-4 sm:px-8 lg:px-16";
+const GUTTER = "px-6 md:px-16";
+
+/** Map Modal Component */
+function MapModal({ onClose, imageSrc, label, rotateMessage }: { onClose: () => void; imageSrc: string; label: string; rotateMessage: string }) {
+  return (
+    <div
+      className="fixed inset-0 bg-[#0E0F19]/90 z-[10000] flex items-center justify-center p-4 md:p-8"
+      onClick={onClose}
+    >
+      {/* Container for the map image - only shown in landscape */}
+      <div className="border-4 border-[#1F5673] bg-[rgba(0,163,224,0.1)] w-full max-w-[95vw] md:max-w-[90vw] [@media(orientation:portrait)]:hidden [@media(max-width:767px)]:hidden" onClick={(e) => e.stopPropagation()}>
+        <div className="relative w-full h-[80vh]">
+          <img
+            src={imageSrc}
+            alt={label}
+            className="w-full h-full object-contain p-2"
+          />
+        </div>
+      </div>
+      {/* Portrait warning with border - only shown in portrait on small screens */}
+      <div className="border-4 border-[#1F5673] bg-[rgba(0,163,224,0.1)] p-8 max-w-[90vw] md:max-w-md text-[#EEE5E5] text-center text-base md:text-lg [@media(orientation:landscape)]:hidden [@media(min-width:768px)]:hidden pointer-events-none" onClick={(e) => e.stopPropagation()}>
+        {rotateMessage}
+      </div>
+    </div>
+  );
+}
+
+/** Client component for the maps section with modal functionality */
+function MapsSection({ gutter }: { gutter: string }) {
+  const t = useTranslations();
+  const [selectedMap, setSelectedMap] = useState<{ image: string; label: string } | null>(null);
+
+  React.useEffect(() => {
+    if (selectedMap) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selectedMap]);
+
+  const maps = [
+    { image: "/images/messiala/fuajee-kaart.svg", label: t("expo.mapFoyer") },
+    { image: "/images/messiala/tudengimaja-kaart.svg", label: t("expo.mapStudentHouse") },
+  ];
+
+  return (
+    <>
+      <div className={`${gutter} pb-12 md:pb-16`}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
+          {maps.map((map) => (
+            <button
+              key={map.image}
+              onClick={() => setSelectedMap(map)}
+              className="relative aspect-[3/2] md:aspect-[4/3] w-full cursor-zoom-in hover:brightness-110 transition"
+              aria-label={t("expo.viewMap")}
+            >
+              <img
+                src={map.image}
+                alt={map.label}
+                className="w-full h-full object-contain p-2 md:p-4 lg:p-8"
+              />
+            </button>
+          ))}
+        </div>
+      </div>
+      {selectedMap && (
+        <MapModal
+          onClose={() => setSelectedMap(null)}
+          imageSrc={selectedMap.image}
+          label={selectedMap.label}
+          rotateMessage={t("expo.rotateDevice")}
+        />
+      )}
+    </>
+  );
+}
 
 /** Venue map card: the map SVG rendered transparent over the page background. */
 function MapCard({ image, label }: { image: string; label: string }) {
@@ -149,20 +231,14 @@ function GameCard({
   );
 }
 
-export default async function Expo({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-  setRequestLocale(locale);
-  const t = await getTranslations({ locale });
+export default function Expo() {
+  const t = useTranslations();
 
   return (
     <div className="bg-[#0E0F19] min-h-screen">
-      <div className="mx-auto w-full max-w-[1920px]">
+      <div className="mx-auto w-full">
         {/* Page title */}
-        <div className={`${GUTTER} pt-12 md:pt-16 pb-8`}>
+        <div className={`${GUTTER} pt-24 md:pt-32 pb-8`}>
           <h1
             className={`${vipnagorgialla.className} font-bold italic uppercase text-[#EEE5E5] leading-none text-[clamp(1.75rem,1.4rem+3vw,3.5rem)]`}
           >
@@ -171,18 +247,7 @@ export default async function Expo({
         </div>
 
         {/* Venue maps */}
-        <div className={`${GUTTER} pb-12 md:pb-16`}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-            <MapCard
-              image="/images/messiala/fuajee-kaart.svg"
-              label={t("expo.mapFoyer")}
-            />
-            <MapCard
-              image="/images/messiala/tudengimaja-kaart.svg"
-              label={t("expo.mapStudentHouse")}
-            />
-          </div>
-        </div>
+        <MapsSection gutter={GUTTER} />
 
         {/* Mini-tournaments feature (full-bleed) */}
         <section

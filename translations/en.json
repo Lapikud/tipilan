@@ -870,6 +870,8 @@
     "description": "The TipiLAN expo area hosts companies, additional activities and lectures.",
     "mapFoyer": "Foyer map",
     "mapStudentHouse": "Student house map",
+    "viewMap": "View map",
+    "rotateDevice": "Please rotate your device to landscape for the best experience.",
     "miniTournaments": {
       "title": "Mini-tournaments",
       "description": "TipiLAN hosts a variety of fun and competitive mini-tournaments. Regular visitors can take part too! The total prize pool across all tournaments is 1250€.",
