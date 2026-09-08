@@ -9,15 +9,20 @@ const DIVIDER = "border-t-4 border-[rgba(0,163,224,0.5)]";
 /** Horizontal padding used by the padded sections (64px at the design width). */
 const GUTTER = "px-4 sm:px-8 lg:px-16";
 
-/** Blue gradient placeholder standing in for a venue map (real images TBD). */
-function MapCard({ label }: { label: string }) {
+/** Venue map card: the map SVG rendered transparent over the page background. */
+function MapCard({ image, label }: { image: string; label: string }) {
   return (
-    <div className="relative flex items-center justify-center aspect-[4/3] bg-[linear-gradient(113deg,#00A3E0_0%,#1F5673_100%)]">
-      <h2
-        className={`${vipnagorgialla.className} font-bold italic uppercase text-center text-white leading-none tracking-tight px-6 text-[clamp(1.75rem,1rem+4vw,4rem)]`}
-      >
-        {label}
-      </h2>
+    <div className="relative aspect-[4/3] overflow-hidden">
+      <Image
+        src={image}
+        alt={label}
+        fill
+        className="object-contain p-4 md:p-6"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        // next/image's optimizer rejects SVG (400) unless dangerouslyAllowSVG
+        // is enabled globally; serve the map SVG as-is instead.
+        unoptimized
+      />
     </div>
   );
 }
@@ -168,8 +173,14 @@ export default async function Expo({
         {/* Venue maps */}
         <div className={`${GUTTER} pb-12 md:pb-16`}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-            <MapCard label={t("expo.mapFoyer")} />
-            <MapCard label={t("expo.mapStudentHouse")} />
+            <MapCard
+              image="/images/messiala/fuajee-kaart.svg"
+              label={t("expo.mapFoyer")}
+            />
+            <MapCard
+              image="/images/messiala/tudengimaja-kaart.svg"
+              label={t("expo.mapStudentHouse")}
+            />
           </div>
         </div>
 
