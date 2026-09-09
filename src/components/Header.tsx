@@ -26,6 +26,7 @@ interface NavItem {
     | "/haldus"
     | "/kodukord"
     | "/messiala"
+    | "/miniturniirid"
     | "/piletid"
     | "/striim"
     | "/turniirid";
@@ -49,6 +50,7 @@ const Header = ({ navItems }: HeaderProps) => {
 
   const navIconByHref: Partial<Record<NavItem["href"], string>> = {
     "/messiala": "weekend",
+    "/miniturniirid": "rewarded_ads",
     "/ajakava": "event_note",
     "/piletid": "local_activity",
     "/turniirid": "rewarded_ads",

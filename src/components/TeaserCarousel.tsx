@@ -11,7 +11,7 @@ type Slide = {
   image: string;
   imageAlt: string;
   hero: string;
-  href: "/turniirid" | "/piletid" | "/messiala";
+  href: "/turniirid" | "/piletid" | "/messiala" | "/miniturniirid";
   flip?: boolean;
   fullBrightness?: boolean;
 };

@@ -1,7 +1,7 @@
 import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import Link from "next/link";
 import Image from "next/image";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 interface TournamentCardProps {
   title: string;
@@ -50,6 +50,7 @@ export default async function Tourney({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale });
   return (
     <div className="bg-[#0E0F19] min-h-0 flex flex-col flex-1">
       {/* 1x2 Grid */}
@@ -59,7 +60,7 @@ export default async function Tourney({
           title="COUNTER-STRIKE 2"
           buttonHref="/turniirid/cs2"
           backgroundImage="/images/landing/cs2_tournament.jpg"
-          className="border-b-[3px] md:border-b-0 md:border-r-3"
+          className="border-b-[3px] md:border-b-0 md:border-r-3 min-h-[50vh]"
         />
 
         {/* LoL */}
@@ -68,7 +69,17 @@ export default async function Tourney({
           buttonHref="/turniirid/lol"
           backgroundImage="/images/landing/lol_tournament.png"
           objectPosition="bottom left"
-          className="border-b-0"
+          className="border-b-0 min-h-[50vh]"
+        />
+      </div>
+
+      {/* Full-width Mini-tournaments */}
+      <div className="grid grid-cols-1 auto-rows-fr">
+        <TournamentCard
+          title={t("expo.miniTournaments.title").toUpperCase()}
+          buttonHref="/miniturniirid"
+          backgroundImage="/images/miniturniirid/minitournaments.jpg"
+          className="border-t-[3px] min-h-[50vh]"
         />
       </div>
     </div>

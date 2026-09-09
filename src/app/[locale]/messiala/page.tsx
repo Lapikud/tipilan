@@ -272,7 +272,7 @@ export default function Expo() {
             <p className="text-[#EEE5E5] text-base md:text-lg max-w-md">
               {t("expo.miniTournaments.description")}
             </p>
-            <Link href="/turniirid" className="w-fit">
+            <Link href="/miniturniirid" className="w-fit">
               <button
                 className={`${vipnagorgialla.className} px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer font-bold italic leading-none uppercase transition`}
               >
