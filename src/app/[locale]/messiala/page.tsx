@@ -322,7 +322,7 @@ export default function Expo() {
         </section>
 
         {/* Universities */}
-        <section className={`${DIVIDER} ${GUTTER} py-12 md:py-16`}>
+        <section className={`${DIVIDER} ${GUTTER} py-12 md:py-16 hidden`}>
           <SectionHeading>{t("expo.universities")}</SectionHeading>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {universities.map((uni) => (

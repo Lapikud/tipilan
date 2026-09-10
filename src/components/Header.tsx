@@ -49,7 +49,7 @@ const Header = ({ navItems }: HeaderProps) => {
   const dropdownNavItems = mainNavItems;
 
   const navIconByHref: Partial<Record<NavItem["href"], string>> = {
-    "/messiala": "weekend",
+    "/messiala": "festival",
     "/miniturniirid": "rewarded_ads",
     "/ajakava": "event_note",
     "/piletid": "local_activity",
