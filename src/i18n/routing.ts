@@ -46,6 +46,10 @@ export const routing = defineRouting({
       et: "/turniirid",
       en: "/tournaments",
     },
+    "/turniirid/miniturniirid": {
+      et: "/turniirid/miniturniirid",
+      en: "/tournaments/minitournaments",
+    },
   },
 });
 

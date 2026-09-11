@@ -120,7 +120,7 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
         "schedule.locations.studentHouse",
         "schedule.locations.lobbyAndLanArea"
       ],
-      time: "*01:00",
+      time: "~01:00",
     },
   ],
   sep12: [
@@ -316,7 +316,7 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
     {
       titleKey: "schedule.events.doorsClose",
       locationKey: "schedule.locations.auditorium",
-      time: "*01:30",
+      time: "~01:30",
     },
   ],
   sep13: [
@@ -361,17 +361,17 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
     {
       titleKey: "schedule.events.awardCeremony",
       locationKey: "schedule.locations.auditorium",
-      time: "18:30",
+      time: "~18:30",
     },
     {
       titleKey: "schedule.events.closingCeremony",
       locationKey: "schedule.locations.auditorium",
-      time: "19:00",
+      time: "~19:00",
     },
     {
       titleKey: "schedule.events.doorsClose",
       locationKey: "schedule.locations.auditorium",
-      time: "19:30",
+      time: "~19:30",
     },
   ],
 };

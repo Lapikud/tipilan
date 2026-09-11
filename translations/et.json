@@ -8,7 +8,8 @@
     "tickets": "Piletid",
     "rules": "Reeglid",
     "stream": "Striim",
-    "tournaments": "Turniirid"
+    "tournaments": "Turniirid",
+    "minitournaments": "Miniturniirid"
   },
   "common": {
     "loading": "Laadimine...",
@@ -174,6 +175,22 @@
       "description2": "Miniturniiridel saab osaleda ka tavalise piletiga. Registreerimine toimub kohapeal.",
       "readRules": "LOE REEGLEID",
       "buyTicket": "OSTA PILET"
+    }
+  },
+  "minipage": {
+    "title": "Miniturniirid",
+    "date": "11. ja 12. september",
+    "description": "TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Iga turniiri juures on välja toodud terve turniiri auhinnafond.",
+    "readRules": "LOE REEGLEID",
+    "buyTicket": "OSTA PILET",
+    "organizedBy": "Korraldaja",
+    "prizePool": "Auhinnafond",
+    "giftBags": "Kinkekotid",
+    "top": "Top {place}",
+    "categories": {
+      "simRacing": "Sim Racing",
+      "fightingGames": "Võitlusmängud",
+      "other": "Muud turniirid"
     }
   },
   "cs2page": {
@@ -840,7 +857,8 @@
       "entranceHall": "Fuajee",
       "fuajeeLanAla": "Fuajee/LAN-ala",
       "foyerAndLanArea": "Fuajee/LAN-ala",
-      "lobbyAndLanArea": "Fuajee/LAN-ala"
+      "lobbyAndLanArea": "Fuajee/LAN-ala",
+      "miniTournaments": "Miniturniirid"
     },
     "transportInfo": "Tule võimaluse korral TipiLANile ühistranspordiga! TalTechi toovad sind bussid 10, 11, 19, 23, 24A, 27, 33, 36, 37, 45, 67 ning trollid 72 ja 83. Kui tuled autoga, siis ära tule üksi, võta sõbrad kaasa!"
   },

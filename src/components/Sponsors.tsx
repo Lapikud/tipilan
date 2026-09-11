@@ -89,6 +89,22 @@ const highlightedSponsors: Sponsor[] = [
 ];
 
 const sponsors: Sponsor[] = [
+  {
+    href: "https://www.tlu.ee",
+    src: "/sponsors/tlu.svg",
+    alt: "Tallinn Ülikool",
+    width: 292,
+    height: 60,
+    className: "brightness-0 invert scale-115",
+  },
+  {
+    href: "https://www.tlu.ee/dt",
+    src: "/sponsors/tludti.svg",
+    alt: "Tallinn Ülikooli Digitehnoloogiate Instituut",
+    width: 220,
+    height: 65,
+    className: "brightness-0 invert scale-115",
+  },
   // Gaming and technology
   {
     href: "https://k-space.ee/",

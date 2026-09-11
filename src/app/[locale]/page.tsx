@@ -26,10 +26,10 @@ export default async function Home({
       <Livestreams />
 
       {/* Nav cards: Piletid + Ajakava + Turniirid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 md:h-65 border-b-3 border-[#1F5673]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 3xl:grid-cols-4 3xl:h-65 border-b-3 border-[#1F5673]">
         <Link
           href="/piletid"
-          className="px-8 md:px-12 py-8 flex flex-col justify-center gap-4 border-b-3 md:border-b-0 md:border-r-3 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
+          className="px-8 xl:px-12 py-8 flex flex-col justify-center gap-4 border-b-3 3xl:border-b-0 lg:border-r-3 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
         >
           <div className="flex flex-col gap-4">
             <span
@@ -56,7 +56,7 @@ export default async function Home({
 
         <Link
           href="/ajakava"
-          className="px-8 md:px-12 py-8 flex flex-col justify-center gap-4 border-b-3 md:border-b-0 md:border-r-3 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
+          className="px-8 xl:px-12 py-8 flex flex-col justify-center gap-4 border-b-3 3xl:border-b-0 3xl:border-r-3 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
         >
           <div className="flex flex-col gap-4">
             <span
@@ -82,8 +82,29 @@ export default async function Home({
         </Link>
 
         <Link
+          href="/messiala"
+          className="px-8 xl:px-12 py-8 flex flex-col justify-center gap-4 border-b-3 lg:border-b-0 lg:border-r-3 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
+        >
+          <div className="flex flex-col gap-4">
+            <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
+              festival
+            </span>
+          </div>
+          <div className="flex flex-row justify-between gap-4 items-center">
+            <h2
+              className={`text-[clamp(2rem,1.8rem+1vw,3rem)] ${vipnagorgialla.className} font-bold italic uppercase dark:text-[#EEE5E5] text-[#2A2C3F] dark:group-hover:text-[#2A2C3F] group-hover:text-black`}
+            >
+              {t("navigation.expo")}
+            </h2>
+            <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! font-bold! text-[#007CAB] dark:text-[#00A3E0] group-hover:translate-x-2 dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5] transition">
+              arrow_right_alt
+            </span>
+          </div>
+        </Link>
+
+        <Link
           href="/turniirid"
-          className="px-8 md:px-12 py-8 flex flex-col justify-center gap-4 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
+          className="px-8 xl:px-12 py-8 flex flex-col justify-center gap-4 group border-[#1F5673] hover:bg-[#007CAB] dark:hover:bg-[#00A3E0] transition"
         >
           <div className="flex flex-col gap-4">
             <span className="material-symbols-outlined text-[clamp(2rem,1.5rem+1.5vw,3.5rem)]! text-[#007CAB] dark:text-[#00A3E0] dark:group-hover:text-[#EEE5E5] group-hover:text-[#EEE5E5]">
