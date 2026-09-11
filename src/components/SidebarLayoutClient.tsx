@@ -9,7 +9,6 @@ interface NavItem {
     | "/haldus"
     | "/kodukord"
     | "/messiala"
-    | "/miniturniirid"
     | "/piletid"
     | "/striim"
     | "/turniirid";

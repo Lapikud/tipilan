@@ -254,13 +254,13 @@ export default function Expo() {
           className={`relative overflow-hidden ${DIVIDER} min-h-[360px] md:min-h-[480px]`}
         >
           <Image
-            src="/images/landing/compete_teaser.jpg"
+            src="/images/miniturniirid/minitournaments.jpg"
             alt=""
             fill
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0E0F19] via-[#0E0F19]/85 to-[#0E0F19]/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0E0F19] via-[#0E0F19]/50 to-[#0E0F19]/30" />
           <div
             className={`relative z-10 flex flex-col justify-center h-full min-h-[360px] md:min-h-[480px] max-w-2xl gap-6 py-10 ${GUTTER}`}
           >
@@ -272,7 +272,7 @@ export default function Expo() {
             <p className="text-[#EEE5E5] text-base md:text-lg max-w-md">
               {t("expo.miniTournaments.description")}
             </p>
-            <Link href="/miniturniirid" className="w-fit">
+            <Link href="/turniirid/miniturniirid" className="w-fit">
               <button
                 className={`${vipnagorgialla.className} px-4 py-2 border-4 border-transparent bg-[#00A3E0] hover:bg-[#E5E5EE] text-[#0A121F] cursor-pointer font-bold italic leading-none uppercase transition`}
               >

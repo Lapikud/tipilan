@@ -181,7 +181,16 @@
     "date": "11 & 12 September",
     "description": "TipiLAN hosts a variety of fun and competitive mini-tournaments. The full prize pool for each tournament is shown next to it.",
     "readRules": "READ RULES",
-    "buyTicket": "BUY TICKETS"
+    "buyTicket": "BUY TICKETS",
+    "organizedBy": "Organized by",
+    "prizePool": "Prize pool",
+    "giftBags": "Gifts",
+    "top": "Top {place}",
+    "categories": {
+      "simRacing": "Sim Racing",
+      "fightingGames": "Fighting Games",
+      "other": "Other Tournaments"
+    }
   },
   "cs2page": {
     "title": "COUNTER-STRIKE 2 TOURNAMENT",

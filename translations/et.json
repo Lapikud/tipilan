@@ -182,7 +182,16 @@
     "date": "11. ja 12. september",
     "description": "TipiLANil toimub mitmeid erinevaid lõbusaid ja võistlushimu tekitavaid miniturniire. Iga turniiri juures on välja toodud terve turniiri auhinnafond.",
     "readRules": "LOE REEGLEID",
-    "buyTicket": "OSTA PILET"
+    "buyTicket": "OSTA PILET",
+    "organizedBy": "Korraldaja",
+    "prizePool": "Auhinnafond",
+    "giftBags": "Kinkekotid",
+    "top": "Top {place}",
+    "categories": {
+      "simRacing": "Sim Racing",
+      "fightingGames": "Võitlusmängud",
+      "other": "Muud turniirid"
+    }
   },
   "cs2page": {
     "title": "COUNTER-STRIKE 2 TURNIIR",

@@ -77,7 +77,7 @@ export default async function Tourney({
       <div className="grid grid-cols-1 auto-rows-fr">
         <TournamentCard
           title={t("expo.miniTournaments.title").toUpperCase()}
-          buttonHref="/miniturniirid"
+          buttonHref="/turniirid/miniturniirid"
           backgroundImage="/images/miniturniirid/minitournaments.jpg"
           className="border-t-[3px] min-h-[50vh]"
         />
