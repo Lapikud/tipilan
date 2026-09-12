@@ -12,60 +12,47 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       locationKey: [
         "schedule.locations.auditorium",
         "schedule.locations.studentHouse",
-        "schedule.locations.lobbyAndLanArea"
+        "schedule.locations.lobby",
+        "schedule.locations.lanArea"
       ],
       time: "17:00",
     },
     {
-      titleKey: "schedule.events.gamersSetup",
-      locationKey: [
-        "schedule.locations.auditorium",
-        "schedule.locations.studentHouse"
-      ],
-      time: "17:00-19:00",
-    },
-    {
       titleKey: "schedule.events.exploring",
       locationKey: [
-        "schedule.locations.auditorium",
-        "schedule.locations.studentHouse"
+        "schedule.locations.studentHouse",
+        "schedule.locations.lanArea"
       ],
       time: "17:00-18:00",
     },
     {
       titleKey: "schedule.events.gameDevShowcasing",
-      locationKey: "schedule.locations.lobbyAndLanArea",
+      locationKey: "schedule.locations.lobby",
       time: "17:00-00:00",
     },
     {
       titleKey: "schedule.events.miniTournaments",
       locationKey: "schedule.locations.studentHouse",
-      time: "18:00",
+      time: "18:00-20:30",
     },
     {
       titleKey: "schedule.events.lanAreaTournaments",
-      locationKey: "schedule.locations.lobbyAndLanArea",
+      locationKey: "schedule.locations.lanArea",
       time: "18:00-00:00",
     },
     {
-      titleKey: "schedule.events.minigamesAndTournaments",
-      locationKey: "schedule.locations.lobbyAndLanArea",
-      time: "18:00-00:00",
+      titleKey: "schedule.events.miniTournaments",
+      locationKey: "schedule.locations.studentHouse",
+      time: "22:30-00:00",
     },
     {
       titleKey: "schedule.events.blueCarpet",
-      locationKey: [
-        "schedule.locations.auditorium",
-        "schedule.locations.studentHouse"
-      ],
+      locationKey: "schedule.locations.auditorium",
       time: "19:00",
     },
     {
       titleKey: "schedule.events.day1Begins",
-      locationKey: [
-        "schedule.locations.auditorium",
-        "schedule.locations.studentHouse"
-      ],
+      locationKey: "schedule.locations.auditorium",
       time: "19:30",
     },
     {
@@ -89,6 +76,16 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       time: "21:00-22:00",
     },
     {
+      titleKey: "schedule.events.ssbuFinal",
+      locationKey: "schedule.locations.studentHouse",
+      time: "21:00-21:30",
+    },
+    {
+      titleKey: "schedule.events.streetFighter6Final",
+      locationKey: "schedule.locations.studentHouse",
+      time: "21:30-22:00",
+    },
+    {
       titleKey: "schedule.events.cs2SwissR3",
       locationKey: "schedule.locations.auditorium",
       time: "22:00-23:00",
@@ -97,6 +94,16 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       titleKey: "schedule.events.lolGame3",
       locationKey: "schedule.locations.auditorium",
       time: "22:00-23:00",
+    },
+    {
+      titleKey: "schedule.events.invincibleVsFinal",
+      locationKey: "schedule.locations.studentHouse",
+      time: "22:00-22:30",
+    },
+    {
+      titleKey: "schedule.events.quakeDeathmatch",
+      locationKey: "schedule.locations.studentHouse",
+      time: "20:30-21:00",
     },
     {
       titleKey: "schedule.events.cs2SwissR4",
@@ -118,9 +125,10 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       locationKey: [
         "schedule.locations.auditorium",
         "schedule.locations.studentHouse",
-        "schedule.locations.lobbyAndLanArea"
+        "schedule.locations.lobby",
+        "schedule.locations.lanArea"
       ],
-      time: "~01:00",
+      time: "~02:00",
     },
   ],
   sep12: [
@@ -129,19 +137,10 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       locationKey: [
         "schedule.locations.auditorium",
         "schedule.locations.studentHouse",
-        "schedule.locations.lobbyAndLanArea"
+        "schedule.locations.lobby",
+        "schedule.locations.lanArea"
       ],
       time: "09:00",
-    },
-    {
-      titleKey: "schedule.events.gamersSetup",
-      locationKey: "schedule.locations.auditorium",
-      time: "09:00-10:30",
-    },
-    {
-      titleKey: "schedule.events.gamersSetup",
-      locationKey: "schedule.locations.studentHouse",
-      time: "09:00-11:30",
     },
     {
       titleKey: "schedule.events.cs2WbR1",
@@ -165,18 +164,33 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
     },
     {
       titleKey: "schedule.events.expoOpens",
-      locationKey: "schedule.locations.lobbyAndLanArea",
-      time: "12:00",
+      locationKey: "schedule.locations.lobby",
+      time: "09:00",
+    },
+    {
+      titleKey: "schedule.events.lanAreaOpens",
+      locationKey: "schedule.locations.lanArea",
+      time: "10:00",
+    },
+    {
+      titleKey: "schedule.events.studentHouseOpens",
+      locationKey: "schedule.locations.studentHouse",
+      time: "10:00",
     },
     {
       titleKey: "schedule.events.gamedevExpo",
-      locationKey: "schedule.locations.lobbyAndLanArea",
-      time: "12:00-19:00",
+      locationKey: "schedule.locations.lobby",
+      time: "09:00-19:00",
     },
     {
       titleKey: "schedule.events.miniTournaments",
-      locationKey: "schedule.locations.lobbyAndLanArea",
-      time: "13:00-19:00",
+      locationKey: "schedule.locations.studentHouse",
+      time: "10:00-17:00",
+    },
+    {
+      titleKey: "schedule.events.lanAreaTournaments",
+      locationKey: "schedule.locations.lanArea",
+      time: "10:00-22:00",
     },
     {
       titleKey: "schedule.events.cs2LbR1",
@@ -225,17 +239,42 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
     },
     {
       titleKey: "schedule.events.break",
+      locationKey: "schedule.locations.auditorium",
+      time: "17:30-19:00",
+    },
+    {
+      titleKey: "schedule.events.avatarLegendsFinal",
+      locationKey: "schedule.locations.studentHouse",
+      time: "19:00-19:30",
+    },
+    {
+      titleKey: "schedule.events.rlFinal",
+      locationKey: "schedule.locations.studentHouse",
+      time: "17:00-18:00",
+    },
+    {
+      titleKey: "schedule.events.cs16Final",
+      locationKey: "schedule.locations.studentHouse",
+      time: "17:00-18:00",
+    },
+    {
+      titleKey: "schedule.events.osuFinal",
+      locationKey: "schedule.locations.studentHouse",
+      time: "17:00-18:00",
+    },
+    {
+      titleKey: "schedule.events.eaFc26Final",
+      locationKey: "schedule.locations.studentHouse",
+      time: "17:00-18:00",
+    },
+    {
+      titleKey: "schedule.events.evalHfdAndFinal",
       locationKey: "schedule.locations.studentHouse",
       time: "18:00-19:00",
     },
     {
-      titleKey: "schedule.events.avatarLegendsFinal",
-      locationKey: "schedule.locations.lobbyAndLanArea",
-      time: "19:00-19:30",
-    },
-    {
       titleKey: "schedule.events.gamedevAwardCeremony",
-      locationKey: "schedule.locations.lobbyAndLanArea",
+      locationKey: "schedule.locations.lobby",
       time: "19:00-20:00",
     },
     {
@@ -255,23 +294,28 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
     },
     {
       titleKey: "schedule.events.tekken8Final",
-      locationKey: "schedule.locations.lobbyAndLanArea",
-      time: "19:30-20:00",
+      locationKey: "schedule.locations.studentHouse",
+      time: "18:00-18:30",
     },
     {
-      titleKey: "schedule.events.streetFighter6Final",
-      locationKey: "schedule.locations.lobbyAndLanArea",
-      time: "20:00-20:30",
+      titleKey: "schedule.events.tokonFinal",
+      locationKey: "schedule.locations.studentHouse",
+      time: "18:30-19:00",
     },
     {
       titleKey: "schedule.events.gamedevExpo",
-      locationKey: "schedule.locations.lobbyAndLanArea",
+      locationKey: "schedule.locations.lobby",
       time: "20:00-00:00",
     },
     {
       titleKey: "schedule.events.twoXkoFinal",
-      locationKey: "schedule.locations.lobbyAndLanArea",
-      time: "20:30-21:00",
+      locationKey: "schedule.locations.studentHouse",
+      time: "19:30-20:00",
+    },
+    {
+      titleKey: "schedule.events.gt7HfdAndFinal",
+      locationKey: "schedule.locations.studentHouse",
+      time: "19:00-20:00",
     },
     {
       titleKey: "schedule.events.cs2ScLbR5",
@@ -279,19 +323,14 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       time: "20:30-21:30",
     },
     {
-      titleKey: "schedule.events.ssbuFinal",
-      locationKey: "schedule.locations.lobbyAndLanArea",
-      time: "21:00-21:30",
-    },
-    {
       titleKey: "schedule.events.cs2ScTournamentFinal",
       locationKey: "schedule.locations.auditorium",
-      time: "21:30-23:30",
+      time: "22:30-00:30",
     },
     {
-      titleKey: "schedule.events.invincibleVsFinal",
-      locationKey: "schedule.locations.lobbyAndLanArea",
-      time: "21:30-22:00",
+      titleKey: "schedule.events.cs2ScLbR6",
+      locationKey: "schedule.locations.auditorium",
+      time: "21:30-22:30",
     },
     {
       titleKey: "schedule.events.cs2LbR3",
@@ -300,8 +339,26 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
     },
     {
       titleKey: "schedule.events.miniTournamentsAwardCeremony",
-      locationKey: "schedule.locations.lobbyAndLanArea",
+      locationKey: "schedule.locations.studentHouse",
       time: "22:00-22:30",
+    },
+    {
+      titleKey: "schedule.events.lanAreaAwardCeremony",
+      locationKey: [
+        "schedule.locations.studentHouse",
+        "schedule.locations.lanArea"
+      ],
+      time: "22:00-22:30",
+    },
+    {
+      titleKey: "schedule.events.lanAreaFunTime",
+      locationKey: "schedule.locations.lanArea",
+      time: "22:30-00:00",
+    },
+    {
+      titleKey: "schedule.events.exploring",
+      locationKey: "schedule.locations.studentHouse",
+      time: "22:30-00:00",
     },
     {
       titleKey: "schedule.events.cs2LbR4",
@@ -310,13 +367,13 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
     },
     {
       titleKey: "schedule.events.awardCeremony",
-      locationKey: "schedule.locations.lobbyAndLanArea",
+      locationKey: "schedule.locations.auditorium",
       time: "00:00-00:30",
     },
     {
       titleKey: "schedule.events.doorsClose",
       locationKey: "schedule.locations.auditorium",
-      time: "~01:30",
+      time: "~02:00",
     },
   ],
   sep13: [
@@ -324,7 +381,8 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       titleKey: "schedule.events.noEventsScheduled",
       locationKey: [
         "schedule.locations.studentHouse",
-        "schedule.locations.lobbyAndLanArea"
+        "schedule.locations.lobby",
+        "schedule.locations.lanArea"
       ],
       time: "-",
     },
@@ -332,11 +390,6 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
       titleKey: "schedule.events.doorsOpenSimple",
       locationKey: "schedule.locations.auditorium",
       time: "09:00",
-    },
-    {
-      titleKey: "schedule.events.gamersSetup",
-      locationKey: "schedule.locations.auditorium",
-      time: "09:30-10:30",
     },
     {
       titleKey: "schedule.events.cs2WbR4",

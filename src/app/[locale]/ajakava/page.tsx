@@ -14,11 +14,11 @@ const FILTER_MAP: Record<string, string[]> = {
   auditorium: ['auditorium'],
   tudengimaja: ['studentHouse'],
   studenthouse: ['studentHouse'],
-  fuajee: ['lobbyAndLanArea'],
-  foyer: ['lobbyAndLanArea'],
-  lan: ['lobbyAndLanArea'],
-  lanarea: ['lobbyAndLanArea'],
-  lobby: ['lobbyAndLanArea'],
+  fuajee: ['lobby'],
+  foyer: ['lobby'],
+  lan: ['lanArea'],
+  lanarea: ['lanArea'],
+  lobby: ['lobby'],
 };
 
 function matchesFilter(item: ScheduleItem, filter: string): boolean {
@@ -154,7 +154,21 @@ export default function Timetable() {
                 : "bg-[#1F5673] text-[#EEE5E5] hover:bg-[#00A3E0] hover:text-black"
             }`}
           >
-            {t("schedule.locations.lobbyAndLanArea")}
+            {t("schedule.locations.lobby")}
+          </button>
+          <button
+            onClick={() => {
+              const url = new URL(window.location.href);
+              url.searchParams.set('filter', 'lan');
+              window.history.pushState({}, '', url.toString());
+            }}
+            className={`${vipnagorgialla.className} font-bold italic leading-none text-lg uppercase px-4 py-2 border-4 border-[#00A3E0] transition cursor-pointer ${
+              filter === 'lan'
+                ? "bg-[#00A3E0] text-black cursor-default pointer-events-none"
+                : "bg-[#1F5673] text-[#EEE5E5] hover:bg-[#00A3E0] hover:text-black"
+            }`}
+          >
+            {t("schedule.locations.lanArea")}
           </button>
         </div>
 
