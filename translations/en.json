@@ -857,7 +857,7 @@
       "lolSemiFinals": "LoL Semi Finals",
       "lolFinalsAndThirdPlace": "LoL Finals + 3rd place",
       "closingCeremony": "Closing of TipiLAN 2026",
-      "noEventsScheduled": "No events scheduled for these areas"
+      "lanAreaOpen": "LAN Area Open"
     },
     "locations": {
       "registrationSetup": "Registration and setup in auditorium",
