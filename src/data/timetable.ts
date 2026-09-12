@@ -348,12 +348,7 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
     },
     {
       titleKey: "schedule.events.exploring",
-      locationKey: "schedule.locations.studentHouse",
-      time: "22:30-00:00",
-    },
-    {
-      titleKey: "schedule.events.exploring",
-      locationKey: "schedule.locations.lobbyAndLanArea",
+      locationKey: ["schedule.locations.studentHouse", "schedule.locations.lobbyAndLanArea"],
       time: "22:30-00:00",
     },
     {
