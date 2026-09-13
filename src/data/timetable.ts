@@ -383,57 +383,55 @@ export const scheduleData: Record<string, ScheduleItem[]> = {
   ],
   sep13: [
     {
-      titleKey: "schedule.events.noEventsScheduled",
+      titleKey: "schedule.events.doorsOpenSimple",
+      locationKey: [
+        "schedule.locations.auditorium",
+        "schedule.locations.studentHouse",
+        "schedule.locations.lobbyAndLanArea"
+      ],
+      time: "09:00",
+    },
+    {
+      titleKey: "schedule.events.lanAreaOpen",
       locationKey: [
         "schedule.locations.studentHouse",
         "schedule.locations.lobbyAndLanArea"
       ],
-      time: "-",
+      time: "10:00-17:30",
     },
     {
-      titleKey: "schedule.events.doorsOpenSimple",
+      titleKey: "schedule.events.cs2GamersSetup",
       locationKey: "schedule.locations.auditorium",
-      time: "09:00",
-    },
-    {
-      titleKey: "schedule.events.gamersSetup",
-      locationKey: "schedule.locations.auditorium",
-      time: "09:30-10:30",
+      time: "10:00-10:30",
     },
     {
       titleKey: "schedule.events.cs2WbR4",
       locationKey: "schedule.locations.auditorium",
-      time: "10:30-13:00",
-    },
-    {
-      titleKey: "schedule.events.cs2LbR5",
-      locationKey: "schedule.locations.auditorium",
-      time: "13:00-14:00",
+      time: "11:00-13:00",
     },
     {
       titleKey: "schedule.events.cs2LbR6",
       locationKey: "schedule.locations.auditorium",
-      time: "14:00-16:00",
+      time: "13:00-15:00",
     },
     {
       titleKey: "schedule.events.cs2GrandFinal",
       locationKey: "schedule.locations.auditorium",
-      time: "16:00-18:00",
+      time: "15:00-17:00",
     },
     {
       titleKey: "schedule.events.awardCeremony",
       locationKey: "schedule.locations.auditorium",
-      time: "~18:30",
+      time: "17:00-17:30",
     },
     {
       titleKey: "schedule.events.closingCeremony",
-      locationKey: "schedule.locations.auditorium",
-      time: "~19:00",
-    },
-    {
-      titleKey: "schedule.events.doorsClose",
-      locationKey: "schedule.locations.auditorium",
-      time: "~19:30",
+      locationKey: [
+        "schedule.locations.auditorium",
+        "schedule.locations.studentHouse",
+        "schedule.locations.lobbyAndLanArea"
+      ],
+      time: "~17:30",
     },
   ],
 };
