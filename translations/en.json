@@ -73,6 +73,9 @@
       "cs2": "Counter-Strike 2",
       "lol": "League of Legends"
     },
+    "farewell": {
+      "message": "Thank you for participating in TipiLAN 2026! We hope to see you again next time!"
+    },
     "sections": {
       "schedule": {
         "description": "TipiLAN is packed with exciting tournaments, mini-competitions and much more."
