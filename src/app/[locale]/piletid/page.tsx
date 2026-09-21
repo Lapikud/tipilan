@@ -6,9 +6,9 @@ import SoldOutOverlay from "@/components/SoldOutOverlay";
 import SwitchableTicketCard from "@/components/SwitchableTicketCard";
 
 const ticketSoldOut = {
-  visitor: false,
-  supporter: false,
-  lan: false,
+  visitor: true,
+  supporter: true,
+  lan: true,
   lol: true,
   cs2: true,
 } as const;

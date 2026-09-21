@@ -43,7 +43,6 @@ const Header = ({ navItems }: HeaderProps) => {
   // Header navigation should include all options except homepage and hidden items
   const hiddenNavHrefs: NavItem["href"][] = [
     "/messiala",
-    "/turniirid",
   ];
   const mainNavItems = navItems.filter(
     (item) => item.href !== "/" && !hiddenNavHrefs.includes(item.href),
