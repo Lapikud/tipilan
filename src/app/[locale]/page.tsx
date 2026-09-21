@@ -2,7 +2,7 @@ import { vipnagorgialla } from "@/components/Vipnagorgialla";
 import Sponsors from "@/components/Sponsors";
 import HeroSection from "@/components/HeroSection";
 import TeaserCarousel from "@/components/TeaserCarousel";
-import Livestreams from "@/components/Livestreams";
+import FarewellMessage from "@/components/FarewellMessage";
 import { Link } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
@@ -22,8 +22,8 @@ export default async function Home({
         <HeroSection />
       </div>
 
-      {/* Livestreams — shown automatically when the event begins */}
-      <Livestreams />
+      {/* Farewell message */}
+      <FarewellMessage />
 
       {/* Nav cards: Piletid + Ajakava + Turniirid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 3xl:grid-cols-4 3xl:h-65 border-b-3 border-[#1F5673]">
